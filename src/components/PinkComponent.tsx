@@ -20,9 +20,10 @@ export default function PinkComponent() {
         justifyContent: "center",
         paddingY: { xs: 2, md: 4 },
         marginTop: "100px", // Justera detta värde till höjden på din header
+        marginBottom: 200,
         alignItems: "center",
         position: "fixed", // Gör den fast
-        zIndex: 1, // Viktigt att ha högre än ParallaxWave
+        zIndex: 2, // Viktigt att ha högre än ParallaxWave
         height: "400px", // Sätt en fast höjd
       }}
     >

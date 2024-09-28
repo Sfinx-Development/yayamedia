@@ -2,22 +2,16 @@ import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-const RootLayout = () => {
-  //   const isMobile = window.innerWidth <= 820;
+export default function RootLayout() {
   return (
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
-        flex: 1,
-        minHeight: "100vh",
-        backgroundColor: "red",
-        alignItems: "center",
-        width: "100%",
         position: "relative",
-        margin: 0,
-        padding: 0,
-        flexGrow: 1,
+        flexDirection: "column",
+        minHeight: "100vh", // Sätter min höjd till 100% av viewport
+        backgroundColor: "red",
+        width: "100%",
       }}
     >
       <Header />
@@ -27,9 +21,12 @@ const RootLayout = () => {
           display: "flex",
           flexDirection: "column",
           flexGrow: 1,
-          minHeight: "100vh",
           width: "100%",
+          zIndex: 3,
+          position: "relative",
+          minHeight: "1000px",
           alignItems: "center",
+          paddingBottom: 200, // Lägger till padding för att ge plats för foten
         }}
       >
         <Outlet />
@@ -39,17 +36,16 @@ const RootLayout = () => {
         style={{
           width: "100%",
           display: "flex",
-          flex: 1,
           flexDirection: "column",
           padding: 0,
           margin: 0,
           maxWidth: "none",
+          zIndex: 3,
+          position: "relative", // Använd relativ positionering
         }}
       >
         <Footer />
       </footer>
     </div>
   );
-};
-
-export default RootLayout;
+}

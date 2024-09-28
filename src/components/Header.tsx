@@ -35,6 +35,7 @@ export default function Header(): JSX.Element {
         width: "100%",
         position: "fixed",
         height: 100,
+        zIndex: 999,
         backgroundColor: "#F7F7F7",
         paddingY: { xs: 1, md: 1 }, // Mindre padding på små skärmar
       }}
