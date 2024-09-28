@@ -2,10 +2,10 @@ import { Box, Link, styled, Typography } from "@mui/material";
 
 export default function Header(): JSX.Element {
   const Heading = styled(Typography)`
-    color: "#363434";
-    font-family: "atyp-bl-variable", sans-serif;
-    font-variation-settings: "wght" 333, "ital" 0, "opsz" 6;
+    font-family: "AtypRegularVariable", sans-serif;
+    font-variation-settings: "wght" 300;
   `;
+  const isMobile = window.innerWidth <= 820;
 
   return (
     <Box
@@ -15,22 +15,27 @@ export default function Header(): JSX.Element {
         justifyContent: "space-between",
         width: "100%",
         backgroundColor: "#F7F7F7",
-        paddingY: 1,
+        paddingY: { xs: 1, md: 2 }, // Mindre padding på små skärmar
       }}
       component={"header"}
     >
-      <Box sx={{ paddingLeft: 10 }}>
+      {/* Logotyp */}
+      <Box sx={{ paddingLeft: { xs: 2, md: 10 } }}>
+        {" "}
+        {/* Anpassa padding */}
         <img
           src={"https://i.imgur.com/hyHtDy4.png"}
           alt="Yaya Logo"
-          height={60}
+          style={{ height: isMobile ? 40 : 60 }} // Mindre logotyp på små skärmar
         />
       </Box>
+
+      {/* Navigationslänkar */}
       <Box
         sx={{
           display: "flex",
-          paddingY: 3,
-          gap: 6,
+          paddingY: { xs: 1, md: 3 }, // Mindre padding på små skärmar
+          gap: { xs: 2, md: 6 }, // Mindre gap mellan länkar på små skärmar
           justifyContent: "center",
         }}
       >
@@ -41,7 +46,10 @@ export default function Header(): JSX.Element {
           }}
           href="/"
         >
-          <Heading variant="h4">Kontakt</Heading>
+          <Heading sx={{ fontSize: { xs: 20, md: 36 }, color: "#363434" }}>
+            Kontakt
+          </Heading>{" "}
+          {/* Mindre textstorlek */}
         </Link>
         <Link
           sx={{
@@ -50,7 +58,7 @@ export default function Header(): JSX.Element {
           }}
           href="/about"
         >
-          <Heading variant="h4">Yaya</Heading>
+          <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Yaya</Heading>
         </Link>
         <Link
           sx={{
@@ -59,33 +67,34 @@ export default function Header(): JSX.Element {
           }}
           href="/about"
         >
-          <Heading variant="h4">Case</Heading>
+          <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Case</Heading>
         </Link>
       </Box>
 
+      {/* Menyikoner */}
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          paddingRight: 10,
+          paddingRight: { xs: 2, md: 10 }, // Mindre padding på små skärmar
         }}
       >
         <Box
           sx={{
             backgroundColor: "#363434",
             height: "5px",
-            width: "30px",
-            borderRadius: "10px",
-            marginBottom: "8px",
+            width: { xs: "25px", md: "35px" }, // Anpassa bredd på små skärmar
+            borderRadius: "20px",
+            marginBottom: "15px",
           }}
         />
         <Box
           sx={{
             backgroundColor: "#363434",
             height: "5px",
-            width: "60px",
-            borderRadius: "10px",
+            width: { xs: "40px", md: "70px" }, // Anpassa bredd på små skärmar
+            borderRadius: "20px",
             transform: "rotate(-8deg)",
           }}
         />
