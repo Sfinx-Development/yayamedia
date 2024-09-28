@@ -24,30 +24,27 @@ export default function PinkComponent() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "column" }, // Ingen ändring här
+          flexDirection: { xs: "column", md: "column" },
           justifyContent: "space-between",
-          alignItems: "flex-start", // Align text to left for consistent layout
-          maxWidth: 900, // Max width for the inner box
-          width: "100%", // Full width on smaller screens
+          alignItems: "flex-start",
+          maxWidth: 900,
+          width: "100%",
         }}
       >
         <Texting sx={{ fontSize: { xs: 40, md: 80 }, color: "#363434" }}>
-          {" "}
-          {/* Responsiv fontstorlek */}
           Yttepytteliten.
         </Texting>
         <Texting sx={{ fontSize: { xs: 30, md: 50 }, color: "#363434" }}>
-          {" "}
-          {/* Responsiv fontstorlek */}
           Vår byrå - inte vår vision.
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 16, md: 20 }, // Responsiv fontstorlek
+            fontSize: { xs: 16, md: 20 },
             fontWeight: "lighter",
             color: "#363434",
             flexWrap: "wrap",
             maxWidth: 900,
+            marginTop: 1,
           }}
         >
           Vi är en mindre reklambyrå på två som brinner för kreativt skapande.
