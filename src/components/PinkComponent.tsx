@@ -18,25 +18,32 @@ export default function PinkComponent() {
         background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
         display: "flex",
         justifyContent: "center",
+        paddingY: { xs: 6, md: 14 }, // Responsiv padding
       }}
     >
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "column" },
+          flexDirection: { xs: "column", md: "column" }, // Ingen ändring här
           justifyContent: "space-between",
-          paddingY: 14,
+          alignItems: "flex-start", // Align text to left for consistent layout
+          maxWidth: 900, // Max width for the inner box
+          width: "100%", // Full width on smaller screens
         }}
       >
-        <Texting sx={{ fontSize: 80, color: "#363434" }}>
+        <Texting sx={{ fontSize: { xs: 40, md: 80 }, color: "#363434" }}>
+          {" "}
+          {/* Responsiv fontstorlek */}
           Yttepytteliten.
         </Texting>
-        <Texting sx={{ fontSize: 50, color: "#363434" }}>
+        <Texting sx={{ fontSize: { xs: 30, md: 50 }, color: "#363434" }}>
+          {" "}
+          {/* Responsiv fontstorlek */}
           Vår byrå - inte vår vision.
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: 20,
+            fontSize: { xs: 16, md: 20 }, // Responsiv fontstorlek
             fontWeight: "lighter",
             color: "#363434",
             flexWrap: "wrap",
