@@ -1,10 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import MobileHeader from "../components/MobileHeader";
 
 const RootLayout = () => {
-  const isMobile = window.innerWidth <= 820;
+  //   const isMobile = window.innerWidth <= 820;
   return (
     <div
       style={{
@@ -20,7 +19,7 @@ const RootLayout = () => {
         flexGrow: 1,
       }}
     >
-      {isMobile ? <MobileHeader /> : <Header />}
+      <Header />
 
       <main
         style={{

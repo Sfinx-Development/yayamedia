@@ -1,11 +1,30 @@
 import { Box, Link, styled, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import DrawerComponent from "./DrawerComponent";
 
 export default function Header(): JSX.Element {
   const Heading = styled(Typography)`
     font-family: "AtypRegularVariable", sans-serif;
     font-variation-settings: "wght" 300;
   `;
-  const isMobile = window.innerWidth <= 820;
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        (event as React.KeyboardEvent).key === "Tab"
+      ) {
+        return;
+      }
+      console.log("TOGGLE");
+      setDrawerOpen(open);
+    };
+
+  useEffect(() => {
+    console.log("ÖPPEN: ", drawerOpen);
+  }, [drawerOpen]);
 
   return (
     <Box
@@ -15,27 +34,25 @@ export default function Header(): JSX.Element {
         justifyContent: "space-between",
         width: "100%",
         backgroundColor: "#F7F7F7",
-        paddingY: { xs: 1, md: 2 }, // Mindre padding på små skärmar
+        paddingY: { xs: 1, md: 1 }, // Mindre padding på små skärmar
       }}
       component={"header"}
     >
       {/* Logotyp */}
       <Box sx={{ paddingLeft: { xs: 2, md: 10 } }}>
-        {" "}
-        {/* Anpassa padding */}
         <img
           src={"https://i.imgur.com/hyHtDy4.png"}
           alt="Yaya Logo"
-          style={{ height: isMobile ? 40 : 60 }} // Mindre logotyp på små skärmar
+          style={{ height: window.innerWidth <= 820 ? 40 : 60 }} // Mindre logotyp på små skärmar
         />
       </Box>
 
-      {/* Navigationslänkar */}
+      {/* Navigationslänkar (endast för större skärmar) */}
       <Box
         sx={{
-          display: "flex",
-          paddingY: { xs: 1, md: 3 }, // Mindre padding på små skärmar
-          gap: { xs: 2, md: 6 }, // Mindre gap mellan länkar på små skärmar
+          display: { xs: "none", md: "flex" },
+          paddingY: { xs: 1, md: 3 },
+          gap: { xs: 2, md: 6 },
           justifyContent: "center",
         }}
       >
@@ -48,8 +65,7 @@ export default function Header(): JSX.Element {
         >
           <Heading sx={{ fontSize: { xs: 20, md: 36 }, color: "#363434" }}>
             Kontakt
-          </Heading>{" "}
-          {/* Mindre textstorlek */}
+          </Heading>
         </Link>
         <Link
           sx={{
@@ -72,12 +88,17 @@ export default function Header(): JSX.Element {
       </Box>
 
       {/* Menyikoner */}
-      <Box
-        sx={{
+      <div
+        onClick={() => {
+          console.log("Meny ikoner klickad"); // För felsökning
+          setDrawerOpen(true);
+        }}
+        style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          paddingRight: { xs: 2, md: 10 }, // Mindre padding på små skärmar
+          paddingRight: "16px", // Sätt standardpadding
+          cursor: "pointer",
         }}
       >
         <Box
@@ -98,7 +119,10 @@ export default function Header(): JSX.Element {
             transform: "rotate(-8deg)",
           }}
         />
-      </Box>
+      </div>
+
+      {/* Drawer */}
+      <DrawerComponent drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
     </Box>
   );
 }
