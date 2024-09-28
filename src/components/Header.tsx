@@ -15,7 +15,7 @@ export default function Header(): JSX.Element {
         justifyContent: "space-between",
         width: "100%",
         backgroundColor: "#F7F7F7",
-        paddingY: { xs: 1, md: 2 }, // Mindre padding på små skärmar
+        paddingY: { xs: 1, md: 1 }, // Mindre padding på små skärmar
       }}
       component={"header"}
     >

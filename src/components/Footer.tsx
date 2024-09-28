@@ -26,12 +26,12 @@ export default function Footer() {
     >
       {/* Logotyp */}
       <Box
-        sx={{ paddingX: 4, flex: 1, display: "flex", justifyContent: "center" }}
+        sx={{ paddingX: 6, flex: 1, display: "flex", justifyContent: "start" }}
       >
         <img
           src={"https://i.imgur.com/1MzhvyL.png"}
           alt="Yaya Logo"
-          style={{ height: isMobile ? 70 : 100 }} // Mindre logotyp på små skärmar
+          style={{ height: isMobile ? 70 : 90 }} // Mindre logotyp på små skärmar
         />
       </Box>
 
@@ -66,10 +66,12 @@ export default function Footer() {
             >
               Emelie Svernhed
             </Texting>
-            <TextingATYP sx={{ color: "#F7F7F7" }}>
+            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
               emelie@yayamedia.se
             </TextingATYP>
-            <TextingATYP sx={{ color: "#F7F7F7" }}>070-7 46 06 69</TextingATYP>
+            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
+              070-7 46 06 69
+            </TextingATYP>
           </Box>
 
           {/* Åsa Kontaktuppgifter */}
@@ -84,10 +86,12 @@ export default function Footer() {
             >
               Åsa Kjellberg
             </Texting>
-            <TextingATYP sx={{ color: "#F7F7F7" }}>
+            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
               asa@yayamedia.se
             </TextingATYP>
-            <TextingATYP sx={{ color: "#F7F7F7" }}>073-8 20 14 29</TextingATYP>
+            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
+              073-8 20 14 29
+            </TextingATYP>
           </Box>
         </Box>
       </Box>

@@ -1,5 +1,5 @@
-import { Box } from "@mui/material";
+import PinkComponent from "../components/PinkComponent";
 
 export default function Index() {
-  return <Box></Box>;
+  return <PinkComponent />;
 }
