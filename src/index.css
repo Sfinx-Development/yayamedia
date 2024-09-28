@@ -8,3 +8,13 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: 'AtypRegularVariable';
+  src: url('./fonts/AtypRegularVariable.eot');
+  src: url('./fonts/AtypRegularVariable.woff2') format('woff2'),
+       url('./fonts/AtypRegularVariable.woff') format('woff'),
+       url('./fonts/AtypRegularVariable.eot?#iefix') format('embedded-opentype');
+  font-weight: 100 900; /* Om det är en variabel font */
+  font-style: normal;
+}
