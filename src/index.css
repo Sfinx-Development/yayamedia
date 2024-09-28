@@ -16,5 +16,13 @@ body {
        url('./fonts/AtypRegularVariable.woff') format('woff'),
        url('./fonts/AtypRegularVariable.eot?#iefix') format('embedded-opentype');
   font-weight: 100 900; /* Om det är en variabel font */
-  font-style: normal;
+  font-style: light;
 }
+
+@font-face {
+  font-family: 'H3'; /* Byt ut 'DinFont' mot namnet du vill använda */
+  src: url('./fonts/TestDomaineDisplay-Semibold-BF66174a224449e.otf') format('opentype'); /* Justera sökvägen till din .otf-fil */
+  font-weight: light; /* Ange tyngd om det behövs */
+  font-style: normal; /* Ange stil om det behövs */
+}
+
