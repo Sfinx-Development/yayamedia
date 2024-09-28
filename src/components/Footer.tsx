@@ -19,12 +19,15 @@ export default function Footer() {
         width: "100%",
         backgroundColor: "#363434",
         display: "flex",
-        flexDirection: "row",
+        flexDirection: { xs: "column", md: "row" }, // Ändrar layout baserat på skärmstorlek
         justifyContent: "space-between",
         paddingY: 2,
       }}
     >
-      <Box sx={{ paddingX: 4, flex: 1 }}>
+      {/* Logotyp */}
+      <Box
+        sx={{ paddingX: 4, flex: 1, display: "flex", justifyContent: "center" }}
+      >
         <img
           src={"https://i.imgur.com/1MzhvyL.png"}
           alt="Yaya Logo"
@@ -39,7 +42,8 @@ export default function Footer() {
           flex: 1,
           display: "flex",
           justifyContent: "flex-end", // Flyttar hela blocket till höger
-          marginRight: 5,
+          marginRight: { xs: 0, md: 5 }, // Justera marginal beroende på skärmstorlek
+          marginTop: { xs: 2, md: 0 }, // Lägg till mellanrum ovanför på små skärmar
         }}
       >
         <Box
@@ -47,13 +51,11 @@ export default function Footer() {
             display: "flex",
             flexDirection: "column", // Lägger elementen vertikalt
             alignItems: "flex-start", // Justerar till vänster
-            gap: 4, // Mellanrum mellan Emelie och Åsa
+            gap: 2, // Justera mellanrum mellan Emelie och Åsa
           }}
         >
           {/* Emelie Kontaktuppgifter */}
           <Box sx={{ textAlign: "left" }}>
-            {" "}
-            {/* All text justerad till vänster */}
             <Texting
               sx={{
                 color: "#F7F7F7",
@@ -72,8 +74,6 @@ export default function Footer() {
 
           {/* Åsa Kontaktuppgifter */}
           <Box sx={{ textAlign: "left" }}>
-            {" "}
-            {/* All text justerad till vänster */}
             <Texting
               sx={{
                 color: "#F7F7F7",
