@@ -18,7 +18,12 @@ export default function PinkComponent() {
         background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
         display: "flex",
         justifyContent: "center",
-        paddingY: { xs: 6, md: 14 }, // Responsiv padding
+        paddingY: { xs: 2, md: 4 },
+        marginTop: "100px", // Justera detta värde till höjden på din header
+        alignItems: "center",
+        position: "fixed", // Gör den fast
+        zIndex: 1, // Viktigt att ha högre än ParallaxWave
+        height: "400px", // Sätt en fast höjd
       }}
     >
       <Box

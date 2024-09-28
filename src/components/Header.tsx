@@ -33,6 +33,8 @@ export default function Header(): JSX.Element {
         alignItems: "center",
         justifyContent: "space-between",
         width: "100%",
+        position: "fixed",
+        height: 100,
         backgroundColor: "#F7F7F7",
         paddingY: { xs: 1, md: 1 }, // Mindre padding på små skärmar
       }}
@@ -99,6 +101,7 @@ export default function Header(): JSX.Element {
           alignItems: "flex-start",
           paddingRight: "16px", // Sätt standardpadding
           cursor: "pointer",
+          marginRight: 30,
         }}
       >
         <Box

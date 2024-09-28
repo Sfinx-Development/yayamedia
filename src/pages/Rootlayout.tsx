@@ -14,6 +14,7 @@ const RootLayout = () => {
         backgroundColor: "red",
         alignItems: "center",
         width: "100%",
+        position: "relative",
         margin: 0,
         padding: 0,
         flexGrow: 1,
