@@ -220,7 +220,55 @@ export default function ParallaxYaya() {
                 du själv.
               </TextingATYP>
             </Box>
-            <Box></Box>
+          </Box>
+          <Box sx={{ marginY: 12, display: "flex" }}>
+            <Box
+              sx={{
+                backgroundColor: "#363434",
+                display: "flex",
+                flexDirection: "row",
+                maxHeight: 150,
+                padding: 4,
+                justifyContent: "space-evenly",
+                width: "100%",
+                position: "relative",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: 1 / 2,
+                }}
+              >
+                <Texting sx={{ fontSize: 30, color: "#B9DCD2" }}>
+                  Rubrik
+                </Texting>
+                <TextingATYP
+                  sx={{ color: "#F7F7F7", fontSize: 16, maxWidth: "70%" }}
+                >
+                  No worries - vi är ju en kommunikationsbyrå. Vi är bra på
+                  annat också. Slå en pling, eller släng iväg ett mejl och
+                  berätta om dina drömmar och visioner. Vi är helt inne på att
+                  förverkliga dom!
+                </TextingATYP>
+              </Box>
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <img
+                  src="https://i.imgur.com/3OPFh2Q.jpeg"
+                  alt="two girls"
+                  height={320}
+                  width={170}
+                  style={{
+                    position: "absolute", // Gör bilden absolut positionerad
+                    bottom: "-10%", // Justera detta värde för att flytta bilden upp eller ner
+                    right: "10%", // Centrera bilden horisontellt
+                    transform: "translateX(-50%)", // Justera så att bilden centreras korrekt
+                    height: "auto", // Håll proportionerna
+                  }}
+                />
+              </Box>
+            </Box>
           </Box>
           <Partners />
         </Box>
