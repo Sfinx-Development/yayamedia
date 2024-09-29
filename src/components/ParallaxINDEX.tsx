@@ -1,6 +1,8 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import Case from "./Case";
 import GreenComponent from "./GreenComponent";
+import Partners from "./Partners";
 import Wave from "./Wave";
 
 export default function ParallaxWave() {
@@ -133,6 +135,8 @@ export default function ParallaxWave() {
             </Box>
           </Box>
           <GreenComponent />
+          <Case />
+          <Partners />
         </Box>
       </Box>
     </Box>
