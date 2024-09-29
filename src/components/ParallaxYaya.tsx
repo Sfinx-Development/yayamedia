@@ -113,7 +113,31 @@ export default function ParallaxYaya() {
               </TextingATYP>
             </Box>
           </Box>
-
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+              justifyContent: "center",
+              gap: 2,
+            }}
+          >
+            <Box
+              sx={{ backgroundColor: "#F3D9DF", padding: 4, borderRadius: 2 }}
+            >
+              <Texting sx={{ fontSize: 20, color: "#363434" }}>
+                Såhär säger Emelie - om Åsa
+              </Texting>
+            </Box>
+            <Box
+              sx={{ backgroundColor: "#B9DCD2", padding: 4, borderRadius: 2 }}
+            >
+              <Texting sx={{ fontSize: 20, color: "#363434" }}>
+                Såhär säger Åsa - om Emelie
+              </Texting>
+            </Box>
+            <Box></Box>
+          </Box>
           <Partners />
         </Box>
       </Box>
