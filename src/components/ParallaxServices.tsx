@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import Case from "./Case";
-import GreenComponent from "./GreenComponent";
+import ConceptDevelopment from "./ConceptDevelopment";
 import PaketScroll from "./PaketScroll";
 import Partners from "./Partners";
 import Wave from "./Wave";
@@ -39,8 +38,7 @@ export default function ParallaxServices() {
           }}
         >
           <PaketScroll />
-          <GreenComponent />
-          <Case />
+          <ConceptDevelopment />
           <Partners />
         </Box>
       </Box>
