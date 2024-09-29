@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import GraphicProfile from "./GraphicProfile";
 import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
 
@@ -13,6 +14,7 @@ export default function PaketScroll() {
     >
       <SocialMedia />
       <Webdesign />
+      <GraphicProfile />
     </Box>
   );
 }
