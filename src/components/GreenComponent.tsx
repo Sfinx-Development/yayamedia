@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography } from "@mui/material";
 
 export default function GreenComponent() {
   const Texting = styled(Typography)`
@@ -15,7 +15,7 @@ export default function GreenComponent() {
     <Box
       sx={{
         width: "100%",
-        background: "linear-gradient(to top, #B9DCD2, #90C9D3)",
+        background: "#B9DCD2",
         display: "flex",
         justifyContent: "center",
       }}
@@ -24,33 +24,64 @@ export default function GreenComponent() {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "column" },
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          maxWidth: 900,
+          //   justifyContent: "space-between",
+          alignItems: "start",
+          maxWidth: 500,
           width: "100%",
         }}
       >
-        <Texting sx={{ fontSize: { xs: 40, md: 80 }, color: "#363434" }}>
-          Yttepytteliten.
-        </Texting>
-        <Texting sx={{ fontSize: { xs: 30, md: 50 }, color: "#363434" }}>
-          Vår byrå - inte vår vision.
+        <Texting
+          sx={{ fontSize: { xs: 20, md: 40 }, color: "#2D6555", marginTop: 10 }}
+        >
+          Yaya, vem är hon egentligen?
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 16, md: 20 },
+            fontSize: { xs: 16, md: 18 },
             fontWeight: "lighter",
             color: "#363434",
             flexWrap: "wrap",
-            maxWidth: 900,
+            maxWidth: 1000,
             marginTop: 1,
           }}
         >
-          Vi är en mindre reklambyrå på två som brinner för kreativt skapande.
-          Värdesätter du en personlig och nära kontakt, är Yaya media rätt för
-          dig. Vi ses över en kaffe, snackar gött och utvecklar strategier som
-          förverkligar dina visioner.
+          Ja, vem är hon? Yaya finns i oss båda, på olika sätt. Hon är liksom en
+          del av vilka vi är. Kreatören i oss. Hon som får trist och platt att
+          spraka. Hon som kan sätta färg på världen. Och hon finns i oss båda,
+          på olika sätt.
         </TextingATYP>
+        <TextingATYP
+          sx={{
+            fontSize: { xs: 16, md: 18 },
+            fontWeight: "lighter",
+            color: "#363434",
+            flexWrap: "wrap",
+            maxWidth: 1000,
+            marginY: 2,
+          }}
+        >
+          Vi är Yaya och Yaya är oss.
+        </TextingATYP>
+        <Button
+          sx={{
+            backgroundColor: "#2D6555",
+            marginTop: 1,
+            width: "40%",
+            color: "#F7F7F7",
+            borderRadius: 2,
+            paddingY: 1,
+            textTransform: "none",
+          }}
+        >
+          <Texting sx={{ fontSize: 18 }}>Om oss</Texting>
+        </Button>
+      </Box>
+      <Box sx={{}}>
+        <img
+          src="https://i.imgur.com/6aWnJLD.png"
+          alt="two girls"
+          height="500px"
+        />
       </Box>
     </Box>
   );
