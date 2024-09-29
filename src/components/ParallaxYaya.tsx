@@ -6,7 +6,7 @@ import GreenComponent from "./GreenComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
-export default function ParallaxWave() {
+export default function ParallaxYaya() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
   useEffect(() => {

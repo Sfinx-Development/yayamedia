@@ -75,7 +75,7 @@ export default function Header(): JSX.Element {
             textDecoration: "none",
             color: "#363434",
           }}
-          href="/about"
+          href="/yaya"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Yaya</Heading>
         </Link>
