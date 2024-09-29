@@ -47,7 +47,7 @@ export default function Webdesign() {
         sx={{
           backgroundColor: "#F7F7F7",
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "row", md: "row" },
           paddingBottom: { xs: 5, md: 10 },
           margin: { xs: 2, md: 0 },
           //   height: "100%",

@@ -48,7 +48,7 @@ export default function GraphicProfile() {
         sx={{
           backgroundColor: "#F7F7F7",
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "row", md: "row" },
           paddingBottom: { xs: 5, md: 10 },
           margin: { xs: 2, md: 0 },
           //   height: "100%",
@@ -71,25 +71,25 @@ export default function GraphicProfile() {
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             Klick
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Tröttnat på loggan? Vi gör om befintlig logotyp, eller levererar en
             helt ny om så önskas.
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             10 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#B8DCD2", fontSize: 14 }}>
+          <TextingATYP sx={{ color: "#B8DCD2", fontSize: 13 }}>
             Ex. moms
           </TextingATYP>
 
           <Texting sx={{ color: "#B8DCD2", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Logotyp i leverans av png, jpg och eps
           </TextingATYP>
         </Box>
@@ -107,7 +107,7 @@ export default function GraphicProfile() {
           <Texting sx={{ fontSize: 30, paddingTop: 2, color: "#2D6555" }}>
             Klack
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Du inser att du behöver mer än bara en logga. Du vill ha grafiska
             riktlinjer att följa, så att ditt företag känns igen på alla
             platser.
@@ -115,22 +115,22 @@ export default function GraphicProfile() {
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             25 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>Ex. moms</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>Ex. moms</TextingATYP>
           <Texting sx={{ fontSize: 14, paddingTop: 2, color: "#2D6555" }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Logotyp (leverans i png, jpg och eps)
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Favicon</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Favicon</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Typografi och riktlinjer för hur det ska användas
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Färger i RGB och Hex-kod
           </TextingATYP>
         </Box>
