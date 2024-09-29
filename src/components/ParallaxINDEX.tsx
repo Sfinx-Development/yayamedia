@@ -7,7 +7,7 @@ import Wave from "./Wave";
 
 export default function ParallaxWave() {
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  const isMobile = window.innerWidth <= 820;
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -21,7 +21,7 @@ export default function ParallaxWave() {
   }, []);
 
   const Texting = styled(Typography)`
-    font-family: "H2", sans-serif;
+    font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
@@ -35,19 +35,17 @@ export default function ParallaxWave() {
       sx={{
         position: "relative",
         width: "100%",
-        minHeight: "100vh", // Höjd för att täcka hela skärmen
+        minHeight: "100vh",
         overflowX: "hidden",
-        backgroundColor: "#F7F7F7", // Bakgrundsfärg under vågorna
+        backgroundColor: "#F7F7F7",
       }}
     >
-      {/* Innehåll */}
       <Box
         sx={{
           position: "absolute",
           width: "100%",
           paddingY: 10,
-          //   height: "100%",
-          zIndex: 3, // Se till att in
+          zIndex: 3,
         }}
       >
         <Wave />
@@ -55,13 +53,9 @@ export default function ParallaxWave() {
           sx={{
             backgroundColor: "#F7F7F7",
             margin: 0,
-            // height: "100%",
             position: "absolute",
-            // padding: 2,
-            // height: "100%",
             width: "100%",
-            //   height: "100%",
-            zIndex: 3, // Se till att in
+            zIndex: 3,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -70,26 +64,33 @@ export default function ParallaxWave() {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", md: "row" },
               justifyContent: "center",
             }}
           >
             <Box
               sx={{
                 backgroundColor: "#F7F7F7",
-                margin: 0,
+                // margin: 0,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-end",
-                paddingBottom: 20,
+                paddingBottom: { xs: 5, md: 20 },
+                margin: { xs: 2, md: 0 },
               }}
             >
-              <Texting sx={{ fontSize: 45, color: "#363434", marginBottom: 2 }}>
+              <Texting
+                sx={{
+                  fontSize: { xs: 35, md: 45 },
+                  color: "#363434",
+                  marginBottom: 2,
+                }}
+              >
                 Slut på moves?
               </Texting>
               <TextingATYP
                 sx={{
-                  width: 450,
+                  width: { xs: 320, md: 450 },
                 }}
               >
                 Det brusar högt där ute. Att hitta sin unika rytm bland
@@ -101,7 +102,7 @@ export default function ParallaxWave() {
               </TextingATYP>
               <TextingATYP
                 sx={{
-                  width: 450,
+                  width: { xs: 320, md: 450 },
                   marginTop: 2,
                 }}
               >
@@ -124,8 +125,23 @@ export default function ParallaxWave() {
                 <Texting sx={{ fontSize: 18 }}>Våra tjänster</Texting>
               </Button>
             </Box>
-            <Box sx={{ marginTop: 1 }}>
-              <video width="640" height="400" autoPlay loop muted>
+            <Box
+              sx={{
+                marginTop: { xs: 0, md: 2 },
+                backgroundColor: "#F7F7F7",
+                padding: 0,
+                margin: 0,
+                display: "flex",
+                alignItems: "start",
+              }}
+            >
+              <video
+                width={isMobile ? "320" : "500"}
+                // height="400"
+                autoPlay
+                loop
+                muted
+              >
                 <source
                   src="https://i.imgur.com/5yECUKT.mp4"
                   type="video/mp4"

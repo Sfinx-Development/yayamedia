@@ -19,6 +19,7 @@ export default function PinkComponent() {
         display: "flex",
         justifyContent: "center",
         paddingY: { xs: 2, md: 4 },
+        paddingX: { xs: 1, md: 0 },
         marginTop: "100px", // Justera detta värde till höjden på din header
         marginBottom: 200,
         alignItems: "center",

@@ -2,15 +2,15 @@ import React from "react";
 
 const Wave: React.FC = () => {
   const waveColor = "#F7F7F7"; // Färgen på vågorna
-
+  const isMobile = window.innerWidth <= 820;
   return (
     <svg
       width="100%"
-      height="100vh" // Bestäm en höjd så att vågen blir synlig
+      height={isMobile ? "80vh" : "105vh"} // Bestäm en höjd så att vågen blir synlig
       viewBox="0 0 100 100" // Använd en vy för att passa SVG-innehållet
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ display: "block" }}
+      style={{ display: "block", margin: 0 }}
     >
       {/* Enkel path för tre toppar */}
       <path
