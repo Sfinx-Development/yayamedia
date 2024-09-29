@@ -17,21 +17,24 @@ export default function GreenComponent() {
         width: "100%",
         background: "#B9DCD2",
         display: "flex",
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
+        paddingY: { xs: 2, md: 4 },
+        paddingX: { xs: 1, md: 0 },
       }}
     >
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "column" },
+          flexDirection: "column",
           //   justifyContent: "space-between",
           alignItems: "start",
-          maxWidth: 500,
+          maxWidth: { xs: 300, md: 500 },
           width: "100%",
         }}
       >
         <Texting
-          sx={{ fontSize: { xs: 20, md: 40 }, color: "#2D6555", marginTop: 10 }}
+          sx={{ fontSize: { xs: 30, md: 40 }, color: "#2D6555", marginTop: 10 }}
         >
           Yaya, vem är hon egentligen?
         </Texting>

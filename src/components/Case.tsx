@@ -1,6 +1,8 @@
 import { Box, styled, Typography } from "@mui/material";
 
 export default function Case() {
+  const isMobile = window.innerWidth <= 820;
+
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -24,7 +26,7 @@ export default function Case() {
     >
       <Texting
         sx={{
-          fontSize: 40,
+          fontSize: { xs: 30, md: 40 },
           color: "#363434",
           marginTop: 12,
           marginBottom: 5,
@@ -36,7 +38,7 @@ export default function Case() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "center",
           gap: 0.1,
         }}
@@ -44,12 +46,12 @@ export default function Case() {
         <img
           src="https://i.imgur.com/LsyTFZT.png"
           alt="picture of teip"
-          height="500px"
+          height={isMobile ? "90%" : "500px"}
         />
         <img
           src="https://i.imgur.com/nRLImCB.png"
           alt="picture of teip"
-          height="500px"
+          height={isMobile ? "90%" : "500px"}
         />
       </Box>
     </Box>

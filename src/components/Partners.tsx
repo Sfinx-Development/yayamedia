@@ -25,7 +25,7 @@ export default function Partners() {
     >
       <Texting
         sx={{
-          fontSize: 40,
+          fontSize: { xs: 30, md: 40 },
           color: "#363434",
           marginTop: 12,
           marginBottom: 5,
@@ -37,7 +37,7 @@ export default function Partners() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "center",
           gap: 0.1,
         }}
@@ -45,7 +45,7 @@ export default function Partners() {
         <img
           src="https://i.imgur.com/5Fk6tu4.png"
           alt="Logo of zeroett"
-          height="130px"
+          height={"130px"}
         />
         <img
           src="https://i.imgur.com/CVKKnXu.png"

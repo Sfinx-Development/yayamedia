@@ -40,11 +40,12 @@ export default function ParallaxWave() {
         backgroundColor: "#F7F7F7",
       }}
     >
+      {/* paddingen här har med vågen att göra */}
       <Box
         sx={{
           position: "absolute",
           width: "100%",
-          paddingY: 10,
+          paddingY: { xs: 30, md: 10 },
           zIndex: 3,
         }}
       >
