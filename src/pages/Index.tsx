@@ -18,7 +18,7 @@ export default function Index() {
     >
       <PinkComponent />
       {/* ParallaxWave kommer att skrolla upp direkt efter PinkComponent */}
-      <Box sx={{ width: "100%", position: "relative", marginTop: "500px" }}>
+      <Box sx={{ width: "100%", position: "relative" }}>
         {/* MarginTop är nu justerat för att matcha höjden på PinkComponent */}
         <ParallaxWave />
       </Box>

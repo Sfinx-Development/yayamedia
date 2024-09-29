@@ -6,7 +6,7 @@ const Wave: React.FC = () => {
   return (
     <svg
       width="100%"
-      height="200px" // Bestäm en höjd så att vågen blir synlig
+      height="100vh" // Bestäm en höjd så att vågen blir synlig
       viewBox="0 0 100 100" // Använd en vy för att passa SVG-innehållet
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -15,17 +15,18 @@ const Wave: React.FC = () => {
       {/* Enkel path för tre toppar */}
       <path
         d={`
-    M 0 60           
-    Q 10 30, 20 60   
-    T 40 40          
-    T 60 50        
-    T 80 30         
-    L 100 20        
-    L 100 100       
+    M 0 80           
+    Q 30 60, 60 70   
+    Q 90 80, 120 50   
+    Q 150 60, 180 40
+    Q 210 60, 240 30   
+    Q 270 50, 300 20 
+    L 320 0
+    L 320 100       
     L 0 100          
     Z                
   `}
-        fill={waveColor} /* Fyller vågorna med färgen */
+        fill={waveColor}
       />
     </svg>
   );
