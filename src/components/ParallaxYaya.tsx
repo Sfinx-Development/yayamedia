@@ -285,6 +285,111 @@ export default function ParallaxYaya() {
               </Box>
             </Box>
           </Box>
+          {/* bilderna till vardera med kontakt uppgifeter */}
+          <Box
+            sx={{
+              display: "flex",
+              height: "100%",
+              flexDirection: "row",
+              gap: 4,
+              marginTop: 10,
+            }}
+          >
+            <Box
+              sx={{
+                width: "80%",
+                height: 300,
+                backgroundImage: `url("https://i.imgur.com/Vi6rD7y.png")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "center",
+                color: "white",
+                marginLeft: { xs: 2, md: 8 },
+              }}
+            >
+              <Box
+                sx={{
+                  backgroundColor: "rgba(247, 247, 247, 0.9)",
+                  width: "100%",
+                  color: "#363434",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Texting sx={{ fontSize: { xs: 20, md: 30 } }}>
+                  Emelie Svernhed
+                </Texting>
+                <TextingATYP>COPYWRITER/CREATIVE DIRECTOR</TextingATYP>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: 1,
+                    padding: 1,
+                  }}
+                >
+                  <img
+                    height={24}
+                    src="https://i.imgur.com/DN2uTbx.png"
+                    alt="email-icon"
+                  />
+                  <TextingATYP>emelie@yayamedia.se</TextingATYP>
+                </Box>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                width: "80%",
+                height: "auto",
+                backgroundImage: `url("https://i.imgur.com/vjuekTb.png")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "center",
+                color: "white",
+                marginRight: { xs: 2, md: 8 },
+              }}
+            >
+              <Box
+                sx={{
+                  backgroundColor: "rgba(247, 247, 247, 0.9)",
+                  width: "100%",
+                  color: "#363434",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <Texting sx={{ fontSize: { xs: 20, md: 30 } }}>
+                  Åsa Kjellberg
+                </Texting>
+                <TextingATYP>ART DIRECTOR/PROJEKTLEDARE</TextingATYP>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: 1,
+                    padding: 1,
+                  }}
+                >
+                  <img
+                    height={24}
+                    src="https://i.imgur.com/DN2uTbx.png"
+                    alt="email-icon"
+                  />
+                  <TextingATYP>asa@yayamedia.se</TextingATYP>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
           <Partners />
         </Box>
       </Box>
