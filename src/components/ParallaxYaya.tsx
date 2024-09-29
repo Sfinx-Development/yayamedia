@@ -133,7 +133,7 @@ export default function ParallaxYaya() {
                 position: "absolute",
                 zIndex: 2,
                 left: { xs: 50, md: 200 },
-                top: { xs: 110, md: 390 },
+                top: { xs: 110, md: 370 },
               }}
             >
               <img
@@ -182,7 +182,7 @@ export default function ParallaxYaya() {
                 position: "absolute",
                 zIndex: 2,
                 right: { xs: 50, md: 200 },
-                top: { xs: 110, md: 390 },
+                top: { xs: 110, md: 370 },
               }}
             >
               <img
@@ -338,7 +338,14 @@ export default function ParallaxYaya() {
                     src="https://i.imgur.com/DN2uTbx.png"
                     alt="email-icon"
                   />
-                  <TextingATYP>emelie@yayamedia.se</TextingATYP>
+                  <a
+                    href="mailto:emelie@yayamedia.se"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <TextingATYP sx={{ color: "#363434" }}>
+                      emelie@yayamedia.se
+                    </TextingATYP>
+                  </a>
                 </Box>
               </Box>
             </Box>
@@ -385,7 +392,14 @@ export default function ParallaxYaya() {
                     src="https://i.imgur.com/DN2uTbx.png"
                     alt="email-icon"
                   />
-                  <TextingATYP>asa@yayamedia.se</TextingATYP>
+                  <a
+                    href="mailto:emelie@yayamedia.se"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <TextingATYP sx={{ color: "#363434" }}>
+                      asa@yayamedia.se
+                    </TextingATYP>
+                  </a>
                 </Box>
               </Box>
             </Box>
