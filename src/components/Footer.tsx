@@ -19,10 +19,14 @@ export default function Footer() {
         width: "100%",
         backgroundColor: "#363434",
         display: "flex",
+        bottom: 0,
+        height: 200,
         flexDirection: { xs: "column", md: "row" }, // Ändrar layout baserat på skärmstorlek
         justifyContent: "space-between",
         paddingY: 2,
+        zIndex: 3,
       }}
+      component={"footer"}
     >
       {/* Logotyp */}
       <Box

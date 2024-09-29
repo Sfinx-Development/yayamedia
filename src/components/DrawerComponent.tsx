@@ -39,7 +39,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
     >
       <Box
         sx={{
-          width: 250,
+          width: { xs: "100%", sm: 260 }, // Full bredd på små skärmar, 250px på större
           padding: 2,
           backgroundColor: "#F7F7F7",
           height: "100%",
@@ -56,6 +56,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             alignItems: "flex-end",
             paddingBottom: 4,
             marginTop: 4,
+            marginRight: 5,
           }}
         >
           <CrossLine
@@ -79,49 +80,57 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           </Atyp>
         </Box>
         <Link href="/case" style={{ textDecoration: "none", color: "#363434" }}>
-          <Texting sx={{ paddingY: 2, fontSize: 20 }}>Case</Texting>
+          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20 } }}>
+            Case
+          </Texting>
         </Link>
         <Link
           href="/tjanster"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Texting sx={{ fontSize: 20, paddingBottom: 0.5 }}>Tjänster</Texting>
+          <Texting sx={{ fontSize: { xs: 18, sm: 20 }, paddingBottom: 0.5 }}>
+            Tjänster
+          </Texting>
         </Link>
         <Link
           href="/tjanster/socialamedier"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: 16 }}>Sociala medier</Atyp>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Sociala medier</Atyp>
         </Link>
         <Link
           href="/tjanster/webdesign"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: 16 }}>Webdesign</Atyp>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Webdesign</Atyp>
         </Link>
         <Link
           href="/tjanster/konceptutveckling"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: 16 }}>Konceptutveckling</Atyp>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Konceptutveckling</Atyp>
         </Link>
         <Link
           href="/tjanster/copywriting"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: 16 }}>Copywriting</Atyp>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Copywriting</Atyp>
         </Link>
         <Link
           href="/tjanster/grafisk-profil"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ paddingBottom: 0.5, fontSize: 16 }}>Grafisk profil</Atyp>
+          <Atyp sx={{ paddingBottom: 0.5, fontSize: { xs: 14, sm: 16 } }}>
+            Grafisk profil
+          </Atyp>
         </Link>
         <Link
           href="/om-oss"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Texting sx={{ paddingY: 2, fontSize: 20 }}>Om oss</Texting>
+          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20 } }}>
+            Om oss
+          </Texting>
         </Link>
       </Box>
     </Drawer>
