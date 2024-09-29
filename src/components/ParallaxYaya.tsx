@@ -123,18 +123,42 @@ export default function ParallaxYaya() {
             }}
           >
             <Box
-              sx={{ backgroundColor: "#F3D9DF", padding: 4, borderRadius: 2 }}
+              sx={{
+                backgroundColor: "#F3D9DF",
+                padding: 5,
+                borderRadius: 2,
+                flex: 1 / 3,
+              }}
             >
-              <Texting sx={{ fontSize: 20, color: "#363434" }}>
+              <Texting sx={{ fontSize: 20, color: "#363434", marginBottom: 2 }}>
                 Såhär säger Emelie - om Åsa
               </Texting>
+              <TextingATYP>
+                Och lektioner i kommunikation, förstås. Ett fenomen som kan få
+                vilket barn som helst att på en millisekund gå från pirrigt
+                förväntansfull till besviken. Vi minimerar helt enkelt risken
+                för besvikelse, och erbjuder bara hårda paket på Yaya.
+                Innehållet då? Det bestämmer du själv.
+              </TextingATYP>
             </Box>
             <Box
-              sx={{ backgroundColor: "#B9DCD2", padding: 4, borderRadius: 2 }}
+              sx={{
+                backgroundColor: "#B9DCD2",
+                padding: 5,
+                borderRadius: 2,
+                flex: 1 / 3,
+              }}
             >
-              <Texting sx={{ fontSize: 20, color: "#363434" }}>
+              <Texting sx={{ fontSize: 20, color: "#363434", marginBottom: 2 }}>
                 Såhär säger Åsa - om Emelie
               </Texting>
+              <TextingATYP>
+                Och lektioner i kommunikation, förstås. Ett fenomen som kan få
+                vilket barn som helst att på en millisekund gå från pirrigt
+                förväntansfull till besviken. Vi minimerar helt enkelt risken
+                för besvikelse, och erbjuder bara hårda paket på Yaya.
+                Innehållet då? Det bestämmer du själv.
+              </TextingATYP>
             </Box>
             <Box></Box>
           </Box>
