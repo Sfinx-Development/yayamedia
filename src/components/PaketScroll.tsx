@@ -1,4 +1,4 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 
 export default function PaketScroll() {
   const isMobile = window.innerWidth <= 820;
@@ -15,87 +15,194 @@ export default function PaketScroll() {
     <Box
       sx={{
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
+        flexDirection: "column",
         justifyContent: "center",
+        paddingBottom: { xs: 5, md: 20 },
       }}
     >
       <Box
         sx={{
           backgroundColor: "#F7F7F7",
-          // margin: 0,
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-end",
-          paddingBottom: { xs: 5, md: 20 },
           margin: { xs: 2, md: 0 },
+          height: "100%",
+          width: "100%",
         }}
       >
         <Texting
           sx={{
-            fontSize: { xs: 35, md: 45 },
+            fontSize: { xs: 35, md: 40 },
+            margin: 0,
+            padding: 0,
             color: "#363434",
-            marginBottom: 2,
           }}
         >
-          Slut på moves?
+          Sociala medier
         </Texting>
         <TextingATYP
           sx={{
-            width: { xs: 320, md: 450 },
+            fontSize: 20,
+            color: "#363434",
+            margin: 0,
+            padding: 0,
           }}
         >
-          Det brusar högt där ute. Att hitta sin unika rytm bland tusentals
-          andra kan vara svårt - vi vet. Men vi vet också hur man skapar
-          autentiskt innehåll. Du vet, sånt vi alla faktiskt frivilligt
-          konsumerar. Ibland är allt som behövs ett enkelt klick. Andra gånger
-          en skarp klack. Och för vissa, ett kraftfullt boom för att verkligen
-          bryta igenom bruset.
+          Paketlösningar
         </TextingATYP>
-        <TextingATYP
-          sx={{
-            width: { xs: 320, md: 450 },
-            marginTop: 2,
-          }}
-        >
-          Oavsett hur du för dig just nu kan du räkna med oss! En fullständig
-          koreografi eller ett par väl valda moves? Upp till dig! Vi erbjuder
-          paketlösningar för det mesta, och anpassar oss alltid efter dina
-          behov.
-        </TextingATYP>
-        <Button
-          sx={{
-            backgroundColor: "#363434",
-            marginTop: 3,
-            maxWidth: "40%",
-            color: "#F7F7F7",
-            borderRadius: 2,
-            paddingY: 1,
-            textTransform: "none",
-          }}
-        >
-          <Texting sx={{ fontSize: 18 }}>Våra tjänster</Texting>
-        </Button>
       </Box>
       <Box
         sx={{
-          marginTop: { xs: 0, md: 2 },
-          backgroundColor: "#F7F7F7",
-          padding: 0,
-          margin: 0,
+          backgroundColor: "blue",
           display: "flex",
-          alignItems: "start",
+          flexDirection: { xs: "column", md: "row" },
+          paddingBottom: { xs: 5, md: 10 },
+          margin: { xs: 2, md: 0 },
+          height: "100%",
+          justifyContent: "center",
+          width: "100%",
+          gap: 2,
         }}
       >
-        <video
-          width={isMobile ? "320" : "500"}
-          // height="400"
-          autoPlay
-          loop
-          muted
+        <Box
+          sx={{
+            borderRadius: 2,
+            backgroundColor: "#B9BCD2",
+            width: 320,
+            color: "#363434",
+            padding: 2,
+            marginTop: 15,
+          }}
         >
-          <source src="https://i.imgur.com/5yECUKT.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            Klick
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            Du vet vad du vill, men har svårt att få fram rätt känsla. Då
+            behöver du en klick!
+          </TextingATYP>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            4500:-/mån
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+          </TextingATYP>
+          <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
+            Vad får du?
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+            -Uppstartsmöte
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>-Tre inlägg per månad</TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>-Passande copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            -Enklare redigering på befintligt bildmaterial
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            -Publicering i en kanal
+          </TextingATYP>
+
+          <TextingATYP
+            sx={{ fontSize: 12, textAlign: "center", paddingTop: 2 }}
+          >
+            Klick erbjuds också som ett engångspaket. Då till en kostnad på
+            5500:-
+          </TextingATYP>
+        </Box>
+
+        <Box
+          sx={{
+            borderRadius: 2,
+            backgroundColor: "#B9BCD2",
+            width: 350,
+            color: "#363434",
+            padding: 2,
+
+            marginTop: 10,
+          }}
+        >
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            Klick
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            Du vet vad du vill, men har svårt att få fram rätt känsla. Då
+            behöver du en klick!
+          </TextingATYP>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            4500:-/mån
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+          </TextingATYP>
+          <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
+            Vad får du?
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+            -Uppstartsmöte
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>-Tre inlägg per månad</TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>-Passande copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            -Enklare redigering på befintligt bildmaterial
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            -Publicering i en kanal
+          </TextingATYP>
+
+          <TextingATYP
+            sx={{ fontSize: 12, textAlign: "center", paddingTop: 2 }}
+          >
+            Klick erbjuds också som ett engångspaket. Då till en kostnad på
+            5500:-
+          </TextingATYP>
+        </Box>
+
+        <Box
+          sx={{
+            borderRadius: 2,
+            backgroundColor: "#B9BCD2",
+            width: 350,
+            color: "#363434",
+            padding: 2,
+
+            marginTop: 5,
+          }}
+        >
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            Klick
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            Du vet vad du vill, men har svårt att få fram rätt känsla. Då
+            behöver du en klick!
+          </TextingATYP>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            4500:-/mån
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+          </TextingATYP>
+          <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
+            Vad får du?
+          </Texting>
+          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+            -Uppstartsmöte
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>-Tre inlägg per månad</TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>-Passande copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            -Enklare redigering på befintligt bildmaterial
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: 14 }}>
+            -Publicering i en kanal
+          </TextingATYP>
+
+          <TextingATYP
+            sx={{ fontSize: 12, textAlign: "center", paddingTop: 2 }}
+          >
+            Klick erbjuds också som ett engångspaket. Då till en kostnad på
+            5500:-
+          </TextingATYP>
+        </Box>
       </Box>
     </Box>
   );
