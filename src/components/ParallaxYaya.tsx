@@ -94,7 +94,7 @@ export default function ParallaxYaya() {
               <TextingATYP
                 sx={{
                   marginTop: 2,
-                  maxWidth: { xs: "90%", md: "60%" },
+                  maxWidth: { xs: "90%", md: "70%" },
                 }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
@@ -124,7 +124,32 @@ export default function ParallaxYaya() {
           >
             <Box
               sx={{
+                borderRadius: "50%",
+                width: 100,
+                height: 100,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "absolute",
+                zIndex: 2,
+                left: { xs: 50, md: 200 },
+                top: { xs: 110, md: 390 },
+              }}
+            >
+              <img
+                src="https://i.imgur.com/j10A3GX.png"
+                alt="guy dancing on hands"
+                style={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
+            </Box>
+            <Box
+              sx={{
                 backgroundColor: "#F3D9DF",
+                position: "relative",
                 padding: 5,
                 borderRadius: 2,
                 flex: 1 / 3,
@@ -138,14 +163,44 @@ export default function ParallaxYaya() {
                 vilket barn som helst att på en millisekund gå från pirrigt
                 förväntansfull till besviken. Vi minimerar helt enkelt risken
                 för besvikelse, och erbjuder bara hårda paket på Yaya.
-                Innehållet då? Det bestämmer du själv.
+                Innehållet då? Det bestämmer du själv. Och lektioner i
+                kommunikation, förstås. Ett fenomen som kan få vilket barn som
+                helst att på en millisekund gå från pirrigt förväntansfull till
+                besviken. Vi minimerar helt enkelt risken för besvikelse, och
+                erbjuder bara hårda paket på Yaya. Innehållet då? Det bestämmer
+                du själv.
               </TextingATYP>
+            </Box>
+            <Box
+              sx={{
+                borderRadius: "50%",
+                width: 100,
+                height: 100,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                position: "absolute",
+                zIndex: 2,
+                right: { xs: 50, md: 200 },
+                top: { xs: 110, md: 390 },
+              }}
+            >
+              <img
+                src="https://i.imgur.com/KcCeP5O.png"
+                alt="guy dancing on hands"
+                style={{
+                  borderRadius: "50%",
+                  width: "100%",
+                  height: "100%",
+                }}
+              />
             </Box>
             <Box
               sx={{
                 backgroundColor: "#B9DCD2",
                 padding: 5,
                 borderRadius: 2,
+                position: "relative",
                 flex: 1 / 3,
               }}
             >
@@ -157,7 +212,12 @@ export default function ParallaxYaya() {
                 vilket barn som helst att på en millisekund gå från pirrigt
                 förväntansfull till besviken. Vi minimerar helt enkelt risken
                 för besvikelse, och erbjuder bara hårda paket på Yaya.
-                Innehållet då? Det bestämmer du själv.
+                Innehållet då? Det bestämmer du själv. Och lektioner i
+                kommunikation, förstås. Ett fenomen som kan få vilket barn som
+                helst att på en millisekund gå från pirrigt förväntansfull till
+                besviken. Vi minimerar helt enkelt risken för besvikelse, och
+                erbjuder bara hårda paket på Yaya. Innehållet då? Det bestämmer
+                du själv.
               </TextingATYP>
             </Box>
             <Box></Box>
