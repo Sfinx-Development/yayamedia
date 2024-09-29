@@ -21,6 +21,7 @@ export default function ConceptDevelopment() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        position: "relative",
         flexDirection: "column",
         height: "100%",
       }}
@@ -49,9 +50,35 @@ export default function ConceptDevelopment() {
 
       <Box
         sx={{
+          backgroundColor: "#F3D9DF", // Rosa bakgrund
+          borderRadius: "50%", // Gör boxen rund
+          width: 70, // Justera bredden för cirkeln
+          height: 70, // Justera höjden för cirkeln
+          display: "flex", // Använd flexbox
+          alignItems: "center", // Centrera vertikalt
+          justifyContent: "center", // Centrera horisontellt
+          position: "absolute",
+          zIndex: 2,
+          right: 200, // Justera till vänster från kanten
+          top: 90, // Justera till toppen från botten
+        }}
+      >
+        <img
+          src="https://i.imgur.com/6aWnJLD.png"
+          alt="guy dancing on hands"
+          style={{
+            borderRadius: "50%", // Gör bilden rund (om det behövs)
+            width: "70%", // Gör bilden proportionell till cirkeln
+            height: "70%", // Gör bilden proportionell till cirkeln
+          }}
+        />
+      </Box>
+      <Box
+        sx={{
           display: "flex",
           backgroundColor: "#363434",
           padding: 4,
+          position: "relative",
           //   marginX: 10,
           borderRadius: 2,
           width: "90%",
