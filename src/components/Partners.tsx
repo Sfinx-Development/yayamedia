@@ -18,9 +18,41 @@ export default function Partners() {
         background: "#F7F7F7",
         display: "flex",
         justifyContent: "center",
+        flexDirection: "column",
+        height: "100%",
+        paddingBottom: 10,
       }}
     >
-      <Texting>SamarbetsPartners</Texting>
+      <Texting
+        sx={{
+          fontSize: 40,
+          color: "#363434",
+          marginTop: 12,
+          marginBottom: 5,
+          textAlign: "center",
+        }}
+      >
+        Samarbetspartners
+      </Texting>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          gap: 0.1,
+        }}
+      >
+        <img
+          src="https://i.imgur.com/5Fk6tu4.png"
+          alt="Logo of zeroett"
+          height="130px"
+        />
+        <img
+          src="https://i.imgur.com/CVKKnXu.png"
+          alt="Logo of 609"
+          height="130px"
+        />
+      </Box>
     </Box>
   );
 }
