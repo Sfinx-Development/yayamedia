@@ -70,28 +70,28 @@ export default function SocialMedia() {
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             Klick
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Du vet vad du vill, men har svårt att få fram rätt känsla. Då
             behöver du en klick!
           </TextingATYP>
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             4500:-/mån
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Priset gäller löpande avtal, lägsta avtalstid 6 mån.
           </TextingATYP>
           <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Tre inlägg per månad</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Passande copy</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Tre inlägg per månad</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>-Passande copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Enklare redigering på befintligt bildmaterial
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Publicering i en kanal
           </TextingATYP>
 
@@ -116,33 +116,33 @@ export default function SocialMedia() {
           <Texting sx={{ fontSize: 30, paddingTop: 2, color: "#EF3434" }}>
             Klack
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Du vet vad du vill, men har svårt att få fram rätt känsla. Då
             behöver du en klack!
           </TextingATYP>
           <Texting sx={{ fontSize: 25, paddingTop: 2, color: "#EF3434" }}>
             8500:-/mån
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Priset gäller löpande avtal, lägsta avtalstid 6 mån.
           </TextingATYP>
           <Texting sx={{ fontSize: 14, paddingTop: 2, color: "#EF3434" }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Fyra inlägg per månad
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Publicering i två kanaler
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Passande copy</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Passande copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Enklare fotografering inkl. redigering
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Contentplan för hela avtalstiden
           </TextingATYP>
         </Box>
@@ -160,35 +160,35 @@ export default function SocialMedia() {
           <Texting sx={{ color: "#B8DCD2", fontSize: 35, paddingTop: 2 }}>
             Boom!
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             För dig som vill gå all in, och få en tiopoängare direkt!
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             15000:-/mån
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Priset gäller löpande avtal, lägsta avtalstid 6 mån.
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Åtta inlägg per månad
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Publicering i upp till tre kanaler
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Passande copy</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Passande copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Fotografering inkl. redigering
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Contentplan för hela avtalstiden
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Annonsering och analys
           </TextingATYP>
         </Box>

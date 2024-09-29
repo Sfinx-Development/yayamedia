@@ -148,33 +148,33 @@ export default function GraphicProfile() {
           <Texting sx={{ color: "#B8DCD2", fontSize: 35, paddingTop: 2 }}>
             Boom!
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Du går all in direkt och ger ditt bolag de bästa förutsättningarna
             för att ta sin plats på marknaden.
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             60.000:-
           </Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 14 }}>
+          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 13 }}>
             Ex. moms
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Allt som ingår i Klack
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Färger i Pantone</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Färger i Pantone</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Visualisering av logotyp på 6 tillämpningar
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Visitkort</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Bildmáner</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 12 }}>-Visitkort</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>-Bildmáner</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Formgivning av två enheter, tex roll-up/flagga, skylt,
             profilprodukt
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Allt levererat i en brandbook
           </TextingATYP>
         </Box>

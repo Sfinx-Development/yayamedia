@@ -70,29 +70,29 @@ export default function Webdesign() {
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             Klick
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
             sätt.
           </TextingATYP>
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             20 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#2D6555", fontSize: 14 }}>
+          <TextingATYP sx={{ color: "#2D6555", fontSize: 13 }}>
             Ex. moms
           </TextingATYP>
 
           <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Upp till fem undersidor
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Cookie policy</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Cookie policy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Enklare sökordsanalys
           </TextingATYP>
 
@@ -115,7 +115,7 @@ export default function Webdesign() {
           <Texting sx={{ fontSize: 30, paddingTop: 2, color: "#EF3434" }}>
             Klack
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
             sätt, men det kräver lite fler undersidor än vad klick-paketet
             erbjuder..
@@ -123,22 +123,22 @@ export default function Webdesign() {
           <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
             35 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>Ex. moms</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>Ex. moms</TextingATYP>
           <Texting sx={{ fontSize: 14, paddingTop: 2, color: "#EF3434" }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Upp till åtta undersidor
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Cookie policy</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Cookie policy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Enklare sökordsanalys
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-SEO-anpassad copy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>-SEO-anpassad copy</TextingATYP>
           <TextingATYP sx={{ fontSize: 12, textAlign: "start", paddingTop: 2 }}>
             Hemsidan är responsiv och anpassas till desktop, platta eller mobil
             beroende på besökarens referenser.
@@ -158,34 +158,34 @@ export default function Webdesign() {
           <Texting sx={{ color: "#B8DCD2", fontSize: 35, paddingTop: 2 }}>
             Boom!
           </Texting>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             För dig är det viktigt med en unik design. Här specialdesignar vi på
             detaljnivå för att ditt varumärke ska sticka ut, precis så som det.
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             Från 60 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 14 }}>
+          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 13 }}>
             Ex. moms
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Analys av befintlig hemsida
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Upp till 20 specialdesignade undersidor
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>-Cookie policy</TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>-Cookie policy</TextingATYP>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Enklare sökordsanalys
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 14 }}>
+          <TextingATYP sx={{ fontSize: 13 }}>
             -Bildmanér för stillbild och video till hemsidan
           </TextingATYP>
 
