@@ -5,12 +5,6 @@ export default function Partners() {
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
-
-  const TextingATYP = styled(Typography)`
-    font-family: "AtypRegularVariable", sans-serif;
-    font-variation-settings: "wght" 300;
-  `;
-
   return (
     <Box
       sx={{

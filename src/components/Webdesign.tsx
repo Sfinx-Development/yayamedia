@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
 
 export default function Webdesign() {
-  const isMobile = window.innerWidth <= 820;
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;

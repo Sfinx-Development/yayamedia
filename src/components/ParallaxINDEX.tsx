@@ -1,5 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Case from "./Case";
 import GreenComponent from "./GreenComponent";
 import Partners from "./Partners";
@@ -29,7 +30,7 @@ export default function ParallaxWave() {
     font-family: "AtypRegularVariable", sans-serif;
     font-variation-settings: "wght" 300;
   `;
-
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -113,6 +114,9 @@ export default function ParallaxWave() {
                 alltid efter dina behov.
               </TextingATYP>
               <Button
+                onClick={() => {
+                  navigate("/tjanster");
+                }}
                 sx={{
                   backgroundColor: "#363434",
                   marginTop: 3,

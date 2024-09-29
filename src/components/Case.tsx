@@ -8,11 +8,6 @@ export default function Case() {
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
-    font-family: "AtypRegularVariable", sans-serif;
-    font-variation-settings: "wght" 300;
-  `;
-
   return (
     <Box
       sx={{
