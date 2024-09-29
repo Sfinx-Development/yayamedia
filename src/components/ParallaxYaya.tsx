@@ -52,7 +52,7 @@ export default function ParallaxYaya() {
         <Box
           sx={{
             backgroundColor: "#F7F7F7",
-            margin: -2,
+            marginTop: -2,
             position: "absolute",
             width: "100%",
             zIndex: 3,
@@ -260,11 +260,26 @@ export default function ParallaxYaya() {
                   height={320}
                   width={170}
                   style={{
-                    position: "absolute", // Gör bilden absolut positionerad
-                    bottom: "-10%", // Justera detta värde för att flytta bilden upp eller ner
-                    right: "10%", // Centrera bilden horisontellt
-                    transform: "translateX(-50%)", // Justera så att bilden centreras korrekt
-                    height: "auto", // Håll proportionerna
+                    position: "absolute",
+                    bottom: "-10%",
+                    right: "15%",
+                    transform: "translateX(-50%)",
+                    height: "auto",
+                  }}
+                />
+              </Box>
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <img
+                  src="https://i.imgur.com/mtpsyXG.png"
+                  alt="strings in different colors"
+                  //   height={320}
+                  width={650}
+                  style={{
+                    position: "absolute",
+                    bottom: "-135%",
+                    right: "-34%",
+                    transform: "translateX(-50%) rotate(15deg)",
+                    height: "auto",
                   }}
                 />
               </Box>
