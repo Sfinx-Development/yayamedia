@@ -13,6 +13,7 @@ export default function ConceptDevelopment() {
     font-family: "AtypRegularVariable", sans-serif;
     font-variation-settings: "wght" 300;
   `;
+
   return (
     <Box
       sx={{
@@ -24,24 +25,25 @@ export default function ConceptDevelopment() {
         position: "relative",
         flexDirection: "column",
         height: "100%",
+        padding: { xs: 2, md: 0 }, // Justera padding för mobil
       }}
     >
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "100%", padding: { xs: 2, md: 0 } }}>
         <Texting
           sx={{
-            fontSize: { xs: 30, md: 40 },
+            fontSize: { xs: 30, md: 40 }, // Responsiv fontstorlek
             color: "#363434",
-            paddingLeft: 8,
+            paddingLeft: { xs: 0, md: 8 }, // Justera padding för mobil
           }}
         >
           En extra push
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 15, md: 20 },
+            fontSize: { xs: 15, md: 20 }, // Responsiv fontstorlek
             color: "#363434",
             marginBottom: 5,
-            paddingLeft: 8,
+            paddingLeft: { xs: 0, md: 8 }, // Justera padding för mobil
           }}
         >
           Konceptutveckling
@@ -59,8 +61,8 @@ export default function ConceptDevelopment() {
           justifyContent: "center", // Centrera horisontellt
           position: "absolute",
           zIndex: 2,
-          right: 200, // Justera till vänster från kanten
-          top: 90, // Justera till toppen från botten
+          right: { xs: 50, md: 200 }, // Justera till vänster från kanten för mobil
+          top: { xs: 110, md: 90 }, // Justera till toppen från botten för mobil
         }}
       >
         <img
@@ -73,41 +75,60 @@ export default function ConceptDevelopment() {
           }}
         />
       </Box>
+
       <Box
         sx={{
           display: "flex",
           backgroundColor: "#363434",
-          padding: 4,
+          padding: { xs: 2, md: 4 }, // Justera padding för mobil
           position: "relative",
-          //   marginX: 10,
           borderRadius: 2,
           width: "90%",
           justifyContent: "space-between",
+          flexDirection: { xs: "column", md: "row" }, // Ställ in kolumnlayout för mobil
         }}
       >
         <Box
           sx={{
             color: "#B9DCD2",
             display: "flex",
-            flex: 1 / 2,
+            flex: 1,
             flexDirection: "column",
             padding: 2,
           }}
         >
-          <Texting sx={{ fontSize: 20 }}>Konceptutveckling</Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 13, marginTop: 2 }}>
+          <Texting sx={{ fontSize: { xs: 18, md: 20 } }}>
+            Konceptutveckling
+          </Texting>
+          <TextingATYP
+            sx={{
+              color: "#F7F7F7",
+              fontSize: { xs: 12, md: 13 },
+              marginTop: 2,
+            }}
+          >
             Du tänker att du har allt klappat och klart. En trevlig och
             informativ hemsida, levande sociala medier och ett värdefullt
             kontaktnät. Ändå är det som att du inte når riktigt hela vägen fram.
             Då kan konceptutveckling vara något som ger ditt varumärke den extra
             push som krävs.
           </TextingATYP>
-          <Texting sx={{ fontSize: 20, marginTop: 2 }}>Från 80 000:-</Texting>
-          <TextingATYP sx={{ fontSize: 13 }}>Ex. moms</TextingATYP>
+          <Texting sx={{ fontSize: { xs: 18, md: 20 }, marginTop: 2 }}>
+            Från 80 000:-
+          </Texting>
+          <TextingATYP sx={{ fontSize: { xs: 12, md: 13 } }}>
+            Ex. moms
+          </TextingATYP>
           <Texting sx={{ fontSize: 14, marginTop: 4 }}>
             Vad betalar jag för?
           </Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 13, marginTop: 1 }}>
+          <TextingATYP
+            sx={{
+              color: "#F7F7F7",
+              fontSize: { xs: 12, md: 13 },
+              marginTop: 1,
+            }}
+          >
             Exakt vad du betalar för vet vi först när vi förstår varumärkets
             förutsättningar och drömmar. Det skulle kunna landa i ett beslut om
             att det som behövs är en tydlig grafisk manual, eller en
@@ -115,21 +136,29 @@ export default function ConceptDevelopment() {
             strategi?
           </TextingATYP>
         </Box>
+
         <Box
           sx={{
             color: "#B9DCD2",
             display: "flex",
-            flex: 1 / 3,
+            flex: 1,
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "end",
+            alignItems: { xs: "start", md: "end" }, // Justera för mobil
             padding: 2,
           }}
         >
-          <Texting sx={{ fontSize: 40, textAlign: "end" }}>
+          <Texting
+            sx={{
+              fontSize: { xs: 25, md: 40 },
+              textAlign: { xs: "start", md: "end" },
+            }}
+          >
             Hur och vad vill du att din målgrupp ska känna?
           </Texting>
-          <TextingATYP sx={{ textAlign: "end", marginTop: 2 }}>
+          <TextingATYP
+            sx={{ textAlign: { xs: "start", md: "end" }, marginTop: 2 }}
+          >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke
             och din målgrupp.
           </TextingATYP>
