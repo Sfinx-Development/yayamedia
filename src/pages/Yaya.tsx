@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import ParallaxServices from "../components/ParallaxServices";
+import ParallaxYaya from "../components/ParallaxYaya";
 import YellowComponent from "../components/YellowComponent";
 
 export default function Yaya() {
@@ -18,7 +18,7 @@ export default function Yaya() {
     >
       <YellowComponent />
       <Box sx={{ width: "100%", position: "relative" }}>
-        <ParallaxServices />
+        <ParallaxYaya />
       </Box>
     </Box>
   );
