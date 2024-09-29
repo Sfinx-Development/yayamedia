@@ -22,7 +22,6 @@ export default function Index() {
         {/* MarginTop är nu justerat för att matcha höjden på PinkComponent */}
         <ParallaxWave />
       </Box>
-      <PinkComponent />
     </Box>
   );
 }

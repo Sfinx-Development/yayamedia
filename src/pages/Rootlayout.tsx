@@ -24,9 +24,7 @@ export default function RootLayout() {
           width: "100%",
           zIndex: 3,
           position: "relative",
-          minHeight: "1000px",
           alignItems: "center",
-          paddingBottom: 200, // Lägger till padding för att ge plats för foten
         }}
       >
         <Outlet />
