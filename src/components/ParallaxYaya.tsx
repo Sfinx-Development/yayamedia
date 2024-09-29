@@ -6,7 +6,6 @@ import Wave from "./Wave";
 
 export default function ParallaxYaya() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const isMobile = window.innerWidth <= 820;
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -287,6 +286,7 @@ export default function ParallaxYaya() {
           </Box>
           {/* bilderna till vardera med kontakt uppgifeter */}
           <Box
+            id="targetBox"
             sx={{
               display: "flex",
               height: "100%",
