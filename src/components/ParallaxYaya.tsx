@@ -151,8 +151,8 @@ export default function ParallaxYaya() {
               }}
             >
               <img
-                src="https://i.imgur.com/j10A3GX.png"
-                alt="guy dancing on hands"
+                src="https://i.imgur.com/sJh4Ym5.png"
+                alt="Girl profile in a circle"
                 style={{
                   borderRadius: "50%",
                   width: "100%",
@@ -201,8 +201,8 @@ export default function ParallaxYaya() {
               }}
             >
               <img
-                src="https://i.imgur.com/KcCeP5O.png"
-                alt="guy dancing on hands"
+                src="https://i.imgur.com/RYl6BGF.png"
+                alt="Girl profile in a circle"
                 style={{
                   borderRadius: "50%",
                   width: "100%",
@@ -274,7 +274,7 @@ export default function ParallaxYaya() {
               </Box>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <img
-                  src="https://i.imgur.com/3OPFh2Q.jpeg"
+                  src="https://i.imgur.com/c81JL2G.jpeg"
                   alt="two girls"
                   height={isMobile ? 250 : 320}
                   width={isMobile ? 150 : 170}
@@ -294,7 +294,7 @@ export default function ParallaxYaya() {
                 }}
               >
                 <img
-                  src="https://i.imgur.com/mtpsyXG.png"
+                  src="https://i.imgur.com/zYSSjI8.png"
                   alt="strings in different colors"
                   //   height={320}
                   width={650}
@@ -323,10 +323,10 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 width: { xs: "100%", md: "80%" },
-                height: 300,
-                backgroundImage: `url("https://i.imgur.com/Vi6rD7y.png")`,
+                height: 420,
+                backgroundImage: `url("https://i.imgur.com/pHn9D5k.jpeg")`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center 25%",
                 display: "flex",
                 alignItems: "flex-end",
                 justifyContent: "center",
@@ -377,10 +377,10 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 width: { xs: "100%", md: "80%" },
-                height: 300,
-                backgroundImage: `url("https://i.imgur.com/vjuekTb.png")`,
+                height: 420,
+                backgroundImage: `url("https://i.imgur.com/IDFZknK.jpeg")`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "center 40%",
                 display: "flex",
                 alignItems: "flex-end",
                 justifyContent: "center",

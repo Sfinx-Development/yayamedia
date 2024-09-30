@@ -18,23 +18,23 @@ export default function GreenComponent() {
         background: "#B9DCD2",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        justifyContent: "center",
-        paddingY: { xs: 2, md: 4 },
+        justifyContent: "space-evenly",
+        paddingY: 0,
         paddingX: { xs: 1, md: 0 },
+        height: "100%",
       }}
     >
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          //   justifyContent: "space-between",
-          alignItems: "start",
+          justifyContent: "center",
           maxWidth: { xs: 300, md: 500 },
           width: "100%",
         }}
       >
         <Texting
-          sx={{ fontSize: { xs: 30, md: 40 }, color: "#2D6555", marginTop: 10 }}
+          sx={{ fontSize: { xs: 30, md: 40 }, color: "#2D6555", marginTop: 5 }}
         >
           Yaya, vem är hon egentligen?
         </Texting>
@@ -69,21 +69,21 @@ export default function GreenComponent() {
           sx={{
             backgroundColor: "#2D6555",
             marginTop: 1,
-            width: "40%",
+            width: "35%",
             color: "#F7F7F7",
             borderRadius: 2,
-            paddingY: 1,
+            paddingY: 1.2,
             textTransform: "none",
           }}
         >
           <Texting sx={{ fontSize: 18 }}>Om oss</Texting>
         </Button>
       </Box>
-      <Box sx={{}}>
+      <Box>
         <img
-          src="https://i.imgur.com/6aWnJLD.png"
+          src="https://i.imgur.com/pHngbgI.jpeg"
           alt="two girls"
-          height="500px"
+          height="480px"
         />
       </Box>
     </Box>

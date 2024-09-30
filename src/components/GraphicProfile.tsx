@@ -63,28 +63,28 @@ export default function GraphicProfile() {
         <Box
           sx={{
             borderRadius: 2,
-            backgroundColor: "#363434",
+            backgroundColor: "#B9DCD2",
             width: 310,
-            color: "#F7F7F7",
+            color: "#363434",
             padding: 2,
             marginTop: 15,
           }}
         >
-          <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             Klick
           </Texting>
           <TextingATYP sx={{ fontSize: 13 }}>
             Tröttnat på loggan? Vi gör om befintlig logotyp, eller levererar en
             helt ny om så önskas.
           </TextingATYP>
-          <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             10 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#B8DCD2", fontSize: 13 }}>
+          <TextingATYP sx={{ color: "#2D6555", fontSize: 13 }}>
             Ex. moms
           </TextingATYP>
 
-          <Texting sx={{ color: "#B8DCD2", fontSize: 14, paddingTop: 2 }}>
+          <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
             Vad får du?
           </Texting>
           <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
@@ -99,14 +99,14 @@ export default function GraphicProfile() {
         <Box
           sx={{
             borderRadius: 2,
-            backgroundColor: "#B9DCD2",
+            backgroundColor: "#F3D9DF",
             width: 310,
             padding: 2,
             marginTop: 5,
             color: "#363434",
           }}
         >
-          <Texting sx={{ fontSize: 30, paddingTop: 2, color: "#2D6555" }}>
+          <Texting sx={{ fontSize: 30, paddingTop: 2, color: "#EF3434" }}>
             Klack
           </Texting>
           <TextingATYP sx={{ fontSize: 13 }}>
@@ -114,11 +114,11 @@ export default function GraphicProfile() {
             riktlinjer att följa, så att ditt företag känns igen på alla
             platser.
           </TextingATYP>
-          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+          <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
             25 000:-
           </Texting>
           <TextingATYP sx={{ fontSize: 13 }}>Ex. moms</TextingATYP>
-          <Texting sx={{ fontSize: 14, paddingTop: 2, color: "#2D6555" }}>
+          <Texting sx={{ fontSize: 14, paddingTop: 2, color: "#EF3434" }}>
             Vad får du?
           </Texting>
           <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>

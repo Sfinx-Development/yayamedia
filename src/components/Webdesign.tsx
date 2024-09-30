@@ -162,7 +162,8 @@ export default function Webdesign() {
           </Texting>
           <TextingATYP sx={{ fontSize: 13 }}>
             För dig är det viktigt med en unik design. Här specialdesignar vi på
-            detaljnivå för att ditt varumärke ska sticka ut, precis så som det.
+            detaljnivå för att ditt varumärke ska sticka ut, precis så som det
+            förtjänar att göra.
           </TextingATYP>
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             Från 60 000:-
