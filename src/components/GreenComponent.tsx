@@ -21,9 +21,11 @@ export default function GreenComponent() {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-evenly",
+        alignItems: "stretch", 
         paddingY: 0,
         paddingX: { xs: 1, md: 0 },
-        height: "100%",
+         height: "480px",
+        // height: "100%",
       }}
     >
       <Box
@@ -89,7 +91,7 @@ export default function GreenComponent() {
         <img
           src="https://i.imgur.com/pHngbgI.jpeg"
           alt="two girls"
-          height="480px"
+          height="480px" 
         />
       </Box>
     </Box>

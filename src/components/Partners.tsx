@@ -33,13 +33,15 @@ export default function Partners() {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           justifyContent: "center",
+          alignItems: "center",
           gap: 0.1,
         }}
       >
         <img
-          src="https://i.imgur.com/5Fk6tu4.png"
+          src="https://i.imgur.com/o9i7f1R.png"
           alt="Logo of zeroett"
-          height={"130px"}
+          height={"80px"}
+          
         />
         <img
           src="https://i.imgur.com/CVKKnXu.png"
