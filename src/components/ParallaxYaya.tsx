@@ -6,6 +6,7 @@ import Wave from "./Wave";
 
 export default function ParallaxYaya() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const isMobile = window.innerWidth <= 820;
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -94,6 +95,7 @@ export default function ParallaxYaya() {
                 sx={{
                   marginTop: 2,
                   maxWidth: { xs: "90%", md: "70%" },
+                  textAlign: "center",
                 }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
@@ -114,25 +116,27 @@ export default function ParallaxYaya() {
           </Box>
           <Box
             sx={{
+              position: "relative",
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", md: "row" },
               width: "100%",
               justifyContent: "center",
-              gap: 2,
+              alignItems: "center",
+              gap: 4,
             }}
           >
             <Box
               sx={{
                 borderRadius: "50%",
-                width: 100,
-                height: 100,
-                display: "flex",
+                width: { xs: 70, md: 110 },
+                height: { xs: 70, md: 110 },
+                display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-                left: { xs: 50, md: 200 },
-                top: { xs: 110, md: 370 },
+                left: { xs: "20%", md: "20%" },
+                top: { xs: "-20%", md: "-20%" },
               }}
             >
               <img
@@ -151,13 +155,15 @@ export default function ParallaxYaya() {
                 position: "relative",
                 padding: 5,
                 borderRadius: 2,
-                flex: 1 / 3,
+                // flex: 1 / 3,
+                height: 350,
+                width: 300,
               }}
             >
               <Texting sx={{ fontSize: 20, color: "#363434", marginBottom: 2 }}>
                 Såhär säger Emelie - om Åsa
               </Texting>
-              <TextingATYP>
+              <TextingATYP sx={{ flexWrap: "wrap" }}>
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt
                 förväntansfull till besviken. Vi minimerar helt enkelt risken
@@ -165,23 +171,22 @@ export default function ParallaxYaya() {
                 Innehållet då? Det bestämmer du själv. Och lektioner i
                 kommunikation, förstås. Ett fenomen som kan få vilket barn som
                 helst att på en millisekund gå från pirrigt förväntansfull till
-                besviken. Vi minimerar helt enkelt risken för besvikelse, och
-                erbjuder bara hårda paket på Yaya. Innehållet då? Det bestämmer
-                du själv.
+                besviken. Vi minimerar helt enkelt risken för
               </TextingATYP>
             </Box>
+            {/* DETTA ÄR EN CIRKELBOX SOM ALLTID SKA SITTA LÄNGST UPP PÅ BOXENS KANT LITE TILL HÖGER */}
             <Box
               sx={{
                 borderRadius: "50%",
-                width: 100,
-                height: 100,
-                display: "flex",
+                width: { xs: 70, md: 110 },
+                height: { xs: 70, md: 110 },
+                display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-                right: { xs: 50, md: 200 },
-                top: { xs: 110, md: 370 },
+                right: { xs: "20%", md: "20%" },
+                top: { xs: "-10%", md: "-20%" },
               }}
             >
               <img
@@ -194,13 +199,15 @@ export default function ParallaxYaya() {
                 }}
               />
             </Box>
+            {/* på denna ska den sitta: */}
             <Box
               sx={{
                 backgroundColor: "#B9DCD2",
                 padding: 5,
                 borderRadius: 2,
                 position: "relative",
-                flex: 1 / 3,
+                height: 350,
+                width: 300,
               }}
             >
               <Texting sx={{ fontSize: 20, color: "#363434", marginBottom: 2 }}>
@@ -214,21 +221,19 @@ export default function ParallaxYaya() {
                 Innehållet då? Det bestämmer du själv. Och lektioner i
                 kommunikation, förstås. Ett fenomen som kan få vilket barn som
                 helst att på en millisekund gå från pirrigt förväntansfull till
-                besviken. Vi minimerar helt enkelt risken för besvikelse, och
-                erbjuder bara hårda paket på Yaya. Innehållet då? Det bestämmer
-                du själv.
+                besviken. Vi minimerar helt enkelt risken för
               </TextingATYP>
             </Box>
           </Box>
-          <Box sx={{ marginY: 12, display: "flex" }}>
+          <Box sx={{ marginY: { xs: 6, md: 12 }, display: "flex" }}>
             <Box
               sx={{
                 backgroundColor: "#363434",
                 display: "flex",
                 flexDirection: "row",
-                maxHeight: 150,
-                padding: 4,
-                justifyContent: "space-evenly",
+                maxHeight: { xs: 250, md: 150 },
+                padding: { xs: 4, md: 4 },
+                justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
                 position: "relative",
               }}
@@ -244,7 +249,11 @@ export default function ParallaxYaya() {
                   Rubrik
                 </Texting>
                 <TextingATYP
-                  sx={{ color: "#F7F7F7", fontSize: 16, maxWidth: "70%" }}
+                  sx={{
+                    color: "#F7F7F7",
+                    fontSize: { xs: 14, md: 16 },
+                    maxWidth: { xs: "100%", md: "70%" },
+                  }}
                 >
                   No worries - vi är ju en kommunikationsbyrå. Vi är bra på
                   annat också. Slå en pling, eller släng iväg ett mejl och
@@ -256,18 +265,23 @@ export default function ParallaxYaya() {
                 <img
                   src="https://i.imgur.com/3OPFh2Q.jpeg"
                   alt="two girls"
-                  height={320}
-                  width={170}
+                  height={isMobile ? 250 : 320}
+                  width={isMobile ? 150 : 170}
                   style={{
                     position: "absolute",
-                    bottom: "-10%",
-                    right: "15%",
+                    bottom: isMobile ? "10%" : "-10%",
+                    right: isMobile ? "-15%" : "15%",
                     transform: "translateX(-50%)",
                     height: "auto",
                   }}
                 />
               </Box>
-              <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Box
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  flexDirection: "column",
+                }}
+              >
                 <img
                   src="https://i.imgur.com/mtpsyXG.png"
                   alt="strings in different colors"
@@ -290,14 +304,14 @@ export default function ParallaxYaya() {
             sx={{
               display: "flex",
               height: "100%",
-              flexDirection: "row",
-              gap: 4,
+              flexDirection: { xs: "column", md: "row" },
+              gap: { xs: 3, md: 4 },
               marginTop: 10,
             }}
           >
             <Box
               sx={{
-                width: "80%",
+                width: { xs: "100%", md: "80%" },
                 height: 300,
                 backgroundImage: `url("https://i.imgur.com/Vi6rD7y.png")`,
                 backgroundSize: "cover",
@@ -306,7 +320,7 @@ export default function ParallaxYaya() {
                 alignItems: "flex-end",
                 justifyContent: "center",
                 color: "white",
-                marginLeft: { xs: 2, md: 8 },
+                marginLeft: { xs: 0, md: 8 },
               }}
             >
               <Box
@@ -351,8 +365,8 @@ export default function ParallaxYaya() {
             </Box>
             <Box
               sx={{
-                width: "80%",
-                height: "auto",
+                width: { xs: "100%", md: "80%" },
+                height: 300,
                 backgroundImage: `url("https://i.imgur.com/vjuekTb.png")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",

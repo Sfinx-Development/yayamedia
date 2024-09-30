@@ -79,13 +79,13 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             Stäng
           </Atyp>
         </Box>
-        <Link href="/case" style={{ textDecoration: "none", color: "#363434" }}>
+        <Link to="/case" style={{ textDecoration: "none", color: "#363434" }}>
           <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20 } }}>
             Case
           </Texting>
         </Link>
         <Link
-          href="/tjanster"
+          to="/tjanster"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Texting sx={{ fontSize: { xs: 18, sm: 20 }, paddingBottom: 0.5 }}>
@@ -93,41 +93,38 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           </Texting>
         </Link>
         <Link
-          href="/tjanster/socialamedier"
+          to="/tjanster/socialamedier"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Sociala medier</Atyp>
         </Link>
         <Link
-          href="/tjanster/webdesign"
+          to="/tjanster/webdesign"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Webdesign</Atyp>
         </Link>
         <Link
-          href="/tjanster/konceptutveckling"
+          to="/tjanster/konceptutveckling"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Konceptutveckling</Atyp>
         </Link>
         <Link
-          href="/tjanster/copywriting"
+          to="/tjanster/copywriting"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Copywriting</Atyp>
         </Link>
         <Link
-          href="/tjanster/grafisk-profil"
+          to="/tjanster/grafisk-profil"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ paddingBottom: 0.5, fontSize: { xs: 14, sm: 16 } }}>
             Grafisk profil
           </Atyp>
         </Link>
-        <Link
-          href="/om-oss"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
+        <Link to="/yaya" style={{ textDecoration: "none", color: "#363434" }}>
           <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20 } }}>
             Om oss
           </Texting>
