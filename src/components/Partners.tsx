@@ -37,7 +37,7 @@ export default function Partners() {
         }}
       >
         <img
-          src="https://i.imgur.com/5Fk6tu4.png"
+          src="https://i.imgur.com/GRcfgpN.png"
           alt="Logo of zeroett"
           height={"130px"}
         />
