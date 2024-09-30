@@ -65,7 +65,7 @@ export default function ParallaxWave() {
         <Box
           sx={{
             backgroundColor: "#F7F7F7",
-            margin: 0,
+            marginTop: -2,
             position: "absolute",
             width: "100%",
             zIndex: 3,

@@ -1,6 +1,8 @@
 import { Box, Button, styled, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function GreenComponent() {
+  const navigate = useNavigate();
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -66,6 +68,9 @@ export default function GreenComponent() {
           Vi är Yaya och Yaya är oss.
         </TextingATYP>
         <Button
+          onClick={() => {
+            navigate("/yaya");
+          }}
           sx={{
             backgroundColor: "#2D6555",
             marginTop: 1,
@@ -74,6 +79,7 @@ export default function GreenComponent() {
             borderRadius: 2,
             paddingY: 1.2,
             textTransform: "none",
+            marginY: { xs: 2, md: 0 },
           }}
         >
           <Texting sx={{ fontSize: 18 }}>Om oss</Texting>
