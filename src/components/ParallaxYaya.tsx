@@ -1,10 +1,21 @@
 import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
 export default function ParallaxYaya() {
+  const location = useLocation();
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
   useEffect(() => {
@@ -28,7 +39,7 @@ export default function ParallaxYaya() {
     font-family: "AtypRegularVariable", sans-serif;
     font-variation-settings: "wght" 300;
   `;
-  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -298,15 +309,15 @@ export default function ParallaxYaya() {
               </Box>
             </Box>
           </Box>
-          {/* bilderna till vardera med kontakt uppgifeter */}
           <Box
-            id="targetBox"
+            id="kontakt"
             sx={{
               display: "flex",
               height: "100%",
               flexDirection: { xs: "column", md: "row" },
               gap: { xs: 3, md: 4 },
-              marginTop: 10,
+              paddingTop: { xs: 10, md: 20 },
+              paddingBottom: 5,
             }}
           >
             <Box

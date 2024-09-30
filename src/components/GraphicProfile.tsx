@@ -12,7 +12,10 @@ export default function GraphicProfile() {
     font-variation-settings: "wght" 300;
   `;
   return (
-    <Box sx={{ paddingLeft: 10, display: "flex", flexDirection: "column" }}>
+    <Box
+      id="grafisk-profil"
+      sx={{ paddingLeft: 10, display: "flex", flexDirection: "column" }}
+    >
       <Box
         sx={{
           backgroundColor: "#F7F7F7",

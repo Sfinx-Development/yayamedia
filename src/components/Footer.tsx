@@ -30,7 +30,12 @@ export default function Footer() {
     >
       {/* Logotyp */}
       <Box
-        sx={{ paddingX: 6, flex: 1, display: "flex", justifyContent: "start" }}
+        sx={{
+          paddingX: 6,
+          flex: 1,
+          display: "flex",
+          justifyContent: { xs: "center", md: "start" },
+        }}
       >
         <img
           src={"https://i.imgur.com/1MzhvyL.png"}
@@ -53,7 +58,7 @@ export default function Footer() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column", // Lägger elementen vertikalt
+            flexDirection: { xs: "row", md: "column" }, // Lägger elementen vertikalt
             alignItems: "flex-start", // Justerar till vänster
             gap: 2, // Justera mellanrum mellan Emelie och Åsa
           }}

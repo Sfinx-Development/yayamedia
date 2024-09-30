@@ -76,7 +76,7 @@ export default function Header(): JSX.Element {
             textDecoration: "none",
             color: "#363434",
           }}
-          href="/yaya#targetBox"
+          href="/yaya#kontakt"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 36 }, color: "#363434" }}>
             Kontakt

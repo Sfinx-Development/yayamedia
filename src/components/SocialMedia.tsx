@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
 
 export default function SocialMedia() {
-
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -13,7 +12,14 @@ export default function SocialMedia() {
     font-variation-settings: "wght" 300;
   `;
   return (
-    <Box sx={{ paddingLeft: 10, display: "flex", flexDirection: "column" }}>
+    <Box
+      id="socialamedier"
+      sx={{
+        paddingLeft: { xs: 2, md: 10 },
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Box
         sx={{
           backgroundColor: "#F7F7F7",

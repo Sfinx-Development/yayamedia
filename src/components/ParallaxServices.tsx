@@ -1,10 +1,22 @@
 import { Box } from "@mui/material";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import ConceptDevelopment from "./ConceptDevelopment";
 import PaketScroll from "./PaketScroll";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
 export default function ParallaxServices() {
+  const location = useLocation();
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
   return (
     <Box
       sx={{

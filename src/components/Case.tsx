@@ -10,6 +10,7 @@ export default function Case() {
 
   return (
     <Box
+      id="case"
       sx={{
         width: "100%",
         background: "#F7F7F7",
