@@ -7,13 +7,14 @@ import Partners from "./Partners";
 import Wave from "./Wave";
 
 export default function ParallaxWave() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
-
+    console.log(scrollPosition);
     window.addEventListener("scroll", handleScroll);
 
     return () => {

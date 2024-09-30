@@ -16,13 +16,14 @@ export default function ParallaxYaya() {
     }
   }, [location]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
-
+    console.log(scrollPosition);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
