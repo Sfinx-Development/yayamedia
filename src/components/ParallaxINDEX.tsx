@@ -1,6 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Case from "./Case";
 import GreenComponent from "./GreenComponent";
 import Partners from "./Partners";
@@ -20,6 +20,17 @@ export default function ParallaxWave() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const location = useLocation();
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
 
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;

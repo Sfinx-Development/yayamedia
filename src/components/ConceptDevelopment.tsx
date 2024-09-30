@@ -14,6 +14,7 @@ export default function ConceptDevelopment() {
 
   return (
     <Box
+      id="konceptutveckling"
       sx={{
         width: "100%",
         background: "#F7F7F7",
@@ -23,7 +24,7 @@ export default function ConceptDevelopment() {
         position: "relative",
         flexDirection: "column",
         height: "100%",
-        padding: { xs: 2, md: 0 }, // Justera padding för mobil
+        padding: { xs: 0, md: 0 }, // Justera padding för mobil
       }}
     >
       <Box sx={{ width: "100%", padding: { xs: 2, md: 0 } }}>
@@ -31,7 +32,7 @@ export default function ConceptDevelopment() {
           sx={{
             fontSize: { xs: 30, md: 40 }, // Responsiv fontstorlek
             color: "#363434",
-            paddingLeft: { xs: 0, md: 8 }, // Justera padding för mobil
+            paddingLeft: { xs: 2, md: 8 }, // Justera padding för mobil
           }}
         >
           En extra push
@@ -41,7 +42,7 @@ export default function ConceptDevelopment() {
             fontSize: { xs: 15, md: 20 }, // Responsiv fontstorlek
             color: "#363434",
             marginBottom: 5,
-            paddingLeft: { xs: 0, md: 8 }, // Justera padding för mobil
+            paddingLeft: { xs: 2, md: 8 }, // Justera padding för mobil
           }}
         >
           Konceptutveckling

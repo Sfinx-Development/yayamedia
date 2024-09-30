@@ -79,7 +79,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             Stäng
           </Atyp>
         </Box>
-        <Link to="/case" style={{ textDecoration: "none", color: "#363434" }}>
+        <Link to="/#case" style={{ textDecoration: "none", color: "#363434" }}>
           <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20 } }}>
             Case
           </Texting>
@@ -93,31 +93,31 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           </Texting>
         </Link>
         <Link
-          to="/tjanster/socialamedier"
+          to="/tjanster#socialamedier"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Sociala medier</Atyp>
         </Link>
         <Link
-          to="/tjanster/webdesign"
+          to="/tjanster#webbdesign"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Webdesign</Atyp>
         </Link>
         <Link
-          to="/tjanster/konceptutveckling"
+          to="/tjanster#konceptutveckling"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Konceptutveckling</Atyp>
         </Link>
         <Link
-          to="/tjanster/copywriting"
+          to="/tjanster#copywriting"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ fontSize: { xs: 14, sm: 16 } }}>Copywriting</Atyp>
         </Link>
         <Link
-          to="/tjanster/grafisk-profil"
+          to="/tjanster#grafisk-profil"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp sx={{ paddingBottom: 0.5, fontSize: { xs: 14, sm: 16 } }}>
