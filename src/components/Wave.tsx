@@ -12,20 +12,19 @@ const Wave: React.FC = () => {
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block", margin: 0 }}
     >
-      {/* Enkel path för tre toppar */}
       <path
         d={`
     M 0 80           
-    Q 30 60, 60 70   
-    Q 90 80, 120 50   
-    Q 150 60, 180 40
-    Q 210 60, 240 30   
-    Q 270 50, 300 20 
-    L 320 0
-    L 320 100       
-    L 0 100          
-    Z                
-  `}
+    Q 15 70, 30 75   
+    Q 45 80, 60 70    
+    Q 70 65, 80 70    
+    Q 90 75, 100 65   
+    Q 110 90, 130 90  
+    Q 150 85, 180 100 
+    L 200 0           
+    L 200 100         
+    L 0 100           
+    Z`}
         fill={waveColor}
       />
     </svg>
