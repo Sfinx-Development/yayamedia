@@ -91,15 +91,15 @@ export default function Header(): JSX.Element {
         >
           <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Yaya</Heading>
         </Link>
-        {/* <Link
+        <Link
           sx={{
             textDecoration: "none",
             color: "#363434",
           }}
-          href="/about"
+          href="/#case"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Case</Heading>
-        </Link> */}
+        </Link>
       </Box>
 
       {/* Menyikoner */}

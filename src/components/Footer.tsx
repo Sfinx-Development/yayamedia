@@ -16,12 +16,13 @@ export default function Footer() {
   return (
     <Box
       sx={{
+        position: "relative",
         width: "100%",
         backgroundColor: "#363434",
         display: "flex",
         bottom: 0,
         height: { xs: 200, md: 200, lg: 320 },
-        flexDirection: { xs: "column", md: "row" }, // Ändrar layout baserat på skärmstorlek
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
         paddingY: 2,
         zIndex: 3,
