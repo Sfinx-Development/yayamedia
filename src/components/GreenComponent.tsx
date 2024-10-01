@@ -1,5 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { isMobile } from "./GreyComponent";
 
 export default function GreenComponent() {
   const navigate = useNavigate();
@@ -21,10 +22,10 @@ export default function GreenComponent() {
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-evenly",
-        alignItems: "stretch", 
+        alignItems: "stretch",
         paddingY: 0,
         paddingX: { xs: 1, md: 0 },
-         height: "480px",
+        height: isMobile ? "auto" : "480px",
         // height: "100%",
       }}
     >
@@ -95,7 +96,7 @@ export default function GreenComponent() {
         <img
           src="https://i.imgur.com/pHngbgI.jpeg"
           alt="two girls"
-          height="480px" 
+          height={isMobile ? "400px" : "480px"}
         />
       </Box>
     </Box>
