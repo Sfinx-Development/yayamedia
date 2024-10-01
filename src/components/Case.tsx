@@ -2,6 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 
 export default function Case() {
   const isMobile = window.innerWidth <= 820;
+  const isBigScreen = window.innerHeight >= 1080;
 
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
@@ -22,7 +23,7 @@ export default function Case() {
     >
       <Texting
         sx={{
-          fontSize: { xs: 30, md: 40 },
+          fontSize: { xs: 30, md: 40, xl: 55 },
           color: "#363434",
           marginTop: 12,
           marginBottom: 5,
@@ -42,12 +43,12 @@ export default function Case() {
         <img
           src="https://i.imgur.com/LsyTFZT.png"
           alt="picture of teip"
-          height={isMobile ? "90%" : "500px"}
+          height={isMobile ? "90%" : isBigScreen ? "700px" : "500px"}
         />
         <img
           src="https://i.imgur.com/nRLImCB.png"
           alt="picture of teip"
-          height={isMobile ? "90%" : "500px"}
+          height={isMobile ? "90%" : isBigScreen ? "700px" : "500px"}
         />
       </Box>
     </Box>

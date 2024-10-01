@@ -3,10 +3,11 @@ import React from "react";
 const Wave: React.FC = () => {
   const waveColor = "#F7F7F7"; // Färgen på vågorna
   const isMobile = window.innerWidth <= 820;
+  const isBigScreen = window.innerHeight >= 1080;
   return (
     <svg
       width="100%"
-      height={isMobile ? "50vh" : "105vh"} // Bestäm en höjd så att vågen blir synlig
+      height={isMobile ? "50vh" : isBigScreen ? "85vh" : "105vh"} // Bestäm en höjd så att vågen blir synlig
       viewBox="0 0 100 100" // Använd en vy för att passa SVG-innehållet
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"

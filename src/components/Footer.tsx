@@ -2,7 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 
 export default function Footer() {
   const isMobile = window.innerWidth <= 820;
-
+  const isBigScreen = window.innerHeight >= 1080;
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -20,8 +20,8 @@ export default function Footer() {
         backgroundColor: "#363434",
         display: "flex",
         bottom: 0,
-        height: 200,
-        flexDirection: { xs: "column", md: "row" }, // Ändrar layout baserat på skärmstorlek
+        height: { xs: "auto", xl: 320 },
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
         paddingY: 2,
         zIndex: 3,
@@ -40,7 +40,7 @@ export default function Footer() {
         <img
           src={"https://i.imgur.com/1MzhvyL.png"}
           alt="Yaya Logo"
-          style={{ height: isMobile ? 70 : 90 }} // Mindre logotyp på små skärmar
+          style={{ height: isMobile ? 70 : isBigScreen ? 130 : 90 }}
         />
       </Box>
 
@@ -60,7 +60,7 @@ export default function Footer() {
             display: "flex",
             flexDirection: { xs: "row", md: "column" }, // Lägger elementen vertikalt
             alignItems: "flex-start", // Justerar till vänster
-            gap: 2, // Justera mellanrum mellan Emelie och Åsa
+            gap: { xs: 2, md: 2, xl: 5 }, // Justera mellanrum mellan Emelie och Åsa
           }}
         >
           {/* Emelie Kontaktuppgifter */}
@@ -68,17 +68,29 @@ export default function Footer() {
             <Texting
               sx={{
                 color: "#F7F7F7",
-                fontSize: 20,
+                fontSize: { xs: 20, md: 20, xl: 25 },
                 fontWeight: 500,
                 marginBottom: 1.5,
               }}
             >
               Emelie Svernhed
             </Texting>
-            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
+            <TextingATYP
+              sx={{
+                color: "#F7F7F7",
+                marginBottom: 0.5,
+                fontSize: { xs: 20, md: 20, xl: 25 },
+              }}
+            >
               emelie@yayamedia.se
             </TextingATYP>
-            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
+            <TextingATYP
+              sx={{
+                color: "#F7F7F7",
+                marginBottom: 1,
+                fontSize: { xs: 20, md: 20, xl: 25 },
+              }}
+            >
               070-7 46 06 69
             </TextingATYP>
           </Box>
@@ -88,17 +100,29 @@ export default function Footer() {
             <Texting
               sx={{
                 color: "#F7F7F7",
-                fontSize: 20,
+                fontSize: { xs: 20, md: 20, xl: 25 },
                 fontWeight: 500,
                 marginBottom: 1.5,
               }}
             >
               Åsa Kjellberg
             </Texting>
-            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
+            <TextingATYP
+              sx={{
+                color: "#F7F7F7",
+                marginBottom: 0.5,
+                fontSize: { xs: 20, md: 20, xl: 25 },
+              }}
+            >
               asa@yayamedia.se
             </TextingATYP>
-            <TextingATYP sx={{ color: "#F7F7F7", marginBottom: 0.5 }}>
+            <TextingATYP
+              sx={{
+                color: "#F7F7F7",
+                marginBottom: 0.5,
+                fontSize: { xs: 20, md: 20, xl: 25 },
+              }}
+            >
               073-8 20 14 29
             </TextingATYP>
           </Box>

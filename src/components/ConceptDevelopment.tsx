@@ -24,25 +24,25 @@ export default function ConceptDevelopment() {
         position: "relative",
         flexDirection: "column",
         height: "100%",
-        padding: { xs: 0, md: 0 }, // Justera padding för mobil
+        padding: { xs: 0, md: 0 },
       }}
     >
       <Box sx={{ width: "100%", padding: { xs: 2, md: 0 } }}>
         <Texting
           sx={{
-            fontSize: { xs: 30, md: 40 }, // Responsiv fontstorlek
+            fontSize: { xs: 30, md: 40, xl: 50 },
             color: "#363434",
-            paddingLeft: { xs: 2, md: 8 }, // Justera padding för mobil
+            paddingLeft: { xs: 2, md: 8 },
           }}
         >
           En extra push
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 15, md: 20 }, // Responsiv fontstorlek
+            fontSize: { xs: 15, md: 20, xl: 25 },
             color: "#363434",
             marginBottom: 5,
-            paddingLeft: { xs: 2, md: 8 }, // Justera padding för mobil
+            paddingLeft: { xs: 2, md: 8 },
           }}
         >
           Konceptutveckling
@@ -51,26 +51,26 @@ export default function ConceptDevelopment() {
 
       <Box
         sx={{
-          backgroundColor: "#F3D9DF", // Rosa bakgrund
-          borderRadius: "50%", // Gör boxen rund
-          width: 70, // Justera bredden för cirkeln
-          height: 70, // Justera höjden för cirkeln
-          display: "flex", // Använd flexbox
-          alignItems: "center", // Centrera vertikalt
-          justifyContent: "center", // Centrera horisontellt
+          backgroundColor: "#F3D9DF",
+          borderRadius: "50%",
+          width: { xs: 70, xl: 100 },
+          height: { xs: 70, xl: 100 },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           position: "absolute",
           zIndex: 2,
-          right: { xs: 50, md: 200 }, // Justera till vänster från kanten för mobil
-          top: { xs: 110, md: 90 }, // Justera till toppen från botten för mobil
+          right: { xs: 50, md: 200 },
+          top: { xs: 110, md: 90 },
         }}
       >
         <img
           src="https://i.imgur.com/6aWnJLD.png"
           alt="guy dancing on hands"
           style={{
-            borderRadius: "50%", // Gör bilden rund (om det behövs)
-            width: "70%", // Gör bilden proportionell till cirkeln
-            height: "70%", // Gör bilden proportionell till cirkeln
+            borderRadius: "50%",
+            width: "70%",
+            height: "70%",
           }}
         />
       </Box>
@@ -79,12 +79,13 @@ export default function ConceptDevelopment() {
         sx={{
           display: "flex",
           backgroundColor: "#363434",
-          padding: { xs: 2, md: 4 }, // Justera padding för mobil
+          padding: { xs: 2, md: 4, xl: 5 },
           position: "relative",
           borderRadius: 2,
           width: "90%",
           justifyContent: "space-between",
-          flexDirection: { xs: "column", md: "row" }, // Ställ in kolumnlayout för mobil
+          flexDirection: { xs: "column", md: "row" },
+          gap: { xl: 10 },
         }}
       >
         <Box
@@ -96,13 +97,13 @@ export default function ConceptDevelopment() {
             padding: 2,
           }}
         >
-          <Texting sx={{ fontSize: { xs: 18, md: 20 } }}>
+          <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
             Konceptutveckling
           </Texting>
           <TextingATYP
             sx={{
               color: "#F7F7F7",
-              fontSize: { xs: 12, md: 13 },
+              fontSize: { xs: 12, md: 13, xl: 18 },
               marginTop: 2,
             }}
           >
@@ -112,19 +113,19 @@ export default function ConceptDevelopment() {
             Då kan konceptutveckling vara något som ger ditt varumärke den extra
             push som krävs.
           </TextingATYP>
-          <Texting sx={{ fontSize: { xs: 18, md: 20 }, marginTop: 2 }}>
+          <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 }, marginTop: 2 }}>
             Från 80 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 12, md: 13 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 12, md: 13, xl: 16 } }}>
             Ex. moms
           </TextingATYP>
-          <Texting sx={{ fontSize: 14, marginTop: 4 }}>
+          <Texting sx={{ fontSize: { xs: 14, md: 20 }, marginTop: 4 }}>
             Vad betalar jag för?
           </Texting>
           <TextingATYP
             sx={{
               color: "#F7F7F7",
-              fontSize: { xs: 12, md: 13 },
+              fontSize: { xs: 12, md: 13, xl: 18 },
               marginTop: 1,
             }}
           >
@@ -143,20 +144,25 @@ export default function ConceptDevelopment() {
             flex: 1,
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: { xs: "start", md: "end" }, // Justera för mobil
+            alignItems: { xs: "start", md: "end" },
             padding: 2,
           }}
         >
           <Texting
             sx={{
-              fontSize: { xs: 25, md: 40 },
+              fontSize: { xs: 25, md: 40, xl: 52 },
               textAlign: { xs: "start", md: "end" },
             }}
           >
-            Hur och vad vill du att din målgrupp ska känna?
+            Hur och vad vill du att din måxlrupp ska känna?
           </Texting>
           <TextingATYP
-            sx={{ textAlign: { xs: "start", md: "end" }, marginTop: 2 }}
+            sx={{
+              textAlign: { xs: "start", md: "end" },
+              marginTop: 2,
+              fontSize: { xs: 20, xl: 25 },
+              marginLeft: { xl: 22 },
+            }}
           >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke
             och din målgrupp.
