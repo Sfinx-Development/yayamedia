@@ -145,15 +145,14 @@ export default function ParallaxYaya() {
                 display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
-                position: "absolute",
-               
-                // top: "-20px", // Position the image slightly above the card
-                // left: "calc(50% - 55px)", // Center the image horizontally based on its width (adjust for smaller size)
-                // transform: "translateX(-50%)", // Center the image properly
+                position: "absolute",            
+                top: "-88px", 
+                left: "calc(50% - 330px)",
+                transform: "translateX(-50%)", 
                 zIndex: 2,
               
-                left: { xs: "20%", md: "20%" },
-                top: { xs: "-20%", md: "-20%" },
+                // left: { xs: "20%", md: "20%" },
+                // top: { xs: "-20%", md: "-20%" },
               }}
             >
               <img
@@ -201,13 +200,11 @@ export default function ParallaxYaya() {
                 alignItems: "center",
                 justifyContent: "center",
                 position: "absolute",
-                top: "-88px", // Position the image slightly above the card
-                right: "calc(50% - 440px)", // Center the image horizontally based on its width (adjust for smaller size)
-                transform: "translateX(-50%)", // Center the image properly
+                top: "-88px", 
+                right: "calc(50% - 440px)", 
+                transform: "translateX(-50%)", 
                 zIndex: 2,
-                // zIndex: 2,
-                // right: "calc(20% - 0px)", // Justera baserat på bildens storlek
-                // top: "calc(-20% - 0px)",
+          
                 // right: { xs: "20%", md: "20%" },
                 // top: { xs: "-10%", md: "-20%" },
               }}
