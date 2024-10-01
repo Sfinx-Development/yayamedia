@@ -29,7 +29,7 @@ export default function GraphicProfile() {
       >
         <Texting
           sx={{
-            fontSize: { xs: 35, md: 40 },
+            fontSize: { xs: 35, md: 40, lg: 45 },
             color: "#363434",
           }}
         >
@@ -37,7 +37,7 @@ export default function GraphicProfile() {
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: 20,
+            fontSize: { xs: 20, md: 20, lg: 25 },
             color: "#363434",
             margin: 0,
             padding: 0,
@@ -64,34 +64,48 @@ export default function GraphicProfile() {
           sx={{
             borderRadius: 2,
             backgroundColor: "#B9DCD2",
-            width: 310,
+            width: { xs: 310, md: 310, lg: 330 },
             color: "#363434",
-            padding: 2,
+            padding: { xs: 2, lg: 4 },
             marginTop: 15,
           }}
         >
-          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+          <Texting
+            sx={{
+              color: "#2D6555",
+              fontSize: { xs: 25, lg: 30 },
+              paddingTop: 2,
+            }}
+          >
             Klick
           </Texting>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             Tröttnat på loggan? Vi gör om befintlig logotyp, eller levererar en
             helt ny om så önskas.
           </TextingATYP>
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             10 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#2D6555", fontSize: 13 }}>
+          <TextingATYP sx={{ color: "#2D6555", fontSize: { xs: 13, lg: 15 } }}>
             Ex. moms
           </TextingATYP>
 
-          <Texting sx={{ color: "#2D6555", fontSize: 14, paddingTop: 2 }}>
+          <Texting
+            sx={{
+              color: "#2D6555",
+              fontSize: { xs: 14, lg: 17 },
+              paddingTop: 2,
+            }}
+          >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 }, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+            -Startsida
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Logotyp i leverans av png, jpg och eps
           </TextingATYP>
         </Box>
@@ -100,16 +114,22 @@ export default function GraphicProfile() {
           sx={{
             borderRadius: 2,
             backgroundColor: "#F3D9DF",
-            width: 310,
+            width: { xs: 310, md: 310, lg: 330 },
             padding: 2,
             marginTop: 5,
             color: "#363434",
           }}
         >
-          <Texting sx={{ fontSize: 30, paddingTop: 2, color: "#EF3434" }}>
+          <Texting
+            sx={{
+              fontSize: { xs: 30, lg: 35 },
+              paddingTop: 2,
+              color: "#EF3434",
+            }}
+          >
             Klack
           </Texting>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             Du inser att du behöver mer än bara en logga. Du vill ha grafiska
             riktlinjer att följa, så att ditt företag känns igen på alla
             platser.
@@ -117,22 +137,34 @@ export default function GraphicProfile() {
           <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
             25 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: 13 }}>Ex. moms</TextingATYP>
-          <Texting sx={{ fontSize: 14, paddingTop: 2, color: "#EF3434" }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+            Ex. moms
+          </TextingATYP>
+          <Texting
+            sx={{
+              fontSize: { xs: 14, lg: 17 },
+              paddingTop: 2,
+              color: "#EF3434",
+            }}
+          >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 }, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>-Startsida</TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+            -Startsida
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Logotyp (leverans i png, jpg och eps)
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>-Favicon</TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+            -Favicon
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Typografi och riktlinjer för hur det ska användas
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Färger i RGB och Hex-kod
           </TextingATYP>
         </Box>
@@ -141,42 +173,66 @@ export default function GraphicProfile() {
           sx={{
             borderRadius: 2,
             backgroundColor: "#363434",
-            width: 310,
+            width: { xs: 310, md: 310, lg: 330 },
             color: "#F7F7F7",
             padding: 2,
             marginTop: 0,
           }}
         >
-          <Texting sx={{ color: "#B8DCD2", fontSize: 35, paddingTop: 2 }}>
+          <Texting
+            sx={{
+              color: "#B8DCD2",
+              fontSize: { xs: 35, lg: 40 },
+              paddingTop: 2,
+            }}
+          >
             Boom!
           </Texting>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             Du går all in direkt och ger ditt bolag de bästa förutsättningarna
             för att ta sin plats på marknaden.
           </TextingATYP>
-          <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
+          <Texting
+            sx={{
+              color: "#B8DCD2",
+              fontSize: 25,
+              paddingTop: { xs: 2, lg: 4 },
+            }}
+          >
             60.000:-
           </Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: 13 }}>
+          <TextingATYP sx={{ color: "#F7F7F7", fontSize: { xs: 13, lg: 15 } }}>
             Ex. moms
           </TextingATYP>
-          <Texting sx={{ color: "#B8DCD2", fontSize: 14, paddingTop: 2 }}>
+          <Texting
+            sx={{
+              color: "#B8DCD2",
+              fontSize: { xs: 14, lg: 17 },
+              paddingTop: { xs: 2, md: 3 },
+            }}
+          >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: 13, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 }, paddingTop: 2 }}>
             -Allt som ingår i Klack
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>-Färger i Pantone</TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+            -Färger i Pantone
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Visualisering av logotyp på 6 tillämpningar
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 12 }}>-Visitkort</TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>-Bildmáner</TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 12, lg: 13 } }}>
+            -Visitkort
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+            -Bildmáner
+          </TextingATYP>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Formgivning av två enheter, tex roll-up/flagga, skylt,
             profilprodukt
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: 13 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
             -Allt levererat i en brandbook
           </TextingATYP>
         </Box>

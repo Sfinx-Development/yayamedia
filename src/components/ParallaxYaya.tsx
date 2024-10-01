@@ -136,7 +136,7 @@ export default function ParallaxYaya() {
               width: "100%",
               justifyContent: "center",
               alignItems: "center",
-              gap: 4,
+              gap: isBigScreen ? 8 : 4,
             }}
           >
             <Box
@@ -170,8 +170,8 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 // flex: 1 / 3,
-                height: { xs: 350, md: 350, lg: 450 },
-                width: { xs: 300, md: 300, lg: 400 },
+                height: { xs: 350, md: 350, lg: 500 },
+                width: { xs: 300, md: 300, lg: 450 },
               }}
             >
               <Texting
@@ -184,7 +184,7 @@ export default function ParallaxYaya() {
                 Såhär säger Emelie - om Åsa
               </Texting>
               <TextingATYP
-                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, lg: 20 } }}
+                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, lg: 23 } }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt
@@ -228,8 +228,8 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 position: "relative",
-                height: { xs: 350, md: 350, lg: 450 },
-                width: { xs: 300, md: 300, lg: 400 },
+                height: { xs: 350, md: 350, lg: 500 },
+                width: { xs: 300, md: 300, lg: 450 },
               }}
             >
               <Texting
@@ -241,7 +241,9 @@ export default function ParallaxYaya() {
               >
                 Såhär säger Åsa - om Emelie
               </Texting>
-              <TextingATYP sx={{ fontSize: { xs: 18, md: 18, lg: 20 } }}>
+              <TextingATYP
+                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, lg: 23 } }}
+              >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt
                 förväntansfull till besviken. Vi minimerar helt enkelt risken

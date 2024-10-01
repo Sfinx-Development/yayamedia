@@ -10,6 +10,7 @@ export default function Header(): JSX.Element {
     font-variation-settings: "wght" 300;
   `;
   const isMobile = window.innerWidth <= 820;
+  const isBigScreen = window.innerHeight >= 1080;
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer =
@@ -47,7 +48,7 @@ export default function Header(): JSX.Element {
       <div
         style={{
           cursor: "pointer",
-          paddingLeft: isMobile ? "20px" : "80px",
+          paddingLeft: isMobile ? "20px" : isBigScreen ? "120px" : "80px",
         }}
         onClick={() => {
           navigate("/");
@@ -57,7 +58,7 @@ export default function Header(): JSX.Element {
           src={"https://i.imgur.com/LNlGvx8.png"}
           alt="Yaya Logo"
           style={{
-            height: window.innerWidth <= 820 ? 40 : 60,
+            height: isMobile ? 40 : isBigScreen ? 75 : 60,
           }} // Mindre logotyp på små skärmar
         />
       </div>
