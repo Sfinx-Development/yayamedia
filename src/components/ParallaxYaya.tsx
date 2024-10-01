@@ -171,7 +171,7 @@ export default function ParallaxYaya() {
                 borderRadius: 3,
                 // flex: 1 / 3,
                 height: { xs: 350, md: 350, xl: 500 },
-                width: { xs: 300, md: 300, xl: 450 },
+                width: { xs: 300, md: 320, xl: 450 },
               }}
             >
               <Texting
@@ -184,7 +184,7 @@ export default function ParallaxYaya() {
                 Såhär säger Emelie - om Åsa
               </Texting>
               <TextingATYP
-                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, xl: 23 } }}
+                sx={{ flexWrap: "wrap", fontSize: { xs: 16, md: 16, xl: 23 } }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt
@@ -229,7 +229,7 @@ export default function ParallaxYaya() {
                 borderRadius: 3,
                 position: "relative",
                 height: { xs: 350, md: 350, xl: 500 },
-                width: { xs: 300, md: 300, xl: 450 },
+                width: { xs: 300, md: 320, xl: 450 },
               }}
             >
               <Texting
@@ -242,7 +242,7 @@ export default function ParallaxYaya() {
                 Såhär säger Åsa - om Emelie
               </Texting>
               <TextingATYP
-                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, xl: 23 } }}
+                sx={{ flexWrap: "wrap", fontSize: { xs: 16, md: 16, xl: 23 } }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt

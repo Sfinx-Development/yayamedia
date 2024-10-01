@@ -23,7 +23,7 @@ export default function GreyComponent() {
         marginTop: "60px", // Justera detta värde till höjden på din header
         marginBottom: 100,
         alignItems: "center",
-        paddingBottom: { xl: 20 },
+        paddingBottom: { xs: 0, xl: 20 },
         position: "fixed", // Gör den fast
         zIndex: 2, // Viktigt att ha högre än ParallaxWave
         height: { xs: "500px", md: "500px", xl: 650 }, // Sätt en fast höjd
