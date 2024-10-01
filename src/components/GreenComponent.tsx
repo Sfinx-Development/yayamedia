@@ -31,18 +31,22 @@ export default function GreenComponent() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          maxWidth: { xs: 300, md: 500 },
+          maxWidth: { xs: 300, md: 500, lg: 700 },
           width: "100%",
         }}
       >
         <Texting
-          sx={{ fontSize: { xs: 30, md: 40 }, color: "#2D6555", marginTop: 5 }}
+          sx={{
+            fontSize: { xs: 30, md: 40, lg: 55 },
+            color: "#2D6555",
+            // marginTop: 5,
+          }}
         >
           Yaya, vem är hon egentligen?
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 16, md: 18 },
+            fontSize: { xs: 16, md: 18, lg: 25 },
             fontWeight: "lighter",
             color: "#363434",
             flexWrap: "wrap",
@@ -57,7 +61,7 @@ export default function GreenComponent() {
         </TextingATYP>
         <TextingATYP
           sx={{
-            fontSize: { xs: 16, md: 18 },
+            fontSize: { xs: 16, md: 18, lg: 25 },
             fontWeight: "lighter",
             color: "#363434",
             flexWrap: "wrap",
@@ -82,7 +86,7 @@ export default function GreenComponent() {
             marginY: { xs: 2, md: 0 },
           }}
         >
-          <Texting sx={{ fontSize: 18 }}>Om oss</Texting>
+          <Texting sx={{ fontSize: { md: 18, lg: 25 } }}>Om oss</Texting>
         </Button>
       </Box>
       <Box>
