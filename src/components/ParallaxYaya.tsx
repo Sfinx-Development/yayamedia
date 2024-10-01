@@ -145,10 +145,14 @@ export default function ParallaxYaya() {
                 display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
-                position: "absolute",
+                position: "absolute",            
+                top: "-88px", 
+                left: "calc(50% - 330px)",
+                transform: "translateX(-50%)", 
                 zIndex: 2,
-                left: { xs: "20%", md: "20%" },
-                top: { xs: "-20%", md: "-20%" },
+              
+                // left: { xs: "20%", md: "20%" },
+                // top: { xs: "-20%", md: "-20%" },
               }}
             >
               <img
@@ -163,8 +167,8 @@ export default function ParallaxYaya() {
             </Box>
             <Box
               sx={{
+                position: "relative", 
                 backgroundColor: "#F3D9DF",
-                position: "relative",
                 padding: 5,
                 borderRadius: 2,
                 // flex: 1 / 3,
@@ -196,9 +200,13 @@ export default function ParallaxYaya() {
                 alignItems: "center",
                 justifyContent: "center",
                 position: "absolute",
+                top: "-88px", 
+                right: "calc(50% - 440px)", 
+                transform: "translateX(-50%)", 
                 zIndex: 2,
-                right: { xs: "20%", md: "20%" },
-                top: { xs: "-10%", md: "-20%" },
+          
+                // right: { xs: "20%", md: "20%" },
+                // top: { xs: "-10%", md: "-20%" },
               }}
             >
               <img
