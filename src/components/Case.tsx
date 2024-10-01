@@ -23,7 +23,7 @@ export default function Case() {
     >
       <Texting
         sx={{
-          fontSize: { xs: 30, md: 40, lg: 55 },
+          fontSize: { xs: 30, md: 40, xl: 55 },
           color: "#363434",
           marginTop: 12,
           marginBottom: 5,

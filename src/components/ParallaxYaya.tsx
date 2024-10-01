@@ -94,7 +94,7 @@ export default function ParallaxYaya() {
             >
               <Texting
                 sx={{
-                  fontSize: { xs: 20, md: 30, lg: 45 },
+                  fontSize: { xs: 20, md: 30, xl: 45 },
                   color: "#363434",
                   marginBottom: 2,
                   textAlign: "center",
@@ -109,7 +109,7 @@ export default function ParallaxYaya() {
                   marginTop: 2,
                   maxWidth: { xs: "90%", md: "70%" },
                   textAlign: "center",
-                  fontSize: { xs: 18, md: 18, lg: 25 },
+                  fontSize: { xs: 18, md: 18, xl: 25 },
                 }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
@@ -142,8 +142,8 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 borderRadius: "50%",
-                width: { xs: 70, md: 110, lg: 150 },
-                height: { xs: 70, md: 110, lg: 150 },
+                width: { xs: 70, md: 110, xl: 150 },
+                height: { xs: 70, md: 110, xl: 150 },
                 display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
@@ -170,13 +170,13 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 // flex: 1 / 3,
-                height: { xs: 350, md: 350, lg: 500 },
-                width: { xs: 300, md: 300, lg: 450 },
+                height: { xs: 350, md: 350, xl: 500 },
+                width: { xs: 300, md: 300, xl: 450 },
               }}
             >
               <Texting
                 sx={{
-                  fontSize: { xs: 20, md: 20, lg: 26 },
+                  fontSize: { xs: 20, md: 20, xl: 26 },
                   color: "#363434",
                   marginBottom: 2,
                 }}
@@ -184,7 +184,7 @@ export default function ParallaxYaya() {
                 Såhär säger Emelie - om Åsa
               </Texting>
               <TextingATYP
-                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, lg: 23 } }}
+                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, xl: 23 } }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt
@@ -200,8 +200,8 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 borderRadius: "50%",
-                width: { xs: 70, md: 110, lg: 150 },
-                height: { xs: 70, md: 110, lg: 150 },
+                width: { xs: 70, md: 110, xl: 150 },
+                height: { xs: 70, md: 110, xl: 150 },
                 display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
@@ -228,13 +228,13 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 position: "relative",
-                height: { xs: 350, md: 350, lg: 500 },
-                width: { xs: 300, md: 300, lg: 450 },
+                height: { xs: 350, md: 350, xl: 500 },
+                width: { xs: 300, md: 300, xl: 450 },
               }}
             >
               <Texting
                 sx={{
-                  fontSize: { xs: 20, md: 20, lg: 26 },
+                  fontSize: { xs: 20, md: 20, xl: 26 },
                   color: "#363434",
                   marginBottom: 2,
                 }}
@@ -242,7 +242,7 @@ export default function ParallaxYaya() {
                 Såhär säger Åsa - om Emelie
               </Texting>
               <TextingATYP
-                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, lg: 23 } }}
+                sx={{ flexWrap: "wrap", fontSize: { xs: 18, md: 18, xl: 23 } }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
                 vilket barn som helst att på en millisekund gå från pirrigt
@@ -255,13 +255,13 @@ export default function ParallaxYaya() {
               </TextingATYP>
             </Box>
           </Box>
-          <Box sx={{ marginY: { xs: 6, md: 12, lg: 25 }, display: "flex" }}>
+          <Box sx={{ marginY: { xs: 6, md: 12, xl: 25 }, display: "flex" }}>
             <Box
               sx={{
                 backgroundColor: "#363434",
                 display: "flex",
                 flexDirection: "row",
-                maxHeight: { xs: 250, md: 150, lg: 300 },
+                maxHeight: { xs: 250, md: 150, xl: 300 },
                 padding: { xs: 4, md: 4 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
@@ -277,7 +277,7 @@ export default function ParallaxYaya() {
               >
                 <Texting
                   sx={{
-                    fontSize: { xs: 30, md: 30, lg: 45 },
+                    fontSize: { xs: 30, md: 30, xl: 45 },
                     color: "#B9DCD2",
                   }}
                 >
@@ -286,7 +286,7 @@ export default function ParallaxYaya() {
                 <TextingATYP
                   sx={{
                     color: "#F7F7F7",
-                    fontSize: { xs: 14, md: 16, lg: 25 },
+                    fontSize: { xs: 14, md: 16, xl: 25 },
                     maxWidth: { xs: "100%", md: "70%" },
                   }}
                 >
@@ -368,10 +368,10 @@ export default function ParallaxYaya() {
                   alignItems: "center",
                 }}
               >
-                <Texting sx={{ fontSize: { xs: 20, md: 30, lg: 45 } }}>
+                <Texting sx={{ fontSize: { xs: 20, md: 30, xl: 45 } }}>
                   Emelie Svernhed
                 </Texting>
-                <TextingATYP sx={{ fontSize: { lg: 25 } }}>
+                <TextingATYP sx={{ fontSize: { xl: 25 } }}>
                   COPYWRITER/CREATIVE DIRECTOR
                 </TextingATYP>
                 <Box
@@ -394,7 +394,7 @@ export default function ParallaxYaya() {
                     style={{ textDecoration: "none" }}
                   >
                     <TextingATYP
-                      sx={{ color: "#363434", fontSize: { lg: 25 } }}
+                      sx={{ color: "#363434", fontSize: { xl: 25 } }}
                     >
                       emelie@yayamedia.se
                     </TextingATYP>
@@ -426,10 +426,10 @@ export default function ParallaxYaya() {
                   alignItems: "center",
                 }}
               >
-                <Texting sx={{ fontSize: { xs: 20, md: 30, lg: 45 } }}>
+                <Texting sx={{ fontSize: { xs: 20, md: 30, xl: 45 } }}>
                   Åsa Kjellberg
                 </Texting>
-                <TextingATYP sx={{ fontSize: { lg: 25 } }}>
+                <TextingATYP sx={{ fontSize: { xl: 25 } }}>
                   ART DIRECTOR/PROJEKTLEDARE
                 </TextingATYP>
                 <Box
@@ -452,7 +452,7 @@ export default function ParallaxYaya() {
                     style={{ textDecoration: "none" }}
                   >
                     <TextingATYP
-                      sx={{ color: "#363434", fontSize: { lg: 25 } }}
+                      sx={{ color: "#363434", fontSize: { xl: 25 } }}
                     >
                       asa@yayamedia.se
                     </TextingATYP>

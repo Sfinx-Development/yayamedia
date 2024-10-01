@@ -30,7 +30,7 @@ export default function ConceptDevelopment() {
       <Box sx={{ width: "100%", padding: { xs: 2, md: 0 } }}>
         <Texting
           sx={{
-            fontSize: { xs: 30, md: 40, lg: 50 },
+            fontSize: { xs: 30, md: 40, xl: 50 },
             color: "#363434",
             paddingLeft: { xs: 2, md: 8 },
           }}
@@ -39,7 +39,7 @@ export default function ConceptDevelopment() {
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 15, md: 20, lg: 25 },
+            fontSize: { xs: 15, md: 20, xl: 25 },
             color: "#363434",
             marginBottom: 5,
             paddingLeft: { xs: 2, md: 8 },
@@ -53,8 +53,8 @@ export default function ConceptDevelopment() {
         sx={{
           backgroundColor: "#F3D9DF",
           borderRadius: "50%",
-          width: { xs: 70, lg: 100 },
-          height: { xs: 70, lg: 100 },
+          width: { xs: 70, xl: 100 },
+          height: { xs: 70, xl: 100 },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -79,13 +79,13 @@ export default function ConceptDevelopment() {
         sx={{
           display: "flex",
           backgroundColor: "#363434",
-          padding: { xs: 2, md: 4, lg: 5 },
+          padding: { xs: 2, md: 4, xl: 5 },
           position: "relative",
           borderRadius: 2,
           width: "90%",
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
-          gap: { lg: 10 },
+          gap: { xl: 10 },
         }}
       >
         <Box
@@ -97,13 +97,13 @@ export default function ConceptDevelopment() {
             padding: 2,
           }}
         >
-          <Texting sx={{ fontSize: { xs: 18, md: 20, lg: 30 } }}>
+          <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
             Konceptutveckling
           </Texting>
           <TextingATYP
             sx={{
               color: "#F7F7F7",
-              fontSize: { xs: 12, md: 13, lg: 18 },
+              fontSize: { xs: 12, md: 13, xl: 18 },
               marginTop: 2,
             }}
           >
@@ -113,10 +113,10 @@ export default function ConceptDevelopment() {
             Då kan konceptutveckling vara något som ger ditt varumärke den extra
             push som krävs.
           </TextingATYP>
-          <Texting sx={{ fontSize: { xs: 18, md: 20, lg: 30 }, marginTop: 2 }}>
+          <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 }, marginTop: 2 }}>
             Från 80 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 12, md: 13, lg: 16 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 12, md: 13, xl: 16 } }}>
             Ex. moms
           </TextingATYP>
           <Texting sx={{ fontSize: { xs: 14, md: 20 }, marginTop: 4 }}>
@@ -125,7 +125,7 @@ export default function ConceptDevelopment() {
           <TextingATYP
             sx={{
               color: "#F7F7F7",
-              fontSize: { xs: 12, md: 13, lg: 18 },
+              fontSize: { xs: 12, md: 13, xl: 18 },
               marginTop: 1,
             }}
           >
@@ -150,18 +150,18 @@ export default function ConceptDevelopment() {
         >
           <Texting
             sx={{
-              fontSize: { xs: 25, md: 40, lg: 52 },
+              fontSize: { xs: 25, md: 40, xl: 52 },
               textAlign: { xs: "start", md: "end" },
             }}
           >
-            Hur och vad vill du att din målgrupp ska känna?
+            Hur och vad vill du att din måxlrupp ska känna?
           </Texting>
           <TextingATYP
             sx={{
               textAlign: { xs: "start", md: "end" },
               marginTop: 2,
-              fontSize: { xs: 20, lg: 25 },
-              marginLeft: { lg: 22 },
+              fontSize: { xs: 20, xl: 25 },
+              marginLeft: { xl: 22 },
             }}
           >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke

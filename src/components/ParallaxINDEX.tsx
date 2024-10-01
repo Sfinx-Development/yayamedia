@@ -81,7 +81,7 @@ export default function ParallaxWave() {
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
               justifyContent: "center",
-              // gap: { lg: 8 },
+              // gap: { xl: 8 },
             }}
           >
             <Box
@@ -97,7 +97,7 @@ export default function ParallaxWave() {
             >
               <Texting
                 sx={{
-                  fontSize: { xs: 35, md: 45, lg: 55 },
+                  fontSize: { xs: 35, md: 45, xl: 55 },
                   color: "#363434",
                   marginBottom: 2,
                 }}
@@ -106,8 +106,8 @@ export default function ParallaxWave() {
               </Texting>
               <TextingATYP
                 sx={{
-                  width: { xs: 320, md: 450, lg: 600 },
-                  fontSize: { lg: 25 },
+                  width: { xs: 320, md: 450, xl: 600 },
+                  fontSize: { xl: 25 },
                 }}
               >
                 Det brusar högt där ute. Att hitta sin unika rytm bland
@@ -119,9 +119,9 @@ export default function ParallaxWave() {
               </TextingATYP>
               <TextingATYP
                 sx={{
-                  width: { xs: 320, md: 450, lg: 600 },
+                  width: { xs: 320, md: 450, xl: 600 },
                   marginTop: 2,
-                  fontSize: { lg: 25 },
+                  fontSize: { xl: 25 },
                 }}
               >
                 Oavsett hur du för dig just nu kan du räkna med oss! En
@@ -139,7 +139,7 @@ export default function ParallaxWave() {
                   maxWidth: "40%",
                   color: "#F7F7F7",
                   borderRadius: 2,
-                  paddingY: { md: 1, lg: 2 },
+                  paddingY: { md: 1, xl: 2 },
                   textTransform: "none",
                 }}
               >
@@ -148,7 +148,7 @@ export default function ParallaxWave() {
             </Box>
             <Box
               sx={{
-                marginTop: { xs: 0, md: 2, lg: 8 },
+                marginTop: { xs: 0, md: 2, xl: 8 },
                 backgroundColor: "#F7F7F7",
                 padding: 0,
                 margin: 0,

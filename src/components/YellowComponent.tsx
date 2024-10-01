@@ -18,10 +18,10 @@ export default function YellowComponent() {
         marginTop: "60px", // Justera detta värde till höjden på din header
         marginBottom: 100,
         alignItems: "center",
-        paddingBottom: { lg: 20 },
+        paddingBottom: { xl: 20 },
         position: "fixed", // Gör den fast
         zIndex: 2, // Viktigt att ha högre än ParallaxWave
-        height: { xs: "500px", md: "500px", lg: 650 }, // Sätt en fast höjd
+        height: { xs: "500px", md: "500px", xl: 650 }, // Sätt en fast höjd
       }}
     >
       <Box
@@ -30,17 +30,17 @@ export default function YellowComponent() {
           flexDirection: { xs: "column", md: "column" },
           justifyContent: "space-between",
           alignItems: "flex-start",
-          maxWidth: { md: 900, lg: 1300 },
+          maxWidth: { md: 900, xl: 1300 },
           width: "100%",
         }}
       >
         <Texting
-          sx={{ fontSize: { xs: 40, md: 80, lg: 90 }, color: "#363434" }}
+          sx={{ fontSize: { xs: 40, md: 80, xl: 90 }, color: "#363434" }}
         >
           Vilka är vi?
         </Texting>
         <Texting
-          sx={{ fontSize: { xs: 30, md: 50, lg: 60 }, color: "#363434" }}
+          sx={{ fontSize: { xs: 30, md: 50, xl: 60 }, color: "#363434" }}
         >
           Allt du behöver veta.
         </Texting>

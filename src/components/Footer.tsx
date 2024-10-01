@@ -16,12 +16,11 @@ export default function Footer() {
   return (
     <Box
       sx={{
-        position: "relative",
         width: "100%",
         backgroundColor: "#363434",
         display: "flex",
         bottom: 0,
-        height: { xs: 200, md: 200, lg: 320 },
+        height: { xs: "auto", xl: 320 },
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
         paddingY: 2,
@@ -61,7 +60,7 @@ export default function Footer() {
             display: "flex",
             flexDirection: { xs: "row", md: "column" }, // Lägger elementen vertikalt
             alignItems: "flex-start", // Justerar till vänster
-            gap: { xs: 2, md: 2, lg: 5 }, // Justera mellanrum mellan Emelie och Åsa
+            gap: { xs: 2, md: 2, xl: 5 }, // Justera mellanrum mellan Emelie och Åsa
           }}
         >
           {/* Emelie Kontaktuppgifter */}
@@ -69,7 +68,7 @@ export default function Footer() {
             <Texting
               sx={{
                 color: "#F7F7F7",
-                fontSize: { xs: 20, md: 20, lg: 25 },
+                fontSize: { xs: 20, md: 20, xl: 25 },
                 fontWeight: 500,
                 marginBottom: 1.5,
               }}
@@ -80,7 +79,7 @@ export default function Footer() {
               sx={{
                 color: "#F7F7F7",
                 marginBottom: 0.5,
-                fontSize: { xs: 20, md: 20, lg: 25 },
+                fontSize: { xs: 20, md: 20, xl: 25 },
               }}
             >
               emelie@yayamedia.se
@@ -88,8 +87,8 @@ export default function Footer() {
             <TextingATYP
               sx={{
                 color: "#F7F7F7",
-                marginBottom: 0.5,
-                fontSize: { xs: 20, md: 20, lg: 25 },
+                marginBottom: 1,
+                fontSize: { xs: 20, md: 20, xl: 25 },
               }}
             >
               070-7 46 06 69
@@ -101,7 +100,7 @@ export default function Footer() {
             <Texting
               sx={{
                 color: "#F7F7F7",
-                fontSize: { xs: 20, md: 20, lg: 25 },
+                fontSize: { xs: 20, md: 20, xl: 25 },
                 fontWeight: 500,
                 marginBottom: 1.5,
               }}
@@ -112,7 +111,7 @@ export default function Footer() {
               sx={{
                 color: "#F7F7F7",
                 marginBottom: 0.5,
-                fontSize: { xs: 20, md: 20, lg: 25 },
+                fontSize: { xs: 20, md: 20, xl: 25 },
               }}
             >
               asa@yayamedia.se
@@ -121,7 +120,7 @@ export default function Footer() {
               sx={{
                 color: "#F7F7F7",
                 marginBottom: 0.5,
-                fontSize: { xs: 20, md: 20, lg: 25 },
+                fontSize: { xs: 20, md: 20, xl: 25 },
               }}
             >
               073-8 20 14 29

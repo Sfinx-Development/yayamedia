@@ -18,15 +18,15 @@ export default function GreyComponent() {
         backgroundColor: "#363434",
         display: "flex",
         justifyContent: "center",
-        paddingY: { xs: 2, md: 4, lg: 10 },
+        paddingY: { xs: 2, md: 4, xl: 10 },
         paddingX: { xs: 1, md: 0 },
         marginTop: "60px", // Justera detta värde till höjden på din header
         marginBottom: 100,
         alignItems: "center",
-        paddingBottom: { lg: 20 },
+        paddingBottom: { xl: 20 },
         position: "fixed", // Gör den fast
         zIndex: 2, // Viktigt att ha högre än ParallaxWave
-        height: { xs: "500px", md: "500px", lg: 650 }, // Sätt en fast höjd
+        height: { xs: "500px", md: "500px", xl: 650 }, // Sätt en fast höjd
       }}
     >
       <Box
@@ -35,23 +35,23 @@ export default function GreyComponent() {
           flexDirection: { xs: "column", md: "column" },
           justifyContent: "space-between",
           alignItems: "flex-start",
-          maxWidth: { md: 900, lg: 1300 },
+          maxWidth: { md: 900, xl: 1300 },
           width: "100%",
         }}
       >
         <Texting
-          sx={{ fontSize: { xs: 40, md: 80, lg: 90 }, color: "#F7F7F7" }}
+          sx={{ fontSize: { xs: 40, md: 80, xl: 90 }, color: "#F7F7F7" }}
         >
           Inget som kliar,
         </Texting>
         <Texting
-          sx={{ fontSize: { xs: 30, md: 50, lg: 60 }, color: "#F7F7F7" }}
+          sx={{ fontSize: { xs: 30, md: 50, xl: 60 }, color: "#F7F7F7" }}
         >
           inget som sticks.
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 16, md: 18, lg: 25 },
+            fontSize: { xs: 16, md: 18, xl: 25 },
             color: "#F7F7F7",
             flexWrap: "wrap",
             maxWidth: 900,

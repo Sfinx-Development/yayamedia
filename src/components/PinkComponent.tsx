@@ -18,7 +18,7 @@ export default function PinkComponent() {
         background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
         display: "flex",
         justifyContent: "center",
-        paddingY: { xs: 2, md: 4, lg: 20 },
+        paddingY: { xs: 2, md: 4, xl: 20 },
         paddingX: { xs: 1, md: 0 },
         marginTop: "100px", // Justera detta värde till höjden på din header
         marginBottom: 200,
@@ -34,23 +34,23 @@ export default function PinkComponent() {
           flexDirection: { xs: "column", md: "column" },
           justifyContent: "space-between",
           alignItems: "flex-start",
-          maxWidth: { md: 900, lg: 1300 },
+          maxWidth: { md: 900, xl: 1300 },
           width: "100%",
         }}
       >
         <Texting
-          sx={{ fontSize: { xs: 40, md: 80, lg: 90 }, color: "#363434" }}
+          sx={{ fontSize: { xs: 40, md: 80, xl: 90 }, color: "#363434" }}
         >
           Yttepytteliten.
         </Texting>
         <Texting
-          sx={{ fontSize: { xs: 30, md: 50, lg: 60 }, color: "#363434" }}
+          sx={{ fontSize: { xs: 30, md: 50, xl: 60 }, color: "#363434" }}
         >
           Vår byrå - inte vår vision.
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 16, md: 20, lg: 25 },
+            fontSize: { xs: 16, md: 20, xl: 25 },
             fontWeight: "lighter",
             color: "#363434",
             flexWrap: "wrap",

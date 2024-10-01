@@ -28,7 +28,7 @@ export default function Webdesign() {
       >
         <Texting
           sx={{
-            fontSize: { xs: 35, md: 40, lg: 45 },
+            fontSize: { xs: 35, md: 40, xl: 45 },
             color: "#363434",
           }}
         >
@@ -36,7 +36,7 @@ export default function Webdesign() {
         </Texting>
         <TextingATYP
           sx={{
-            fontSize: { xs: 20, md: 20, lg: 25 },
+            fontSize: { xs: 20, md: 20, xl: 25 },
             color: "#363434",
             margin: 0,
             padding: 0,
@@ -72,51 +72,51 @@ export default function Webdesign() {
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 25, lg: 30 },
+              fontSize: { xs: 25, xl: 30 },
               paddingTop: 2,
             }}
           >
             Klick
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 16 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
             Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
             sätt.
           </TextingATYP>
           <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             20 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#2D6555", fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ color: "#2D6555", fontSize: { xs: 13, xl: 15 } }}>
             Ex. moms
           </TextingATYP>
 
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 14, lg: 17 },
+              fontSize: { xs: 14, xl: 17 },
               paddingTop: 2,
             }}
           >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 }, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Startsida
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Upp till fem undersidor
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Cookie policy
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Enklare sökordsanalys
           </TextingATYP>
 
           <TextingATYP
             sx={{
-              fontSize: { xs: 12, lg: 13 },
+              fontSize: { xs: 12, xl: 13 },
               textAlign: "start",
               paddingTop: 2,
             }}
@@ -138,14 +138,14 @@ export default function Webdesign() {
         >
           <Texting
             sx={{
-              fontSize: { xs: 30, lg: 35 },
+              fontSize: { xs: 30, xl: 35 },
               paddingTop: 2,
               color: "#EF3434",
             }}
           >
             Klack
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
             sätt, men det kräver lite fler undersidor än vad klick-paketet
             erbjuder..
@@ -153,39 +153,39 @@ export default function Webdesign() {
           <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
             35 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             Ex. moms
           </TextingATYP>
           <Texting
             sx={{
-              fontSize: { xs: 14, lg: 17 },
+              fontSize: { xs: 14, xl: 17 },
               paddingTop: 2,
               color: "#EF3434",
             }}
           >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 }, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Startsida
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Upp till åtta undersidor
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Cookie policy
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Enklare sökordsanalys
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -SEO-anpassad copy
           </TextingATYP>
           <TextingATYP
             sx={{
-              fontSize: { xs: 12, lg: 13 },
+              fontSize: { xs: 12, xl: 13 },
               textAlign: "start",
               paddingTop: 2,
             }}
@@ -208,13 +208,13 @@ export default function Webdesign() {
           <Texting
             sx={{
               color: "#B8DCD2",
-              fontSize: { xs: 35, lg: 40 },
+              fontSize: { xs: 35, xl: 40 },
               paddingTop: 2,
             }}
           >
             Boom!
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             För dig är det viktigt med en unik design. Här specialdesignar vi på
             detaljnivå för att ditt varumärke ska sticka ut, precis så som det
             förtjänar att göra.
@@ -222,43 +222,43 @@ export default function Webdesign() {
           <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
             Från 60 000:-
           </Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ color: "#F7F7F7", fontSize: { xs: 13, xl: 15 } }}>
             Ex. moms
           </TextingATYP>
           <Texting
             sx={{
               color: "#B8DCD2",
-              fontSize: { xs: 14, lg: 17 },
+              fontSize: { xs: 14, xl: 17 },
               paddingTop: 2,
             }}
           >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 }, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
             -Uppstartsmöte
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Analys av befintlig hemsida
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Startsida
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Upp till 20 specialdesignade undersidor
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Cookie policy
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Enklare sökordsanalys
           </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, lg: 15 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Bildmanér för stillbild och video till hemsidan
           </TextingATYP>
 
           <TextingATYP
             sx={{
-              fontSize: { xs: 12, lg: 13 },
+              fontSize: { xs: 12, xl: 13 },
               textAlign: "start",
               paddingTop: 2,
             }}

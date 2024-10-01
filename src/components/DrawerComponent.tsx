@@ -75,12 +75,12 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               borderRadius: 20,
             }}
           />
-          <Atyp sx={{ marginRight: 1.5, fontSize: { xs: 16, md: 16, lg: 20 } }}>
+          <Atyp sx={{ marginRight: 1.5, fontSize: { xs: 16, md: 16, xl: 20 } }}>
             Stäng
           </Atyp>
         </Box>
         <Link to="/#case" style={{ textDecoration: "none", color: "#363434" }}>
-          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20, lg: 30 } }}>
+          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20, xl: 30 } }}>
             Case
           </Texting>
         </Link>
@@ -89,7 +89,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Texting
-            sx={{ fontSize: { xs: 18, sm: 20, lg: 30 }, paddingBottom: 0.5 }}
+            sx={{ fontSize: { xs: 18, sm: 20, xl: 30 }, paddingBottom: 0.5 }}
           >
             Tjänster
           </Texting>
@@ -98,7 +98,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           to="/tjanster#socialamedier"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, lg: 20 } }}>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>
             Sociala medier
           </Atyp>
         </Link>
@@ -106,13 +106,13 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           to="/tjanster#webbdesign"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, lg: 20 } }}>Webdesign</Atyp>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>Webdesign</Atyp>
         </Link>
         <Link
           to="/tjanster#konceptutveckling"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, lg: 20 } }}>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>
             Konceptutveckling
           </Atyp>
         </Link>
@@ -120,20 +120,20 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           to="/tjanster#copywriting"
           style={{ textDecoration: "none", color: "#363434" }}
         >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, lg: 20 } }}>Copywriting</Atyp>
+          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>Copywriting</Atyp>
         </Link>
         <Link
           to="/tjanster#grafisk-profil"
           style={{ textDecoration: "none", color: "#363434" }}
         >
           <Atyp
-            sx={{ paddingBottom: 0.5, fontSize: { xs: 14, sm: 16, lg: 20 } }}
+            sx={{ paddingBottom: 0.5, fontSize: { xs: 14, sm: 16, xl: 20 } }}
           >
             Grafisk profil
           </Atyp>
         </Link>
         <Link to="/yaya" style={{ textDecoration: "none", color: "#363434" }}>
-          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20, lg: 30 } }}>
+          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20, xl: 30 } }}>
             Om oss
           </Texting>
         </Link>
