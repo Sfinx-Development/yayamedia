@@ -5,7 +5,7 @@ export const isTablet =
   window.innerWidth >= 768 &&
   window.innerWidth <= 1366 &&
   window.innerHeight >= 600 &&
-  window.innerHeight <= 1024;
+  window.outerHeight <= 1024;
 
 export const isMobile = window.innerWidth <= 820;
 export default function GreyComponent() {
