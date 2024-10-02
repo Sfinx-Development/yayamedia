@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
+import { isTablet } from "./GreyComponent";
 
 export default function SocialMedia() {
   const Texting = styled(Typography)`
@@ -32,7 +33,7 @@ export default function SocialMedia() {
       >
         <Texting
           sx={{
-            fontSize: { xs: 35, md: 40, xl: 45 },
+            fontSize: isTablet ? 40 : { xs: 35, md: 40, xl: 45 },
             color: "#363434",
           }}
         >

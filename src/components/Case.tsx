@@ -1,4 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
+import { isTablet } from "./GreyComponent";
 
 export default function Case() {
   const isMobile = window.innerWidth <= 820;
@@ -35,7 +36,7 @@ export default function Case() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: isTablet ? "column" : { xs: "column", md: "row" },
           justifyContent: "center",
           gap: 0.1,
         }}
