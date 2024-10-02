@@ -56,10 +56,10 @@ export default function SocialMedia() {
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
           paddingBottom: { xs: 5, md: 10 },
-          margin: { xs: 2, md: 0 },
+          margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
-          width: "100%",
+          width: "90%",
           gap: 2,
         }}
       >
@@ -162,7 +162,7 @@ export default function SocialMedia() {
           <Texting
             sx={{
               fontSize: 25,
-              paddingTop: { xs: 2, xl: 4 },
+              paddingTop: { xs: 6, xl: 4 },
               color: "#EF3434",
             }}
           >
@@ -226,7 +226,7 @@ export default function SocialMedia() {
             sx={{
               color: "#B8DCD2",
               fontSize: 25,
-              paddingTop: { xs: 2, xl: 7 },
+              paddingTop: { xs: 9, xl: 7 },
             }}
           >
             15000:-/mån
