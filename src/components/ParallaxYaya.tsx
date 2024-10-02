@@ -1,22 +1,10 @@
 import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { isTablet } from "./GreyComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
 export default function ParallaxYaya() {
-  const location = useLocation();
-  useEffect(() => {
-    const hash = location.hash;
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  }, [location]);
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
@@ -31,6 +19,18 @@ export default function ParallaxYaya() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100); // Delay in milliseconds
+      }
+    }
+  }, [location]);
 
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
