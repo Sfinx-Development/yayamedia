@@ -9,8 +9,8 @@ export default function RootLayout() {
         display: "flex",
         position: "relative",
         flexDirection: "column",
-        minHeight: "100vh", // Sätter min höjd till 100% av viewport
-        backgroundColor: "red",
+        minHeight: "100vh",
+        backgroundColor: "#F7F7F7",
         width: "100%",
       }}
     >

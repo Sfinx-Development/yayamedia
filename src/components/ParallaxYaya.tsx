@@ -360,7 +360,7 @@ export default function ParallaxYaya() {
                   width={isBigScreen ? 1000 : 650}
                   style={{
                     position: "absolute",
-                    bottom: isBigScreen ? "-150%" : "-135%",
+                    bottom: isBigScreen ? "-155%" : "-135%",
                     right: isBigScreen ? "-35%" : "-34%",
                     transform: "translateX(-50%) rotate(15deg)",
                     height: "auto",
