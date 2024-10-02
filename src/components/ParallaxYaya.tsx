@@ -1,6 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { isTablet } from "./GreyComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -93,7 +94,7 @@ export default function ParallaxYaya() {
             >
               <Texting
                 sx={{
-                  fontSize: { xs: 20, md: 30 },
+                  fontSize: isTablet ? 30 : { xs: 20, md: 30 },
                   color: "#363434",
                   marginBottom: 2,
                   textAlign: "center",
@@ -108,6 +109,7 @@ export default function ParallaxYaya() {
                   marginTop: 2,
                   maxWidth: { xs: "90%", md: "70%" },
                   textAlign: "center",
+                  fontSize: isTablet ? 20 : { xs: 18 },
                 }}
               >
                 Och lektioner i kommunikation, förstås. Ett fenomen som kan få
@@ -130,11 +132,11 @@ export default function ParallaxYaya() {
             sx={{
               position: "relative",
               display: "flex",
-              flexDirection: { xs: "column", md: "row" },
+              flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
               width: "100%",
               justifyContent: "center",
               alignItems: "center",
-              gap: 4,
+              gap: isTablet ? 2 : 4,
             }}
           >
             <Box
@@ -237,7 +239,9 @@ export default function ParallaxYaya() {
               </TextingATYP>
             </Box>
           </Box>
-          <Box sx={{ marginY: { xs: 6, md: 12 }, display: "flex" }}>
+          <Box
+            sx={{ marginY: isTablet ? 12 : { xs: 6, md: 12 }, display: "flex" }}
+          >
             <Box
               sx={{
                 backgroundColor: "#363434",
@@ -263,8 +267,8 @@ export default function ParallaxYaya() {
                 <TextingATYP
                   sx={{
                     color: "#F7F7F7",
-                    fontSize: { xs: 14, md: 16 },
-                    maxWidth: { xs: "100%", md: "70%" },
+                    fontSize: isTablet ? 16 : { xs: 14, md: 16 },
+                    maxWidth: isTablet ? "70%" : { xs: "100%", md: "70%" },
                   }}
                 >
                   No worries - vi är ju en kommunikationsbyrå. Vi är bra på
@@ -277,12 +281,14 @@ export default function ParallaxYaya() {
                 <img
                   src="https://i.imgur.com/c81JL2G.jpeg"
                   alt="two girls"
-                  height={isMobile ? 250 : 320}
-                  width={isMobile ? 150 : 170}
+                  height={isMobile && !isTablet ? 250 : isTablet ? 350 : 320}
+                  width={isMobile && !isTablet ? 150 : isTablet ? 200 : 170}
                   style={{
                     position: "absolute",
-                    bottom: isMobile ? "10%" : "-10%",
-                    right: isMobile ? "-15%" : "15%",
+                    bottom:
+                      isMobile && !isTablet ? "10%" : isTablet ? "-3%" : "-10%",
+                    right:
+                      isMobile && !isTablet ? "-15%" : isTablet ? "10%" : "15%",
                     transform: "translateX(-50%)",
                     height: "auto",
                   }}
@@ -290,7 +296,7 @@ export default function ParallaxYaya() {
               </Box>
               <Box
                 sx={{
-                  display: { xs: "none", md: "flex" },
+                  display: isTablet ? "none" : { xs: "none", md: "flex" },
                   flexDirection: "column",
                 }}
               >

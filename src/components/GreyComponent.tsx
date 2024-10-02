@@ -1,6 +1,6 @@
 import { Box, styled, Typography } from "@mui/material";
 
-export const isTablet = window.outerWidth >= 600 && window.innerHeight < 1025;
+export const isTablet = window.outerWidth >= 600 && window.innerHeight <= 1366;
 export const isMobile = window.innerWidth <= 820;
 export default function GreyComponent() {
   const Texting = styled(Typography)`
