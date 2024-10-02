@@ -38,8 +38,8 @@ export default function RootLayout() {
           padding: 0,
           margin: 0,
           maxWidth: "none",
-          zIndex: 3,
-          position: "relative", // Använd relativ positionering
+          // zIndex: 3,
+          // position: "relative", // Använd relativ positionering
         }}
       >
         <Footer />
