@@ -14,7 +14,12 @@ export default function GraphicProfile() {
   return (
     <Box
       id="grafisk-profil"
-      sx={{ paddingLeft: 10, display: "flex", flexDirection: "column" }}
+      sx={{
+        paddingLeft: 0,
+        marginLeft: -8,
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
       <Box
         sx={{
@@ -24,7 +29,7 @@ export default function GraphicProfile() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
-          paddingRight: 10,
+          paddingRight: 5,
         }}
       >
         <Texting
@@ -55,7 +60,7 @@ export default function GraphicProfile() {
           margin: { xs: 2, md: 0 },
           //   height: "100%",
           justifyContent: "start",
-          width: "100%",
+          width: "90%",
           gap: 2,
         }}
       >
@@ -66,7 +71,7 @@ export default function GraphicProfile() {
             backgroundColor: "#B9DCD2",
             width: { xs: 310, md: 310, xl: 330 },
             color: "#363434",
-            padding: { xs: 2, xl: 4 },
+            padding: { xs: 2, md: 4, xl: 4 },
             marginTop: 15,
           }}
         >
@@ -115,7 +120,7 @@ export default function GraphicProfile() {
             borderRadius: 2,
             backgroundColor: "#F3D9DF",
             width: { xs: 310, md: 310, xl: 330 },
-            padding: 2,
+            padding: 4,
             marginTop: 5,
             color: "#363434",
           }}
@@ -175,7 +180,7 @@ export default function GraphicProfile() {
             backgroundColor: "#363434",
             width: { xs: 310, md: 310, xl: 330 },
             color: "#F7F7F7",
-            padding: 2,
+            padding: 4,
             marginTop: 0,
           }}
         >

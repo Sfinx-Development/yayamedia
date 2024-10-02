@@ -14,14 +14,19 @@ export default function Webdesign() {
   return (
     <Box
       id="webbdesign"
-      sx={{ paddingLeft: 10, display: "flex", flexDirection: "column" }}
+      sx={{
+        paddingLeft: 0,
+        marginLeft: -8,
+        display: "flex",
+        flexDirection: "column",
+      }}
     >
       <Box
         sx={{
           backgroundColor: "#F7F7F7",
           display: "flex",
           flexDirection: "column",
-          margin: { xs: 2, md: 0 },
+          margin: { xs: 0, md: 0 },
           height: "100%",
           width: "100%",
         }}
@@ -54,7 +59,7 @@ export default function Webdesign() {
           margin: { xs: 2, md: 0 },
           //   height: "100%",
           justifyContent: "start",
-          width: "100%",
+          width: "90%",
           gap: 2,
         }}
       >
