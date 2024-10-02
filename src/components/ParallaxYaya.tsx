@@ -150,9 +150,9 @@ export default function ParallaxYaya() {
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-               
-                top: "-88px",
-                left: { xs: "calc(50% - 410px)", md: "calc(50% - 410px)", xl: "calc(50% - 510px)" },
+                top: { xs: "5%", md: "-20%", xl: "-20%" },
+                // top: "-88px",
+                left: { xs: "calc(50% - 410px)", md: "calc(50% - 410px)", xl: "calc(50% - 525px)" },
               
        
                 // left: { xs: "20%", md: "20%" },
@@ -213,8 +213,12 @@ export default function ParallaxYaya() {
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-                top: "-88px",
-                left: { xs: "calc(50% - 150px)", md: "calc(50% - -300px)", xl: "calc(50% - -370px)" },
+
+                top: { xs: "5%", md: "-20%", xl: "-20%" }, 
+           
+                // top: "-88px",
+
+                left: { xs: "calc(50% - 150px)", md: "calc(50% - -300px)", xl: "calc(50% - -380px)" },
                 // right: { xs: "20%", md: "20%" },
                 // top: { xs: "-10%", md: "-20%" },
               }}
