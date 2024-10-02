@@ -1,6 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { isMobile } from "./GreyComponent";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function GreenComponent() {
   const navigate = useNavigate();
@@ -20,11 +20,11 @@ export default function GreenComponent() {
         width: "100%",
         background: "#B9DCD2",
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
+        flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
         justifyContent: "space-evenly",
         alignItems: "stretch",
         paddingY: 0,
-        paddingX: { xs: 1, md: 0 },
+        paddingX: isTablet ? 2 : { xs: 1, md: 0 },
         height: isMobile ? "auto" : "480px",
         // height: "100%",
       }}
@@ -34,7 +34,7 @@ export default function GreenComponent() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          maxWidth: { xs: 300, md: 500, xl: 700 },
+          maxWidth: isTablet ? 400 : { xs: 300, md: 500, xl: 700 },
           width: "100%",
         }}
       >

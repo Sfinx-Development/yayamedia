@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Case from "./Case";
 import GreenComponent from "./GreenComponent";
+import { isTablet } from "./GreyComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -79,7 +80,7 @@ export default function ParallaxWave() {
           <Box
             sx={{
               display: "flex",
-              flexDirection: { xs: "column", md: "row" },
+              flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
               justifyContent: "center",
               // gap: { xl: 8 },
             }}
@@ -97,7 +98,7 @@ export default function ParallaxWave() {
             >
               <Texting
                 sx={{
-                  fontSize: { xs: 35, md: 45, xl: 55 },
+                  fontSize: isTablet ? 45 : { xs: 35, md: 45, xl: 55 },
                   color: "#363434",
                   marginBottom: 2,
                 }}
@@ -107,7 +108,7 @@ export default function ParallaxWave() {
               <TextingATYP
                 sx={{
                   width: { xs: 320, md: 450, xl: 600 },
-                  fontSize: { xl: 25 },
+                  fontSize: isTablet ? 18 : { xl: 25 },
                 }}
               >
                 Det brusar högt där ute. Att hitta sin unika rytm bland
@@ -121,7 +122,7 @@ export default function ParallaxWave() {
                 sx={{
                   width: { xs: 320, md: 450, xl: 600 },
                   marginTop: 2,
-                  fontSize: { xl: 25 },
+                  fontSize: isTablet ? 18 : { xl: 25 },
                 }}
               >
                 Oavsett hur du för dig just nu kan du räkna med oss! En
@@ -136,7 +137,7 @@ export default function ParallaxWave() {
                 sx={{
                   backgroundColor: "#363434",
                   marginTop: 3,
-                  maxWidth: "40%",
+                  maxWidth: isTablet ? "60%" : "40%",
                   color: "#F7F7F7",
                   borderRadius: 2,
                   paddingY: { md: 1, xl: 2 },
@@ -153,11 +154,19 @@ export default function ParallaxWave() {
                 padding: 0,
                 margin: 0,
                 display: "flex",
-                alignItems: "start",
+                alignItems: isTablet ? "end" : "start",
               }}
             >
               <video
-                width={isMobile ? "320" : isBigScreen ? "700" : "500"}
+                width={
+                  isMobile && !isTablet
+                    ? "320"
+                    : isTablet
+                    ? "350"
+                    : isBigScreen
+                    ? "700"
+                    : "500"
+                }
                 // height="400"
                 autoPlay
                 loop
