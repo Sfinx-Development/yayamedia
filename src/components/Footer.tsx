@@ -25,6 +25,7 @@ export default function Footer() {
         justifyContent: "space-between",
         paddingY: 2,
         zIndex: 3,
+        // position: "relative",
       }}
       component={"footer"}
     >
@@ -44,23 +45,22 @@ export default function Footer() {
         />
       </Box>
 
-      {/* För kontaktuppgifterna */}
       <Box
         sx={{
           paddingX: 2,
           flex: 1,
           display: "flex",
-          justifyContent: "flex-end", // Flyttar hela blocket till höger
-          marginRight: { xs: 0, md: 5 }, // Justera marginal beroende på skärmstorlek
-          marginTop: { xs: 4, md: 0 }, // Lägg till mellanrum ovanför på små skärmar
+          justifyContent: "flex-end",
+          marginRight: { xs: 0, md: 5 },
+          marginTop: { xs: 4, md: 0 },
         }}
       >
         <Box
           sx={{
             display: "flex",
-            flexDirection: { xs: "row", md: "column" }, // Lägger elementen vertikalt
-            alignItems: "flex-start", // Justerar till vänster
-            gap: { xs: 2, md: 2, xl: 5 }, // Justera mellanrum mellan Emelie och Åsa
+            flexDirection: { xs: "row", md: "column" },
+            alignItems: "flex-start",
+            gap: { xs: 2, md: 2, xl: 5 },
           }}
         >
           {/* Emelie Kontaktuppgifter */}

@@ -2,6 +2,7 @@ import { Box, Button, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Case from "./Case";
+import Footer from "./Footer";
 import GreenComponent from "./GreenComponent";
 import { isTablet } from "./GreyComponent";
 import Partners from "./Partners";
@@ -183,6 +184,7 @@ export default function ParallaxWave() {
           <GreenComponent />
           <Case />
           <Partners />
+          <Footer />
         </Box>
       </Box>
     </Box>

@@ -8,6 +8,7 @@ export default function Index() {
       sx={{
         display: "flex",
         flexDirection: "column",
+        position: "relative",
         padding: 0,
         margin: 0,
         overflowX: "hidden",

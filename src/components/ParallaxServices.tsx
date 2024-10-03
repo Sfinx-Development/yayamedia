@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ConceptDevelopment from "./ConceptDevelopment";
+import Footer from "./Footer";
 import PaketScroll from "./PaketScroll";
 import Partners from "./Partners";
 import Wave from "./Wave";
@@ -52,6 +53,7 @@ export default function ParallaxServices() {
           <PaketScroll />
           <ConceptDevelopment />
           <Partners />
+          <Footer />
         </Box>
       </Box>
     </Box>
