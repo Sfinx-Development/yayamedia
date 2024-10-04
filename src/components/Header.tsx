@@ -115,25 +115,26 @@ export default function Header(): JSX.Element {
           alignItems: "flex-start",
           paddingRight: "16px", // Sätt standardpadding
           cursor: "pointer",
-          marginRight: 30,
+          marginRight: 10,
         }}
       >
         <Box
           sx={{
             backgroundColor: "#363434",
-            height: "5px",
+            // height: "4px",
+            height:  { xs: "4px", md: "4px", xl: "5px" },
             width: { xs: "25px", md: "35px" }, // Anpassa bredd på små skärmar
             borderRadius: "20px",
-            marginBottom: "15px",
+            marginBottom: "10px",
           }}
         />
         <Box
           sx={{
             backgroundColor: "#363434",
-            height: "5px",
-            width: { xs: "40px", md: "70px" }, // Anpassa bredd på små skärmar
+            height:  { xs: "4px", md: "4px" },
+            width: { xs: "45px", md: "70px" }, // Anpassa bredd på små skärmar
             borderRadius: "20px",
-            transform: "rotate(-8deg)",
+            transform: "rotate(-10deg)",
           }}
         />
       </div>
