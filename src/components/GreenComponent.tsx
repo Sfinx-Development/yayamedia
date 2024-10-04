@@ -36,6 +36,8 @@ export default function GreenComponent() {
           justifyContent: "center",
           maxWidth: isTablet ? 400 : { xs: 300, md: 500, xl: 700 },
           width: "100%",
+          // paddingLeft: 2,
+           paddingLeft: isMobile ? 2 : { xs: 1, md: 0, sm: 0, xl: 0 },
         }}
       >
         <Texting

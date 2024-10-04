@@ -95,6 +95,8 @@ export default function ParallaxWave() {
                 justifyContent: "flex-end",
                 paddingBottom: { xs: 5, md: 20 },
                 margin: { xs: 2, md: 0 },
+                //  paddingLeft: 1.5,
+                paddingLeft: isMobile ? 1.5 : { xs: 1, md: 0, sm: 0, xl: 0 },
               }}
             >
               <Texting
