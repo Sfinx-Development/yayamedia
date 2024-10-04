@@ -31,22 +31,22 @@ export default function Partners() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "row", md: "row" },
           justifyContent: "center",
           alignItems: "center",
-          gap: 0.1,
+          gap: {xs: 1, md: 3, sm: 3, xl: 3}
         }}
       >
         <img
           src="https://i.imgur.com/o9i7f1R.png"
           alt="Logo of zeroett"
-          height={"80px"}
+          height={"40px"}
           
         />
         <img
           src="https://i.imgur.com/CVKKnXu.png"
           alt="Logo of 609"
-          height="130px"
+          height="90px"
         />
       </Box>
     </Box>
