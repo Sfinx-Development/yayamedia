@@ -18,14 +18,14 @@ export default function PinkComponent() {
         background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
         display: "flex",
         justifyContent: "center",
-        paddingY: isTablet ? 30 : { xs: 2, md: 4, xl: 20 },
+        paddingY: isTablet ? 30 : { xs: 1, md: 4, xl: 20 },
         paddingX: { xs: 1, md: 0 },
-        marginTop: "100px", // Justera detta värde till höjden på din header
-        marginBottom: 200,
+        marginTop: "-50px", // Justera detta värde till höjden på din header, ÄNDRADE DENNA FRÅN 100 TILL -50
+        marginBottom: 200,     
         alignItems: "center",
         position: "fixed", // Gör den fast
         zIndex: 2, // Viktigt att ha högre än ParallaxWave
-        height: "400px", // Sätt en fast höjd
+        height: "700px", // Sätt en fast höjd ÄNDRADE DENNA FRÅN 4 TILL 700
       }}
     >
       <Box
@@ -37,6 +37,7 @@ export default function PinkComponent() {
           maxWidth: { md: 900, xl: 1300 },
           width: "100%",
           paddingX: isTablet ? 2 : isMobile ? 1 : 0,
+          
         }}
       >
         <Texting
