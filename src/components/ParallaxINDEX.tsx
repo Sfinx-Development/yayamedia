@@ -61,7 +61,7 @@ export default function ParallaxWave() {
         sx={{
           position: "absolute",
           width: "100%",
-          paddingY: { xs: 30, md: 10 },
+          paddingY: { xs: 30, md: 10, sm: 1, xl: 1},
           zIndex: 3,
         }}
       >
@@ -169,6 +169,21 @@ export default function ParallaxWave() {
               <video
                 width={
                   isMobile && !isTablet
+                    ? "0" 
+                    : isTablet
+                    ? "350"
+                    : isBigScreen
+                    ? "700"
+                    : "500"
+                }
+                autoPlay
+                loop
+                muted
+                style={{ display: isMobile ? "none" : "block" }} // Döljer videon om enheten är mobil
+              >
+                {/* <video
+                width={
+                  isMobile && !isTablet
                     ? "320"
                     : isTablet
                     ? "350"
@@ -180,7 +195,7 @@ export default function ParallaxWave() {
                 autoPlay
                 loop
                 muted
-              >
+              > */}
                 <source
                   src="https://i.imgur.com/5yECUKT.mp4"
                   type="video/mp4"
