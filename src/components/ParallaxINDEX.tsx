@@ -145,6 +145,12 @@ export default function ParallaxWave() {
                   borderRadius: 2,
                   paddingY: { md: 1, xl: 2 },
                   textTransform: "none",
+                  "&:hover": {
+                    background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen för hover-effekten
+                  },
+                  "&:active": {
+                    background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen när knappen är aktiv (om nödvändigt)
+                  },
                 }}
               >
                 <Texting sx={{ fontSize: 18 }}>Våra tjänster</Texting>
