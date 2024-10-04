@@ -36,8 +36,9 @@ export default function GreenComponent() {
           justifyContent: "center",
           maxWidth: isTablet ? 400 : { xs: 300, md: 500, xl: 700 },
           width: "100%",
+          paddingTop: isMobile ? 10 : { xs: 1, md: 0, sm: 0, xl: 0 },
           // paddingLeft: 2,
-           paddingLeft: isMobile ? 2 : { xs: 1, md: 0, sm: 0, xl: 0 },
+          paddingLeft: isMobile ? 2 : { xs: 1, md: 0, sm: 0, xl: 0 },
         }}
       >
         <Texting
@@ -98,7 +99,13 @@ export default function GreenComponent() {
         <img
           src="https://i.imgur.com/pHngbgI.jpeg"
           alt="two girls"
-          height={isMobile ? "400px" : "480px"}
+          style={{
+            width: isMobile ? "96%" : "96%", // 96% på mobil, 80% på desktop
+            height: isMobile ? "auto" : "480px", // Automatisk höjd på mobil, 480px på desktop
+            objectFit: "cover", // Täcker utrymmet utan att förvränga bilden
+            objectPosition: "top", // Justera bilden så att toppen syns
+          }}
+          // height={isMobile ? "560px" : "480px"} LA TILL STYLE MED MER CSS, KOMMENTERADE UT HEIGHT UNDER
         />
       </Box>
     </Box>
