@@ -408,20 +408,21 @@ export default function ParallaxYaya() {
               // height: "100vh",
               minHeight: "100%",
               flexDirection: { xs: "column", md: "row" },
-              alignItems: "center", // Center children vertically
+              alignItems: "center",
               justifyContent: "center",
-              gap: { xs: 3, md: 4 },
+              gap: { xs: 3, md: 6 },
+              width: "100%",
               paddingTop: { xs: 10, md: 10, xl: 15 },
               paddingBottom: { xs: 2, md: 10, xl: 15 },
             }}
           >
             <Box
               sx={{
-                width: { xs: "100%", md: "80%" },
+                width: { xs: "100%", md: "40%" },
                 height: isBiggerScreen
                   ? 900
                   : isBigScreen
-                  ? 800
+                  ? 700
                   : isMobile
                   ? 420
                   : 600,
@@ -433,7 +434,7 @@ export default function ParallaxYaya() {
                 justifyContent: "center",
                 color: "white",
                 // marginLeft: { xs: 0, md: 8 },
-                marginLeft: { xl: 2 },
+                // marginLeft: { xs: 0, md: 6 },
               }}
             >
               <Box
@@ -488,13 +489,13 @@ export default function ParallaxYaya() {
             </Box>
             <Box
               sx={{
-                width: { xs: "100%", md: "80%" },
+                width: { xs: "100%", md: "40%" },
                 height: isBiggerScreen
                   ? 900
                   : isTablet
                   ? 600
                   : isBigScreen
-                  ? 800
+                  ? 700
                   : isMobile
                   ? 420
                   : 600,
@@ -506,7 +507,7 @@ export default function ParallaxYaya() {
                 justifyContent: "center",
                 color: "white",
                 // marginRight: { xs: 2, md: 8 },
-                marginRight: { xl: 2 },
+                // marginRight: { xs: 0, md: 6 },
               }}
             >
               <Box
