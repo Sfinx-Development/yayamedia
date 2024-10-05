@@ -31,15 +31,15 @@ export default function GreyComponent() {
         backgroundColor: "#363434",
         display: "flex",
         justifyContent: "center",
-        paddingY: isTablet ? 30 : { xs: 2, md: 4 },
-        paddingX: { xs: 1, md: 0 },
-        marginTop: isBiggerScreen ? "60px" : "-50px",
+        paddingY: isTablet && !isMobile ? 30 : { xs: 2, md: 4 },
+        paddingX: { xs: 2, md: 0 },
+        marginTop: isBiggerScreen ? "60px" : isMobile ? "20px" : "-50px",
         marginBottom: 100,
         alignItems: "center",
-        paddingBottom: { xl: 20 },
+        paddingBottom: { xs: 20, xl: 20 },
         position: "fixed",
         zIndex: 2,
-        height: isTablet ? 800 : { xs: "550px", md: "500px", xl: 800 },
+        height: isTablet ? 800 : { xs: 600, md: "500px", xl: 800 },
       }}
     >
       <Box
