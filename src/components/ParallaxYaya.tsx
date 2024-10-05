@@ -62,7 +62,7 @@ export default function ParallaxYaya() {
         width: "100%",
         minHeight: "100vh",
         overflowX: "hidden",
-        backgroundColor: "#F7F7F7",
+        backgroundColor: "#f8f8f8",
       }}
     >
       {/* paddingen här har med vågen att göra */}
@@ -77,7 +77,7 @@ export default function ParallaxYaya() {
         <Wave />
         <Box
           sx={{
-            backgroundColor: "#F7F7F7",
+            backgroundColor: "#f8f8f8",
             marginTop: -2,
             position: "absolute",
             width: "100%",
@@ -97,7 +97,7 @@ export default function ParallaxYaya() {
           >
             <Box
               sx={{
-                backgroundColor: "#F7F7F7",
+                backgroundColor: "#f8f8f8",
                 // margin: 0,
                 display: "flex",
                 flexDirection: "column",
@@ -339,7 +339,7 @@ export default function ParallaxYaya() {
                 </Texting>
                 <TextingATYP
                   sx={{
-                    color: "#F7F7F7",
+                    color: "#f8f8f8",
                     fontSize: isTablet ? 16 : { xs: 12, md: 18, xl: 25 },
                     maxWidth: isTablet ? "70%" : { xs: "50%", md: "70%" },
                     flexWrap: "wrap",
