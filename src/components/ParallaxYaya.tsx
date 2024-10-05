@@ -165,7 +165,7 @@ export default function ParallaxYaya() {
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-                top: { xs: "-5%", md: "-20%", xl: "-20%" },
+                top: { xs: "-5%", md: "-10%", xl: "-20%" },
                 // top: "-88px",
                 left: isTablet
                   ? "calc(20% - 150px)"
@@ -238,7 +238,7 @@ export default function ParallaxYaya() {
                 position: "absolute",
                 zIndex: 2,
 
-                top: { xs: "48%", md: "-20%", xl: "-20%" },
+                top: { xs: "48%", md: "-10%", xl: "-20%" },
 
                 // top: "-88px",
 
@@ -313,7 +313,7 @@ export default function ParallaxYaya() {
                 display: "flex",
                 flexDirection: "row",
                 height: isBiggerScreen ? 300 : { xs: 250, md: 240 },
-                padding: { xs: 2, md: 4 },
+                padding: { xs: 2, lxl: 4 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
                 position: "relative",
@@ -370,7 +370,7 @@ export default function ParallaxYaya() {
                       ? 500
                       : isBiggerScreen
                       ? 480
-                      : 400
+                      : 380
                   }
                   width={
                     isMobile && !isTablet
@@ -392,7 +392,7 @@ export default function ParallaxYaya() {
                         ? "-5%"
                         : isBigScreen
                         ? "-20%"
-                        : "-15%",
+                        : "-20%",
                     right:
                       isMobile && !isTablet
                         ? "-20%"
@@ -433,14 +433,14 @@ export default function ParallaxYaya() {
                       ? "-155%"
                       : isMobile
                       ? "-50%"
-                      : "-125%",
+                      : "-142%",
                     right: isBiggerScreen
                       ? "-32%"
                       : isBigScreen
                       ? "-35%"
                       : isMobile
                       ? "-60%"
-                      : "-35%",
+                      : "-50%",
                     transform: "translateX(-50%) rotate(15deg)",
                     height: "auto",
                   }}

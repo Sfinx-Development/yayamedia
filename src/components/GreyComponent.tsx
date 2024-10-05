@@ -39,7 +39,7 @@ export default function GreyComponent() {
         paddingBottom: { xs: 20, xl: 20 },
         position: "fixed",
         zIndex: 2,
-        height: isTablet ? 800 : { xs: 600, md: "500px", xl: 800 },
+        height: isTablet ? 800 : { xs: 600, md: "720px", xl: 800 },
       }}
     >
       <Box
