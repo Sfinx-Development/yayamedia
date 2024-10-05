@@ -8,6 +8,12 @@ export const isTablet =
   window.outerHeight <= 1024;
 
 export const isMobile = window.innerWidth <= 820;
+
+export const isBigScreen =
+  window.innerHeight >= 1080 && window.innerHeight >= 1800;
+
+export const isBiggerScreen = window.innerHeight >= 1440;
+
 export default function GreyComponent() {
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
