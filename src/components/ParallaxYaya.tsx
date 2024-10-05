@@ -111,7 +111,7 @@ export default function ParallaxYaya() {
                   fontSize: isTablet ? 30 : { xs: 20, md: 30, xl: 45 },
                   color: "#363434",
                   marginBottom: 2,
-                  textAlign: "center",
+                  textAlign: { xs: "start", md: "center" },
                   maxWidth: { xs: "90%", md: "40%" },
                 }}
               >
@@ -122,7 +122,7 @@ export default function ParallaxYaya() {
                 sx={{
                   marginTop: 2,
                   maxWidth: { xs: "90%", md: "70%" },
-                  textAlign: "center",
+                  textAlign: { xs: "start", md: "center" },
                   fontSize: isTablet ? 20 : { xs: 18, md: 18, xl: 25 },
                 }}
               >
@@ -150,7 +150,7 @@ export default function ParallaxYaya() {
               width: "100%",
               justifyContent: "center",
               alignItems: "center",
-              gap: isTablet ? 2 : isBigScreen ? 8 : 4,
+              gap: isTablet ? 2 : isBigScreen ? 8 : 8,
               // backgroundColor: "red",
               maxWidth: { xs: "90%", md: "70%" },
             }}
@@ -158,19 +158,21 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 borderRadius: "50%",
-                width: { xs: 70, md: 110, xl: 150 },
-                height: { xs: 70, md: 110, xl: 150 },
-                display: { xs: "none", md: "flex" },
+                width: { xs: 80, md: 110, xl: 150 },
+                height: { xs: 80, md: 110, xl: 150 },
+                display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-                top: { xs: "5%", md: "-20%", xl: "-20%" },
+                top: { xs: "-5%", md: "-20%", xl: "-20%" },
                 // top: "-88px",
-                left: isBiggerScreen
+                left: isTablet
+                  ? "calc(20% - 150px)"
+                  : isBiggerScreen
                   ? "calc(30% - 525px)"
                   : {
-                      xs: "calc(50% - 410px)",
+                      xs: "calc(50% - 150px)",
                       md: "calc(50% - 410px)",
                       xl: "calc(45% - 525px)",
                     },
@@ -186,6 +188,7 @@ export default function ParallaxYaya() {
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
+                  transform: isMobile ? "scaleX(-1)" : "none",
                 }}
               />
             </Box>
@@ -226,19 +229,22 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 borderRadius: "50%",
-                width: { xs: 70, md: 110, xl: 150 },
-                height: { xs: 70, md: 110, xl: 150 },
-                display: { xs: "none", md: "flex" },
+                width: { xs: 80, md: 110, xl: 150 },
+                height: { xs: 80, md: 110, xl: 150 },
+                display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                // backgroundColor: isTablet ? "red" : "green",
                 position: "absolute",
                 zIndex: 2,
 
-                top: { xs: "5%", md: "-20%", xl: "-20%" },
+                top: { xs: "48%", md: "-20%", xl: "-20%" },
 
                 // top: "-88px",
 
-                left: isBiggerScreen
+                left: isTablet
+                  ? "calc(70% - -150px)"
+                  : isBiggerScreen
                   ? "calc(70% - -380px)"
                   : {
                       xs: "calc(50% - 150px)",
@@ -256,6 +262,7 @@ export default function ParallaxYaya() {
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
+                  transform: isMobile ? "scaleX(-1)" : "none",
                 }}
               />
             </Box>
@@ -305,7 +312,7 @@ export default function ParallaxYaya() {
                 backgroundColor: "#363434",
                 display: "flex",
                 flexDirection: "row",
-                height: { xs: 250, md: 250, xl: 300 },
+                height: isBiggerScreen ? 300 : { xs: 250, md: 240 },
                 padding: { xs: 4, md: 4 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
@@ -382,7 +389,7 @@ export default function ParallaxYaya() {
                         ? "-5%"
                         : isBigScreen
                         ? "-20%"
-                        : "-5%",
+                        : "-15%",
                     right:
                       isMobile && !isTablet
                         ? "-15%"
@@ -406,19 +413,19 @@ export default function ParallaxYaya() {
                   src="https://i.imgur.com/zYSSjI8.png"
                   alt="strings in different colors"
                   //   height={320}
-                  width={isBiggerScreen ? 1150 : isBigScreen ? 1000 : 1000}
+                  width={isBiggerScreen ? 1150 : isBigScreen ? 1000 : 900}
                   style={{
                     position: "absolute",
                     bottom: isBiggerScreen
                       ? "-140%"
                       : isBigScreen
                       ? "-155%"
-                      : "-115%",
+                      : "-125%",
                     right: isBiggerScreen
                       ? "-32%"
                       : isBigScreen
                       ? "-35%"
-                      : "-40%",
+                      : "-35%",
                     transform: "translateX(-50%) rotate(15deg)",
                     height: "auto",
                   }}
@@ -452,7 +459,7 @@ export default function ParallaxYaya() {
                   ? 700
                   : isMobile
                   ? 420
-                  : 600,
+                  : 550,
                 backgroundImage: `url("https://i.imgur.com/pHn9D5k.jpeg")`,
                 backgroundSize: "120%",
                 backgroundPosition: "right 50% top 13%",
@@ -519,13 +526,11 @@ export default function ParallaxYaya() {
                 width: { xs: "100%", md: "40%" },
                 height: isBiggerScreen
                   ? 900
-                  : isTablet
-                  ? 600
                   : isBigScreen
                   ? 700
                   : isMobile
                   ? 420
-                  : 600,
+                  : 550,
                 backgroundImage: `url("https://i.imgur.com/IDFZknK.jpeg")`,
                 backgroundSize: "135%",
                 backgroundPosition: "right 0% top 20%",

@@ -22,7 +22,7 @@ export default function YellowComponent() {
         paddingBottom: { xl: 20 },
         position: "fixed",
         zIndex: 2,
-        height: { xs: "500px", md: "500px", xl: 800 },
+        height: isTablet ? 800 : { xs: "550px", md: "500px", xl: 800 },
       }}
     >
       <Box
@@ -33,8 +33,8 @@ export default function YellowComponent() {
           alignItems: "flex-start",
           maxWidth: { md: 900, xl: 1300 },
           width: "100%",
-          paddingX: isTablet ? 2 : isMobile ? 1 : 0,
-          marginTop: isBiggerScreen ? 50 : 50,
+          paddingX: isTablet ? 2 : isMobile ? 4 : 0,
+          marginTop: isBiggerScreen ? 50 : 30,
         }}
       >
         <Texting
