@@ -358,7 +358,7 @@ export default function ParallaxYaya() {
                       : isBigScreen
                       ? 500
                       : isBiggerScreen
-                      ? 500
+                      ? 480
                       : 400
                   }
                   width={
@@ -369,7 +369,7 @@ export default function ParallaxYaya() {
                       : isBigScreen
                       ? 340
                       : isBiggerScreen
-                      ? 370
+                      ? 350
                       : 260
                   }
                   style={{
@@ -405,16 +405,16 @@ export default function ParallaxYaya() {
                   src="https://i.imgur.com/zYSSjI8.png"
                   alt="strings in different colors"
                   //   height={320}
-                  width={isBiggerScreen ? 1300 : isBigScreen ? 1000 : 1000}
+                  width={isBiggerScreen ? 1100 : isBigScreen ? 1000 : 1000}
                   style={{
                     position: "absolute",
                     bottom: isBiggerScreen
-                      ? "-160%"
+                      ? "-133%"
                       : isBigScreen
                       ? "-155%"
                       : "-115%",
                     right: isBiggerScreen
-                      ? "-37%"
+                      ? "-32%"
                       : isBigScreen
                       ? "-35%"
                       : "-40%",
