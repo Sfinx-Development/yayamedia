@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { useRef, useState } from "react";
 import Draggable, { DraggableData, DraggableEvent } from "react-draggable"; // Import DraggableEvent
 import GraphicProfile from "./GraphicProfile";
+import { isMobile, isTablet } from "./GreyComponent";
 import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
 
@@ -45,7 +46,7 @@ export default function PaketScroll() {
       }}
       onMouseDown={(e) => e.preventDefault()}
     >
-      <Draggable axis="x" onStart={handleDragStart} onStop={handleDragStop}>
+      {isMobile || isTablet ? (
         <Box
           sx={{
             display: "flex",
@@ -56,7 +57,20 @@ export default function PaketScroll() {
           <Webdesign />
           <GraphicProfile />
         </Box>
-      </Draggable>
+      ) : (
+        <Draggable axis="x" onStart={handleDragStart} onStop={handleDragStop}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <SocialMedia />
+            <Webdesign />
+            <GraphicProfile />
+          </Box>
+        </Draggable>
+      )}
     </Box>
   );
 }
