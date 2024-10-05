@@ -1,5 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
+import { isBiggerScreen, isMobile, isTablet } from "./GreyComponent";
 
 export default function YellowComponent() {
   const Texting = styled(Typography)`
@@ -11,29 +11,30 @@ export default function YellowComponent() {
     <Box
       sx={{
         width: "100%",
-        background: "linear-gradient(to top, #FAF7E4, #FAECD0)",
+        background: "linear-gradient(to top,  #FAECD0,#FAF7E4)",
         display: "flex",
         justifyContent: "center",
         paddingY: isTablet ? 30 : { xs: 2, md: 4 },
         paddingX: { xs: 1, md: 0 },
-        marginTop: "60px", // Justera detta värde till höjden på din header
+        marginTop: "60px",
         marginBottom: 100,
         alignItems: "center",
         paddingBottom: { xl: 20 },
-        position: "fixed", // Gör den fast
-        zIndex: 2, // Viktigt att ha högre än ParallaxWave
-        height: { xs: "500px", md: "500px", xl: 650 }, // Sätt en fast höjd
+        position: "fixed",
+        zIndex: 2,
+        height: isTablet ? 800 : { xs: "550px", md: "500px", xl: 800 },
       }}
     >
       <Box
         sx={{
           display: "flex",
+          height: "100%",
           flexDirection: { xs: "column", md: "column" },
-          justifyContent: "space-between",
           alignItems: "flex-start",
           maxWidth: { md: 900, xl: 1300 },
           width: "100%",
-          paddingX: isTablet ? 2 : isMobile ? 1 : 0,
+          paddingX: isTablet ? 2 : isMobile ? 4 : 0,
+          marginTop: isBiggerScreen ? 50 : 30,
         }}
       >
         <Texting
