@@ -40,7 +40,7 @@ export default function ConceptDevelopment() {
           sx={{
             fontSize: { xs: 30, md: 40, xl: 50 },
             color: "#363434",
-            paddingLeft: { xs: 2, md: 8 },
+            paddingLeft: { xs: 4, md: 8 },
             marginBottom: 0.5,
           }}
         >
@@ -166,7 +166,7 @@ export default function ConceptDevelopment() {
               marginTop: 2,
               fontSize: { xs: 20, xl: 25 },
               marginLeft: { xl: 22 },
-              width: isBiggerScreen ? "60%" : "60%",
+              width: isBiggerScreen ? "55%" : "60%",
             }}
           >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke

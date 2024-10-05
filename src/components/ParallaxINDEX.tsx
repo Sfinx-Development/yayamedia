@@ -61,7 +61,7 @@ export default function ParallaxWave() {
         sx={{
           position: "absolute",
           width: "100%",
-          paddingY: { xs: 30, md: 10, sm: 1, xl: 1},
+          paddingY: { xs: 40, md: 10 },
           zIndex: 3,
         }}
       >
@@ -169,7 +169,7 @@ export default function ParallaxWave() {
               <video
                 width={
                   isMobile && !isTablet
-                    ? "0" 
+                    ? "0"
                     : isTablet
                     ? "350"
                     : isBigScreen

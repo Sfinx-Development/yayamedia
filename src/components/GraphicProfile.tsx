@@ -57,7 +57,7 @@ export default function GraphicProfile() {
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
           paddingBottom: { xs: 5, md: 10 },
-          margin: { xs: 2, md: 0 },
+          margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
           width: "90%",
