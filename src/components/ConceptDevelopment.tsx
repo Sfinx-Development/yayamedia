@@ -158,7 +158,7 @@ export default function ConceptDevelopment() {
               width: isBiggerScreen ? "65%" : "70%",
             }}
           >
-            Hur och vad vill du att din måxlrupp ska känna?
+            Hur och vad vill du att din målgrupp ska känna?
           </Texting>
           <TextingATYP
             sx={{
@@ -166,7 +166,7 @@ export default function ConceptDevelopment() {
               marginTop: 2,
               fontSize: { xs: 20, xl: 25 },
               marginLeft: { xl: 22 },
-              width: isBiggerScreen ? "55%" : "60%",
+              width: isBiggerScreen ? "55%" : "65%",
             }}
           >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke

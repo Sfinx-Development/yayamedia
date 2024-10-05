@@ -30,7 +30,7 @@ export default function PinkComponent() {
           ? 700
           : isBiggerScreen
           ? 800
-          : { xs: "750px", md: "800px", xl: "600px" },
+          : { xs: "750px", md: "740px", xl: "600px" },
       }}
     >
       <Box
