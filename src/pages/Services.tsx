@@ -10,6 +10,7 @@ export default function Services() {
         flexDirection: "column",
         padding: 0,
         margin: 0,
+        backgroundColor: "#F7F7F7",
         overflowX: "hidden",
         width: "100%",
         alignItems: "start",
@@ -17,7 +18,9 @@ export default function Services() {
       }}
     >
       <GreyComponent />
-      <Box sx={{ width: "100%", position: "relative" }}>
+      <Box
+        sx={{ width: "100%", position: "relative", backgroundColor: "#F7F7F7" }}
+      >
         <ParallaxServices />
       </Box>
     </Box>
