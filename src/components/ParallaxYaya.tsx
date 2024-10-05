@@ -85,6 +85,7 @@ export default function ParallaxYaya() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Box
@@ -150,6 +151,8 @@ export default function ParallaxYaya() {
               justifyContent: "center",
               alignItems: "center",
               gap: isTablet ? 2 : isBigScreen ? 8 : 4,
+              // backgroundColor: "red",
+              maxWidth: { xs: "90%", md: "70%" },
             }}
           >
             <Box
@@ -164,11 +167,13 @@ export default function ParallaxYaya() {
                 zIndex: 2,
                 top: { xs: "5%", md: "-20%", xl: "-20%" },
                 // top: "-88px",
-                left: {
-                  xs: "calc(50% - 410px)",
-                  md: "calc(50% - 410px)",
-                  xl: "calc(50% - 525px)",
-                },
+                left: isBiggerScreen
+                  ? "calc(30% - 525px)"
+                  : {
+                      xs: "calc(50% - 410px)",
+                      md: "calc(50% - 410px)",
+                      xl: "calc(40% - 525px)",
+                    },
 
                 // left: { xs: "20%", md: "20%" },
                 // top: { xs: "-20%", md: "-20%" },
@@ -191,15 +196,15 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 // flex: 1 / 3,
-                height: { xs: 350, md: 350, xl: 500 },
-                width: { xs: 300, md: 320, xl: 450 },
+                height: isBiggerScreen ? 400 : { xs: 350, md: 500 },
+                width: { xs: 300, md: "45%" },
               }}
             >
               <Texting
                 sx={{
                   fontSize: { xs: 20, md: 20, xl: 26 },
                   color: "#363434",
-                  marginBottom: 2,
+                  marginY: { xs: 2, md: 4 },
                 }}
               >
                 Såhär säger Emelie - om Åsa
@@ -233,11 +238,13 @@ export default function ParallaxYaya() {
 
                 // top: "-88px",
 
-                left: {
-                  xs: "calc(50% - 150px)",
-                  md: "calc(50% - -300px)",
-                  xl: "calc(50% - -380px)",
-                },
+                left: isBiggerScreen
+                  ? "calc(70% - -380px)"
+                  : {
+                      xs: "calc(50% - 150px)",
+                      md: "calc(50% - -300px)",
+                      xl: "calc(60% - -380px)",
+                    },
                 // right: { xs: "20%", md: "20%" },
                 // top: { xs: "-10%", md: "-20%" },
               }}
@@ -259,15 +266,15 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 position: "relative",
-                height: { xs: 350, md: 350, xl: 500 },
-                width: { xs: 300, md: 320, xl: 450 },
+                height: isBiggerScreen ? 400 : { xs: 350, md: 500 },
+                width: { xs: 300, md: "45%" },
               }}
             >
               <Texting
                 sx={{
                   fontSize: { xs: 20, md: 20, xl: 26 },
                   color: "#363434",
-                  marginBottom: 2,
+                  marginY: { xs: 2, md: 4 },
                 }}
               >
                 Såhär säger Åsa - om Emelie
