@@ -2,7 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
-import { isTablet } from "./GreyComponent";
+import { isBiggerScreen, isTablet } from "./GreyComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -14,7 +14,18 @@ export default function ParallaxYaya() {
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Calculate the position of the element
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+
+        // Adjust the offset as needed (for example, 100 pixels)
+        const offset = 100; // Change this value based on your header size or spacing
+
+        // Scroll to the adjusted position
+        window.scrollTo({
+          top: elementPosition - offset,
+          behavior: "smooth",
+        });
       }
     }
   }, [location]);
@@ -388,29 +399,41 @@ export default function ParallaxYaya() {
               </Box>
             </Box>
           </Box>
+
           <Box
             id="kontakt"
             sx={{
+              // backgroundColor: "red",
               display: "flex",
-              height: "100%",
+              // height: "100vh",
+              minHeight: "100%",
               flexDirection: { xs: "column", md: "row" },
+              alignItems: "center", // Center children vertically
+              justifyContent: "center",
               gap: { xs: 3, md: 4 },
-              paddingTop: { xs: 10, md: 10 },
-              paddingBottom: 5,
+              paddingTop: { xs: 10, md: 10, xl: 15 },
+              paddingBottom: { xs: 2, md: 10, xl: 15 },
             }}
           >
             <Box
               sx={{
                 width: { xs: "100%", md: "80%" },
-                height: isBigScreen ? 600 : 420,
+                height: isBiggerScreen
+                  ? 900
+                  : isBigScreen
+                  ? 800
+                  : isMobile
+                  ? 420
+                  : 600,
                 backgroundImage: `url("https://i.imgur.com/pHn9D5k.jpeg")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center 25%",
+                backgroundSize: "120%",
+                backgroundPosition: "right 50% top 13%",
                 display: "flex",
                 alignItems: "flex-end",
                 justifyContent: "center",
                 color: "white",
-                marginLeft: { xs: 0, md: 8 },
+                // marginLeft: { xs: 0, md: 8 },
+                marginLeft: { xl: 2 },
               }}
             >
               <Box
@@ -421,9 +444,15 @@ export default function ParallaxYaya() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  paddingY: 2,
                 }}
               >
-                <Texting sx={{ fontSize: { xs: 20, md: 30, xl: 45 } }}>
+                <Texting
+                  sx={{
+                    fontSize: { xs: 20, md: 30, xl: 45 },
+                    paddingY: { xs: 1, md: 0 },
+                  }}
+                >
                   Emelie Svernhed
                 </Texting>
                 <TextingATYP sx={{ fontSize: { xl: 25 } }}>
@@ -460,15 +489,24 @@ export default function ParallaxYaya() {
             <Box
               sx={{
                 width: { xs: "100%", md: "80%" },
-                height: isBigScreen ? 600 : 420,
+                height: isBiggerScreen
+                  ? 900
+                  : isTablet
+                  ? 600
+                  : isBigScreen
+                  ? 800
+                  : isMobile
+                  ? 420
+                  : 600,
                 backgroundImage: `url("https://i.imgur.com/IDFZknK.jpeg")`,
-                backgroundSize: "cover",
-                backgroundPosition: "center 40%",
+                backgroundSize: "135%",
+                backgroundPosition: "right 0% top 20%",
                 display: "flex",
                 alignItems: "flex-end",
                 justifyContent: "center",
                 color: "white",
-                marginRight: { xs: 2, md: 8 },
+                // marginRight: { xs: 2, md: 8 },
+                marginRight: { xl: 2 },
               }}
             >
               <Box
@@ -479,9 +517,15 @@ export default function ParallaxYaya() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  paddingY: 2,
                 }}
               >
-                <Texting sx={{ fontSize: { xs: 20, md: 30, xl: 45 } }}>
+                <Texting
+                  sx={{
+                    fontSize: { xs: 20, md: 30, xl: 45 },
+                    paddingY: { xs: 1, md: 0 },
+                  }}
+                >
                   Åsa Kjellberg
                 </Texting>
                 <TextingATYP sx={{ fontSize: { xl: 25 } }}>
