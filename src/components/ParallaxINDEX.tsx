@@ -61,7 +61,7 @@ export default function ParallaxWave() {
         sx={{
           position: "absolute",
           width: "100%",
-          paddingY: { xs: 30, md: 10 },
+          paddingY: { xs: 30, md: 10, sm: 1, xl: 1},
           zIndex: 3,
         }}
       >
@@ -95,6 +95,8 @@ export default function ParallaxWave() {
                 justifyContent: "flex-end",
                 paddingBottom: { xs: 5, md: 20 },
                 margin: { xs: 2, md: 0 },
+                //  paddingLeft: 1.5,
+                paddingLeft: isMobile ? 1.5 : { xs: 1, md: 0, sm: 0, xl: 0 },
               }}
             >
               <Texting
@@ -143,6 +145,12 @@ export default function ParallaxWave() {
                   borderRadius: 2,
                   paddingY: { md: 1, xl: 2 },
                   textTransform: "none",
+                  "&:hover": {
+                    background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen för hover-effekten
+                  },
+                  "&:active": {
+                    background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen när knappen är aktiv (om nödvändigt)
+                  },
                 }}
               >
                 <Texting sx={{ fontSize: 18 }}>Våra tjänster</Texting>
@@ -161,6 +169,21 @@ export default function ParallaxWave() {
               <video
                 width={
                   isMobile && !isTablet
+                    ? "0" 
+                    : isTablet
+                    ? "350"
+                    : isBigScreen
+                    ? "700"
+                    : "500"
+                }
+                autoPlay
+                loop
+                muted
+                style={{ display: isMobile ? "none" : "block" }} // Döljer videon om enheten är mobil
+              >
+                {/* <video
+                width={
+                  isMobile && !isTablet
                     ? "320"
                     : isTablet
                     ? "350"
@@ -172,7 +195,7 @@ export default function ParallaxWave() {
                 autoPlay
                 loop
                 muted
-              >
+              > */}
                 <source
                   src="https://i.imgur.com/5yECUKT.mp4"
                   type="video/mp4"
