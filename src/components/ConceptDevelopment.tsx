@@ -59,8 +59,8 @@ export default function ConceptDevelopment() {
           justifyContent: "center",
           position: "absolute",
           zIndex: 2,
-          right: { xs: 50, md: 300 },
-          top: { xs: 110, md: -40 },
+          right: isBiggerScreen ? 300 : { xs: 50, md: 240 },
+          top: isBiggerScreen ? -40 : { xs: 40, md: 20 },
         }}
       >
         <img
@@ -81,7 +81,7 @@ export default function ConceptDevelopment() {
           padding: { xs: 2, md: 4, xl: 5 },
           position: "relative",
           borderRadius: 2,
-          width: "92%",
+          width: isBiggerScreen ? "92%" : "88%",
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
           gap: { xl: 10 },
@@ -101,7 +101,7 @@ export default function ConceptDevelopment() {
           </Texting>
           <TextingATYP
             sx={{
-              width: isBiggerScreen ? "80%" : "80%",
+              width: isBiggerScreen ? "80%" : "100%",
               color: "#F7F7F7",
               fontSize: { xs: 12, md: 13, xl: 20 },
               marginTop: 2,
@@ -128,7 +128,7 @@ export default function ConceptDevelopment() {
               fontSize: { xs: 12, md: 13, xl: 20 },
               marginTop: 1,
 
-              width: isBiggerScreen ? "80%" : "80%",
+              width: isBiggerScreen ? "80%" : "100%",
             }}
           >
             Exakt vad du betalar för vet vi först när vi förstår varumärkets
@@ -153,9 +153,9 @@ export default function ConceptDevelopment() {
         >
           <Texting
             sx={{
-              fontSize: { xs: 25, md: 40, xl: 56 },
+              fontSize: isBiggerScreen ? 56 : { xs: 25, md: 40, xl: 52 },
               textAlign: { xs: "start", md: "end" },
-              width: isBiggerScreen ? "65%" : "40%",
+              width: isBiggerScreen ? "65%" : "70%",
             }}
           >
             Hur och vad vill du att din måxlrupp ska känna?
@@ -166,7 +166,7 @@ export default function ConceptDevelopment() {
               marginTop: 2,
               fontSize: { xs: 20, xl: 25 },
               marginLeft: { xl: 22 },
-              width: isBiggerScreen ? "60%" : "40%",
+              width: isBiggerScreen ? "60%" : "60%",
             }}
           >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke
