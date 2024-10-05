@@ -297,6 +297,7 @@ export default function ParallaxYaya() {
             sx={{
               marginY: isTablet ? 12 : { xs: 6, md: 12, xl: 25 },
               display: "flex",
+              width: "100%",
             }}
           >
             <Box
@@ -405,11 +406,11 @@ export default function ParallaxYaya() {
                   src="https://i.imgur.com/zYSSjI8.png"
                   alt="strings in different colors"
                   //   height={320}
-                  width={isBiggerScreen ? 1100 : isBigScreen ? 1000 : 1000}
+                  width={isBiggerScreen ? 1150 : isBigScreen ? 1000 : 1000}
                   style={{
                     position: "absolute",
                     bottom: isBiggerScreen
-                      ? "-133%"
+                      ? "-140%"
                       : isBigScreen
                       ? "-155%"
                       : "-115%",
