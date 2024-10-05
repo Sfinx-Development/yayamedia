@@ -313,7 +313,7 @@ export default function ParallaxYaya() {
                 display: "flex",
                 flexDirection: "row",
                 height: isBiggerScreen ? 300 : { xs: 250, md: 240 },
-                padding: { xs: 4, md: 4 },
+                padding: { xs: 2, md: 4 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
                 position: "relative",
@@ -323,8 +323,9 @@ export default function ParallaxYaya() {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  flex: 1 / 2,
+                  flex: { xs: "none", md: 1 / 2 },
                   justifyContent: "center",
+                  width: { xs: "100%", md: "auto" },
                 }}
               >
                 <Texting
@@ -339,8 +340,10 @@ export default function ParallaxYaya() {
                 <TextingATYP
                   sx={{
                     color: "#F7F7F7",
-                    fontSize: isTablet ? 16 : { xs: 14, md: 18, xl: 25 },
-                    maxWidth: isTablet ? "70%" : { xs: "100%", md: "70%" },
+                    fontSize: isTablet ? 16 : { xs: 12, md: 18, xl: 25 },
+                    maxWidth: isTablet ? "70%" : { xs: "50%", md: "70%" },
+                    flexWrap: "wrap",
+                    // backgroundColor: "red",
                   }}
                 >
                   No worries - vi är ju en kommunikationsbyrå. Vi är bra på
@@ -360,7 +363,7 @@ export default function ParallaxYaya() {
                   alt="two girls"
                   height={
                     isMobile && !isTablet
-                      ? 250
+                      ? 270
                       : isTablet
                       ? 350
                       : isBigScreen
@@ -371,7 +374,7 @@ export default function ParallaxYaya() {
                   }
                   width={
                     isMobile && !isTablet
-                      ? 150
+                      ? 170
                       : isTablet
                       ? 200
                       : isBigScreen
@@ -384,7 +387,7 @@ export default function ParallaxYaya() {
                     position: "absolute",
                     bottom:
                       isMobile && !isTablet
-                        ? "10%"
+                        ? "-15%"
                         : isTablet
                         ? "-5%"
                         : isBigScreen
@@ -392,7 +395,7 @@ export default function ParallaxYaya() {
                         : "-15%",
                     right:
                       isMobile && !isTablet
-                        ? "-15%"
+                        ? "-20%"
                         : isTablet
                         ? "10%"
                         : isBigScreen
@@ -405,7 +408,7 @@ export default function ParallaxYaya() {
               </Box>
               <Box
                 sx={{
-                  display: isTablet ? "none" : { xs: "none", md: "flex" },
+                  display: "flex",
                   flexDirection: "column",
                 }}
               >
@@ -413,18 +416,30 @@ export default function ParallaxYaya() {
                   src="https://i.imgur.com/zYSSjI8.png"
                   alt="strings in different colors"
                   //   height={320}
-                  width={isBiggerScreen ? 1150 : isBigScreen ? 1000 : 900}
+                  width={
+                    isBiggerScreen
+                      ? 1150
+                      : isBigScreen
+                      ? 1000
+                      : isMobile
+                      ? 300
+                      : 900
+                  }
                   style={{
                     position: "absolute",
                     bottom: isBiggerScreen
                       ? "-140%"
                       : isBigScreen
                       ? "-155%"
+                      : isMobile
+                      ? "-50%"
                       : "-125%",
                     right: isBiggerScreen
                       ? "-32%"
                       : isBigScreen
                       ? "-35%"
+                      : isMobile
+                      ? "-60%"
                       : "-35%",
                     transform: "translateX(-50%) rotate(15deg)",
                     height: "auto",
