@@ -9,7 +9,7 @@ export default function Partners() {
     <Box
       sx={{
         width: "100%",
-        background: "#F7F7F7",
+        backgroundColor: "#F7F7F7",
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
@@ -34,14 +34,13 @@ export default function Partners() {
           flexDirection: { xs: "row", md: "row" },
           justifyContent: "center",
           alignItems: "center",
-          gap: {xs: 1, md: 3, sm: 3, xl: 3}
+          gap: { xs: 1, md: 3, sm: 3, xl: 3 },
         }}
       >
         <img
           src="https://i.imgur.com/o9i7f1R.png"
           alt="Logo of zeroett"
           height={"40px"}
-          
         />
         <img
           src="https://i.imgur.com/CVKKnXu.png"

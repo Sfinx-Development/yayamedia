@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
+import { isBiggerScreen } from "./GreyComponent";
 
 export default function ConceptDevelopment() {
   const Texting = styled(Typography)`
@@ -17,51 +18,49 @@ export default function ConceptDevelopment() {
       id="konceptutveckling"
       sx={{
         width: "100%",
-        background: "#F7F7F7",
+        backgroundColor: "#F7F7F7",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
         flexDirection: "column",
         height: "100%",
-        padding: { xs: 0, md: 0 },
+        padding: { xs: 0 },
+        marginTop: 4,
       }}
     >
-      <Box sx={{ width: "100%", padding: { xs: 2, md: 0 } }}>
+      <Box
+        sx={{
+          width: "100%",
+          padding: { xs: 2, md: 0 },
+          backgroundColor: "#F7F7F7",
+        }}
+      >
         <Texting
           sx={{
             fontSize: { xs: 30, md: 40, xl: 50 },
             color: "#363434",
-            paddingLeft: { xs: 2, md: 8 },
+            paddingLeft: { xs: 4, md: 8 },
+            marginBottom: 0.5,
           }}
         >
           En extra push
         </Texting>
-        <TextingATYP
-          sx={{
-            fontSize: { xs: 15, md: 20, xl: 25 },
-            color: "#363434",
-            marginBottom: 5,
-            paddingLeft: { xs: 2, md: 8 },
-          }}
-        >
-          Konceptutveckling
-        </TextingATYP>
       </Box>
 
       <Box
         sx={{
           backgroundColor: "#F3D9DF",
           borderRadius: "50%",
-          width: { xs: 70, xl: 100 },
-          height: { xs: 70, xl: 100 },
+          width: isBiggerScreen ? 200 : { xs: 70, xl: 100 },
+          height: isBiggerScreen ? 200 : { xs: 70, xl: 100 },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           position: "absolute",
           zIndex: 2,
-          right: { xs: 50, md: 200 },
-          top: { xs: 110, md: 90 },
+          right: isBiggerScreen ? 300 : { xs: 50, md: 240 },
+          top: isBiggerScreen ? -40 : { xs: 40, md: 20 },
         }}
       >
         <img
@@ -82,7 +81,7 @@ export default function ConceptDevelopment() {
           padding: { xs: 2, md: 4, xl: 5 },
           position: "relative",
           borderRadius: 2,
-          width: "90%",
+          width: isBiggerScreen ? "92%" : "88%",
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: "row" },
           gap: { xl: 10 },
@@ -102,8 +101,9 @@ export default function ConceptDevelopment() {
           </Texting>
           <TextingATYP
             sx={{
+              width: isBiggerScreen ? "80%" : "100%",
               color: "#F7F7F7",
-              fontSize: { xs: 12, md: 13, xl: 18 },
+              fontSize: { xs: 12, md: 13, xl: 20 },
               marginTop: 2,
             }}
           >
@@ -116,7 +116,7 @@ export default function ConceptDevelopment() {
           <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 }, marginTop: 2 }}>
             Från 80 000:-
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 12, md: 13, xl: 16 } }}>
+          <TextingATYP sx={{ fontSize: { xs: 12, md: 13, xl: 18 } }}>
             Ex. moms
           </TextingATYP>
           <Texting sx={{ fontSize: { xs: 14, md: 20 }, marginTop: 4 }}>
@@ -125,8 +125,10 @@ export default function ConceptDevelopment() {
           <TextingATYP
             sx={{
               color: "#F7F7F7",
-              fontSize: { xs: 12, md: 13, xl: 18 },
+              fontSize: { xs: 12, md: 13, xl: 20 },
               marginTop: 1,
+
+              width: isBiggerScreen ? "80%" : "100%",
             }}
           >
             Exakt vad du betalar för vet vi först när vi förstår varumärkets
@@ -146,12 +148,14 @@ export default function ConceptDevelopment() {
             justifyContent: "center",
             alignItems: { xs: "start", md: "end" },
             padding: 2,
+            width: "100%",
           }}
         >
           <Texting
             sx={{
-              fontSize: { xs: 25, md: 40, xl: 52 },
+              fontSize: isBiggerScreen ? 56 : { xs: 25, md: 40, xl: 52 },
               textAlign: { xs: "start", md: "end" },
+              width: isBiggerScreen ? "65%" : "70%",
             }}
           >
             Hur och vad vill du att din måxlrupp ska känna?
@@ -162,6 +166,7 @@ export default function ConceptDevelopment() {
               marginTop: 2,
               fontSize: { xs: 20, xl: 25 },
               marginLeft: { xl: 22 },
+              width: isBiggerScreen ? "55%" : "60%",
             }}
           >
             Vi hjälper dig att skapa en starkare koppling mellan ditt varumärke

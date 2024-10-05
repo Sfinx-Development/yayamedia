@@ -31,14 +31,15 @@ export default function GreyComponent() {
         backgroundColor: "#363434",
         display: "flex",
         justifyContent: "center",
-        paddingY: isTablet ? 30 : { xs: 2, md: 4, xl: 20 },
-        paddingX: { xs: 1, md: 0 },
-        marginTop: "100px", // Justera detta värde till höjden på din header
-        marginBottom: 200,
+        paddingY: isTablet && !isMobile ? 30 : { xs: 2, md: 4 },
+        paddingX: { xs: 2, md: 0 },
+        marginTop: isBiggerScreen ? "60px" : isMobile ? "20px" : "-50px",
+        marginBottom: 100,
         alignItems: "center",
-        position: "fixed", // Gör den fast
-        zIndex: 2, // Viktigt att ha högre än ParallaxWave
-        height: "400px", // Sätt en fast höjd
+        paddingBottom: { xs: 20, xl: 20 },
+        position: "fixed",
+        zIndex: 2,
+        height: isTablet ? 800 : { xs: 600, md: "500px", xl: 800 },
       }}
     >
       <Box

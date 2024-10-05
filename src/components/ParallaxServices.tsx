@@ -33,7 +33,7 @@ export default function ParallaxServices() {
         sx={{
           position: "absolute",
           width: "100%",
-          paddingY: { xs: 30, md: 10 },
+          paddingY: { xs: 40, md: 10 },
           zIndex: 3,
         }}
       >

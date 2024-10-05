@@ -1,5 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
+import { isBiggerScreen, isMobile, isTablet } from "./GreyComponent";
 
 export default function PinkComponent() {
   const Texting = styled(Typography)`
@@ -21,11 +21,16 @@ export default function PinkComponent() {
         paddingY: isTablet ? 30 : { xs: 1, md: 4, xl: 20 },
         paddingX: { xs: 1, md: 0 },
         marginTop: "-50px", // Justera detta värde till höjden på din header, ÄNDRADE DENNA FRÅN 100 TILL -50
-        marginBottom: 200,     
+        marginBottom: 200,
         alignItems: "center",
         position: "fixed", // Gör den fast
         zIndex: 2, // Viktigt att ha högre än ParallaxWave
-        height: "700px", // Sätt en fast höjd ÄNDRADE DENNA FRÅN 4 TILL 700
+        // height: "700px", // Sätt en fast höjd ÄNDRADE DENNA FRÅN 4 TILL 700
+        height: isTablet
+          ? 700
+          : isBiggerScreen
+          ? 800
+          : { xs: "750px", md: "800px", xl: "600px" },
       }}
     >
       <Box
@@ -36,8 +41,7 @@ export default function PinkComponent() {
           alignItems: "flex-start",
           maxWidth: { md: 900, xl: 1300 },
           width: "100%",
-          paddingX: isTablet ? 2 : isMobile ? 1 : 0,
-          
+          paddingX: isTablet ? 2 : isMobile ? 2 : 0,
         }}
       >
         <Texting
