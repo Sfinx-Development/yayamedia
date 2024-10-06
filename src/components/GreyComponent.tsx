@@ -5,14 +5,15 @@ export const isTablet =
   window.innerWidth >= 768 &&
   window.innerWidth <= 1366 &&
   window.innerHeight >= 600 &&
-  window.outerHeight <= 1024;
+  window.outerHeight <= 1180;
 
 export const isMobile = window.innerWidth <= 820;
 
 export const isBigScreen =
-  window.innerHeight >= 1080 && window.innerHeight >= 1920;
+  window.innerWidth >= 1080 && window.innerHeight >= 1920;
 
-export const isBiggerScreen = window.innerHeight >= 1440;
+export const isBiggerScreen =
+  window.innerWidth >= 2560 && window.innerHeight >= 1440;
 
 export default function GreyComponent() {
   const Texting = styled(Typography)`

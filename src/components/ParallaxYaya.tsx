@@ -102,7 +102,7 @@ export default function ParallaxYaya() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingBottom: { xs: 5, md: 20 },
+                paddingBottom: isTablet ? 10 : { xs: 5, md: 20 },
                 margin: { xs: 2, md: 0 },
               }}
             >
@@ -165,16 +165,16 @@ export default function ParallaxYaya() {
                 justifyContent: "center",
                 position: "absolute",
                 zIndex: 2,
-                top: { xs: "-5%", md: "-10%", xl: "-20%" },
+                top: isTablet ? "-10%" : { xs: "-5%", md: "-15%", xl: "-22%" },
                 // top: "-88px",
                 left: isTablet
-                  ? "calc(20% - 150px)"
+                  ? "calc(25% - 150px)"
                   : isBiggerScreen
                   ? "calc(30% - 525px)"
                   : {
                       xs: "calc(50% - 150px)",
                       md: "calc(50% - 410px)",
-                      xl: "calc(45% - 525px)",
+                      xl: "calc(40% - 525px)",
                     },
 
                 // left: { xs: "20%", md: "20%" },
@@ -199,7 +199,11 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 // flex: 1 / 3,
-                height: isBiggerScreen ? 400 : { xs: 350, md: 500 },
+                height: isTablet
+                  ? 500
+                  : isBiggerScreen
+                  ? 400
+                  : { xs: 350, md: 400, xl: 450 },
                 width: { xs: 300, md: "45%" },
               }}
             >
@@ -207,7 +211,8 @@ export default function ParallaxYaya() {
                 sx={{
                   fontSize: { xs: 20, md: 20, xl: 26 },
                   color: "#363434",
-                  marginY: { xs: 2, md: 4 },
+                  marginY: { xs: 2, md: 2 },
+                  paddingBottom: { xl: 2 },
                 }}
               >
                 Såhär säger Emelie - om Åsa
@@ -238,18 +243,18 @@ export default function ParallaxYaya() {
                 position: "absolute",
                 zIndex: 2,
 
-                top: { xs: "48%", md: "-10%", xl: "-20%" },
+                top: isTablet ? "-10%" : { xs: "48%", md: "-15%", xl: "-22%" },
 
                 // top: "-88px",
 
                 left: isTablet
-                  ? "calc(70% - -150px)"
+                  ? "calc(65% - -150px)"
                   : isBiggerScreen
                   ? "calc(70% - -380px)"
                   : {
                       xs: "calc(50% - 150px)",
                       md: "calc(50% - -300px)",
-                      xl: "calc(55% - -380px)",
+                      xl: "calc(60% - -380px)",
                     },
                 // right: { xs: "20%", md: "20%" },
                 // top: { xs: "-10%", md: "-20%" },
@@ -273,7 +278,11 @@ export default function ParallaxYaya() {
                 padding: 5,
                 borderRadius: 3,
                 position: "relative",
-                height: isBiggerScreen ? 400 : { xs: 350, md: 500 },
+                height: isTablet
+                  ? 500
+                  : isBiggerScreen
+                  ? 400
+                  : { xs: 350, md: 400, xl: 450 },
                 width: { xs: 300, md: "45%" },
               }}
             >
@@ -281,7 +290,8 @@ export default function ParallaxYaya() {
                 sx={{
                   fontSize: { xs: 20, md: 20, xl: 26 },
                   color: "#363434",
-                  marginY: { xs: 2, md: 4 },
+                  marginY: { xs: 2, md: 2 },
+                  paddingBottom: { xl: 2 },
                 }}
               >
                 Såhär säger Åsa - om Emelie
@@ -365,9 +375,9 @@ export default function ParallaxYaya() {
                     isMobile && !isTablet
                       ? 270
                       : isTablet
-                      ? 350
+                      ? 340
                       : isBigScreen
-                      ? 500
+                      ? 460
                       : isBiggerScreen
                       ? 480
                       : 380
@@ -376,9 +386,9 @@ export default function ParallaxYaya() {
                     isMobile && !isTablet
                       ? 170
                       : isTablet
-                      ? 200
+                      ? 220
                       : isBigScreen
-                      ? 340
+                      ? 300
                       : isBiggerScreen
                       ? 350
                       : 260
@@ -389,17 +399,19 @@ export default function ParallaxYaya() {
                       isMobile && !isTablet
                         ? "-15%"
                         : isTablet
-                        ? "-5%"
-                        : isBigScreen
+                        ? "-10%"
+                        : isBiggerScreen
                         ? "-20%"
+                        : isBigScreen
+                        ? "-30%"
                         : "-20%",
                     right:
                       isMobile && !isTablet
                         ? "-20%"
                         : isTablet
-                        ? "10%"
+                        ? "-10%"
                         : isBigScreen
-                        ? "10%"
+                        ? "12%"
                         : "15%",
                     transform: "translateX(-50%)",
                     // height: "auto",
@@ -417,7 +429,9 @@ export default function ParallaxYaya() {
                   alt="strings in different colors"
                   //   height={320}
                   width={
-                    isBiggerScreen
+                    isTablet
+                      ? 400
+                      : isBiggerScreen
                       ? 1150
                       : isBigScreen
                       ? 1000
@@ -427,14 +441,18 @@ export default function ParallaxYaya() {
                   }
                   style={{
                     position: "absolute",
-                    bottom: isBiggerScreen
-                      ? "-140%"
+                    bottom: isTablet
+                      ? "-62%"
+                      : isBiggerScreen
+                      ? "-150%"
                       : isBigScreen
-                      ? "-155%"
+                      ? "-160%"
                       : isMobile
                       ? "-50%"
                       : "-142%",
-                    right: isBiggerScreen
+                    right: isTablet
+                      ? "-35%"
+                      : isBiggerScreen
                       ? "-32%"
                       : isBigScreen
                       ? "-35%"
