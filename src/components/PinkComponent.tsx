@@ -1,4 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
+import { useEffect } from "react";
 import { isBiggerScreen, isMobile, isTablet } from "./GreyComponent";
 
 export default function PinkComponent() {
@@ -11,6 +12,11 @@ export default function PinkComponent() {
     font-family: "AtypRegularVariable", sans-serif;
     font-variation-settings: "wght" 300;
   `;
+
+  useEffect(() => {
+    console.log("Width:", window.innerWidth);
+    console.log("Height:", window.innerHeight);
+  }, []);
   return (
     <Box
       sx={{

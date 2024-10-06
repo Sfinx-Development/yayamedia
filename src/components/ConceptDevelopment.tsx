@@ -40,7 +40,7 @@ export default function ConceptDevelopment() {
           sx={{
             fontSize: { xs: 30, md: 40, xl: 50 },
             color: "#363434",
-            paddingLeft: { xs: 4, md: 8 },
+            paddingLeft: { xs: 4, md: 8, xl: 10 },
             marginBottom: 0.5,
           }}
         >
@@ -52,15 +52,15 @@ export default function ConceptDevelopment() {
         sx={{
           backgroundColor: "#F3D9DF",
           borderRadius: "50%",
-          width: isBiggerScreen ? 200 : { xs: 70, xl: 100 },
-          height: isBiggerScreen ? 200 : { xs: 70, xl: 100 },
+          width: isBiggerScreen ? 200 : { xs: 70, md: 100 },
+          height: isBiggerScreen ? 200 : { xs: 70, md: 100 },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           position: "absolute",
           zIndex: 2,
-          right: isBiggerScreen ? 300 : { xs: 50, md: 240 },
-          top: isBiggerScreen ? -40 : { xs: 40, md: 20 },
+          right: isBiggerScreen ? 300 : { xs: 50, md: 180, xl: 300 },
+          top: isBiggerScreen ? -40 : { xs: 40, md: 10, xl: 10 },
         }}
       >
         <img
@@ -68,8 +68,8 @@ export default function ConceptDevelopment() {
           alt="guy dancing on hands"
           style={{
             borderRadius: "50%",
-            width: "70%",
-            height: "70%",
+            width: "80%",
+            height: "80%",
           }}
         />
       </Box>
