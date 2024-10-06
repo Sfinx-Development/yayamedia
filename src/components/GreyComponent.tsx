@@ -75,7 +75,7 @@ export default function GreyComponent() {
             fontSize: isTablet ? 18 : { xs: 16, md: 18, xl: 25 },
             color: "#F7F7F7",
             flexWrap: "wrap",
-            maxWidth: 900,
+            maxWidth: { xs: "95%", md: 900 },
             marginTop: 1,
           }}
         >

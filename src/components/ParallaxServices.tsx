@@ -41,7 +41,7 @@ export default function ParallaxServices() {
         <Box
           sx={{
             backgroundColor: "#F7F7F7",
-            marginTop: -10,
+            marginTop: { xs: -5, md: -10 },
             position: "absolute",
             width: "100%",
             zIndex: 3,
