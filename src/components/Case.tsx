@@ -54,7 +54,7 @@ export default function Case() {
           src="https://i.imgur.com/nRLImCB.png"
           alt="picture of teip"
           height={isMobile ? "90%" : isBigScreen ? "700px" : "545px"}
-          width={isMobile ? "90%" : isBigScreen ? "1100px" : "645px"}
+          width={isMobile ? "100%" : isBigScreen ? "1100px" : "645px"}
         />
       </Box>
     </Box>
