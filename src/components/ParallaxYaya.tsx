@@ -379,7 +379,7 @@ export default function ParallaxYaya() {
                       : isBigScreen
                       ? 460
                       : isBiggerScreen
-                      ? 480
+                      ? 550
                       : 380
                   }
                   width={
@@ -390,7 +390,7 @@ export default function ParallaxYaya() {
                       : isBigScreen
                       ? 300
                       : isBiggerScreen
-                      ? 350
+                      ? 400
                       : 260
                   }
                   style={{
@@ -401,7 +401,7 @@ export default function ParallaxYaya() {
                         : isTablet
                         ? "-10%"
                         : isBiggerScreen
-                        ? "-20%"
+                        ? "-18%"
                         : isBigScreen
                         ? "-30%"
                         : "-20%",
@@ -425,14 +425,14 @@ export default function ParallaxYaya() {
                 }}
               >
                 <img
-                  src="https://i.imgur.com/zYSSjI8.png"
+                  src="https://i.imgur.com/aehCUnX.png"
                   alt="strings in different colors"
                   //   height={320}
                   width={
                     isTablet
                       ? 400
                       : isBiggerScreen
-                      ? 1150
+                      ? 900
                       : isBigScreen
                       ? 1000
                       : isMobile
@@ -444,7 +444,7 @@ export default function ParallaxYaya() {
                     bottom: isTablet
                       ? "-62%"
                       : isBiggerScreen
-                      ? "-150%"
+                      ? "-65%"
                       : isBigScreen
                       ? "-160%"
                       : isMobile
@@ -453,7 +453,7 @@ export default function ParallaxYaya() {
                     right: isTablet
                       ? "-35%"
                       : isBiggerScreen
-                      ? "-32%"
+                      ? "-15%"
                       : isBigScreen
                       ? "-35%"
                       : isMobile
