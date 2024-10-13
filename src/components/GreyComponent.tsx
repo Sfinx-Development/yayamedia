@@ -60,14 +60,14 @@ export default function GreyComponent() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
-            marginLeft: { xs: 2, xl: "10%" },
+            marginLeft: { xs: 2, md: "10%", xl: "10%" },
             maxWidth: { xs: "100%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
           <Texting
             sx={{
-              paddingTop: 10,
+              paddingTop: isBiggerScreen ? 20 : 10,
               fontSize: isTablet
                 ? 80
                 : isBigScreen

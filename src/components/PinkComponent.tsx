@@ -1,6 +1,6 @@
 import { Box, styled, Typography } from "@mui/material";
 import { useEffect } from "react";
-import { isBigScreen, isTablet } from "./GreyComponent";
+import { isBiggerScreen, isBigScreen, isTablet } from "./GreyComponent";
 
 export default function PinkComponent() {
   const Texting = styled(Typography)`
@@ -48,14 +48,14 @@ export default function PinkComponent() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
-            marginLeft: { xs: 2, xl: "10%" },
+            marginLeft: { xs: 2, md: "15%", xl: "10%" },
             maxWidth: { xs: "100%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
           <Texting
             sx={{
-              paddingTop: 10,
+              paddingTop: isBiggerScreen ? 20 : 10,
               fontSize: isTablet
                 ? 80
                 : isBigScreen
