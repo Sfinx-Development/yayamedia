@@ -10,10 +10,14 @@ export const isTablet =
 export const isMobile = window.innerWidth <= 820;
 
 export const isBigScreen =
-  window.innerWidth >= 1080 && window.innerHeight >= 1920;
+  window.innerWidth >= 1920 &&
+  window.innerHeight >= 1080 &&
+  window.innerWidth < 2500;
 
 export const isBiggerScreen =
   window.innerWidth >= 2560 && window.innerHeight >= 1440;
+
+// export const isBiggestScreen = window.innerWidth >= 3024;
 
 export default function GreyComponent() {
   const Texting = styled(Typography)`
@@ -31,59 +35,81 @@ export default function GreyComponent() {
         width: "100%",
         backgroundColor: "#363434",
         display: "flex",
-        justifyContent: "center",
-        paddingY: isTablet && !isMobile ? 30 : { xs: 2, md: 4 },
-        paddingX: { xs: 2, md: 0 },
-        marginTop: isBiggerScreen ? "60px" : isMobile ? "20px" : "-50px",
-        marginBottom: 100,
-        alignItems: "center",
-        paddingBottom: { xs: 20, xl: 20 },
+        justifyContent: "start",
+        // paddingY: isTablet ? 30 : { xs: 1, md: 4, xl: 0 },
+        paddingX: { xs: 1 },
+        alignItems: { xs: "center", xl: "start" },
         position: "fixed",
         zIndex: 2,
-        height: isTablet ? 800 : { xs: 600, md: "720px", xl: 800 },
+        height: "100%",
       }}
     >
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "column" },
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          maxWidth: { md: 900, xl: 1300 },
+          // width: "100%",
+          height: { xs: "60%" },
+          // backgroundColor: "yellow",
+          // alignItems: "flex-start", // Align items to the start (left)
+          justifyContent: "flex-start", // Optional, adjust based on your layout needs
           width: "100%",
-          paddingX: isTablet ? 2 : isMobile ? 1 : 0,
+          alignItems: isBigScreen ? "end" : { xs: "end", xl: "center" },
         }}
       >
-        <Texting
+        <Box
           sx={{
-            fontSize: isTablet ? 80 : { xs: 40, md: 80, xl: 90 },
-            color: "#F7F7F7",
+            display: "flex",
+            flexDirection: { xs: "column", md: "column" },
+            marginLeft: { xs: 20, xl: "10%" },
+            maxWidth: { xs: 900, xl: "80%" },
+            // backgroundColor: "red",
           }}
         >
-          Inget som kliar,
-        </Texting>
-        <Texting
-          sx={{
-            fontSize: isTablet ? 50 : { xs: 30, md: 50, xl: 60 },
-            color: "#F7F7F7",
-          }}
-        >
-          inget som sticks.
-        </Texting>
-        <TextingATYP
-          sx={{
-            fontSize: isTablet ? 18 : { xs: 16, md: 18, xl: 25 },
-            color: "#F7F7F7",
-            flexWrap: "wrap",
-            maxWidth: { xs: "95%", md: 900 },
-            marginTop: 1,
-          }}
-        >
-          Mjuka klappar. Ett fenomen som kan få vilket barn som helst att på en
-          millisekund gå från pirrigt förväntansfull till besviken. Vi minimerar
-          helt enkelt risken för besvikelse, och erbjuder bara hårda paket på
-          Yaya. Innehållet då? Det bestämmer du själv.
-        </TextingATYP>
+          <Texting
+            sx={{
+              paddingTop: 10,
+              fontSize: isTablet
+                ? 80
+                : isBigScreen
+                ? 90
+                : { xs: 40, md: 80, xl: 100 },
+              color: "#F7F7F7",
+              lineHeight: 1,
+            }}
+          >
+            Inget som kliar,
+          </Texting>
+          <Texting
+            sx={{
+              fontSize: isTablet
+                ? 50
+                : isBigScreen
+                ? 60
+                : { xs: 30, md: 50, xl: 70 },
+              color: "#F7F7F7",
+            }}
+          >
+            inget som sticks.
+          </Texting>
+          <TextingATYP
+            sx={{
+              fontSize: isTablet
+                ? 18
+                : isBigScreen
+                ? 25
+                : { xs: 16, md: 18, xl: 30 },
+              color: "#F7F7F7",
+              flexWrap: "wrap",
+              maxWidth: { xs: 900, xl: "50%" },
+              marginTop: 1,
+            }}
+          >
+            Mjuka klappar. Ett fenomen som kan få vilket barn som helst att på
+            en millisekund gå från pirrigt förväntansfull till besviken. Vi
+            minimerar helt enkelt risken för besvikelse, och erbjuder bara hårda
+            paket på Yaya. Innehållet då? Det bestämmer du själv.
+          </TextingATYP>
+        </Box>
       </Box>
     </Box>
   );

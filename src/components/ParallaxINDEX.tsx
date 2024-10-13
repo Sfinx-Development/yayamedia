@@ -53,7 +53,7 @@ export default function ParallaxWave() {
         width: "100%",
         minHeight: "100vh",
         overflowX: "hidden",
-        backgroundColor: "#F7F7F7",
+        backgroundColor: "red",
       }}
     >
       {/* paddingen här har med vågen att göra */}
@@ -63,6 +63,7 @@ export default function ParallaxWave() {
           width: "100%",
           paddingY: { xs: 40, md: 10 },
           zIndex: 3,
+          height: "100%",
         }}
       >
         <Wave />
