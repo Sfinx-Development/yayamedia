@@ -1,4 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
+import { useEffect } from "react";
 
 // export const isTablet = window.outerWidth >= 600 && window.innerHeight <= 1366;
 export const isTablet =
@@ -12,10 +13,13 @@ export const isMobile = window.innerWidth <= 820;
 export const isBigScreen =
   window.innerWidth >= 1920 &&
   window.innerHeight >= 1080 &&
-  window.innerWidth < 2500;
+  window.innerWidth < 2560;
 
 export const isBiggerScreen =
   window.innerWidth >= 2560 && window.innerHeight >= 1440;
+
+export const isBiggestScreen =
+  window.innerWidth >= 3024 && window.innerHeight >= 1964;
 
 // export const isBiggestScreen = window.innerWidth >= 3024;
 
@@ -29,6 +33,11 @@ export default function GreyComponent() {
     font-family: "AtypRegularVariable", sans-serif;
     font-variation-settings: "wght" 300;
   `;
+
+  useEffect(() => {
+    console.log("INNER WIDTH: ", window.innerWidth);
+    console.log("INNER height: ", window.innerHeight);
+  }, []);
   return (
     <Box
       sx={{
@@ -60,14 +69,14 @@ export default function GreyComponent() {
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
-            marginLeft: { xs: 2, md: "10%", xl: "10%" },
+            marginLeft: { xs: 2, md: "12%", xl: "10%" },
             maxWidth: { xs: "100%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
           <Texting
             sx={{
-              paddingTop: isBiggerScreen ? 20 : 10,
+              paddingTop: isBiggerScreen ? 15 : 10,
               fontSize: isTablet
                 ? 80
                 : isBigScreen

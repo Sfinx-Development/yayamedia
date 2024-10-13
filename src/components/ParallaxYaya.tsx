@@ -2,7 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
-import { isBiggerScreen, isTablet } from "./GreyComponent";
+import { isBiggerScreen, isBiggestScreen, isTablet } from "./GreyComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -323,7 +323,7 @@ export default function ParallaxYaya() {
                 display: "flex",
                 flexDirection: "row",
                 height: isBiggerScreen ? 300 : { xs: 250, md: 240 },
-                padding: { xs: 2, lxl: 4 },
+                padding: { xs: 2, xl: 4 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
                 position: "relative",
@@ -377,9 +377,9 @@ export default function ParallaxYaya() {
                       : isTablet
                       ? 340
                       : isBigScreen
-                      ? 460
-                      : isBiggerScreen
                       ? 480
+                      : isBiggerScreen
+                      ? 580
                       : 380
                   }
                   width={
@@ -388,22 +388,22 @@ export default function ParallaxYaya() {
                       : isTablet
                       ? 220
                       : isBigScreen
-                      ? 300
+                      ? 320
                       : isBiggerScreen
-                      ? 350
+                      ? 420
                       : 260
                   }
                   style={{
                     position: "absolute",
                     bottom:
                       isMobile && !isTablet
-                        ? "-15%"
+                        ? "-18%"
                         : isTablet
                         ? "-10%"
                         : isBiggerScreen
                         ? "-20%"
                         : isBigScreen
-                        ? "-30%"
+                        ? "-25%"
                         : "-20%",
                     right:
                       isMobile && !isTablet
@@ -411,7 +411,7 @@ export default function ParallaxYaya() {
                         : isTablet
                         ? "-10%"
                         : isBigScreen
-                        ? "12%"
+                        ? "10%"
                         : "15%",
                     transform: "translateX(-50%)",
                     // height: "auto",
@@ -425,40 +425,44 @@ export default function ParallaxYaya() {
                 }}
               >
                 <img
-                  src="https://i.imgur.com/zYSSjI8.png"
+                  src="https://i.imgur.com/aehCUnX.png"
                   alt="strings in different colors"
                   //   height={320}
                   width={
                     isTablet
                       ? 400
                       : isBiggerScreen
-                      ? 1150
+                      ? 900
                       : isBigScreen
-                      ? 1000
+                      ? 800
                       : isMobile
                       ? 300
-                      : 900
+                      : 600
                   }
                   style={{
                     position: "absolute",
                     bottom: isTablet
                       ? "-62%"
+                      : isBiggestScreen
+                      ? "-63%"
                       : isBiggerScreen
-                      ? "-150%"
+                      ? "-63%"
                       : isBigScreen
-                      ? "-160%"
+                      ? "-68%"
                       : isMobile
-                      ? "-50%"
-                      : "-142%",
+                      ? "-29%"
+                      : "-50%",
                     right: isTablet
                       ? "-35%"
+                      : isBiggestScreen
+                      ? "-15%"
                       : isBiggerScreen
-                      ? "-32%"
+                      ? "-18%"
                       : isBigScreen
-                      ? "-35%"
+                      ? "-22%"
                       : isMobile
                       ? "-60%"
-                      : "-50%",
+                      : "-23%",
                     transform: "translateX(-50%) rotate(15deg)",
                     height: "auto",
                   }}
