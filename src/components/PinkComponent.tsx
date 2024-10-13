@@ -36,20 +36,20 @@ export default function PinkComponent() {
         sx={{
           display: "flex",
           // width: "100%",
-          height: { xs: "60%" },
+          height: { xs: "70%", md: "60%" },
           // backgroundColor: "yellow",
           // alignItems: "flex-start", // Align items to the start (left)
           justifyContent: "flex-start", // Optional, adjust based on your layout needs
           width: "100%",
-          alignItems: isBigScreen ? "end" : { xs: "end", xl: "center" },
+          alignItems: isBigScreen ? "end" : { xs: "start", xl: "center" },
         }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
-            marginLeft: { xs: 20, xl: "10%" },
-            maxWidth: { xs: "90%", md: "70%" },
+            marginLeft: { xs: 2, xl: "10%" },
+            maxWidth: { xs: "100%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
@@ -90,7 +90,7 @@ export default function PinkComponent() {
               fontWeight: "lighter",
               color: "#363434",
               flexWrap: "wrap",
-              maxWidth: { xs: 900, xl: "60%" },
+              maxWidth: { xs: "95%", xl: "60%" },
               marginTop: 1,
             }}
           >

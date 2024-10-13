@@ -48,20 +48,20 @@ export default function GreyComponent() {
         sx={{
           display: "flex",
           // width: "100%",
-          height: { xs: "60%" },
+          height: { xs: "70%", md: "60%" },
           // backgroundColor: "yellow",
           // alignItems: "flex-start", // Align items to the start (left)
           justifyContent: "flex-start", // Optional, adjust based on your layout needs
           width: "100%",
-          alignItems: isBigScreen ? "end" : { xs: "end", xl: "center" },
+          alignItems: isBigScreen ? "end" : { xs: "start", xl: "center" },
         }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
-            marginLeft: { xs: 20, xl: "10%" },
-            maxWidth: { xs: 900, xl: "80%" },
+            marginLeft: { xs: 2, xl: "10%" },
+            maxWidth: { xs: "100%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
@@ -101,7 +101,8 @@ export default function GreyComponent() {
               color: "#F7F7F7",
               flexWrap: "wrap",
               maxWidth: { xs: 900, xl: "50%" },
-              marginTop: 1,
+              // marginTop: 1,
+              marginBottom: 2,
             }}
           >
             Mjuka klappar. Ett fenomen som kan få vilket barn som helst att på

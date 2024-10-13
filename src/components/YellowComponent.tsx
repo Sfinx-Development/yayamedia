@@ -1,5 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
-import { isBigScreen, isTablet } from "./GreyComponent";
+import { isBiggerScreen, isBigScreen, isTablet } from "./GreyComponent";
 
 export default function YellowComponent() {
   const Texting = styled(Typography)`
@@ -43,20 +43,20 @@ export default function YellowComponent() {
         sx={{
           display: "flex",
           // width: "100%",
-          height: { xs: "60%" },
+          height: { xs: "70%", md: "60%" },
           // backgroundColor: "yellow",
           // alignItems: "flex-start", // Align items to the start (left)
           justifyContent: "flex-start", // Optional, adjust based on your layout needs
           width: "100%",
-          alignItems: isBigScreen ? "end" : { xs: "end", xl: "center" },
+          alignItems: isBigScreen ? "end" : { xs: "start", xl: "center" },
         }}
       >
         <Box
           sx={{
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
-            marginLeft: { xs: 20, xl: "10%" },
-            maxWidth: { xs: "90%", md: "70%" },
+            marginLeft: { xs: 2, xl: "10%" },
+            maxWidth: { xs: "100%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
@@ -82,7 +82,7 @@ export default function YellowComponent() {
                 ? 60
                 : { xs: 30, md: 50, xl: 70 },
               color: "#363434",
-              marginBottom: 20,
+              marginBottom: isBiggerScreen ? 20 : 12,
             }}
           >
             Allt du behöver veta.
