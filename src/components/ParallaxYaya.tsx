@@ -2,7 +2,7 @@ import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
-import { isBiggerScreen, isBiggestScreen, isTablet } from "./GreyComponent";
+import { isBiggerScreen, isTablet } from "./GreyComponent";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -320,11 +320,11 @@ export default function ParallaxYaya() {
           >
             <Box
               sx={{
-                backgroundColor: isBigScreen ? "red" : "#363434",
+                backgroundColor: "#363434",
                 display: "flex",
                 flexDirection: "row",
-                height: isBiggerScreen ? 300 : { xs: 250, md: 240 },
-                padding: { xs: 2, xl: 4 },
+                height: isBiggerScreen ? 300 : { xs: 250, md: 230 },
+                padding: { xs: 2, md: 0, xl: 2 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
                 position: "relative",
@@ -363,6 +363,8 @@ export default function ParallaxYaya() {
                   förverkliga dom!
                 </TextingATYP>
               </Box>
+
+              {/* Two Girls Image */}
               <Box
                 sx={{
                   display: "flex",
@@ -377,22 +379,22 @@ export default function ParallaxYaya() {
                       ? 270
                       : isTablet
                       ? 340
-                      : isBigScreen
-                      ? 480
                       : isBiggerScreen
-                      ? 580
-                      : 380
+                      ? 540
+                      : isBigScreen
+                      ? 450
+                      : 340
                   }
                   width={
                     isMobile && !isTablet
                       ? 170
                       : isTablet
                       ? 220
-                      : isBigScreen
-                      ? 320
                       : isBiggerScreen
-                      ? 420
-                      : 260
+                      ? 380
+                      : isBigScreen
+                      ? 310
+                      : 230
                   }
                   style={{
                     position: "absolute",
@@ -402,7 +404,7 @@ export default function ParallaxYaya() {
                         : isTablet
                         ? "-10%"
                         : isBiggerScreen
-                        ? "-20%"
+                        ? "-32%"
                         : isBigScreen
                         ? "-25%"
                         : "-20%",
@@ -411,66 +413,48 @@ export default function ParallaxYaya() {
                         ? "-20%"
                         : isTablet
                         ? "-10%"
+                        : isBiggerScreen
+                        ? "10%"
                         : isBigScreen
                         ? "10%"
-                        : "15%",
+                        : "10%",
                     transform: "translateX(-50%)",
-                    // height: "auto",
                   }}
                 />
               </Box>
+
+              {/* Strings in Colors Image */}
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
+                  position: "absolute",
+                  zIndex: 3, // Ensure it's above other elements like the two girls' image
+                  top: "50%", // Vertically center the image in the box
+                  right: "0%", // Stick it to the right edge of the box
+                  transform: "translateY(-30%) translateX(0%) rotate(14.5deg)", // Adjust position and rotation
+                  width: isTablet
+                    ? 400
+                    : isBiggerScreen
+                    ? 920
+                    : isBigScreen
+                    ? 700
+                    : isMobile
+                    ? 300
+                    : 510,
                 }}
               >
                 <img
                   src="https://i.imgur.com/aehCUnX.png"
                   alt="strings in different colors"
-                  //   height={320}
-                  width={
-                    isTablet
-                      ? 400
-                      : isBiggerScreen
-                      ? 900
-                      : isBigScreen
-                      ? 800
-                      : isMobile
-                      ? 300
-                      : 600
-                  }
                   style={{
-                    position: "absolute",
-                    bottom: isTablet
-                      ? "-62%"
-                      : isBiggestScreen
-                      ? "-63%"
-                      : isBiggerScreen
-                      ? "-63%"
-                      : isBigScreen
-                      ? "-70%"
-                      : isMobile
-                      ? "-29%"
-                      : "-50%",
-                    right: isTablet
-                      ? "-35%"
-                      : isBiggestScreen
-                      ? "-15%"
-                      : isBiggerScreen
-                      ? "-18%"
-                      : isBigScreen
-                      ? "-20%"
-                      : isMobile
-                      ? "-60%"
-                      : "-23%",
-                    transform: "translateX(-50%) rotate(15deg)",
-                    height: "auto",
+                    height: "auto", // Maintain aspect ratio
                   }}
                 />
               </Box>
             </Box>
           </Box>
+
           <Box
             id="kontakt"
             sx={{
