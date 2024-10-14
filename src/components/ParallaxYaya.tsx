@@ -310,6 +310,7 @@ export default function ParallaxYaya() {
               </TextingATYP>
             </Box>
           </Box>
+          {/* //STRINGS BILDEN SKA ALLTID SITTA LÄNGST UT TILL HÖGER PÅ SKÄRMEN */}
           <Box
             sx={{
               marginY: isTablet ? 12 : { xs: 6, md: 12, xl: 25 },
@@ -319,7 +320,7 @@ export default function ParallaxYaya() {
           >
             <Box
               sx={{
-                backgroundColor: "#363434",
+                backgroundColor: isBigScreen ? "red" : "#363434",
                 display: "flex",
                 flexDirection: "row",
                 height: isBiggerScreen ? 300 : { xs: 250, md: 240 },
@@ -448,7 +449,7 @@ export default function ParallaxYaya() {
                       : isBiggerScreen
                       ? "-63%"
                       : isBigScreen
-                      ? "-68%"
+                      ? "-70%"
                       : isMobile
                       ? "-29%"
                       : "-50%",
@@ -459,7 +460,7 @@ export default function ParallaxYaya() {
                       : isBiggerScreen
                       ? "-18%"
                       : isBigScreen
-                      ? "-22%"
+                      ? "-20%"
                       : isMobile
                       ? "-60%"
                       : "-23%",
@@ -470,7 +471,6 @@ export default function ParallaxYaya() {
               </Box>
             </Box>
           </Box>
-
           <Box
             id="kontakt"
             sx={{
