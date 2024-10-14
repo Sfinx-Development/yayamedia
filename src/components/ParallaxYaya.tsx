@@ -432,7 +432,9 @@ export default function ParallaxYaya() {
                   zIndex: 3, // Ensure it's above other elements like the two girls' image
                   top: "50%", // Vertically center the image in the box
                   right: "0%", // Stick it to the right edge of the box
-                  transform: "translateY(-30%) translateX(0%) rotate(14.5deg)", // Adjust position and rotation
+                  transform: isMobile
+                    ? "translateY(20%) translateX(20%) rotate(13deg)"
+                    : "translateY(-30%) translateX(0%) rotate(14.5deg)", // Adjust position and rotation
                   width: isTablet
                     ? 400
                     : isBiggerScreen
