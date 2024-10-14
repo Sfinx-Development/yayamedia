@@ -79,7 +79,7 @@ export default function Header(): JSX.Element {
           }}
           href="/yaya#kontakt"
         >
-          <Heading sx={{ fontSize: { xs: 20, md: 36 }, color: "#363434" }}>
+          <Heading sx={{ fontSize: { xs: 20, md: 30 }, color: "#363434" }}>
             Kontakt
           </Heading>
         </Link>
@@ -90,7 +90,7 @@ export default function Header(): JSX.Element {
           }}
           href="/yaya"
         >
-          <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Yaya</Heading>
+          <Heading sx={{ fontSize: { xs: 20, md: 30 } }}>Yaya</Heading>
         </Link>
         <Link
           sx={{
@@ -99,7 +99,7 @@ export default function Header(): JSX.Element {
           }}
           href="/#case"
         >
-          <Heading sx={{ fontSize: { xs: 20, md: 36 } }}>Case</Heading>
+          <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Case</Heading>
         </Link>
       </Box>
 
@@ -115,15 +115,16 @@ export default function Header(): JSX.Element {
           alignItems: "flex-start",
           paddingRight: "16px", // Sätt standardpadding
           cursor: "pointer",
-          marginRight: 10,
+          marginRight: 90,
+          // fontSize: 20
         }}
       >
         <Box
           sx={{
             backgroundColor: "#363434",
             // height: "4px",
-            height:  { xs: "4px", md: "4px", xl: "5px" },
-            width: { xs: "25px", md: "35px" }, // Anpassa bredd på små skärmar
+            height:  { xs: "6px", md: "6px", xl: "7px" },
+            width: { xs: "27px", md: "37px" }, // Anpassa bredd på små skärmar
             borderRadius: "20px",
             marginBottom: "10px",
           }}
@@ -131,8 +132,8 @@ export default function Header(): JSX.Element {
         <Box
           sx={{
             backgroundColor: "#363434",
-            height:  { xs: "4px", md: "4px" },
-            width: { xs: "45px", md: "70px" }, // Anpassa bredd på små skärmar
+            height:  { xs: "6px", md: "6px" },
+            width: { xs: "47px", md: "72px" }, // Anpassa bredd på små skärmar
             borderRadius: "20px",
             transform: "rotate(-10deg)",
           }}

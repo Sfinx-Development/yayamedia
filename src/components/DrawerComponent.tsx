@@ -55,7 +55,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
       <Box
         sx={{
           width: { xs: "100%", sm: 260 }, // Full bredd på små skärmar, 250px på större
-          padding: 2,
+          padding: 3,
           backgroundColor: "#F7F7F7",
           height: "100%",
           paddingLeft: { xs: 3, sm: 3, md: 3, xl: 3 }, 
