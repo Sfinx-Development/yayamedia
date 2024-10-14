@@ -12,7 +12,7 @@ export const isMobile = window.innerWidth <= 820;
 
 export const isBigScreen =
   window.innerWidth >= 1920 &&
-  window.innerHeight >= 1080 &&
+  window.innerHeight >= 900 &&
   window.innerWidth < 2560;
 
 export const isBiggerScreen =
