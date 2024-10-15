@@ -21,14 +21,14 @@ body {
 
 @font-face {
   font-family: 'H3'; /* Byt ut 'DinFont' mot namnet du vill använda */
-  src: url('./fonts/TestDomaineDisplay-Semibold-BF66174a224449e.otf') format('opentype'); /* Justera sökvägen till din .otf-fil */
-  font-weight: light; /* Ange tyngd om det behövs */
-  font-style: normal; /* Ange stil om det behövs */
+  src: url('./fonts/DomaineDisp-Regular.otf') format('opentype'); /* Justera sökvägen till din .otf-fil */
+  font-weight: 800; /* Ange tyngd om det behövs */
+  font-style:normal; /* Ange stil om det behövs */
 }
 
 @font-face {
   font-family: 'H2'; /* Byt ut 'DinFont' mot namnet du vill använda */
-  src: url('./fonts/TestDomaineDisplay-Semibold-BF66174a224449e.otf') format('opentype'); /* Justera sökvägen till din .otf-fil */
+  src: url('./fonts/DomaineDisp-Regular.otf') format('opentype'); /* Justera sökvägen till din .otf-fil */
   font-weight: 600; /* Ange tyngd om det behövs */
   font-style: normal; /* Ange stil om det behövs */
 }

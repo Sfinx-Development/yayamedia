@@ -42,8 +42,8 @@ export default function ParallaxWave() {
   `;
 
   const TextingATYP = styled(Typography)`
-    font-family: "AtypRegularVariable", sans-serif;
-    font-variation-settings: "wght" 300;
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
   const navigate = useNavigate();
   return (
