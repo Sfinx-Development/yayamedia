@@ -187,7 +187,7 @@ export default function ParallaxYaya() {
                   borderRadius: "50%",
                   width: "100%",
                   height: "100%",
-                  transform: isMobile ? "scaleX(-1)" : "none",
+                  transform: "scaleX(-1)",
                 }}
               />
             </Box>
