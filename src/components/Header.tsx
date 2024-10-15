@@ -115,7 +115,8 @@ export default function Header(): JSX.Element {
           alignItems: "flex-start",
           paddingRight: "16px", // Sätt standardpadding
           cursor: "pointer",
-          marginRight: 90,
+          //  marginRight: 90,
+           marginRight: isMobile ? 10 : isBigScreen ? 120 : 80,
           // fontSize: 20
         }}
       >
