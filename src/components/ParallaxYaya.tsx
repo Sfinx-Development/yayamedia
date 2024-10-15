@@ -151,7 +151,6 @@ export default function ParallaxYaya() {
               justifyContent: "center",
               alignItems: "center",
               gap: isTablet ? 2 : isBigScreen ? 8 : 8,
-              // backgroundColor: "red",
               maxWidth: { xs: "90%", md: "70%" },
             }}
           >
@@ -314,6 +313,8 @@ export default function ParallaxYaya() {
           <Box
             sx={{
               marginY: isTablet ? 12 : { xs: 6, md: 12, xl: 25 },
+
+              paddingTop: { xs: 5, md: 10, xl: 15 },
               display: "flex",
               width: "100%",
             }}
@@ -406,7 +407,7 @@ export default function ParallaxYaya() {
                         : isBiggerScreen
                         ? "-32%"
                         : isBigScreen
-                        ? "-25%"
+                        ? "-35%"
                         : "-20%",
                     right:
                       isMobile && !isTablet
