@@ -221,7 +221,7 @@ export default function GraphicProfile() {
           >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
             -Allt som ingår i Klack
           </TextingATYP>
           <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
