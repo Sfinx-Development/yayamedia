@@ -83,7 +83,7 @@ export default function SocialMedia() {
             sx={{
               color: "#2D6555",
               fontSize: { xs: 25, xl: 30 },
-              paddingTop: 0,
+              paddingTop: 1,
             }}
           >
             Klick
