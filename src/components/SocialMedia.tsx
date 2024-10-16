@@ -60,7 +60,7 @@ export default function SocialMedia() {
           backgroundColor: "#F7F7F7",
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
-          paddingBottom: { xs: 6, md: 10 },
+          paddingBottom: { xs: 8, md: 10 },
           margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
