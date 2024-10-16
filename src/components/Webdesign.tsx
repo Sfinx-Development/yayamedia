@@ -35,6 +35,7 @@ export default function Webdesign() {
           sx={{
             fontSize: { xs: 35, md: 40, xl: 45 },
             color: "#363434",
+            marginBottom: { xs: -1, md: 0 },
           }}
         >
           Webbdesign
@@ -45,6 +46,8 @@ export default function Webdesign() {
             color: "#363434",
             margin: 0,
             padding: 0,
+            marginBottom: { xs: -8, md: 0 },
+            zIndex:999,
           }}
         >
           Paketlösningar
@@ -55,7 +58,7 @@ export default function Webdesign() {
           backgroundColor: "#F7F7F7",
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
-          paddingBottom: { xs: 5, md: 10 },
+          paddingBottom: { xs: 6, md: 10 },
           margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
