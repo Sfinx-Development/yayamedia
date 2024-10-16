@@ -6,8 +6,8 @@ import DrawerComponent from "./DrawerComponent";
 export default function Header(): JSX.Element {
   const navigate = useNavigate();
   const Heading = styled(Typography)`
-    font-family: "AtypRegularVariable", sans-serif;
-    font-variation-settings: "wght" 300;
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
   const isMobile = window.innerWidth <= 820;
   const isBigScreen = window.innerHeight >= 1080;
@@ -124,7 +124,7 @@ export default function Header(): JSX.Element {
           sx={{
             backgroundColor: "#363434",
             // height: "4px",
-            height:  { xs: "6px", md: "6px", xl: "7px" },
+            height: { xs: "6px", md: "6px", xl: "7px" },
             width: { xs: "27px", md: "37px" }, // Anpassa bredd på små skärmar
             borderRadius: "20px",
             marginBottom: "10px",
@@ -133,7 +133,7 @@ export default function Header(): JSX.Element {
         <Box
           sx={{
             backgroundColor: "#363434",
-            height:  { xs: "6px", md: "6px" },
+            height: { xs: "6px", md: "6px" },
             width: { xs: "47px", md: "72px" }, // Anpassa bredd på små skärmar
             borderRadius: "20px",
             transform: "rotate(-10deg)",

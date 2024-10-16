@@ -1,6 +1,7 @@
 import { Box, styled, Typography } from "@mui/material";
 import Footer from "../components/Footer";
-import { isTablet } from "../components/GreyComponent";
+import { isMobile, isTablet } from "../components/GreyComponent";
+import MobileFooter from "../components/MobileFooter";
 
 export default function Error() {
   const Texting = styled(Typography)`
@@ -49,7 +50,7 @@ export default function Error() {
           Den sidan finns faktiskt inte.
         </Texting>
       </Box>
-      <Footer />
+      {isMobile ? <MobileFooter /> : <Footer />}
     </Box>
   );
 }

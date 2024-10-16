@@ -14,8 +14,8 @@ const Texting = styled(Typography)`
 `;
 
 const Atyp = styled(Typography)`
-  font-family: "AtypRegularVariable", sans-serif;
-  font-variation-settings: "wght" 300;
+  font-family: "atyp-bl-variable", sans-serif;
+  font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
 `;
 
 const CrossLine = styled(Box)`
@@ -38,27 +38,27 @@ export default function DrawerComponent(props: DrawerComponentProps) {
     //   onClose={props.toggleDrawer(false)}
     // >
     <Drawer
-    anchor="right"
-    open={props.drawerOpen}
-    onClose={props.toggleDrawer(false)}
-    sx={{
-      "& .MuiDrawer-paper": {
-        height: {
-          xs: "100%",
-          md: "85%",  
-          xl: "80%",  
+      anchor="right"
+      open={props.drawerOpen}
+      onClose={props.toggleDrawer(false)}
+      sx={{
+        "& .MuiDrawer-paper": {
+          height: {
+            xs: "100%",
+            md: "85%",
+            xl: "80%",
+          },
+          top: "auto",
         },
-        top: "auto", 
-      },
-    }}
-  >
+      }}
+    >
       <Box
         sx={{
           width: { xs: "100%", sm: 260 }, // Full bredd på små skärmar, 250px på större
           padding: 3,
           backgroundColor: "#F7F7F7",
           height: "100%",
-          paddingLeft: { xs: 3, sm: 3, md: 3, xl: 3 }, 
+          paddingLeft: { xs: 3, sm: 3, md: 3, xl: 3 },
         }}
         role="presentation"
         onClick={props.toggleDrawer(false)} // Stänger drawern när man klickar inuti
@@ -73,8 +73,6 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             paddingBottom: 4,
             marginTop: 4,
             marginRight: 15,
-            
-            
           }}
         >
           <CrossLine
@@ -92,11 +90,16 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               transform: "rotate(-15deg) translateY(-6px)",
               width: 45,
               borderRadius: 20,
-              marginRight: { xs: 5, md: 1, xl: 1 }, 
+              marginRight: { xs: 5, md: 1, xl: 1 },
               // marginRight: 6,
             }}
           />
-          <Atyp sx={{ marginRight: { xs: 5, md: 1, xl: 1 }, fontSize: { xs: 16, md: 16, xl: 20 } }}>
+          <Atyp
+            sx={{
+              marginRight: { xs: 5, md: 1, xl: 1 },
+              fontSize: { xs: 16, md: 16, xl: 20 },
+            }}
+          >
             Stäng
           </Atyp>
         </Box>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import { isBiggerScreen, isTablet } from "./GreyComponent";
+import MobileFooter from "./MobileFooter";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -51,8 +52,8 @@ export default function ParallaxYaya() {
   `;
 
   const TextingATYP = styled(Typography)`
-    font-family: "AtypRegularVariable", sans-serif;
-    font-variation-settings: "wght" 300;
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
   return (
@@ -618,7 +619,7 @@ export default function ParallaxYaya() {
             </Box>
           </Box>
           <Partners />
-          <Footer />
+          {isMobile ? <MobileFooter /> : <Footer />}
         </Box>
       </Box>
     </Box>

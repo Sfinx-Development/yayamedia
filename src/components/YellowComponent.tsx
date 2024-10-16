@@ -4,7 +4,7 @@ import { isBiggerScreen, isBigScreen, isTablet } from "./GreyComponent";
 export default function YellowComponent() {
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
-    font-variation-settings: "wght" 300;
+    font-variation-settings: "wght" 800;
   `;
 
   return (
