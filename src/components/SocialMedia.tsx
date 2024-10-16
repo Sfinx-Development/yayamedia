@@ -49,7 +49,7 @@ export default function SocialMedia() {
             padding: 0,
             marginBottom: { xs: -9, md: 0 },
             zIndex:999,
-            // marginTop: { xs: -1, md: 0 },
+             
           }}
         >
           Paketlösningar
@@ -83,7 +83,7 @@ export default function SocialMedia() {
             sx={{
               color: "#2D6555",
               fontSize: { xs: 25, xl: 30 },
-              paddingTop: 2,
+              paddingTop: 0,
             }}
           >
             Klick
