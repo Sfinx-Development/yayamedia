@@ -106,7 +106,7 @@ export default function Webdesign() {
           >
             Vad får du?
           </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
             -Uppstartsmöte
           </TextingATYP>
           <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
