@@ -82,7 +82,7 @@ export default function SocialMedia() {
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 20, xl: 30 },
+              fontSize: { xs: 25, xl: 30 },
               paddingTop: 2,
             }}
           >
@@ -95,7 +95,7 @@ export default function SocialMedia() {
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 20, xl: 30 },
+              fontSize: { xs: 25, xl: 30 },
               paddingTop: 2,
             }}
           >

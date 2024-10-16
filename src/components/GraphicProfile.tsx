@@ -81,7 +81,7 @@ export default function GraphicProfile() {
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 20, xl: 30 },
+              fontSize: { xs: 25, xl: 30 },
               paddingTop: 2,
             }}
           >
@@ -91,7 +91,7 @@ export default function GraphicProfile() {
             Tröttnat på loggan? Vi gör om befintlig logotyp, eller levererar en
             helt ny om så önskas.
           </TextingATYP>
-          <Texting sx={{ color: "#2D6555", fontSize: 20, paddingTop: 2 }}>
+          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
             10 000:-
           </Texting>
           <TextingATYP sx={{ color: "#2D6555", fontSize: { xs: 13, xl: 15 } }}>
