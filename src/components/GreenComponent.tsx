@@ -90,6 +90,9 @@ export default function GreenComponent() {
             paddingY: 1.2,
             textTransform: "none",
             marginY: { xs: 2, md: 0 },
+            "&:hover": {
+              backgroundColor: "#363434", 
+            },
           }}
         >
           <Texting sx={{ fontSize: { md: 18, xl: 25 } }}>Om oss</Texting>
