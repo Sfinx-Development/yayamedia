@@ -33,7 +33,7 @@ export default function SocialMedia() {
       >
         <Texting
           sx={{
-            fontSize: isTablet ? 40 : { xs: 35, md: 40, xl: 45 },
+            fontSize: isTablet ? 40 : { xs: 30, md: 40, xl: 45 },
             color: "#363434",
             zIndex:999,
             marginBottom: { xs: -1, md: 0 },
@@ -82,7 +82,7 @@ export default function SocialMedia() {
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 25, xl: 30 },
+              fontSize: { xs: 20, xl: 30 },
               paddingTop: 2,
             }}
           >
@@ -95,7 +95,7 @@ export default function SocialMedia() {
           <Texting
             sx={{
               color: "#2D6555",
-              fontSize: { xs: 25, xl: 30 },
+              fontSize: { xs: 20, xl: 30 },
               paddingTop: 2,
             }}
           >
