@@ -81,7 +81,7 @@ export default function Webdesign() {
             sx={{
               color: "#2D6555",
               fontSize: { xs: 25, xl: 30 },
-              paddingTop: 1,
+              paddingTop: 2,
             }}
           >
             Klick
