@@ -5,6 +5,7 @@ import Case from "./Case";
 import Footer from "./Footer";
 import GreenComponent from "./GreenComponent";
 import { isTablet } from "./GreyComponent";
+import MobileFooter from "./MobileFooter";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -208,7 +209,7 @@ export default function ParallaxWave() {
           <GreenComponent />
           <Case />
           <Partners />
-          <Footer />
+         {isMobile ? <MobileFooter/> : <Footer /> }
         </Box>
       </Box>
     </Box>

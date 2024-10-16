@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ConceptDevelopment from "./ConceptDevelopment";
 import Footer from "./Footer";
+import { isMobile } from "./GreyComponent";
+import MobileFooter from "./MobileFooter";
 import PaketScroll from "./PaketScroll";
 import Partners from "./Partners";
 import Wave from "./Wave";
@@ -53,7 +55,7 @@ export default function ParallaxServices() {
           <PaketScroll />
           <ConceptDevelopment />
           <Partners />
-          <Footer />
+          {isMobile ? <MobileFooter /> : <Footer />}
         </Box>
       </Box>
     </Box>

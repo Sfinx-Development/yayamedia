@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import { isBiggerScreen, isTablet } from "./GreyComponent";
+import MobileFooter from "./MobileFooter";
 import Partners from "./Partners";
 import Wave from "./Wave";
 
@@ -618,7 +619,7 @@ export default function ParallaxYaya() {
             </Box>
           </Box>
           <Partners />
-          <Footer />
+          {isMobile ? <MobileFooter /> : <Footer />}
         </Box>
       </Box>
     </Box>
