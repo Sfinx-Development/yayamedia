@@ -12,6 +12,10 @@ export default function SocialMedia() {
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
+
+  const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
+  const titleMarginTop = { xs: 0, md: 20, xl: 20 };
+
   return (
     <Box
       id="socialamedier"
@@ -37,6 +41,7 @@ export default function SocialMedia() {
             color: "#363434",
             zIndex:999,
             marginBottom: { xs: -1, md: 0 },
+            marginTop: titleMarginTop, // Justerar rubrikens top-margin
           }}
         >
           Sociala medier
@@ -77,6 +82,7 @@ export default function SocialMedia() {
             color: "#363434",
             padding: 4,
             marginTop: 10,
+            height: boxHeight, // Justerar höjden på boxarna
           }}
         >
           <Texting
