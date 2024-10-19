@@ -49,7 +49,7 @@ export default function PinkComponent() {
             display: "flex",
             flexDirection: { xs: "column", md: "column" },
             marginLeft: { xs: 2, md: "12%", xl: "10%" },
-            maxWidth: { xs: "100%", md: "70%" },
+            maxWidth: { xs: "92%", md: "70%" },
             // backgroundColor: "red",
           }}
         >
