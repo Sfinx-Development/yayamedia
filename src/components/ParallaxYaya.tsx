@@ -530,7 +530,7 @@ export default function ParallaxYaya() {
                 >
                   <img
                     height={24}
-                    src="https://i.imgur.com/DN2uTbx.png"
+                    src="https://i.imgur.com/H500cER.png"
                     alt="email-icon"
                   />
                   <a
@@ -601,7 +601,7 @@ export default function ParallaxYaya() {
                 >
                   <img
                     height={24}
-                    src="https://i.imgur.com/DN2uTbx.png"
+                    src="https://i.imgur.com/H500cER.png"
                     alt="email-icon"
                   />
                   <a
