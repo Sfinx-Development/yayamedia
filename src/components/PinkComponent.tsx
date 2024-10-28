@@ -29,7 +29,7 @@ export default function PinkComponent() {
         alignItems: { xs: "center", xl: "start" },
         position: "fixed",
         zIndex: 2,
-        height: "100%",
+        height: "100vh",
       }}
     >
       <Box

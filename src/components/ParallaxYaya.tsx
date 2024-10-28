@@ -436,7 +436,7 @@ export default function ParallaxYaya() {
                   right: "0%", // Stick it to the right edge of the box
                   transform: isMobile
                     ? "translateY(20%) translateX(20%) rotate(13deg)"
-                    : "translateY(-30%) translateX(0%) rotate(14.5deg)", // Adjust position and rotation
+                    : "translateY(-30%) translateX(0%) rotate(14deg)", // Adjust position and rotation
                   width: isTablet
                     ? 400
                     : isBiggerScreen
@@ -445,7 +445,7 @@ export default function ParallaxYaya() {
                     ? 700
                     : isMobile
                     ? 300
-                    : 510,
+                    : 550,
                 }}
               >
                 <img
