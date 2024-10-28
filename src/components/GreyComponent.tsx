@@ -50,14 +50,14 @@ export default function GreyComponent() {
         alignItems: { xs: "center", xl: "start" },
         position: "fixed",
         zIndex: 2,
-        height: "100vh",
+        height: "100%",
       }}
     >
       <Box
         sx={{
           display: "flex",
           // width: "100%",
-          height: { xs: "70%", md: "60%" },
+          height: { xs: "70%", md: "65%" },
           // backgroundColor: "yellow",
           // alignItems: "flex-start", // Align items to the start (left)
           justifyContent: "flex-start", // Optional, adjust based on your layout needs

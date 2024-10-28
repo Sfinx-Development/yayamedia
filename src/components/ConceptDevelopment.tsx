@@ -17,7 +17,7 @@ export default function ConceptDevelopment() {
     <Box
       id="konceptutveckling"
       sx={{
-        width: "100%",
+        width: { xs: "100%", xl: "70%" },
         backgroundColor: "#F7F7F7",
         display: "flex",
         justifyContent: "center",
@@ -27,6 +27,7 @@ export default function ConceptDevelopment() {
         height: "100%",
         padding: { xs: 0 },
         marginTop: 4,
+        marginX: { xl: 4 },
       }}
     >
       <Box
@@ -94,6 +95,7 @@ export default function ConceptDevelopment() {
             flex: 1,
             flexDirection: "column",
             padding: 2,
+            paddingLeft: { xl: 10 },
           }}
         >
           <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
@@ -148,6 +150,7 @@ export default function ConceptDevelopment() {
             justifyContent: "center",
             alignItems: { xs: "start", md: "end" },
             padding: 2,
+            paddingRight: { xl: 10 },
             width: "100%",
           }}
         >
