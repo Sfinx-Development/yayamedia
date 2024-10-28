@@ -11,24 +11,24 @@ body {
 
 @font-face {
   font-family: 'AtypRegularVariable';
-  src: url('../public/fonts/AtypRegularVariable.eot');
-  src: url('../public/fonts/AtypRegularVariable.woff2') format('woff2'),
-       url('../public/fonts/AtypRegularVariable.woff') format('woff'),
-       url('../public/fonts/AtypRegularVariable.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/AtypRegularVariable.eot');
+  src: url('/fonts/AtypRegularVariable.woff2') format('woff2'),
+       url('/fonts/AtypRegularVariable.woff') format('woff'),
+       url('/fonts/AtypRegularVariable.eot?#iefix') format('embedded-opentype');
   font-weight: 100 900; /* Om det är en variabel font */
   font-style: light;
 }
 
 @font-face {
   font-family: 'H3'; /* Byt ut 'DinFont' mot namnet du vill använda */
-  src: url('../public/fonts/DomaineDisp-SemiBold.woff2') format('opentype'); /* Justera sökvägen till din .otf-fil */
+  src: url('/fonts/DomaineDisp-SemiBold.woff2') format('opentype'); /* Justera sökvägen till din .otf-fil */
   font-weight: 800; /* Ange tyngd om det behövs */
   font-style:normal; /* Ange stil om det behövs */
 }
 
 @font-face {
   font-family: 'H2'; /* Byt ut 'DinFont' mot namnet du vill använda */
-  src: url('../public/fonts/DomaineDisp-SemiBold.woff2') format('opentype'); /* Justera sökvägen till din .otf-fil */
+  src: url('/fonts/DomaineDisp-SemiBold.woff2') format('opentype'); /* Justera sökvägen till din .otf-fil */
   font-weight: 600; /* Ange tyngd om det behövs */
   font-style: normal; /* Ange stil om det behövs */
 }
