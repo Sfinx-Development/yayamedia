@@ -43,7 +43,7 @@ export default function Partners() {
           height={"40px"}
         />
         <img
-          src="https://i.imgur.com/CVKKnXu.png"
+          src="https://i.imgur.com/sbljTxp.png"
           alt="Logo of 609"
           height="90px"
         />
