@@ -1,5 +1,8 @@
-import { Box, Drawer, styled, Typography } from "@mui/material";
+import { Box, Drawer, IconButton, styled, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 export interface DrawerComponentProps {
   drawerOpen: boolean;
@@ -19,9 +22,9 @@ const Atyp = styled(Typography)`
 `;
 
 const CrossLine = styled(Box)`
-  background-color: #363434;
-  height: 2px; // Justera höjden
-  width: 30px; // Justera bredden
+  background-color: #f3d9df;
+  height: 3px; // Justera höjden
+  width: 40px; // Justera bredden
   margin: 0 2px;
   transition: transform 0.3s ease;
 
@@ -31,6 +34,8 @@ const CrossLine = styled(Box)`
 `;
 
 export default function DrawerComponent(props: DrawerComponentProps) {
+  const [isOpen, setIsopen] = useState(false);
+
   return (
     // <Drawer
     //   anchor="right"
@@ -54,17 +59,20 @@ export default function DrawerComponent(props: DrawerComponentProps) {
     >
       <Box
         sx={{
+      
           width: { xs: "100%", sm: 260 }, // Full bredd på små skärmar, 250px på större
           padding: 3,
-          backgroundColor: "#F7F7F7",
+          backgroundColor: "#363434",
           height: "100%",
           paddingLeft: { xs: 3, sm: 3, md: 3, xl: 3 },
+        
+       
         }}
         role="presentation"
-        onClick={props.toggleDrawer(false)} // Stänger drawern när man klickar inuti
+       
         onKeyDown={props.toggleDrawer(false)} // Stänger drawern med tangentbordet
       >
-        <Box
+        <Box  
           sx={{
             display: "flex",
             width: "100%",
@@ -77,88 +85,117 @@ export default function DrawerComponent(props: DrawerComponentProps) {
         >
           <CrossLine
             sx={{
-              transform: "rotate(20deg) translateY(0px)",
+              transform: "rotate(0deg) translateY(0px)",
               marginBottom: "3px",
               borderRadius: 20,
-              width: 25,
+
+              width: {xs:35, xl:42},
               // marginRight: 8,
-              marginRight: { xs: 7, md: 3, xl: 3 },
             }}
           />
-          <CrossLine
+
+          <Atyp onClick={props.toggleDrawer(false)} // Stänger drawern när man klickar inuti
             sx={{
-              transform: "rotate(-15deg) translateY(-6px)",
-              width: 45,
-              borderRadius: 20,
-              marginRight: { xs: 5, md: 1, xl: 1 },
-              // marginRight: 6,
-            }}
-          />
-          <Atyp
-            sx={{
-              marginRight: { xs: 5, md: 1, xl: 1 },
-              fontSize: { xs: 16, md: 16, xl: 20 },
+              cursor: "pointer",
+              color: "#F7F7F7",
+              fontSize: { xs: 14, md: 14, xl: 18 },
             }}
           >
             Stäng
           </Atyp>
         </Box>
-        <Link to="/#case" style={{ textDecoration: "none", color: "#363434" }}>
-          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20, xl: 30 } }}>
+        <Link to="/#case" style={{ textDecoration: "none", color: "#F7F7F7" }}>
+          <Texting
+            sx={{ fontSize: { xs: 18, sm: 20, xl: 30 }, paddingBottom: 0.5,
+            paddingLeft:2, }}
+          >
             Case
           </Texting>
         </Link>
-        <Link
-          to="/tjanster"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
-          <Texting
-            sx={{ fontSize: { xs: 18, sm: 20, xl: 30 }, paddingBottom: 0.5 }}
+        <Box sx={{ display: "flex", alignItems: "center",paddingLeft:2 }}>
+          <Link
+            to="/tjanster"
+            style={{ textDecoration: "none", color: "#F7F7F7" }}
           >
-            Tjänster
+            <Texting
+              sx={{ fontSize: { xs: 18, sm: 20, xl: 30 }, paddingBottom: 0.5 }}
+            >
+              Tjänster
+            </Texting>
+          </Link>
+          <IconButton
+            onClick={() => {
+              setIsopen(!isOpen);
+            }}
+          >
+            <KeyboardArrowDown
+              sx={{
+                color: "white",
+                paddingLeft: "5px",
+              }}
+            />
+          </IconButton>
+        </Box>
+        {isOpen && (
+          <>
+            <Link
+              to="/tjanster#socialamedier"
+              style={{ textDecoration: "none", color: "#F7F7F7" }}
+            >
+              <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } ,paddingLeft:2}}>
+                Sociala medier
+              </Atyp>
+            </Link>
+            <Link
+              to="/tjanster#webbdesign"
+              style={{ textDecoration: "none", color: "#F7F7F7" }}
+            >
+              <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 },paddingLeft:2 }}>
+                Webdesign
+              </Atyp>
+            </Link>
+            <Link
+              to="/tjanster#konceptutveckling"
+              style={{ textDecoration: "none", color: "#F7F7F7" }}
+            >
+              <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 },paddingLeft:2 }}>
+                Konceptutveckling
+              </Atyp>
+            </Link>
+            <Link
+              to="/tjanster#copywriting"
+              style={{ textDecoration: "none", color: "#F7F7F7" }}
+            >
+              <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 },paddingLeft:2 }}>
+                Copywriting
+              </Atyp>
+            </Link>
+            <Link
+              to="/tjanster#grafisk-profil"
+              style={{ textDecoration: "none", color: "#F7F7F7" }}
+            >
+              <Atyp
+                sx={{
+                  paddingBottom: 0.5,
+                  fontSize: { xs: 14, sm: 16, xl: 20 },paddingLeft:2
+                }}
+              >
+                Grafisk profil
+              </Atyp>
+            </Link>
+          </>
+        )}
+
+        <Link to="/yaya" style={{ textDecoration: "none", color: "#F7F7F7" }}>
+          <Texting
+            sx={{ paddingLeft:2,fontSize: { xs: 18, sm: 20, xl: 30 }, paddingBottom: 0.5 }}
+          >
+            Om oss
           </Texting>
         </Link>
-        <Link
-          to="/tjanster#socialamedier"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>
-            Sociala medier
-          </Atyp>
-        </Link>
-        <Link
-          to="/tjanster#webbdesign"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>Webdesign</Atyp>
-        </Link>
-        <Link
-          to="/tjanster#konceptutveckling"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>
-            Konceptutveckling
-          </Atyp>
-        </Link>
-        <Link
-          to="/tjanster#copywriting"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
-          <Atyp sx={{ fontSize: { xs: 14, sm: 16, xl: 20 } }}>Copywriting</Atyp>
-        </Link>
-        <Link
-          to="/tjanster#grafisk-profil"
-          style={{ textDecoration: "none", color: "#363434" }}
-        >
-          <Atyp
-            sx={{ paddingBottom: 0.5, fontSize: { xs: 14, sm: 16, xl: 20 } }}
-          >
-            Grafisk profil
-          </Atyp>
-        </Link>
-        <Link to="/yaya" style={{ textDecoration: "none", color: "#363434" }}>
-          <Texting sx={{ paddingY: 2, fontSize: { xs: 18, sm: 20, xl: 30 } }}>
-            Om oss
+        <Link to="/yaya" style={{ textDecoration: "none", color: "#F7F7F7" }}>
+          <Texting sx={{ fontSize: { xs: 18, sm: 20, xl: 30 },paddingLeft:2 }}>
+            Kontakt
           </Texting>
         </Link>
       </Box>
