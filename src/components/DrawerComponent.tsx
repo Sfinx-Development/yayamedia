@@ -71,7 +71,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             flexDirection: "column",
             alignItems: "flex-end",
             paddingBottom: 4,
-            marginTop: 4,
+            marginTop: 2,
             marginRight: 15,
           }}
         >
