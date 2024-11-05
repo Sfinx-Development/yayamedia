@@ -53,14 +53,14 @@ export default function ConceptDevelopment() {
         sx={{
           backgroundColor: "#F3D9DF",
           borderRadius: "50%",
-          width: isBiggerScreen ? 200 : { xs: 70, md: 100 },
-          height: isBiggerScreen ? 200 : { xs: 70, md: 100 },
+          width: isBiggerScreen ? 200 : { xs: 70, md: 100, xl: 150 },
+          height: isBiggerScreen ? 200 : { xs: 70, md: 100, xl: 150 },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           position: "absolute",
           zIndex: 2,
-          right: isBiggerScreen ? 300 : { xs: 50, md: 180, xl: 300 },
+          right: isBiggerScreen ? 300 : { xs: 50, md: 180, xl: 230 },
           top: isBiggerScreen ? -40 : { xs: 40, md: 10, xl: 10 },
         }}
       >
