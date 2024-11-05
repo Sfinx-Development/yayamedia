@@ -1,8 +1,7 @@
+import { KeyboardArrowDown } from "@mui/icons-material";
 import { Box, Drawer, IconButton, styled, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-import { KeyboardArrowDown } from "@mui/icons-material";
 
 export interface DrawerComponentProps {
   drawerOpen: boolean;
@@ -23,13 +22,13 @@ const Atyp = styled(Typography)`
 
 const CrossLine = styled(Box)`
   background-color: #f3d9df;
-  height: 3px; // Justera höjden
-  width: 40px; // Justera bredden
+  height: 3px;
+  width: 40px;
   margin: 0 2px;
   transition: transform 0.3s ease;
 
   &:hover {
-    cursor: pointer; // Markera att det är klickbart
+    cursor: pointer;
   }
 `;
 
@@ -37,11 +36,6 @@ export default function DrawerComponent(props: DrawerComponentProps) {
   const [isOpen, setIsopen] = useState(false);
 
   return (
-    // <Drawer
-    //   anchor="right"
-    //   open={props.drawerOpen}
-    //   onClose={props.toggleDrawer(false)}
-    // >
     <Drawer
       anchor="right"
       open={props.drawerOpen}
@@ -63,11 +57,13 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           padding: 3,
           backgroundColor: "#363434",
           height: "100%",
-          // paddingLeft: { xs: 3, sm: 3, md: 3, xl: 3 },
+          display: "flex",
+          flexDirection: "column",
         }}
         role="presentation"
-        onKeyDown={props.toggleDrawer(false)} // Stänger drawern med tangentbordet
+        onKeyDown={props.toggleDrawer(false)}
       >
+        {/* Stäng-knapp högst upp */}
         <Box
           sx={{
             display: "flex",
@@ -84,14 +80,11 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               transform: "rotate(0deg) translateY(0px)",
               marginBottom: "3px",
               borderRadius: 20,
-
               width: { xs: 35, xl: 42 },
-              // marginRight: 8,
             }}
           />
-
           <Atyp
-            onClick={props.toggleDrawer(false)} // Stänger drawern när man klickar inuti
+            onClick={props.toggleDrawer(false)}
             sx={{
               cursor: "pointer",
               color: "#F7F7F7",
@@ -101,6 +94,8 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             Stäng
           </Atyp>
         </Box>
+
+        {/* Navigationslänkar */}
         <Link to="/#case" style={{ textDecoration: "none", color: "#F7F7F7" }}>
           <Texting
             sx={{
@@ -112,6 +107,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             Case
           </Texting>
         </Link>
+
         <Box
           sx={{
             display: "flex",
@@ -128,24 +124,20 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               Tjänster
             </Texting>
           </Link>
-          <IconButton
-            onClick={() => {
-              setIsopen(!isOpen);
-            }}
-          >
-            <KeyboardArrowDown
-              sx={{
-                color: "white",
-                // paddingLeft: "1px",
-              }}
-            />
+          <IconButton onClick={() => setIsopen(!isOpen)}>
+            <KeyboardArrowDown sx={{ color: "white" }} />
           </IconButton>
         </Box>
+
         {isOpen && (
           <>
             <Link
               to="/tjanster#socialamedier"
-              style={{ textDecoration: "none", color: "#F7F7F7" }}
+              style={{
+                textDecoration: "none",
+                color: "#F7F7F7",
+                paddingTop: 0.5,
+              }}
             >
               <Atyp
                 sx={{
@@ -158,7 +150,11 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             </Link>
             <Link
               to="/tjanster#webbdesign"
-              style={{ textDecoration: "none", color: "#F7F7F7" }}
+              style={{
+                textDecoration: "none",
+                color: "#F7F7F7",
+                paddingTop: 0.5,
+              }}
             >
               <Atyp
                 sx={{
@@ -171,7 +167,11 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             </Link>
             <Link
               to="/tjanster#konceptutveckling"
-              style={{ textDecoration: "none", color: "#F7F7F7" }}
+              style={{
+                textDecoration: "none",
+                color: "#F7F7F7",
+                paddingTop: 0.5,
+              }}
             >
               <Atyp
                 sx={{
@@ -184,7 +184,11 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             </Link>
             <Link
               to="/tjanster#copywriting"
-              style={{ textDecoration: "none", color: "#F7F7F7" }}
+              style={{
+                textDecoration: "none",
+                color: "#F7F7F7",
+                paddingTop: 0.5,
+              }}
             >
               <Atyp
                 sx={{
@@ -197,7 +201,11 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             </Link>
             <Link
               to="/tjanster#grafisk-profil"
-              style={{ textDecoration: "none", color: "#F7F7F7" }}
+              style={{
+                textDecoration: "none",
+                color: "#F7F7F7",
+                paddingTop: 0.5,
+              }}
             >
               <Atyp
                 sx={{
@@ -218,6 +226,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               paddingLeft: { xs: 0.5, md: 2 },
               fontSize: { xs: 18, sm: 20, xl: 30 },
               paddingBottom: 0.5,
+              paddingTop: 0.5,
             }}
           >
             Om oss
@@ -233,6 +242,25 @@ export default function DrawerComponent(props: DrawerComponentProps) {
             Kontakt
           </Texting>
         </Link>
+
+        {/* Flexibel mellanrum för att trycka ner loggan */}
+        <Box sx={{ flexGrow: 1 }} />
+
+        {/* Loggan längst ner */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingBottom: 2,
+          }}
+        >
+          <img
+            src="https://i.imgur.com/bOoA1jT.png"
+            alt="yaya logo"
+            style={{ height: 50 }}
+          />
+        </Box>
       </Box>
     </Drawer>
   );
