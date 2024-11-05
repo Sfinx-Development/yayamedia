@@ -226,7 +226,6 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               paddingLeft: { xs: 0.5, md: 2 },
               fontSize: { xs: 18, sm: 20, xl: 30 },
               paddingBottom: 0.5,
-              paddingTop: 0.5,
             }}
           >
             Om oss
