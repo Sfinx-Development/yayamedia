@@ -258,7 +258,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           <img
             src="https://i.imgur.com/bOoA1jT.png"
             alt="yaya logo"
-            style={{ height: 50 }}
+            style={{ height: 40 }}
           />
         </Box>
       </Box>
