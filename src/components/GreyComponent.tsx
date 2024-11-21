@@ -1,5 +1,4 @@
-import { Box, styled, Typography } from "@mui/material";
-import { useEffect } from "react";
+import { Box, styled, Typography, TypographyProps } from "@mui/material";
 
 // export const isTablet = window.outerWidth >= 600 && window.innerHeight <= 1366;
 export const isTablet =
@@ -24,20 +23,16 @@ export const isBiggestScreen =
 // export const isBiggestScreen = window.innerWidth >= 3024;
 
 export default function GreyComponent() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  useEffect(() => {
-    console.log("INNER WIDTH: ", window.innerWidth);
-    console.log("INNER height: ", window.innerHeight);
-  }, []);
   return (
     <Box
       sx={{
@@ -85,6 +80,7 @@ export default function GreyComponent() {
               color: "#F7F7F7",
               lineHeight: 1,
             }}
+            component="h1"
           >
             Inget som kliar,
           </Texting>
@@ -97,6 +93,7 @@ export default function GreyComponent() {
                 : { xs: 30, md: 50, xl: 70 },
               color: "#F7F7F7",
             }}
+            component="h1"
           >
             inget som sticks.
           </Texting>
@@ -113,6 +110,7 @@ export default function GreyComponent() {
               // marginTop: 1,
               marginBottom: 2,
             }}
+            component="h3"
           >
             Mjuka klappar. Ett fenomen som kan få vilket barn som helst att på
             en millisekund gå från pirrigt förväntansfull till besviken. Vi

@@ -1,15 +1,21 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  styled,
+  Typography,
+  TypographyProps,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { isMobile, isTablet } from "./GreyComponent";
 
 export default function GreenComponent() {
   const navigate = useNavigate();
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
@@ -47,6 +53,7 @@ export default function GreenComponent() {
             color: "#2D6555",
             // marginTop: 5,
           }}
+          component="h1"
         >
           Yaya, vem är hon egentligen?
         </Texting>
@@ -59,6 +66,7 @@ export default function GreenComponent() {
             maxWidth: 1000,
             marginTop: 1,
           }}
+          component="h2"
         >
           Ja, vem är hon? Yaya finns i oss båda, på olika sätt. Hon är liksom en
           del av vilka vi är. Kreatören i oss. Hon som får trist och platt att
@@ -74,6 +82,7 @@ export default function GreenComponent() {
             maxWidth: 1000,
             marginY: 2,
           }}
+          component="h3"
         >
           Vi är Yaya och Yaya är oss.
         </TextingATYP>
@@ -91,7 +100,7 @@ export default function GreenComponent() {
             textTransform: "none",
             marginY: { xs: 2, md: 0 },
             "&:hover": {
-              backgroundColor: "#363434", 
+              backgroundColor: "#363434",
             },
           }}
         >

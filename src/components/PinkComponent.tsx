@@ -1,14 +1,14 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import { useEffect } from "react";
 import { isBiggerScreen, isBigScreen, isTablet } from "./GreyComponent";
 
 export default function PinkComponent() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
@@ -54,6 +54,7 @@ export default function PinkComponent() {
           }}
         >
           <Texting
+            component="h1"
             sx={{
               paddingTop: isBiggerScreen ? 15 : 10,
               fontSize: isTablet
@@ -69,6 +70,7 @@ export default function PinkComponent() {
             Yttepytteliten.
           </Texting>
           <Texting
+            component="h1"
             sx={{
               fontSize: isTablet
                 ? 50
@@ -81,6 +83,7 @@ export default function PinkComponent() {
             Vår byrå - inte vår vision.
           </Texting>
           <TextingATYP
+            component="h2"
             sx={{
               fontSize: isTablet
                 ? 20

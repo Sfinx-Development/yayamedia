@@ -1,8 +1,8 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import { isBiggerScreen, isBigScreen, isTablet } from "./GreyComponent";
 
 export default function YellowComponent() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 800;
   `;
@@ -61,6 +61,7 @@ export default function YellowComponent() {
           }}
         >
           <Texting
+            component="h1"
             sx={{
               paddingTop: isBiggerScreen ? 15 : 10,
               fontSize: isTablet
@@ -75,6 +76,7 @@ export default function YellowComponent() {
             Vilka är vi?
           </Texting>
           <Texting
+            component="h2"
             sx={{
               fontSize: isTablet
                 ? 50
