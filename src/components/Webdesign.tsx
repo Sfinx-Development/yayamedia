@@ -252,7 +252,7 @@ export default function Webdesign() {
             sx={{
               color: "#B8DCD2",
               fontSize: { xs: 14, xl: 17 },
-              paddingTop: 2,
+              paddingTop: 5,
             }}
           >
             Vad får du?

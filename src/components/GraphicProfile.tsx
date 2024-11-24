@@ -53,7 +53,7 @@ export default function GraphicProfile() {
             margin: 0,
             padding: 0,
             marginBottom: { xs: -8, md: 0 },
-            zIndex:999,
+            zIndex: 999,
           }}
         >
           Paketlösningar
@@ -81,7 +81,7 @@ export default function GraphicProfile() {
             color: "#363434",
             padding: 4,
             marginTop: 4,
-            height: boxHeight, 
+            height: boxHeight,
             // borderRadius: 2,
             // backgroundColor: "#B9DCD2",
             // width: { xs: 310, md: 310, xl: 330 },
@@ -137,7 +137,7 @@ export default function GraphicProfile() {
             backgroundColor: "#F3D9DF",
             width: { xs: 310, md: 310, xl: 330 },
             padding: 4,
-            marginTop: 5,
+            marginTop: 0,
             color: "#363434",
           }}
         >
@@ -164,7 +164,7 @@ export default function GraphicProfile() {
           <Texting
             sx={{
               fontSize: { xs: 14, xl: 17 },
-              paddingTop: 2,
+              paddingTop: 3,
               color: "#EF3434",
             }}
           >
@@ -197,7 +197,7 @@ export default function GraphicProfile() {
             width: { xs: 310, md: 310, xl: 330 },
             color: "#F7F7F7",
             padding: 4,
-            marginTop: 0,
+            marginTop: -5,
           }}
         >
           <Texting
@@ -229,7 +229,7 @@ export default function GraphicProfile() {
             sx={{
               color: "#B8DCD2",
               fontSize: { xs: 14, xl: 17 },
-              paddingTop: { xs: 2, md: 3 },
+              paddingTop: { xs: 2, md: 6 },
             }}
           >
             Vad får du?
