@@ -56,7 +56,7 @@ export default function Header(): JSX.Element {
       >
         <img
           src={"https://i.imgur.com/LNlGvx8.png"}
-          alt="Yaya Logo"
+          alt="Yaya Media Logo"
           style={{
             height: isMobile ? 40 : isBigScreen ? 75 : 60,
           }} // Mindre logotyp på små skärmar
@@ -116,7 +116,7 @@ export default function Header(): JSX.Element {
           paddingRight: "16px", // Sätt standardpadding
           cursor: "pointer",
           //  marginRight: 90,
-           marginRight: isMobile ? 10 : isBigScreen ? 120 : 80,
+          marginRight: isMobile ? 10 : isBigScreen ? 120 : 80,
           // fontSize: 20
         }}
       >

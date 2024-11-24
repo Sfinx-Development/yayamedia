@@ -39,7 +39,7 @@ export default function Footer() {
       >
         <img
           src={"https://i.imgur.com/1MzhvyL.png"}
-          alt="Yaya Logo"
+          alt="Yaya Media Logo"
           style={{ height: isMobile ? 70 : 130 }}
         />
       </Box>

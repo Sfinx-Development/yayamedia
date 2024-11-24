@@ -256,7 +256,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
         >
           <img
             src="https://i.imgur.com/bOoA1jT.png"
-            alt="yaya logo"
+            alt="Yaya Media logo"
             style={{ height: 40 }}
           />
         </Box>

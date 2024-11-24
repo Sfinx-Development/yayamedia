@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, TypographyProps } from "@mui/material";
 import { isTablet } from "./GreyComponent";
 
 export default function SocialMedia() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
@@ -39,22 +39,23 @@ export default function SocialMedia() {
           sx={{
             fontSize: isTablet ? 40 : { xs: 30, md: 40, xl: 45 },
             color: "#363434",
-            zIndex:999,
+            zIndex: 999,
             marginBottom: { xs: -1, md: 0 },
             marginTop: titleMarginTop, // Justerar rubrikens top-margin
           }}
+          component="h1"
         >
           Sociala medier
         </Texting>
         <TextingATYP
+          component="h3"
           sx={{
             fontSize: { xs: 20, md: 20, xl: 25 },
             color: "#363434",
             margin: 0,
             padding: 0,
             marginBottom: { xs: -9, md: 0 },
-            zIndex:999,
-             
+            zIndex: 999,
           }}
         >
           Paketlösningar

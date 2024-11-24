@@ -1,19 +1,19 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, TypographyProps } from "@mui/material";
 
 export default function Webdesign() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
   const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
-  const titleMarginTop = { xs: 0, md: 20, xl: 20 }; 
+  const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   return (
     <Box
@@ -36,6 +36,7 @@ export default function Webdesign() {
         }}
       >
         <Texting
+          component="h1"
           sx={{
             fontSize: { xs: 30, md: 40, xl: 45 },
             color: "#363434",
@@ -46,13 +47,14 @@ export default function Webdesign() {
           Webbdesign
         </Texting>
         <TextingATYP
+          component="h3"
           sx={{
             fontSize: { xs: 20, md: 20, xl: 25 },
             color: "#363434",
             margin: 0,
             padding: 0,
             marginBottom: { xs: -9, md: 0 },
-            zIndex:999,
+            zIndex: 999,
           }}
         >
           Paketlösningar
@@ -80,7 +82,7 @@ export default function Webdesign() {
             color: "#363434",
             padding: 4,
             marginTop: 4,
-            height: boxHeight, 
+            height: boxHeight,
             // borderRadius: 2,
             // backgroundColor: "#B9DCD2",
             // width: { xs: 310, md: 310, xl: 330 },

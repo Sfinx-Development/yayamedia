@@ -1,4 +1,10 @@
-import { Box, Button, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  styled,
+  Typography,
+  TypographyProps,
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Case from "./Case";
@@ -37,12 +43,12 @@ export default function ParallaxWave() {
     }
   }, [location]);
 
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
@@ -107,6 +113,7 @@ export default function ParallaxWave() {
                   color: "#363434",
                   marginBottom: 2,
                 }}
+                component="h2"
               >
                 Slut på moves?
               </Texting>
@@ -115,6 +122,7 @@ export default function ParallaxWave() {
                   width: { xs: 320, md: 450, xl: 600 },
                   fontSize: isTablet ? 18 : { xl: 25 },
                 }}
+                component="h3"
               >
                 Det brusar högt där ute. Att hitta sin unika rytm bland
                 tusentals andra kan vara svårt - vi vet. Men vi vet också hur
@@ -129,6 +137,7 @@ export default function ParallaxWave() {
                   marginTop: 2,
                   fontSize: isTablet ? 18 : { xl: 25 },
                 }}
+                component="h3"
               >
                 Oavsett hur du för dig just nu kan du räkna med oss! En
                 fullständig koreografi eller ett par väl valda moves? Upp till
@@ -209,7 +218,7 @@ export default function ParallaxWave() {
           <GreenComponent />
           <Case />
           <Partners />
-         {isMobile ? <MobileFooter/> : <Footer /> }
+          {isMobile ? <MobileFooter /> : <Footer />}
         </Box>
       </Box>
     </Box>

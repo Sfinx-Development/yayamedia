@@ -39,20 +39,17 @@ export default function Case() {
           flexDirection: isTablet ? "column" : { xs: "column", md: "row" },
           justifyContent: "center",
           gap: 0.1,
-        
         }}
       >
         <img
           src="https://i.imgur.com/LsyTFZT.png"
-          alt="picture of teip"
+          alt="teip with logos"
           height={isMobile ? "100%" : isBigScreen ? "700px" : "545px"}
           width={isMobile ? "100%" : isBigScreen ? "1100px" : "645px"}
-         
-         
         />
         <img
           src="https://i.imgur.com/nRLImCB.png"
-          alt="picture of teip"
+          alt="computer showing a website"
           height={isMobile ? "90%" : isBigScreen ? "700px" : "545px"}
           width={isMobile ? "100%" : isBigScreen ? "1100px" : "645px"}
         />

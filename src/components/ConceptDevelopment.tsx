@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, TypographyProps } from "@mui/material";
 import { isBiggerScreen } from "./GreyComponent";
 
 export default function ConceptDevelopment() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
@@ -44,6 +44,7 @@ export default function ConceptDevelopment() {
             paddingLeft: { xs: 4, md: 8, xl: 10 },
             marginBottom: 0.5,
           }}
+          component="h2"
         >
           En extra push
         </Texting>
@@ -98,7 +99,7 @@ export default function ConceptDevelopment() {
             paddingLeft: { xl: 10 },
           }}
         >
-          <Texting sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
+          <Texting component="h2" sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
             Konceptutveckling
           </Texting>
           <TextingATYP
@@ -108,6 +109,7 @@ export default function ConceptDevelopment() {
               fontSize: { xs: 12, md: 13, xl: 20 },
               marginTop: 2,
             }}
+            component="h3"
           >
             Du tänker att du har allt klappat och klart. En trevlig och
             informativ hemsida, levande sociala medier och ett värdefullt
