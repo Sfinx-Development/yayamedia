@@ -207,10 +207,10 @@ export default function ParallaxYaya() {
                 borderRadius: 3,
                 // flex: 1 / 3,
                 height: isTablet
-                  ? 500
+                  ? 440
                   : isBiggerScreen
-                  ? 400
-                  : { xs: 350, md: 400, xl: 450 },
+                  ? 350
+                  : { xs: 350, md: 350, xl: 450 },
                 width: { xs: 300, md: "45%" },
               }}
             >
@@ -287,10 +287,10 @@ export default function ParallaxYaya() {
                 borderRadius: 3,
                 position: "relative",
                 height: isTablet
-                  ? 500
+                  ? 440
                   : isBiggerScreen
-                  ? 400
-                  : { xs: 350, md: 400, xl: 450 },
+                  ? 350
+                  : { xs: 350, md: 350, xl: 450 },
                 width: { xs: 300, md: "45%" },
               }}
             >
@@ -350,7 +350,7 @@ export default function ParallaxYaya() {
               >
                 <Texting
                   sx={{
-                    fontSize: { xs: 30, md: 30, xl: 45 },
+                    fontSize: { xs: 24, md: 30, lg: 20, sm: 20, xl: 45 },
                     color: "#B9DCD2",
                     marginBottom: 2,
                   }}
@@ -361,7 +361,7 @@ export default function ParallaxYaya() {
                   sx={{
                     color: "#f8f8f8",
                     fontSize: isTablet ? 16 : { xs: 12, md: 18, xl: 25 },
-                    maxWidth: isTablet ? "70%" : { xs: "50%", md: "70%" },
+                    maxWidth: isTablet ? "65%" : { xs: "40%", md: "70%", ms: "70%", lg: "70%", },
                     flexWrap: "wrap",
                     // backgroundColor: "red",
                   }}
@@ -389,7 +389,7 @@ export default function ParallaxYaya() {
                   alt="two girls"
                   height={
                     isMobile && !isTablet
-                      ? 270
+                      ? 250
                       : isTablet
                       ? 340
                       : isBiggerScreen
