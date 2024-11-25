@@ -355,7 +355,7 @@ export default function ParallaxYaya() {
                     marginBottom: 2,
                   }}
                 >
-                  Rubrik
+                  Så du vill veta mer?
                 </Texting>
                 <TextingATYP
                   sx={{
@@ -366,10 +366,14 @@ export default function ParallaxYaya() {
                     // backgroundColor: "red",
                   }}
                 >
-                  No worries - vi är ju en kommunikationsbyrå. Vi är bra på
+                  Okej okej, ta det lugnt. Vi har ju en podd också, häng på! Vi
+                  snackar vardag, märkliga mysterier och allt annat som händer
+                  just nu. Vi lovar äkta snack, lagom mycket surr och kanske
+                  lite underhållning.
+                  {/* No worries - vi är ju en kommunikationsbyrå. Vi är bra på
                   annat också. Slå en pling, eller släng iväg ett mejl och
                   berätta om dina drömmar och visioner. Vi är helt inne på att
-                  förverkliga dom!
+                  förverkliga dom! */}
                 </TextingATYP>
               </Box>
 
