@@ -144,9 +144,9 @@ export default function ParallaxYaya() {
                 hade roligt ihop utan att vi också var perfekta för varandra i
                 alla möjliga skapandeprocesser. Att vi kompletterade varandra
                 med våra olika styrkor, men också att vi jobbade på liknande
-                sätt. Att vi tar i, där det behövs. Att vi inte ger inte upp
-                förens vi når perfektion. Når vi någonsin det dock? Det är upp
-                till betraktaren att avgöra, men vi nöjer oss sällan.
+                sätt. Att vi tar i, där det behövs. Att vi inte ger upp förens
+                vi når perfektion. Når vi någonsin det dock? Det är upp till
+                betraktaren att avgöra, men vi nöjer oss sällan.
               </TextingATYP>
             </Box>
           </Box>
@@ -361,7 +361,9 @@ export default function ParallaxYaya() {
                   sx={{
                     color: "#f8f8f8",
                     fontSize: isTablet ? 16 : { xs: 12, md: 18, xl: 25 },
-                    maxWidth: isTablet ? "65%" : { xs: "40%", md: "70%", ms: "70%", lg: "70%", },
+                    maxWidth: isTablet
+                      ? "65%"
+                      : { xs: "40%", md: "70%", ms: "70%", lg: "70%" },
                     flexWrap: "wrap",
                     // backgroundColor: "red",
                   }}
