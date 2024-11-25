@@ -144,9 +144,9 @@ export default function ParallaxYaya() {
                 hade roligt ihop utan att vi också var perfekta för varandra i
                 alla möjliga skapandeprocesser. Att vi kompletterade varandra
                 med våra olika styrkor, men också att vi jobbade på liknande
-                sätt. Att vi tar i, där det behövs. Att vi inte ger inte upp
-                förens vi når perfektion. Når vi någonsin det dock? Det är upp
-                till betraktaren att avgöra, men vi nöjer oss sällan.
+                sätt. Att vi tar i, där det behövs. Att vi inte ger upp förens
+                vi når perfektion. Når vi någonsin det dock? Det är upp till
+                betraktaren att avgöra, men vi nöjer oss sällan.
               </TextingATYP>
             </Box>
           </Box>
@@ -207,10 +207,10 @@ export default function ParallaxYaya() {
                 borderRadius: 3,
                 // flex: 1 / 3,
                 height: isTablet
-                  ? 500
+                  ? 440
                   : isBiggerScreen
-                  ? 400
-                  : { xs: 350, md: 400, xl: 450 },
+                  ? 350
+                  : { xs: 350, md: 350, xl: 450 },
                 width: { xs: 300, md: "45%" },
               }}
             >
@@ -287,10 +287,10 @@ export default function ParallaxYaya() {
                 borderRadius: 3,
                 position: "relative",
                 height: isTablet
-                  ? 500
+                  ? 440
                   : isBiggerScreen
-                  ? 400
-                  : { xs: 350, md: 400, xl: 450 },
+                  ? 350
+                  : { xs: 350, md: 350, xl: 450 },
                 width: { xs: 300, md: "45%" },
               }}
             >
@@ -350,26 +350,32 @@ export default function ParallaxYaya() {
               >
                 <Texting
                   sx={{
-                    fontSize: { xs: 30, md: 30, xl: 45 },
+                    fontSize: { xs: 24, md: 30, lg: 20, sm: 20, xl: 45 },
                     color: "#B9DCD2",
                     marginBottom: 2,
                   }}
                 >
-                  Rubrik
+                  Så du vill veta mer?
                 </Texting>
                 <TextingATYP
                   sx={{
                     color: "#f8f8f8",
                     fontSize: isTablet ? 16 : { xs: 12, md: 18, xl: 25 },
-                    maxWidth: isTablet ? "70%" : { xs: "50%", md: "70%" },
+                    maxWidth: isTablet
+                      ? "65%"
+                      : { xs: "40%", md: "70%", ms: "70%", lg: "70%" },
                     flexWrap: "wrap",
                     // backgroundColor: "red",
                   }}
                 >
-                  No worries - vi är ju en kommunikationsbyrå. Vi är bra på
+                  Okej okej, ta det lugnt. Vi har ju en podd också, häng på! Vi
+                  snackar vardag, märkliga mysterier och allt annat som händer
+                  just nu. Vi lovar äkta snack, lagom mycket surr och kanske
+                  lite underhållning.
+                  {/* No worries - vi är ju en kommunikationsbyrå. Vi är bra på
                   annat också. Slå en pling, eller släng iväg ett mejl och
                   berätta om dina drömmar och visioner. Vi är helt inne på att
-                  förverkliga dom!
+                  förverkliga dom! */}
                 </TextingATYP>
               </Box>
 
@@ -385,7 +391,7 @@ export default function ParallaxYaya() {
                   alt="two girls"
                   height={
                     isMobile && !isTablet
-                      ? 270
+                      ? 250
                       : isTablet
                       ? 340
                       : isBiggerScreen
