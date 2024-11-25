@@ -8,7 +8,7 @@ const Wave: React.FC = () => {
     <svg
       width="100%"
       height={
-        isMobile && !isBigScreen ? "50vh" : isBigScreen ? "85vh" : "105vh"
+        isMobile && !isBigScreen ? "35vh" : isBigScreen ? "85vh" : "105vh"
       } // Bestäm en höjd så att vågen blir synlig
       viewBox="0 0 100 100" // Använd en vy för att passa SVG-innehållet
       preserveAspectRatio="none"
