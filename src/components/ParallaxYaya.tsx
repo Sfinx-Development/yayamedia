@@ -116,7 +116,7 @@ export default function ParallaxYaya() {
                   maxWidth: { xs: "90%", md: "40%" },
                 }}
               >
-                Nånstans mellan bruna bananer och trasiga mjölkpaket.
+                Bruna bananer och trasiga mjölkpaket
               </Texting>
 
               <TextingATYP
@@ -127,26 +127,16 @@ export default function ParallaxYaya() {
                   fontSize: isTablet ? 20 : { xs: 18, md: 18, xl: 25 },
                 }}
               >
-                Första gången vi sågs var som två pirriga och förväntansfulla
-                elever. Vi lärde känna varandra skolvägen. Under två år
-                utbildade vi oss till art director och copywriter och valde sen
-                varsin riktning. Åsa som art director, och Emelie som copywriter
-                - eller hybrid, om hon får välja själv. Men vad har bruna
-                bananer och trasiga mjölkpaket egentligen med det och göra? Inte
-                så mycket kanske. Förutom att Emelie värvade Åsa till sitt
-                extrajobb på ICA Online under studietiden. Där spenderades
-                timmar till att hjälpa och förstå sig på kunder, av olika slag.
-                Många ringde in om just det - bruna bananer eller trasiga
-                mjölkpaket, ibland både och. Och vi tror att det är någonstans
-                där som vi verkligen fann varann, och insåg hur roligt vi hade
-                ihop. Efter två år i skolbänken hade vi också haft flera
-                grupparbeten tillsammans, och kunde konstatera att vi inte bara
-                hade roligt ihop utan att vi också var perfekta för varandra i
-                alla möjliga skapandeprocesser. Att vi kompletterade varandra
-                med våra olika styrkor, men också att vi jobbade på liknande
-                sätt. Att vi tar i, där det behövs. Att vi inte ger upp förens
-                vi når perfektion. Når vi någonsin det dock? Det är upp till
-                betraktaren att avgöra, men vi nöjer oss sällan.
+                Första gången vi sågs var som två pirriga elever mot en framtid
+                som kreatörer. Åsa som art director, och Emelie som copywriter
+                (eller hybrid - om hon själv får välja). Men vad har bruna
+                bananer och trasiga mjölkpaket egentligen med det att göra? Inte
+                så mycket kanske - mer än att det var vanligt förekommande
+                reklamationer, på vårt gemensamma extrajobb vi hade under
+                studietiden. Och att det var där som vi faktiskt fann varandra
+                på riktigt - någonstans mellan bruna bananer och trasiga
+                mjölkpaket. Inte bara som vänner utan också som ett kreativt
+                team - som vi nu får utlopp för i Yaya media.
               </TextingATYP>
             </Box>
           </Box>
