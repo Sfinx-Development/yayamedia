@@ -1,6 +1,6 @@
-import { Box, Link, styled, Typography } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import DrawerComponent from "./DrawerComponent";
 
 export default function Header(): JSX.Element {
@@ -73,31 +73,31 @@ export default function Header(): JSX.Element {
         }}
       >
         <Link
-          sx={{
+          style={{
             textDecoration: "none",
             color: "#363434",
           }}
-          href="/yaya#kontakt"
+          to="/#case"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 30 }, color: "#363434" }}>
             Kontakt
           </Heading>
         </Link>
         <Link
-          sx={{
+          style={{
             textDecoration: "none",
             color: "#363434",
           }}
-          href="/yaya"
+          to="/yaya"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 30 } }}>Yaya</Heading>
         </Link>
         <Link
-          sx={{
+          style={{
             textDecoration: "none",
             color: "#363434",
           }}
-          href="/#case"
+          to="/#case"
         >
           <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Case</Heading>
         </Link>

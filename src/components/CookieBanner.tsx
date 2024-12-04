@@ -1,6 +1,5 @@
 import { Box, Button, Link, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { isTablet } from "./GreyComponent";
 
 const CookieBanner = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -15,7 +14,12 @@ const CookieBanner = () => {
   const handleAccept = () => {
     localStorage.setItem("cookieConsent", "true");
     setShowBanner(false);
-    window.location.reload(); // Ladda om sidan för att aktivera Google Analytics
+    window.location.reload();
+  };
+
+  const handleDecline = () => {
+    localStorage.setItem("cookieConsent", "false");
+    setShowBanner(false);
   };
 
   if (!showBanner) return null;
@@ -27,56 +31,103 @@ const CookieBanner = () => {
         bottom: 0,
         left: 0,
         width: "100%",
-        backgroundColor: "#222", // Mörk bakgrund
-        color: "#fff", // Vit textfärg
-        // padding: "1rem",
+        backgroundColor: "#222",
+        color: "#fff",
         zIndex: 9999,
-        textAlign: "center",
-        boxShadow: "0px -2px 10px rgba(0,0,0,0.2)",
+        textAlign: "left",
+        padding: { xs: "1rem", md: "1.5rem" },
+        boxShadow: "0px -2px 10px rgba(0, 0, 0, 0.2)",
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        alignItems: { xs: "flex-start", md: "center" },
+        gap: { xs: "1rem", md: "2rem" },
       }}
     >
-      <Typography variant="body2">
-        Vi använder Cookies för att förbättra din upplevelse på vår hemsida, det
-        inkluderar att analysera trafik till vår sida via Google Analytics. När
-        du klickar på "Acceptera", ger du oss tillåtelse att använda Cookies.
-        <Button
-          variant="text"
-          component={Link}
-          href="https://cookieinformation.com/sv/vad-ar-en-cookie/"
+      <Typography
+        variant="body2"
+        sx={{
+          fontSize: { xs: "0.85rem", md: "1rem" },
+          lineHeight: "1.6",
+          maxWidth: { xs: "95%", md: "70%" },
+          marginBottom: { xs: "0.5rem", md: "0" },
+        }}
+      >
+        Vi använder cookies för att förbättra din upplevelse på vår hemsida.
+        Detta inkluderar analys av trafik via Google Analytics. Genom att klicka
+        på
+        <Typography
+          component="span"
           sx={{
-            marginLeft: "8px",
-            color: "#ffffff", // Vit textfärg
-            textDecoration: "underline", // Lägg till ett streck under texten
+            fontWeight: "bold",
+            color: "#F3D9DF",
+            marginLeft: "4px",
+          }}
+        >
+          "Acceptera"
+        </Typography>
+        , ger du oss tillåtelse att använda cookies.{" "}
+        <Link
+          href="https://cookieinformation.com/sv/vad-ar-en-cookie/"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{
+            color: "#F3D9DF",
+            textDecoration: "underline",
             "&:hover": {
-              backgroundColor: "transparent", // Ingen bakgrundsfärg vid hover
-              textDecoration: "none", // Ta bort strecket vid hover
+              textDecoration: "none",
             },
           }}
         >
-          Läs mer
-        </Button>
+          Läs mer här
+        </Link>
+        .
       </Typography>
-      <Box sx={{ marginTop: "0.5rem" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "center",
+          gap: "1rem",
+          justifyContent: { xs: "center" },
+          width: { xs: "90%", md: "auto" },
+        }}
+      >
         <Button
           onClick={handleAccept}
           variant="contained"
           sx={{
             backgroundColor: "#363434",
-            marginTop: 3,
-            maxWidth: isTablet ? "60%" : "40%",
             color: "#F7F7F7",
-            borderRadius: 2,
-            paddingY: { md: 1, xl: 2 },
+            borderRadius: "8px",
+            padding: "0.5rem 1.5rem",
             textTransform: "none",
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            width: { xs: "100%", md: "auto" },
             "&:hover": {
-              background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen för hover-effekten
-            },
-            "&:active": {
-              background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen när knappen är aktiv (om nödvändigt)
+              background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
             },
           }}
         >
-          <Typography sx={{ fontSize: 18 }}>Acceptera</Typography>
+          Acceptera
+        </Button>
+        <Button
+          onClick={handleDecline}
+          variant="outlined"
+          sx={{
+            borderColor: "#F3D9DF",
+            color: "#F3D9DF",
+            borderRadius: "8px",
+            padding: "0.5rem 1.5rem",
+            textTransform: "none",
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            width: { xs: "100%", md: "auto" },
+            "&:hover": {
+              backgroundColor: "rgba(255, 165, 0, 0.1)",
+              borderColor: "#F3D9DF",
+            },
+          }}
+        >
+          Avvisa
         </Button>
       </Box>
     </Box>
