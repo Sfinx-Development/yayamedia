@@ -29,7 +29,7 @@ const CookieBanner = () => {
         width: "100%",
         backgroundColor: "#222", // Mörk bakgrund
         color: "#fff", // Vit textfärg
-        padding: "1rem",
+        // padding: "1rem",
         zIndex: 9999,
         textAlign: "center",
         boxShadow: "0px -2px 10px rgba(0,0,0,0.2)",
