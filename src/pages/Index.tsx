@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import ParallaxWave from "../components/ParallaxINDEX";
 import PinkComponent from "../components/PinkComponent";
+import CookieBanner from "../components/CookieBanner";
 
 export default function Index() {
   return (
@@ -17,6 +18,7 @@ export default function Index() {
         flexGrow: 1,
       }}
     >
+       <CookieBanner />
       <PinkComponent />
       {/* ParallaxWave kommer att skrolla upp direkt efter PinkComponent */}
       <Box sx={{ width: "100%", position: "relative" }}>
