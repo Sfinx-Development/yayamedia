@@ -77,7 +77,7 @@ export default function Header(): JSX.Element {
             textDecoration: "none",
             color: "#363434",
           }}
-          to="/#case"
+          to="/#kontakt"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 30 }, color: "#363434" }}>
             Kontakt
