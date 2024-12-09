@@ -17,7 +17,12 @@ export default function ConceptDevelopment() {
     <Box
       id="konceptutveckling"
       sx={{
-        width: { xs: "100%", xl: "70%" },
+        width:
+          window.innerWidth > 2500
+            ? "80%"
+            : {
+                xs: "100%",
+              },
         backgroundColor: "#F7F7F7",
         display: "flex",
         justifyContent: "center",
@@ -104,7 +109,7 @@ export default function ConceptDevelopment() {
           </Texting>
           <TextingATYP
             sx={{
-              width: isBiggerScreen ? "80%" : "100%",
+              width: window.innerWidth > 2500 ? "80%" : "100%",
               color: "#F7F7F7",
               fontSize: { xs: 12, md: 13, xl: 20 },
               marginTop: 2,

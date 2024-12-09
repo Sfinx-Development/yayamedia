@@ -51,11 +51,12 @@ export default function GreenComponent() {
           sx={{
             fontSize: { xs: 30, md: 40, xl: 55 },
             color: "#2D6555",
+            lineHeight: 1,
             // marginTop: 5,
           }}
           component="h1"
         >
-          Yaya, vem är hon egentligen?
+          Hur livet blev lite mer Yaya?
         </Texting>
         <TextingATYP
           sx={{
@@ -68,10 +69,9 @@ export default function GreenComponent() {
           }}
           component="h2"
         >
-          Ja, vem är hon? Yaya finns i oss båda, på olika sätt. Hon är liksom en
-          del av vilka vi är. Kreatören i oss. Hon som får trist och platt att
-          spraka. Hon som kan sätta färg på världen. Och hon finns i oss båda,
-          på olika sätt.
+          Vår story är varken lång, djup eller särskilt unik. Men den är vår.
+          Idag är Yaya en del av oss och vilka vi är. Nyfiken på hur vi kom hit?
+          You know the drill, klicka på knappen bara.
         </TextingATYP>
         <TextingATYP
           sx={{
@@ -107,7 +107,7 @@ export default function GreenComponent() {
           <Texting sx={{ fontSize: { md: 18, xl: 25 } }}>Om oss</Texting>
         </Button>
       </Box>
-      <Box>
+      <Box sx={{ marginLeft: -5 }}>
         <img
           src="https://i.imgur.com/pHngbgI.jpeg"
           alt="two girls"

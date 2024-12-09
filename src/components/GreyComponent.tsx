@@ -107,10 +107,10 @@ export default function GreyComponent() {
               color: "#F7F7F7",
               flexWrap: "wrap",
               maxWidth: { xs: 900, xl: "50%" },
-              // marginTop: 1,
+              marginTop: 1,
               marginBottom: 2,
             }}
-            component="h3"
+            component="h2"
           >
             Mjuka klappar. Ett fenomen som kan få vilket barn som helst att på
             en millisekund gå från pirrigt förväntansfull till besviken. Vi

@@ -77,7 +77,7 @@ export default function Header(): JSX.Element {
             textDecoration: "none",
             color: "#363434",
           }}
-          to="/#kontakt"
+          to="/yaya#kontakt"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 30 }, color: "#363434" }}>
             Kontakt
@@ -100,6 +100,15 @@ export default function Header(): JSX.Element {
           to="/#case"
         >
           <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Case</Heading>
+        </Link>
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "#363434",
+          }}
+          to="/tjanster"
+        >
+          <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Tjänster</Heading>
         </Link>
       </Box>
 
