@@ -107,7 +107,7 @@ export default function GreenComponent() {
           <Texting sx={{ fontSize: { md: 18, xl: 25 } }}>Om oss</Texting>
         </Button>
       </Box>
-      <Box sx={{ marginLeft: -5 }}>
+      <Box>
         <img
           src="https://i.imgur.com/pHngbgI.jpeg"
           alt="two girls"
