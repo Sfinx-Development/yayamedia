@@ -1,8 +1,6 @@
 import { Box, styled, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 export default function MobileFooter() {
-  const navigate = useNavigate();
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -82,7 +80,7 @@ export default function MobileFooter() {
         <Box sx={{ display: "flex", gap: 1 }}>
           <img
             onClick={() => {
-              navigate("https://www.instagram.com/yayamedia.se/");
+              window.open("https://www.instagram.com/yayamedia.se/", "_blank");
             }}
             src="https://i.imgur.com/yJruHJc.png"
             alt="instagram-logo"
@@ -92,7 +90,7 @@ export default function MobileFooter() {
           />
           <img
             onClick={() => {
-              navigate("https://www.linkedin.com/company/yaya-media");
+              window.open("https://www.linkedin.com/company/yaya-media");
             }}
             src="https://i.imgur.com/HxxE6gv.png"
             alt="linkedin-logo"
