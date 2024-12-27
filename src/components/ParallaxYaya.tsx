@@ -1,5 +1,5 @@
 import { Box, styled, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import { isBiggerScreen, isTablet } from "./GreyComponent";
@@ -10,41 +10,20 @@ import Wave from "./Wave";
 export default function ParallaxYaya() {
   const isBigScreen = window.innerHeight >= 1080;
   const location = useLocation();
+
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
-      const element = document.querySelector(hash);
+      const element = document.getElementById(hash.slice(1)); // Ta bort '#' och hitta elementet
       if (element) {
-        // Calculate the position of the element
-        const elementPosition =
-          element.getBoundingClientRect().top + window.scrollY;
-
-        // Adjust the offset as needed (for example, 100 pixels)
-        const offset = 100; // Change this value based on your header size or spacing
-
-        // Scroll to the adjusted position
-        window.scrollTo({
-          top: elementPosition - offset,
-          behavior: "smooth",
-        });
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        console.warn(`Elementet med id "${hash.slice(1)}" hittades inte.`);
       }
     }
   }, [location]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    console.log(scrollPosition);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const Texting = styled(Typography)`
     font-family: "H3", sans-serif;
