@@ -57,13 +57,15 @@ export default function Header(): JSX.Element {
         <img
           src={"https://i.imgur.com/LNlGvx8.png"}
           alt="Yaya Media Logo"
+          height={isMobile ? 40 : isBigScreen ? 75 : 60}
           style={{
             height: isMobile ? 40 : isBigScreen ? 75 : 60,
-          }} // Mindre logotyp på små skärmar
+            objectFit: "contain",
+            width: "auto",
+          }}
         />
       </div>
 
-      {/* Navigationslänkar (endast för större skärmar) */}
       <Box
         sx={{
           display: { xs: "none", md: "flex" },
