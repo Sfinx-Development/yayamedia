@@ -87,6 +87,7 @@ export default function GreenComponent() {
           Vi är Yaya och Yaya är oss.
         </TextingATYP>
         <Button
+          aria-label="Navigera till om oss-sidan"
           onClick={() => {
             navigate("/yaya");
           }}

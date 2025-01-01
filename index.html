@@ -3,14 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <link
+      rel="preload"
+      href="/fonts/AtypRegularVariable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/DomaineDisp-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
       rel="icon"
       type="image/svg+xml"
       href="https://i.imgur.com/aNz3KGl.png"
     />
+    <link rel="preload" href="https://i.imgur.com/LNlGvx8.png" as="image" />
     <link rel="stylesheet" href="/src/index.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ipe6rmb.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Den personliga kommunikationsbyrån i Borås - Yaya Media</title>
+    <meta
+      name="description"
+      content="Den personliga kommunikationsbyrån i Borås - Yaya Media"
+    />
     <meta
       name="keywords"
       content="kommunikationsbyrå, digitalbyra, webbbyrå, design, grafisk profil, yaya media, byrå i borås, sociala medier tjänster, webbdesign, konceptutveckling, reklambyrå i borås, copywriting borås"
@@ -24,21 +43,21 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-HW1QJQXJ22"
     ></script>
     <script>
-       const hasConsent = localStorage.getItem("cookieConsent");
-    
-    if (hasConsent === "true") {
-      const script = document.createElement("script");
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-HW1QJQXJ22";
-      script.async = true;
-      document.head.appendChild(script);
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+      const hasConsent = localStorage.getItem("cookieConsent");
 
-      gtag("config", "G-HW1QJQXJ22");
-    };
+      if (hasConsent === "true") {
+        const script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-HW1QJQXJ22";
+        script.async = true;
+        document.head.appendChild(script);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-HW1QJQXJ22");
+      }
     </script>
   </body>
 </html>

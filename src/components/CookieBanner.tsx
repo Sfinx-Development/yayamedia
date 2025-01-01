@@ -93,6 +93,7 @@ const CookieBanner = () => {
         }}
       >
         <Button
+          aria-label="Acceptera Cookies"
           onClick={handleAccept}
           variant="contained"
           sx={{
@@ -111,6 +112,7 @@ const CookieBanner = () => {
           Acceptera
         </Button>
         <Button
+          aria-label="Neka Cookies"
           onClick={handleDecline}
           variant="outlined"
           sx={{

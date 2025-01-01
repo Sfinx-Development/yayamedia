@@ -124,7 +124,10 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               Tjänster
             </Texting>
           </Link>
-          <IconButton onClick={() => setIsopen(!isOpen)}>
+          <IconButton
+            aria-label="Toggla hamburgermeny"
+            onClick={() => setIsopen(!isOpen)}
+          >
             <KeyboardArrowDown sx={{ color: "white" }} />
           </IconButton>
         </Box>
@@ -255,9 +258,10 @@ export default function DrawerComponent(props: DrawerComponentProps) {
           }}
         >
           <img
-            src="https://i.imgur.com/bOoA1jT.png"
+            src="https://i.imgur.com/FlSiejq.png"
             alt="Yaya Media logo"
-            style={{ height: 40 }}
+            width="auto"
+            height="40"
           />
         </Box>
       </Box>
