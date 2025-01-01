@@ -145,6 +145,7 @@ export default function ParallaxWave() {
                 alltid efter dina behov.
               </TextingATYP>
               <Button
+                aria-label="Navigera till tjänster-sidan"
                 onClick={() => {
                   navigate("/tjanster");
                 }}

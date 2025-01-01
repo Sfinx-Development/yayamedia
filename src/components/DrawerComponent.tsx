@@ -124,7 +124,10 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               Tjänster
             </Texting>
           </Link>
-          <IconButton onClick={() => setIsopen(!isOpen)}>
+          <IconButton
+            aria-label="Toggla hamburgermeny"
+            onClick={() => setIsopen(!isOpen)}
+          >
             <KeyboardArrowDown sx={{ color: "white" }} />
           </IconButton>
         </Box>
