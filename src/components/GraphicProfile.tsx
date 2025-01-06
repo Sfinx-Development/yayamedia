@@ -124,9 +124,6 @@ export default function GraphicProfile() {
             -Uppstartsmöte
           </TextingATYP>
           <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Startsida
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Logotyp i leverans av png, jpg och eps
           </TextingATYP>
         </Box>
@@ -172,9 +169,6 @@ export default function GraphicProfile() {
           </Texting>
           <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
             -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Startsida
           </TextingATYP>
           <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
             -Logotyp (leverans i png, jpg och eps)
