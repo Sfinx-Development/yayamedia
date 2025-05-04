@@ -24,10 +24,12 @@ export default function GreenComponent() {
     <Box
       sx={{
         width: "100%",
-        background: "#B9DCD2",
+        // background: "#B9DCD2",
+        background: " #BECED9",
         display: "flex",
         flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
         justifyContent: "space-evenly",
+        marginTop: isMobile ? 6 : { xs: 8, md: 10 }, 
         alignItems: "stretch",
         paddingY: 0,
         paddingX: isTablet ? 2 : { xs: 1, md: 0 },
@@ -45,18 +47,20 @@ export default function GreenComponent() {
           paddingTop: isMobile ? 10 : { xs: 1, md: 0, sm: 0, xl: 0 },
           // paddingLeft: 2,
           paddingLeft: isMobile ? 2 : { xs: 1, md: 0, sm: 0, xl: 0 },
+          textAlign: "left", // <-- Lägg till denna rad
         }}
       >
         <Texting
           sx={{
             fontSize: { xs: 30, md: 40, xl: 55 },
-            color: "#2D6555",
+            // color: "#2D6555",
+            color: "#1D5880",
             lineHeight: 1,
             // marginTop: 5,
           }}
           component="h1"
         >
-          Hur livet blev lite mer Yaya?
+          Yaya, vem är hon egentligen?
         </Texting>
         <TextingATYP
           sx={{
@@ -65,13 +69,16 @@ export default function GreenComponent() {
             color: "#363434",
             flexWrap: "wrap",
             maxWidth: 1000,
-            marginTop: 1,
+            marginTop: 3,
           }}
           component="h2"
         >
-          Vår story är varken lång, djup eller särskilt unik. Men den är vår.
+        Ja, vem är hon? Yaya finns i oss båda, på olika sätt. Hon är liksom en del av 
+        vilka vi är. Kreatören i oss. Hon som får trist och platt att spraka. Hon som kan sätta 
+        färg på världen. Och hon finns i oss båda, på olika sätt.
+          {/* Vår story är varken lång, djup eller särskilt unik. Men den är vår.
           Idag är Yaya en del av oss och vilka vi är. Nyfiken på hur vi kom hit?
-          You know the drill, klicka på knappen bara.
+          You know the drill, klicka på knappen bara. */}
         </TextingATYP>
         <TextingATYP
           sx={{
@@ -92,7 +99,8 @@ export default function GreenComponent() {
             navigate("/yaya");
           }}
           sx={{
-            backgroundColor: "#2D6555",
+            // backgroundColor: "#2D6555",
+            backgroundColor: " #1D5880",
             marginTop: 1,
             width: "35%",
             color: "#F7F7F7",

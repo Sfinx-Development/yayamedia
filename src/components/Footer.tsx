@@ -91,7 +91,7 @@ export default function Footer() {
                 fontSize: { xs: 16, md: 20, xl: 25 },
               }}
             >
-              070-7 46 06 69
+              070-8 85 61 13
             </TextingATYP>
           </Box>
 
