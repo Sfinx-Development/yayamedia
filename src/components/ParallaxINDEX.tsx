@@ -155,6 +155,8 @@ export default function ParallaxWave() {
               justifyContent: "center",
               my: { xs: 4, md: 8 },
               px: { xs: 2, sm: 4 },
+              paddingX: isTablet ? 2 : { xs: 0, md: 0 },
+
               width: "100%",
               maxWidth: 1200,
               mx: "auto",
@@ -167,9 +169,9 @@ export default function ParallaxWave() {
                 background: "linear-gradient(to top,  #FAECD0,#FAF7E4)",
                 width: { xs: "90%", sm: "90%", md: "45%" }, // samma regler
                 mx: "auto", // centrera på xs och sm
-                 py: 4,
-            
-                 pb: 4, // ← lite mindre padding än det gröna
+                py: 4,
+
+                pb: 4, // ← lite mindre padding än det gröna
                 px: { xs: 3, sm: 4, md: 5 },
                 borderRadius: 4,
                 display: "flex",
@@ -221,8 +223,10 @@ export default function ParallaxWave() {
                 </Box>
 
                 <TextingATYP
-                  sx={{   textAlign: "left",     
-                  fontSize: isTablet ? 18 : { xl: 25 }, }}
+                  sx={{
+                    textAlign: "left",
+                    fontSize: isTablet ? 18 : { xl: 25 },
+                  }}
                   component="p"
                 >
                   Varvar du pitchar och paraplydrinkar med kpier och envis sand
@@ -365,7 +369,7 @@ export default function ParallaxWave() {
                   color: "#F7F7F7",
                   borderRadius: 2,
                   mt: "auto", // flytta neråt
-                  mb: 2,      // luft under
+                  mb: 2, // luft under
                   paddingY: 1.2,
                   textTransform: "none",
                   marginY: { xs: 2, md: 0 },
