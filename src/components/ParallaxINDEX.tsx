@@ -384,7 +384,7 @@ export default function ParallaxWave() {
           </Box>
 
           <GreenComponent />
-          <Case />
+          {/* <Case /> */}
           <Partners />
           {isMobile ? <MobileFooter /> : <Footer />}
         </Box>
