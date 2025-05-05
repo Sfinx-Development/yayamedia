@@ -13,8 +13,8 @@ export default function SocialMedia() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
-  const titleMarginTop = { xs: 0, md: 20, xl: 20 };
+  const boxHeight = { xs: 350, md: 400, xl: 450 }; // Samma höjd för alla boxar
+  const titleMarginTop = { xs: -10, md: 5, xl: 10 };
 
   return (
     <Box
@@ -23,6 +23,7 @@ export default function SocialMedia() {
         paddingLeft: { xs: 2, md: 10 },
         display: "flex",
         flexDirection: "column",
+      
       }}
     >
       <Box
@@ -33,6 +34,9 @@ export default function SocialMedia() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
+         
+         
+         
         }}
       >
         <Texting
