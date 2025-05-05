@@ -12,17 +12,18 @@ export default function GraphicProfile() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
-  const titleMarginTop = { xs: 0, md: 20, xl: 20 };
+  const boxHeight = { xs: 350, md: 310, xl: 450 }; // Samma höjd för alla boxar
+  const titleMarginTop = { xs: -10, md: 5, xl: 10 };
 
   return (
     <Box
       id="grafisk-profil"
       sx={{
         paddingLeft: 0,
-        marginLeft: -8,
+        marginLeft: -12.5,
         display: "flex",
         flexDirection: "column",
+       
       }}
     >
       <Box
@@ -34,6 +35,7 @@ export default function GraphicProfile() {
           height: "100%",
           width: "100%",
           paddingRight: 5,
+        
         }}
       >
         <Texting
@@ -66,7 +68,7 @@ export default function GraphicProfile() {
           flexDirection: { xs: "row", md: "row" },
           paddingBottom: { xs: 8, md: 10 },
           margin: { xs: 0, md: 0 },
-          //   height: "100%",
+            // height: "100%",
           justifyContent: "start",
           width: "90%",
           gap: 2,
@@ -80,7 +82,13 @@ export default function GraphicProfile() {
             width: 310,
             color: "#363434",
             padding: 4,
-            marginTop: 4,
+            marginTop: 38,
+            display: "flex",                  // ✅ Lägger till flex
+            flexDirection: "column",          // ✅ Kolumn-layout
+            justifyContent: "flex-end",  
+            // minHeight: { xs: 360, md: 120, xl: 380 },
+
+
             height: boxHeight,
             // borderRadius: 2,
             // backgroundColor: "#B9DCD2",
@@ -134,8 +142,9 @@ export default function GraphicProfile() {
             backgroundColor: "#F3D9DF",
             width: { xs: 310, md: 310, xl: 330 },
             padding: 4,
-            marginTop: 0,
+            marginTop: 30,
             color: "#363434",
+            // minHeight: { xs: 440, md: 460, xl: 480 },
           }}
         >
           <Texting
@@ -191,7 +200,8 @@ export default function GraphicProfile() {
             width: { xs: 310, md: 310, xl: 330 },
             color: "#F7F7F7",
             padding: 4,
-            marginTop: -5,
+            marginTop: 20,
+            // minHeight: { xs: 500, md: 520, xl: 680 },
           }}
         >
           <Texting
