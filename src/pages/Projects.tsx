@@ -37,8 +37,9 @@ export default function AsundsholmProject() {
       sx={{
         width: "100%",
         position: "relative",
-        zIndex: 10,
-        marginTop: "-2px", // Istället för height: "100vh"
+        zIndex: 2,
+        // marginTop: "-2px", 
+        marginTop: { xs: -35, md: -2 },// Istället för height: "100vh"
       //  height: "100vh", // viktigt! så vi scrollar ned från heron
       }}
     >

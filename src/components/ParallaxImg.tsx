@@ -25,7 +25,7 @@ const ParallaxImg = () => {
           //  zIndex: 2,
           //  height: "100%",
         sx={{
-          position: "fixed",
+          position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
