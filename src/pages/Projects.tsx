@@ -4,10 +4,14 @@ import { Box } from "@mui/material";
 // import YellowComponent from "../components/YellowComponent";
 // import AsundsholmInfo from "../components/AsundsholmInfo";
 import Case from "../components/Case";
+import { BonusComponent } from "../components/BonusComponent";
 
 import AsundsholmUppdrag from "../components/AsundsholmUppdrag";
 
 import ParallaxImg from "../components/ParallaxImg";
+import { isMobile } from "../components/GreyComponent";
+import MobileFooter from "../components/MobileFooter";
+import Footer from "../components/Footer";
 
 export default function AsundsholmProject() {
   return (
@@ -39,7 +43,14 @@ export default function AsundsholmProject() {
       }}
     >
       <AsundsholmUppdrag />
-    </Box>
+      < BonusComponent />
+             <Case />
+            
+          
+        
   </Box>
+  {isMobile ? <MobileFooter /> : <Footer />}
+  </Box>
+
 );
 }
