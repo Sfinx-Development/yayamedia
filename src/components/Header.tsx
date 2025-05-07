@@ -99,7 +99,7 @@ export default function Header(): JSX.Element {
             textDecoration: "none",
             color: "#363434",
           }}
-          to="/#case"
+          to="/projects"
         >
           <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Case</Heading>
         </Link>
