@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 
 // import YellowComponent from "../components/YellowComponent";
 // import AsundsholmInfo from "../components/AsundsholmInfo";
+import Case from "../components/Case";
 
 import AsundsholmUppdrag from "../components/AsundsholmUppdrag";
 
