@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import RootLayout from "./pages/Rootlayout";
 import Services from "./pages/Services";
 import Yaya from "./pages/Yaya";
+import AsundsholmProject from "./pages/Projects"
 
 const Navigation = () => {
   return (
@@ -12,6 +13,7 @@ const Navigation = () => {
         <Route index element={<Index />}></Route>
         <Route path="yaya" element={<Yaya />}></Route>
         <Route path="tjanster" element={<Services />}></Route>
+        <Route path="projects" element={<AsundsholmProject />}></Route>
         <Route path="*" element={<Error />}></Route>
       </Route>
     </Routes>

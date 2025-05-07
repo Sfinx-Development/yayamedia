@@ -96,17 +96,14 @@ export default function DrawerComponent(props: DrawerComponentProps) {
         </Box>
 
         {/* Navigationslänkar */}
-        <Link to="/#case" style={{ textDecoration: "none", color: "#F7F7F7" }}>
-          <Texting
-            sx={{
-              fontSize: { xs: 18, sm: 20, xl: 30 },
-              paddingBottom: 0.5,
-              paddingLeft: { xs: 0.5, md: 2 },
-            }}
+        <Link
+            to="/projects"
+            style={{ textDecoration: "none", color: "#F7F7F7" }}
           >
-            Case
-          </Texting>
-        </Link>
+            <Texting sx={{ fontSize: { xs: 18, sm: 20, xl: 30 } }}>
+              Case
+            </Texting>
+          </Link>
 
         <Box
           sx={{

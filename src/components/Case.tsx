@@ -17,42 +17,62 @@ export default function Case() {
         width: "100%",
         background: "#F7F7F7",
         display: "flex",
-        justifyContent: "center",
         flexDirection: "column",
-        height: "100%",
+        alignItems: "center",
+        py: 6,
       }}
     >
-      <Texting
-        sx={{
-          fontSize: { xs: 30, md: 40, xl: 55 },
-          color: "#363434",
-          marginTop: 12,
-          marginBottom: 5,
-          textAlign: "center",
-        }}
-      >
-        Case
-      </Texting>
       <Box
         sx={{
           display: "flex",
-          flexDirection: isTablet ? "column" : { xs: "column", md: "row" },
-          justifyContent: "center",
-          gap: 0.1,
+          flexDirection: { xs: "column", md: "row" },
+          width: "100%",
+          gap: { xs: 0, md: "8px" }, // 👈 gap på desktop, ej mobil
         }}
       >
-        <img
-          src="https://i.imgur.com/LsyTFZT.png"
-          alt="teip with logos"
-          height={isMobile ? "100%" : isBigScreen ? "700px" : "545px"}
-          width={isMobile ? "100%" : isBigScreen ? "1100px" : "645px"}
-        />
-        <img
-          src="https://i.imgur.com/nRLImCB.png"
-          alt="computer showing a website"
-          height={isMobile ? "90%" : isBigScreen ? "700px" : "545px"}
-          width={isMobile ? "100%" : isBigScreen ? "1100px" : "645px"}
-        />
+        {/* Vänster bild + bakgrund */}
+        <Box
+          sx={{
+            flex: 1,
+            backgroundColor: "#D6D0C6",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="https://i.imgur.com/0hvZjhy.png"
+            alt="teip with logos"
+            sx={{
+              width: "100%",
+              height: "auto",
+              objectFit: "cover",
+            }}
+          />
+        </Box>
+
+        {/* Höger bild + bakgrund */}
+        <Box
+          sx={{
+            flex: 1,
+            backgroundColor: "#314F38", // justera färgen om du vill
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="https://i.imgur.com/z8URFaI.png"
+            alt="computer showing a website"
+            sx={{
+              width: "100%",
+              height: "auto",
+              objectFit: "cover",
+            }}
+          />
+        </Box>
       </Box>
     </Box>
   );
