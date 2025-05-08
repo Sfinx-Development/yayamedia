@@ -1,0 +1,72 @@
+import { useLocation, useNavigate, Outlet } from "react-router-dom";
+import { Box, Typography } from "@mui/material";
+import ParallaxImg from "../components/ParallaxImg";
+
+const ProjectsLayout = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const currentPage = location.pathname.split("/").pop();
+
+  const heroImageMap: Record<string, string> = {
+    asundsholm: "https://i.imgur.com/pDMM8Je.png",
+    sleipner: "https://i.imgur.com/BHWBALX.jpeg", // ← byt till Sleipner-bild
+  };
+
+  const image = heroImageMap[currentPage || "asundsholm"];
+
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        backgroundColor: "#f7f7f7",
+        overflowX: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <ParallaxImg image={image} />
+
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#ffffff",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: { xs: 2, md: 6 },
+          py: { xs: 1, md: 2 },
+          borderBottom: "1px solid #e0e0e0",
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+        }}
+      >
+        {[
+          { label: "Åsundsholm", path: "asundsholm" },
+          { label: "Sleipner", path: "sleipner" },
+        ].map((proj) => (
+          <Typography
+            key={proj.label}
+            variant="body2"
+            onClick={() => navigate(`/projects/${proj.path}`)}
+            sx={{
+              cursor: "pointer",
+              fontWeight: 500,
+              color: "#363434",
+              opacity: 0.7,
+              "&:hover": { opacity: 1 },
+            }}
+          >
+            {proj.label}
+          </Typography>
+        ))}
+      </Box>
+
+      <Outlet />
+    </Box>
+  );
+};
+
+export default ProjectsLayout;
