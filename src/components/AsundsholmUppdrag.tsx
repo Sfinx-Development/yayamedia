@@ -1,76 +1,3 @@
-// import { Box, Button, Typography } from "@mui/material";
-// import React from "react";
-
-// const AsundsholmUppdrag: React.FC = () => {
-//   return (
-//     <Box
-//     // position: "relative",
-//     // width: "100%",
-//     // minHeight: "100vh",
-//     // overflowX: "hidden",
-//     // backgroundColor: "#f8f8f8",
-//       sx={{
-//         position: "relative",
-//         width: "100%",
-//         minHeight: "100vh",
-//         overflowX: "hidden",
-//         backgroundColor: "#f8f8f8",
-//         // backgroundColor: "#f8f8f8",
-//          display: "flex",
-//          flexDirection: { xs: "column", md: "row" },
-//          justifyContent: "space-between",
-//          alignItems: "center",
-//         //    overflowX: "hidden",
-//         px: { xs: 2, md: 8 },
-//         py: { xs: 6, md: 12 },
-//          gap: 4,
-//       }}
-//     >
-//       {/* TEXT */}
-//       <Box sx={{ flex: 1, maxWidth: 600,   marginTop: { xs: -8, md: -40 },  }}>
-//         <Typography variant="h4" fontWeight={300} gutterBottom>
-//           Åsundsholm
-//         </Typography>
-//         <Typography variant="h6" fontWeight={400} gutterBottom>
-//           Uppdrag
-//         </Typography>
-//         <Typography variant="body1" paragraph>
-//           Åsundsholm är mer än bara en plats för golfentusiaster – det är en
-//           destination för möten, vila och njutning...
-//         </Typography>
-//         <Typography variant="body1" paragraph>
-//           Vi fick även förmånen att ta ett större grepp om Åsundsholms visuella
-//           identitet...
-//         </Typography>
-//         <Button variant="outlined" sx={{ mt: 2 }}>Skapa ett resultat</Button>
-//       </Box>
-
-//       {/* BILD */}
-//       <Box
-//         sx={{
-//           flex: 1,
-//           display: "flex",
-//           justifyContent: "center",
-//           marginTop: { xs: -8, md: -40 },
-//         }}
-//       >
-//         <Box
-//           sx={{
-//             width: "100%",
-//             maxWidth: 500,
-//             height: 300,
-//             backgroundImage: "url('https://i.imgur.com/1B3ye3I.png')",
-//             backgroundSize: "cover",
-//             backgroundPosition: "center",
-//             borderRadius: 4,
-//           }}
-//         />
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default AsundsholmUppdrag;
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 // import styled from "@emotion/styled";
@@ -93,8 +20,9 @@ const AsundsholmUppdrag: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        mt: {xs: 2, md: -10},
         px: { xs: 2, md: 8 },
-        pt: { xs: 6, md: 12 },
+        pt: { xs: 6, md: 15 },
       }}
     >
       {/* Text + laptop-sektion */}
