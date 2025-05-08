@@ -5,7 +5,6 @@ export default function SleipnerProject() {
   return (
     <>
       <SleipnerUppdrag />
-      {/* Lägg till fler komponenter likt BonusComponent, typografi, färg osv */}
       <Footer />
     </>
   );

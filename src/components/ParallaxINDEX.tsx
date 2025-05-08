@@ -6,8 +6,8 @@ import {
   TypographyProps,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import Case from "./Case";
+import { useLocation, } from "react-router-dom";
+// import Case from "./Case";
 import Footer from "./Footer";
 import GreenComponent from "./GreenComponent";
 import { isTablet } from "./GreyComponent";
@@ -52,7 +52,7 @@ export default function ParallaxWave() {
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <Box
       sx={{

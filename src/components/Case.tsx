@@ -1,14 +1,15 @@
-import { Box, styled, Typography } from "@mui/material";
-import { isTablet } from "./GreyComponent";
+import { Box,  } from "@mui/material";
+// import { Box, styled, Typography } from "@mui/material";
+// import { isTablet } from "./GreyComponent";
 
 export default function Case() {
-  const isMobile = window.innerWidth <= 820;
-  const isBigScreen = window.innerHeight >= 1080;
+  // const isMobile = window.innerWidth <= 820;
+  // const isBigScreen = window.innerHeight >= 1080;
 
-  const Texting = styled(Typography)`
-    font-family: "H3", sans-serif;
-    font-variation-settings: "wght" 300;
-  `;
+  // const Texting = styled(Typography)`
+  //   font-family: "H3", sans-serif;
+  //   font-variation-settings: "wght" 300;
+  // `;
 
   return (
     <Box

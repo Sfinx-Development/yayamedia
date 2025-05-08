@@ -1,130 +1,268 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
-// import styled from "@emotion/styled";
 
-const AsundsholmUppdrag: React.FC = () => {
-  //   const Texting = styled(Typography)<TypographyProps>`
-  //   font-family: "H3", sans-serif;
-  //   font-variation-settings: "wght" 300;
-  // `;
-
-  // const TextingATYP = styled(Typography)<TypographyProps>`
-  //   font-family: "atyp-bl-variable", sans-serif;
-  //   font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
-  // `;
+const SleipnerUppdrag: React.FC = () => {
   return (
-    <Box
-      sx={{
-        width: "100%",
-        backgroundColor: "#f8f8f8",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        mt: {xs: 2, md: -10},
-        px: { xs: 2, md: 8 },
-        pt: { xs: 6, md: 15 },
-      }}
-    >
-      {/* Text + laptop-sektion */}
+    <>
       <Box
         sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          justifyContent: "space-between",
-          alignItems: "center",
           width: "100%",
-          maxWidth: "1200px",
-          gap: 4,
-          px: { xs: 2, md: 4 },
+          backgroundColor: "#f8f8f8",
+          display: "flex",
+          justifyContent: "center", // vänsterjusterat
+
+          px: { xs: 2, md: 8 },
+          pt: { xs: 10, md: 10 },
+          pb: { xs: 6, md: 12 },
+          zIndex: 10,
         }}
       >
-        {/* TEXT */}
+        <Box
+          sx={{
+            maxWidth: 560,
+            textAlign: "left",
+            ml: { xs: 3, md: -50 },
+          }}
+        >
+          <Typography variant="h5" fontWeight={300} gutterBottom>
+            Sleipnertandvården
+          </Typography>
+          <Typography variant="h6" fontWeight={600} gutterBottom>
+            Uppdrag
+          </Typography>
+
+          <Typography variant="body1" paragraph>
+            Sleipnertandvården är precis vad du föreställer dig – en plats där
+            munhälsa får stå i centrum. Här vill man hjälpa patienter till en
+            friskare, vackrare och framför allt fräschare känsla, varje dag. Men
+            trots starka värderingar och trogna patienter saknades en viktig
+            pusselbit: en digital närvaro. Från texten vi skrev in i bilden
+            fanns mottagningen inte alls på sociala medier – något vi ville
+            förändra. Med en önskan om att nå en yngre målgrupp, och samtidigt
+            behålla sin befintliga kundbas, satte Sleipnertandvården upp ett
+            tydligt mål: att bli top of mind när det är dags att välja tandvård.
+          </Typography>
+
+          <Typography variant="body1" paragraph>
+            Vår rekommendation? Att börja från grunden, med en ny grafisk
+            profil. En visuell identitet som speglar både professionalitet och
+            värme, och som skulle hålla i längden.
+          </Typography>
+          <Typography variant="h6" fontWeight={600} gutterBottom>
+            Resultat
+          </Typography>
+
+          <Typography variant="body1" paragraph>
+            En modern grafisk profil med lekfulla inslag och ett tydligt
+            uttryck. En identitet som skapar igenkänning i sociala medier,
+            samtidigt som den väcker nyfikenhet hos just den målgrupp
+            Sleipnertandvården vill nå.
+          </Typography>
+        </Box>
+      </Box>
+      {/* BILDBOX */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
         <Box
           sx={{
             flex: 1,
-            maxWidth: { xs: "100%", md: 450 }, // smalare än tidigare
-            pr: { md: 4 },
-            mt: { md: -13 },
+            backgroundColor: "#F3DED0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 3,
           }}
         >
-          {/* <Texting component="h2" sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
-        Åsundsholm
-          </Texting> */}
-          <Typography variant="h4" fontWeight={300} gutterBottom>
-            Åsundsholm
-          </Typography>
-          <Typography variant="h6" fontWeight={400} gutterBottom>
-            Uppdrag
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Åsundsholm är mer än bara en plats för golfentusiaster – det är en
-            destination där upplevelser skapas och minnen formas. Vårt uppdrag
-            var att skapa en modern och inspirerande hemsida som speglar hela
-            Åsundsholms själ. Från den natursköna golfbanan vid Åsundens kant,
-            till den hemtrevliga atmosfären i de nyrenoverade hotellrummen.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Vi ville fånga känslan av att vakna upp till fågelkvitter, ta en
-            morgonpromenad längs sjön och sedan njuta av en runda golf. Genom
-            att använda stora, inbjudande bilder och ett språk som talar direkt
-            till besökaren, skapade vi en hemsida som fungerar som en
-            förlängning av den upplevelse du får på plats.
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Sammanfattningsvis, vårt mål var att leverera en hemsida som ger en
-            försmak till allt det som gör Åsundsholm unikt – en plats där varje
-            besök blir en personlig och minnesvärd upplevelse.
-          </Typography>
-          <Button
-            variant="outlined"
-            sx={{
-              mt: 2,
-              backgroundColor: "#D6D0C6",
-              borderColor: "#D6D0C6",
-              color: "#333",
-              textTransform: "none",
-              px: 3,
-              py: 1,
-              fontWeight: 500,
-              "&:hover": {
-                borderColor: "#D6D0C6",
-                backgroundColor: "#D6D0C6",
-              },
+          <img
+            src="https://i.imgur.com/ADTyziN.jpeg"
+            alt="Tygkasse med tand"
+            style={{
+              width: "auto",
+              maxWidth: "100%",
+              flex: 1,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 3,
             }}
-          >
-            Kika på resultatet!
-          </Button>
+          />
         </Box>
-
-        {/* LAPTOP-BILD */}
         <Box
           sx={{
             flex: 1,
             display: "flex",
-            // justifyContent: "center",
-            justifyContent: "flex-end", // högerjustera bilden
-            maxWidth: 750,
-            mt: { xs: 4, md: 0 }, // 👈 justeras så den kommer i samma höjd
-            ml: { md: 2 },
-            mr: { md: -20, xl: -12 },
-            // 👈 förskjut mer åt höger på desktop
-            // maxWidth: 500,
-            // mt: { xs: 4, md: 0 },
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 3,
           }}
         >
-          <Box
-            component="img"
-            src="https://i.imgur.com/1B3ye3I.png"
-            alt="Laptop"
-            sx={{
-              width: "100%",
-              borderRadius: 2,
+          <img
+            src="https://i.imgur.com/DRE44iq.jpeg"
+            alt="Tygkasse med tandborste"
+            style={{
+              width: "auto",
+              maxWidth: "100%",
+              backgroundColor: "#F3DED0",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 3,
             }}
           />
         </Box>
       </Box>
-    </Box>
+
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#f8f8f8",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          py: 2,
+          px: 0,
+          zIndex: 3,
+        }}
+      >
+        <Box
+          component="img"
+          src="https://i.imgur.com/3bgZXRG.jpeg"
+          alt="Typografi"
+          sx={{
+            width: "100%",
+            // maxWidth: "1200px",
+            height: "auto",
+          }}
+        />
+      </Box>
+
+      {/* BILDBOX */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
+        <Box
+          sx={{
+            flex: 1,
+            backgroundColor: "#F3DED0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 3,
+          }}
+        >
+          <img
+            src="https://i.imgur.com/XHtcCQV.png"
+            alt="Tygkasse med tand"
+            style={{
+              width: "auto",
+              maxWidth: "100%",
+              flex: 1,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 3,
+            }}
+          />
+        </Box>
+        
+        {/* <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 3,
+          }}
+        >
+          <img
+            src="https://i.imgur.com/DRE44iq.jpeg"
+            alt="Tygkasse med tandborste"
+            style={{
+              width: "auto",
+              maxWidth: "100%",
+              backgroundColor: "#F3DED0",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 3,
+            }}
+          />
+        </Box> */}
+      </Box>
+
+   
+
+      {/* FÄRGPALETT
+      <Box
+  sx={{
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    minHeight: 500,
+    zIndex: 3,
+  }}
+>
+  {[
+    { color: "#CDE7E1", label: "Aquanint", flex: 1 },
+    { color: "#E7D6C2", label: "Soft Sunrise", flex: 1 },
+    { color: "#FDF7E9", label: "Soft Sunrise", flex: 1 },
+    { color: "#2E2E2E", label: "Pure Pine", flex: 0.5, colorText: "#fff" },
+    { color: "#FBF7EE", label: "Pearl Glow", flex: 0.5 },
+  ].map(({ color, label, flex, colorText = "#000" }, index) => (
+    <Box
+    key={index}
+    sx={{
+      flex,
+      backgroundColor: color,
+      position: "relative",
+      minHeight: 500,
+      display: "flex",
+      justifyContent: "flex-end", // ← flyttar texten till högra kanten inom sin egen box
+      alignItems: "flex-end",     // ← placerar texten längst ner
+      pr: 2,                      // ← avstånd från palettens högra kant
+      pb: 4,                      // ← avstånd från botten
+    }}
+  >
+    <Typography
+      variant="body2"
+      sx={{
+        transform: "rotate(-90deg)",
+        transformOrigin: "bottom left", // ← rotera från nedre högra hörnet
+        color: colorText,
+        fontSize: 14,
+        fontWeight: 400,
+     
+        mb:-1
+      }}
+    >
+      {label}
+    </Typography>
+  </Box>
+  
+  ))}
+</Box> */}
+
+
+
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#f8f8f8",
+          height: { xs: 80, md: 20 },
+          zIndex: 3,
+        }}
+      />
+    </>
   );
 };
 
-export default AsundsholmUppdrag;
+export default SleipnerUppdrag;
