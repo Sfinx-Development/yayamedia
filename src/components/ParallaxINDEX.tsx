@@ -85,7 +85,6 @@ export default function ParallaxWave() {
             position: "absolute",
             width: "100%",
             zIndex: 3,
-            paddingY: { xs: 6, md: 3 }, // vertikal padding
             textAlign: "center", // centrera textinnehåll
             display: "flex",
             flexDirection: "column",
@@ -97,6 +96,7 @@ export default function ParallaxWave() {
               display: "flex",
               flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
               justifyContent: "center",
+
               // gap: { xl: 8 },
             }}
           >
@@ -158,19 +158,18 @@ export default function ParallaxWave() {
               alignItems: "stretch", // <- viktig
               justifyContent: "center",
               my: { xs: 4, md: 8 },
-              px: { xs: 2, sm: 4 },
+              px: { xs: 2, sm: 0, lg: 4 },
               paddingX: isTablet ? 2 : { xs: 0, md: 0 },
 
               width: "100%",
-              maxWidth: 1200,
-              mx: "auto",
+      maxWidth: 1200,              mx: "auto",
             }}
           >
             <Box
               sx={{
                 flex: 1,
                 background: "linear-gradient(to top,  #FAECD0,#FAF7E4)",
-                width: { xs: "90%", sm: "90%", md: "45%" }, // samma regler
+                width: { xs: "90%", sm: "90%", md: "45%", lg: "35%" }, // samma regler
                 mx: "auto", // centrera på xs och sm
                 py: 4,
 
@@ -182,7 +181,7 @@ export default function ParallaxWave() {
                 justifyContent: "space-between",
                 position: "relative",
                 overflow: "visible",
-                height: { xs: "auto", md: 600, xl: 750 },
+                height: { xs: "auto", md: 620, xl: 750 },
               }}
             >
               <Box>
@@ -190,7 +189,7 @@ export default function ParallaxWave() {
                   <Texting
                     component="h3"
                     sx={{
-                      fontSize: { xs: 28, md: 32, xl: 36 },
+                      fontSize: { xs: 24, md: 28, xl: 36 },
                       fontWeight: "bold",
                       lineHeight: 1.3,
                     }}
@@ -199,7 +198,7 @@ export default function ParallaxWave() {
                   </Texting>
                   <Heading
                     sx={{
-                      fontSize: { xs: 24, md: 28 },
+                      fontSize: { xs: 22, md: 24 },
                       fontWeight: 300,
                       lineHeight: 1.3,
                     }}
@@ -227,7 +226,7 @@ export default function ParallaxWave() {
                 <TextingATYP
                   sx={{
                     textAlign: "left",
-                    fontSize: isTablet ? 18 : { xl: 22 },
+                    fontSize: { xs: 16, md: 18, xl: 22 },
                   }}
                   component="p"
                 >
@@ -291,7 +290,7 @@ export default function ParallaxWave() {
                 justifyContent: "space-between",
                 position: "relative",
                 overflow: "visible",
-                height: { xs: "auto", md: 600, xl: 750 },
+                height: { xs: "auto", md: 620, xl: 750 },
               }}
             >
               <Box>
@@ -299,7 +298,7 @@ export default function ParallaxWave() {
                   <Texting
                     component="h3"
                     sx={{
-                      fontSize: { xs: 28, md: 32, xl: 36 },
+                      fontSize: { xs: 24, md: 28, xl: 36 },
                       fontWeight: "bold",
                       lineHeight: 1.3,
                     }}
@@ -308,7 +307,7 @@ export default function ParallaxWave() {
                   </Texting>
                   <Heading
                     sx={{
-                      fontSize: { xs: 24, md: 28 },
+                      fontSize: { xs: 22, md: 24 },
                       fontWeight: 300,
                       lineHeight: 1.3,
                     }}
