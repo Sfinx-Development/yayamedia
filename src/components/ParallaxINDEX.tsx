@@ -6,7 +6,7 @@ import {
   TypographyProps,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useLocation, } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 // import Case from "./Case";
 import Footer from "./Footer";
 import GreenComponent from "./GreenComponent";
@@ -53,6 +53,10 @@ export default function ParallaxWave() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
   // const navigate = useNavigate();
+  const Heading = styled(Typography)`
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  `;
   return (
     <Box
       sx={{
@@ -164,7 +168,6 @@ export default function ParallaxWave() {
           >
             <Box
               sx={{
-                minHeight: { xs: "auto", md: 600 },
                 flex: 1,
                 background: "linear-gradient(to top,  #FAECD0,#FAF7E4)",
                 width: { xs: "90%", sm: "90%", md: "45%" }, // samma regler
@@ -179,7 +182,7 @@ export default function ParallaxWave() {
                 justifyContent: "space-between",
                 position: "relative",
                 overflow: "visible",
-                height: "100%", // <- lägg till denna
+                height: { xs: "auto", md: 600, xl: 750 },
               }}
             >
               <Box>
@@ -187,23 +190,22 @@ export default function ParallaxWave() {
                   <Texting
                     component="h3"
                     sx={{
-                      fontSize: { xs: 28, md: 32 },
+                      fontSize: { xs: 28, md: 32, xl: 36 },
                       fontWeight: "bold",
                       lineHeight: 1.3,
                     }}
                   >
                     Klick, klack
                   </Texting>
-                  <Texting
-                    component="h4"
+                  <Heading
                     sx={{
-                      fontSize: { xs: 20, md: 22 },
+                      fontSize: { xs: 24, md: 28 },
                       fontWeight: 300,
                       lineHeight: 1.3,
                     }}
                   >
                     (semester, tack!)
-                  </Texting>
+                  </Heading>
                 </Box>
 
                 <Box
@@ -225,7 +227,7 @@ export default function ParallaxWave() {
                 <TextingATYP
                   sx={{
                     textAlign: "left",
-                    fontSize: isTablet ? 18 : { xl: 25 },
+                    fontSize: isTablet ? 18 : { xl: 22 },
                   }}
                   component="p"
                 >
@@ -255,7 +257,7 @@ export default function ParallaxWave() {
                 variant="contained"
                 sx={{
                   backgroundColor: "#363434",
-                  marginTop: 1,
+                  marginTop: 2,
                   mt: "auto", // flytta neråt
                   // mb: 2,      // luft under
                   // width: "35%",
@@ -289,7 +291,7 @@ export default function ParallaxWave() {
                 justifyContent: "space-between",
                 position: "relative",
                 overflow: "visible",
-                height: "100%", // <- lägg till denna
+                height: { xs: "auto", md: 600, xl: 750 },
               }}
             >
               <Box>
@@ -297,23 +299,22 @@ export default function ParallaxWave() {
                   <Texting
                     component="h3"
                     sx={{
-                      fontSize: { xs: 28, md: 32 },
+                      fontSize: { xs: 28, md: 32, xl: 36 },
                       fontWeight: "bold",
                       lineHeight: 1.3,
                     }}
                   >
                     Poddpaketet
                   </Texting>
-                  <Texting
-                    component="h4"
+                  <Heading
                     sx={{
-                      fontSize: { xs: 20, md: 22 },
+                      fontSize: { xs: 24, md: 28 },
                       fontWeight: 300,
                       lineHeight: 1.3,
                     }}
                   >
                     Här för att hänga – länge!
-                  </Texting>
+                  </Heading>
                 </Box>
 
                 <Box
@@ -333,7 +334,11 @@ export default function ParallaxWave() {
                 </Box>
 
                 <TextingATYP
-                  sx={{ fontSize: 16, mb: 3, textAlign: "left" }}
+                  sx={{
+                    fontSize: isTablet ? 18 : { xl: 22 },
+
+                    textAlign: "left",
+                  }}
                   component="p"
                 >
                   För dig som vill kommunicera smart, ärligt och med närvaro –
@@ -363,16 +368,17 @@ export default function ParallaxWave() {
                 variant="contained"
                 sx={{
                   backgroundColor: "#2F5C4A",
-                  marginTop: 1,
+                  marginTop: 2,
+                  mt: "auto", // flytta neråt
+                  // mb: 2,      // luft under
                   // width: "35%",
                   width: "fit-content",
                   color: "#F7F7F7",
                   borderRadius: 2,
-                  mt: "auto", // flytta neråt
-                  mb: 2, // luft under
                   paddingY: 1.2,
                   textTransform: "none",
-                  marginY: { xs: 2, md: 0 },
+                  marginY: { xs: 2, md: 0 }, // ✅ matchar det gröna
+
                   "&:hover": {
                     backgroundColor: "#363434",
                   },

@@ -56,7 +56,7 @@ export default function PinkComponent() {
           <Texting
             component="h1"
             sx={{
-              paddingTop: isBiggerScreen ? 15 : 10,
+              paddingTop: {xs:10, xl:15},
               fontSize: isTablet
                 ? 80
                 : isBigScreen
