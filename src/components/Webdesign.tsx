@@ -12,15 +12,15 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 350, md: 400, xl: 450 }; // Samma höjd för alla boxar
-  const titleMarginTop = { xs: -10, md: 5, xl: 10 };
+  const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
+  const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   return (
     <Box
       id="webbdesign"
       sx={{
         paddingLeft: 0,
-        marginLeft: -12.5,
+        marginLeft: -8,
         display: "flex",
         flexDirection: "column",
       }}
@@ -33,7 +33,6 @@ export default function Webdesign() {
           margin: { xs: 0, md: 0 },
           height: "100%",
           width: "100%",
-         
         }}
       >
         <Texting
@@ -82,7 +81,7 @@ export default function Webdesign() {
             width: 310,
             color: "#363434",
             padding: 4,
-            marginTop: 10,
+            marginTop: 4,
             height: boxHeight,
             // borderRadius: 2,
             // backgroundColor: "#B9DCD2",
