@@ -1,9 +1,20 @@
 import { useLocation, useNavigate, Outlet } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
-import { isTablet } from "../components/GreyComponent";
+import ParallaxImg from "../components/ParallaxImg";
+import {  isTablet } from "../components/GreyComponent";
 
 const ProjectsLayout = () => {
+  const location = useLocation();
   const navigate = useNavigate();
+
+  const currentPage = location.pathname.split("/").pop();
+
+  const heroImageMap: Record<string, string> = {
+    asundsholm: "https://i.imgur.com/pDMM8Je.png",
+    sleipner: "https://i.imgur.com/BHWBALX.jpeg", // ← byt till Sleipner-bild
+  };
+
+  const image = heroImageMap[currentPage || "asundsholm"];
 
   return (
     <Box
@@ -17,26 +28,24 @@ const ProjectsLayout = () => {
         width: "100%",
         alignItems: "start",
         flexGrow: 1,
-        zIndex: 30,
       }}
     >
-      {/* Innehållet (Åsundsholm eller Sleipner) */}
-      <Box sx={{ width: "100%" }}>
-        <Outlet />
-      </Box>
+      <ParallaxImg image={image} />
 
-      {/* Navigation mellan projekten */}
-      {/* <Box
+      <Box
         sx={{
           width: "100%",
           backgroundColor: "#ffffff",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: isTablet ? -40 :  { xs: -25, md: 0, sm: 25, lg: 0, xl: -40 },
           gap: { xs: 2, md: 6 },
-          py: { xs: 2, md: 2 },
-          borderTop: "1px solid #e0e0e0",
-          mt: 6,
+          py: { xs: 2, md: 2, sm: 2, lg: 2, xl: 2 },
+          borderBottom: "1px solid #e0e0e0",
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
         }}
       >
         {[
@@ -58,7 +67,9 @@ const ProjectsLayout = () => {
             {proj.label}
           </Typography>
         ))}
-      </Box> */}
+      </Box>
+
+      <Outlet />
     </Box>
   );
 };
