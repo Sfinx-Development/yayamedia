@@ -1,6 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, styled, TypographyProps } from "@mui/material";
 
 export const BonusComponent: React.FC = () => {
+  const Texting = styled(Typography)<TypographyProps>`
+    font-family: "H3", sans-serif;
+    font-variation-settings: "wght" 300;
+  `;
+
+  const TextingATYP = styled(Typography)<TypographyProps>`
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  `;
   return (
     <Box
       sx={{
@@ -9,7 +18,6 @@ export const BonusComponent: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-    
       }}
     >
       <Box
@@ -27,31 +35,30 @@ export const BonusComponent: React.FC = () => {
             width: "100%",
             maxWidth: "100%",
             textAlign: "center",
-          
           }}
         >
-            <Typography
-          variant="h6"
-          fontWeight={500}
-          gutterBottom
-          sx={{ textAlign: "center" }} // 👈 rubriken centrerad
-        >
-          En liten bonus!
-        </Typography>
+          <Texting
+            variant="h6"
+            fontWeight={500}
+            gutterBottom
+            sx={{ textAlign: "center" }} // 👈 rubriken centrerad
+          >
+            En liten bonus!
+          </Texting>
 
-        <Typography
-  variant="body1"
-  sx={{
-    mt: 2,
-    mx: "auto",            // centrera horisontellt
-    maxWidth: 540,         // begränsa bredden
-    textAlign: "center",   // centrera texten visuellt
-    lineHeight: 1.8,       // extra radavstånd för luftighet
-  }}
->
-  Vi fick även förtroendet att uppdatera deras logotyp. Önskemålet var
-  en mer modern logga, som ändå behåller den klassiska känslan.
-</Typography>
+          <TextingATYP
+            variant="body1"
+            sx={{
+              mt: 2,
+              mx: "auto", // centrera horisontellt
+              maxWidth: 540, // begränsa bredden
+              textAlign: "center", // centrera texten visuellt
+              lineHeight: 1.8, // extra radavstånd för luftighet
+            }}
+          >
+            Vi fick även förtroendet att uppdatera deras logotyp. Önskemålet var
+            en mer modern logga, som ändå behåller den klassiska känslan.
+          </TextingATYP>
           {/* <Box
             sx={{
               display: "flex",
