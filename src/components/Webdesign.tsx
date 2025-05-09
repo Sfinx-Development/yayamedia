@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Box, Typography, TypographyProps } from "@mui/material";
+import { isTablet } from "./GreyComponent";
 
 export default function Webdesign() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -12,7 +13,7 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 350, md: 400, xl: 450 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   return (
@@ -25,41 +26,42 @@ export default function Webdesign() {
         flexDirection: "column",
       }}
     >
-      <Box
-        sx={{
-          backgroundColor: "#F7F7F7",
-          display: "flex",
-          flexDirection: "column",
-          margin: { xs: 0, md: 0 },
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        <Texting
-          component="h1"
-          sx={{
-            fontSize: { xs: 30, md: 40, xl: 45 },
-            color: "#363434",
-            marginBottom: { xs: -1, md: 0 },
-            marginTop: titleMarginTop, // Justerar rubrikens top-margin
-          }}
-        >
-          Webbdesign
-        </Texting>
-        <TextingATYP
-          component="h3"
-          sx={{
-            fontSize: { xs: 20, md: 20, xl: 25 },
-            color: "#363434",
-            margin: 0,
-            padding: 0,
-            marginBottom: { xs: -9, md: 0 },
-            zIndex: 999,
-          }}
-        >
-          Paketlösningar
-        </TextingATYP>
-      </Box>
+        <Box
+              sx={{
+                backgroundColor: "#F7F7F7",
+                display: "flex",
+                flexDirection: "column",
+                margin: { xs: 2, md: 0 },
+                height: "100%",
+                width: "100%",
+              }}
+            >
+              <Texting
+                sx={{
+                  fontSize: isTablet ? 40 : { xs: 30, md: 40, xl: 45 },
+                  color: "#363434",
+                  zIndex: 999,
+                  marginBottom: { xs: -1, md: 0 },
+                  marginTop: titleMarginTop, // Justerar rubrikens top-margin
+                }}
+                component="h1"
+              >
+                Webbsesign
+              </Texting>
+              <TextingATYP
+                component="h3"
+                sx={{
+                  fontSize: { xs: 20, md: 20, xl: 25 },
+                  color: "#363434",
+                  margin: 0,
+                  padding: 0,
+                  // marginBottom: { xs: -9, md: 0 },
+                  zIndex: 999,
+                }}
+              >
+                Paketlösningar
+              </TextingATYP>
+            </Box>
       <Box
         sx={{
           backgroundColor: "#F7F7F7",
@@ -81,7 +83,7 @@ export default function Webdesign() {
             width: 310,
             color: "#363434",
             padding: 4,
-            marginTop: 4,
+            marginTop: 14,
             height: boxHeight,
             // borderRadius: 2,
             // backgroundColor: "#B9DCD2",

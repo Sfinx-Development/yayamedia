@@ -1,18 +1,19 @@
 import styled from "@emotion/styled";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, TypographyProps } from "@mui/material";
+import { isTablet } from "./GreyComponent";
 
 export default function GraphicProfile() {
-  const Texting = styled(Typography)`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)`
+  const TextingATYP = styled(Typography)<TypographyProps>`
     font-family: "atyp-bl-variable", sans-serif;
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 450, md: 500, xl: 550 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 430, sm: 300, md: 485, xl: 540 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   return (
@@ -25,40 +26,42 @@ export default function GraphicProfile() {
         flexDirection: "column",
       }}
     >
-      <Box
-        sx={{
-          backgroundColor: "#F7F7F7",
-          display: "flex",
-          flexDirection: "column",
-          margin: { xs: 2, md: 0 },
-          height: "100%",
-          width: "100%",
-          paddingRight: 5,
-        }}
-      >
-        <Texting
-          sx={{
-            fontSize: { xs: 30, md: 40, xl: 45 },
-            color: "#363434",
-            marginBottom: { xs: -1, md: 0 },
-            marginTop: titleMarginTop, // Justerar rubrikens top-margin
-          }}
-        >
-          Grafisk profil
-        </Texting>
-        <TextingATYP
-          sx={{
-            fontSize: { xs: 20, md: 20, xl: 25 },
-            color: "#363434",
-            margin: 0,
-            padding: 0,
-            marginBottom: { xs: -8, md: 0 },
-            zIndex: 999,
-          }}
-        >
-          Paketlösningar
-        </TextingATYP>
-      </Box>
+       <Box
+             sx={{
+               backgroundColor: "#F7F7F7",
+               display: "flex",
+               flexDirection: "column",
+               margin: { xs: 2, md: 0 },
+               height: "100%",
+               width: "100%",
+             }}
+           >
+             <Texting
+               sx={{
+                 fontSize: isTablet ? 40 : { xs: 30, md: 40, xl: 45 },
+                 color: "#363434",
+                 zIndex: 999,
+                 marginBottom: { xs: -1, md: 0 },
+                 marginTop: titleMarginTop, // Justerar rubrikens top-margin
+               }}
+               component="h1"
+             >
+               Grafisk profil
+             </Texting>
+             <TextingATYP
+               component="h3"
+               sx={{
+                 fontSize: { xs: 20, md: 20, xl: 25 },
+                 color: "#363434",
+                 margin: 0,
+                 padding: 0,
+                 // marginBottom: { xs: -9, md: 0 },
+                 zIndex: 999,
+               }}
+             >
+               Paketlösningar
+             </TextingATYP>
+           </Box>
       <Box
         sx={{
           backgroundColor: "#F7F7F7",
