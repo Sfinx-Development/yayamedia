@@ -1,5 +1,5 @@
 import { Box, Typography, styled, TypographyProps } from "@mui/material";
-import { isMobile } from "./GreyComponent";
+
 
 export const BonusComponent: React.FC = () => {
   const Texting = styled(Typography)<TypographyProps>`
@@ -28,7 +28,7 @@ export const BonusComponent: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           px: 2,
-          mt: { xs: 12, md: 10 },
+          mt: { xs: 12, md: 25 },
         }}
       >
         <Box
@@ -43,7 +43,7 @@ export const BonusComponent: React.FC = () => {
             fontWeight={500}
             gutterBottom
             sx={{ textAlign: "center", 
-              mt: isMobile ? -5 : {sx: 10}  }} // 👈 rubriken centrerad
+               }} 
           >
             En liten bonus!
           </Texting>
