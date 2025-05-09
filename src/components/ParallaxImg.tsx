@@ -54,20 +54,28 @@
 
 // export default ParallaxImg;
 import { Box } from "@mui/material";
-import Wave from "./Wave";
+
 
 interface ParallaxImgProps {
-  image: string; // 👈 Tillåter olika bakgrundsbilder
+  image: string;
+  bgPosition?: string; // ny prop
+  bgSize?: string;     // ny prop
 }
 
-const ParallaxImg: React.FC<ParallaxImgProps> = ({ image }) => {
+const ParallaxImg: React.FC<ParallaxImgProps> = ({ image, bgSize, bgPosition}) => {
   return (
     <Box
       sx={{
         width: "100%",
-        height: "100vh",
-        position: "relative",
-        overflow: "hidden",
+        background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
+        display: "flex",
+        justifyContent: "start",
+        // paddingY: isTablet ? 30 : { xs: 1, md: 4, xl: 0 },
+        paddingX: { xs: 1 },
+        alignItems: { xs: "center", xl: "start" },
+        position: "fixed",
+        zIndex: 2,
+         height: "100vh",
       }}
     >
       {/* Bakgrundsbild – fixerad i viewporten */}
@@ -77,26 +85,20 @@ const ParallaxImg: React.FC<ParallaxImgProps> = ({ image }) => {
           top: 0,
           left: 0,
           width: "100%",
-          height: "100vh",
+          minHeight: "100vh",
           backgroundImage: `url(${image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: 1,
+          backgroundSize: bgSize || "cover", // standard: cover
+          backgroundPosition: bgPosition || "center", // standard: center
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // zIndex: 1,
         }}
       />
 
-      {/* Vågen överst */}
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          paddingY: { xs: 40, md: 10 },
-          zIndex: 2,
-        }}
-      >
-        <Wave />
+ 
+        
       </Box>
-    </Box>
+
   );
 };
 

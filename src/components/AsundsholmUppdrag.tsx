@@ -20,9 +20,11 @@ const AsundsholmUppdrag: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        mt: {xs: 2, md: -10},
+        mt: {xs: 6, md: -10},
         px: { xs: 2, md: 8 },
-        pt: { xs: 6, md: 15 },
+        pt: { xs: 2, md: 15 },
+        // height: "100vh",
+      zIndex:3
       }}
     >
       {/* Text + laptop-sektion */}

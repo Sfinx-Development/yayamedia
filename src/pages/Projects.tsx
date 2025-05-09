@@ -1,4 +1,4 @@
-import { Box,  } from "@mui/material";
+import { Box } from "@mui/material";
 // import ParallaxYaya from "../components/ParallaxYaya";
 
 // import YellowComponent from "../components/YellowComponent";
@@ -12,6 +12,8 @@ import AsundsholmUppdrag from "../components/AsundsholmUppdrag";
 import { isMobile } from "../components/GreyComponent";
 import MobileFooter from "../components/MobileFooter";
 import Footer from "../components/Footer";
+import ParallaxImg from "../components/ParallaxImg";
+import Wave from "../components/Wave";
 
 export default function AsundsholmProject() {
   return (
@@ -19,75 +21,47 @@ export default function AsundsholmProject() {
       sx={{
         display: "flex",
         flexDirection: "column",
+        position: "relative",
         padding: 0,
         margin: 0,
-        backgroundColor: "#F7F7F7",
         overflowX: "hidden",
         width: "100%",
         alignItems: "start",
         flexGrow: 1,
       }}
     >
-      {/* <ParallaxImg image="https://i.imgur.com/pDMM8Je.png" /> */}
+      <ParallaxImg image="https://i.imgur.com/pDMM8Je.png" />
 
-
-      {/* Scrollinnehåll under hero */}
-      <Box
-        sx={{
-          width: "100%",
-          position: "relative",
-          zIndex: 2,
-          // marginTop: "-2px",
-          marginTop: { xs: -35, md: 10 }, // Istället för height: "100vh"
-          //  height: "100vh", // viktigt! så vi scrollar ned från heron
-        }}
-      >
-        {/* <Box
+      <Box sx={{ width: "100%", position: "relative" }}>
+        <Box
           sx={{
+            position: "absolute",
             width: "100%",
-            backgroundColor: "#ffffff",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: { xs: 2, md: 6 },
-            py: { xs: 1, md: 2 },
-            borderBottom: "1px solid #e0e0e0",
-            position: "sticky",
-            top: 0, // justeras beroende på din header
-            zIndex: 100,
+            paddingY: { xs: 40, md: 10 },
+            zIndex: 3,
           }}
         >
-          {[
-            { label: "Åsundsholm", path: "/asundsholm" },
-            { label: "Sleipner", path: "/sleipner" },
-            // Lägg till fler projekt här
-          ].map((proj) => (
-            <Typography
-              key={proj.label}
-              variant="body2"
-              onClick={() => (window.location.href = proj.path)}
-              sx={{
-                cursor: "pointer",
-                fontWeight: 500,
-                color: "#363434",
-                textTransform: "none",
-                opacity: 0.7,
-                transition: "opacity 0.2s ease",
-                "&:hover": {
-                  opacity: 1,
-                },
-              }}
-            >
-              {proj.label}
-            </Typography>
-          ))}
-        </Box> */}
-
-        <AsundsholmUppdrag />
-        <BonusComponent />
-        <Case />
+          <Wave />
+          <Box
+            sx={{
+              backgroundColor: "#f8f8f8",
+              marginTop: -2,
+              position: "absolute",
+              width: "100%",
+              zIndex: 3,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <AsundsholmUppdrag />
+            <BonusComponent />
+            <Case />
+            {isMobile ? <MobileFooter /> : <Footer />}
+          </Box>
+        </Box>
       </Box>
-      {isMobile ? <MobileFooter /> : <Footer />}
     </Box>
   );
 }
