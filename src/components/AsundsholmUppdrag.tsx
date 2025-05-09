@@ -19,22 +19,13 @@ const AsundsholmUppdrag: React.FC = () => {
         width: "100%",
         backgroundColor: "#f8f8f8",
         display: "flex",
-        justifyContent: "center", // vänsterjusterat
-
-        px: isTablet ? 30 : { xs: 2, md: 8 },
-        pt: { xs: 10, md: 10 },
-        pb: { xs: 6, md: 12 },
-        zIndex: 10,
-        // width: "100%",
-        // backgroundColor: "#f8f8f8",
-        // display: "flex",
-        // // flexDirection: "column",
+        // flexDirection: "column",
          flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
         alignItems: "center",
-        // // mt: {xs: 2, md: -10},
-        // marginTop: { xs: 3, md: -12, xl: 15 },
-        // px: isTablet ? 10 :{ xs: 0, md: 8, },
-        // pt: { xs: 6, md: 15 },
+        // mt: {xs: 2, md: -10},
+        marginTop: { xs: 3, md: -12, xl: 15 },
+        px: isTablet ? 10 :{ xs: 0, md: 8, },
+        pt: { xs: 6, md: 15 },
       }}
     >
       {/* Text + laptop-sektion */}
@@ -46,10 +37,9 @@ const AsundsholmUppdrag: React.FC = () => {
           alignItems: "center",
           width: "100%",
           // maxWidth: "1200px",
-            maxWidth : { xs: 350, md: "1200px", xl: 600 },
+            maxWidth: isTablet ? 900 : { xs: 350, md: 600, xl: 700 },
           gap: 4,
-          px: { xs: 1, md: 2 },
-          ml:isTablet ? -30 :  { xs: 1, md: 2 },
+          px: { xs: 2, md: 4 },
         }}
       >
         {/* TEXT */}
@@ -58,7 +48,7 @@ const AsundsholmUppdrag: React.FC = () => {
             flex: 1,
             maxWidth: { xs: "100%", md: 450 }, // smalare än tidigare
             pr: { md: 4 },
-            mt: isTablet ? 2 : { md: -13 },
+            mt: { md: -13 },
           }}
         >
           {/* <Texting component="h2" sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
@@ -144,7 +134,7 @@ const AsundsholmUppdrag: React.FC = () => {
             // justifyContent: "center",
             justifyContent: "flex-end", // högerjustera bilden
             maxWidth: 750,
-            mt: isTablet ? 15: { xs: 4, md: 0 }, // 👈 justeras så den kommer i samma höjd
+            mt: { xs: 4, md: 0 }, // 👈 justeras så den kommer i samma höjd
             ml: { md: 2 },
             mr: { md: -20, xl: -12 },
             // 👈 förskjut mer åt höger på desktop

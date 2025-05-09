@@ -19,20 +19,17 @@ const ProjectsLayout = () => {
   return (
     <Box
       sx={{
+        width: "100%",
+        backgroundColor: "#f7f7f7",
+        overflowX: "hidden",
         display: "flex",
         flexDirection: "column",
-        padding: 0,
-        margin: 0,
-        backgroundColor: "#F7F7F7",
-        overflowX: "hidden",
-        width: "100%",
-        alignItems: "start",
-        flexGrow: 1,
+        alignItems: "center",
       }}
     >
       <ParallaxImg image={image} />
 
-      <Box
+      {/* <Box
         sx={{
           width: "100%",
           backgroundColor: "#ffffff",
@@ -67,7 +64,7 @@ const ProjectsLayout = () => {
             {proj.label}
           </Typography>
         ))}
-      </Box>
+      </Box> */}
 
       <Outlet />
     </Box>
