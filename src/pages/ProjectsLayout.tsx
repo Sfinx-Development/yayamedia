@@ -1,7 +1,6 @@
 import { useLocation, useNavigate, Outlet } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import ParallaxImg from "../components/ParallaxImg";
-import {  isTablet } from "../components/GreyComponent";
 
 const ProjectsLayout = () => {
   const location = useLocation();
@@ -36,9 +35,8 @@ const ProjectsLayout = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: isTablet ? -40 :  { xs: -25, md: 0, sm: 25, lg: -50, xl: -60 },
           gap: { xs: 2, md: 6 },
-          py: { xs: 2, md: 2 },
+          py: { xs: 1, md: 2 },
           borderBottom: "1px solid #e0e0e0",
           position: "sticky",
           top: 0,
