@@ -38,8 +38,8 @@ export default function AsundsholmProject() {
           position: "relative",
           zIndex: 2,
           // marginTop: "-2px",
-          marginTop: { xs: -35, md: 10 }, // Istället för height: "100vh"
-          //  height: "100vh", // viktigt! så vi scrollar ned från heron
+          // marginTop: { xs: -100, md: 10 }, // Istället för height: "100vh"
+            height: "100vh", // viktigt! så vi scrollar ned från heron
         }}
       >
         {/* <Box
