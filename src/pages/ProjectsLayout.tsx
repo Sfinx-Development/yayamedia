@@ -29,16 +29,16 @@ const ProjectsLayout = () => {
     >
       <ParallaxImg image={image} />
 
-      {/* <Box
+      <Box
         sx={{
           width: "100%",
           backgroundColor: "#ffffff",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: isTablet ? -40 :  { xs: -25, md: 0, sm: 25, lg: 0, xl: -40 },
+          marginTop: isTablet ? -40 :  { xs: -25, md: 0, sm: 25, lg: -50, xl: -60 },
           gap: { xs: 2, md: 6 },
-          py: { xs: 2, md: 2, sm: 2, lg: 2, xl: 2 },
+          py: { xs: 2, md: 2 },
           borderBottom: "1px solid #e0e0e0",
           position: "sticky",
           top: 0,
@@ -64,7 +64,7 @@ const ProjectsLayout = () => {
             {proj.label}
           </Typography>
         ))}
-      </Box> */}
+      </Box>
 
       <Outlet />
     </Box>

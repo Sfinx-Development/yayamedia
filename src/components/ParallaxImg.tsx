@@ -85,7 +85,7 @@ const ParallaxImg: React.FC<ParallaxImgProps> = ({ image }) => {
         }}
       />
 
-      {/* Vågen överst
+      {/* Vågen överst */}
       <Box
         sx={{
           position: "relative",
@@ -94,9 +94,9 @@ const ParallaxImg: React.FC<ParallaxImgProps> = ({ image }) => {
           zIndex: 2,
         }}
       >
-        <Wave /> */}
+        <Wave />
       </Box>
-    // </Box>
+    </Box>
   );
 };
 

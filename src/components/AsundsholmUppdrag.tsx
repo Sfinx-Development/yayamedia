@@ -23,8 +23,8 @@ const AsundsholmUppdrag: React.FC = () => {
          flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
         alignItems: "center",
         // mt: {xs: 2, md: -10},
-        marginTop: { xs: 3, md: -12, xl: 15 },
-        px: isTablet ? 10 :{ xs: 0, md: 8, },
+        marginTop: { xs: 35, md: -12, xl: 15 },
+        px: isTablet ? 10 :{ xs: 0, md: 8 },
         pt: { xs: 6, md: 15 },
       }}
     >
@@ -79,42 +79,16 @@ const AsundsholmUppdrag: React.FC = () => {
             försmak till allt det som gör Åsundsholm unikt – en plats där varje
             besök blir en personlig och minnesvärd upplevelse.
           </TextingATYP>
-          {/* <Button
-                // aria-label="Navigera till tjänster-sidan"
-                // onClick={() => {
-                //   navigate("/tjanster");
-                // }}
-                sx={{
-                  backgroundColor: "#363434",
-                  marginTop: 3,
-                  maxWidth: isTablet ? "60%" : "40%",
-                  color: "#F7F7F7",
-                  borderRadius: 2,
-                  paddingY: { md: 1, xl: 2 },
-                  textTransform: "none",
-                  "&:hover": {
-                    background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen för hover-effekten
-                  },
-                  "&:active": {
-                    background: "linear-gradient(to top, #EDC1D0, #F3D9DF)", // Färgen när knappen är aktiv (om nödvändigt)
-                  },
-                }}
-              >
-                <Texting sx={{ fontSize: 18 }}>Våra tjänster</Texting>
-              </Button> */}
           <Button
             variant="outlined"
             sx={{
-              mt: 3,
+              mt: 2,
               backgroundColor: "#D6D0C6",
               borderColor: "#D6D0C6",
-              borderRadius: 2,
               color: "#333",
               textTransform: "none",
-              maxWidth: isTablet ? "60%" : "60%",
-              paddingY: { md: 1, xl: 2 },
               px: 3,
-              // py: 1,
+              py: 1,
               fontWeight: 500,
               "&:hover": {
                 borderColor: "#D6D0C6",
@@ -122,7 +96,7 @@ const AsundsholmUppdrag: React.FC = () => {
               },
             }}
           >
-             <Texting sx={{ fontSize: 18 }}>Kika på resultatet!</Texting>
+            Kika på resultatet!
           </Button>
         </Box>
 
