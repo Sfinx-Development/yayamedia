@@ -90,6 +90,7 @@ const AsundsholmUppdrag: React.FC = () => {
           </TextingATYP>
           <Button
             variant="outlined"
+            onClick={() => window.open("https://asundsholm.se", "_blank")}
             sx={{
               mt: 2,
               backgroundColor: "#D6D0C6",
@@ -105,7 +106,8 @@ const AsundsholmUppdrag: React.FC = () => {
               },
             }}
           >
-            Kika på resultatet!
+               <Texting sx={{ fontSize: { md: 18, xl: 25 } }}>Kika på resultatet!</Texting>
+            
           </Button>
         </Box>
 
