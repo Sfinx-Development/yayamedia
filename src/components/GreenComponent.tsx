@@ -29,7 +29,7 @@ export default function GreenComponent() {
         display: "flex",
         flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
         justifyContent: "space-evenly",
-        marginTop: { xs: 10, md: 12, xl: 15 },
+        marginTop: { xs: 10, md: 12, sm: 20, lg: 10, xl: 15 },
         alignItems: "stretch",
         paddingY: 0,
         paddingX: isTablet ? 2 : { xs: 1, md: 0 },

@@ -1,27 +1,30 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, styled, TypographyProps, } from "@mui/material";
 import React from "react";
+import { isMobile, isTablet } from "./GreyComponent";
 // import styled from "@emotion/styled";
 
 const AsundsholmUppdrag: React.FC = () => {
-  //   const Texting = styled(Typography)<TypographyProps>`
-  //   font-family: "H3", sans-serif;
-  //   font-variation-settings: "wght" 300;
-  // `;
+    const Texting = styled(Typography)<TypographyProps>`
+    font-family: "H3", sans-serif;
+    font-variation-settings: "wght" 300;
+  `;
 
-  // const TextingATYP = styled(Typography)<TypographyProps>`
-  //   font-family: "atyp-bl-variable", sans-serif;
-  //   font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
-  // `;
+  const TextingATYP = styled(Typography)<TypographyProps>`
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  `;
   return (
     <Box
       sx={{
         width: "100%",
         backgroundColor: "#f8f8f8",
         display: "flex",
-        flexDirection: "column",
+        // flexDirection: "column",
+         flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
         alignItems: "center",
-        mt: {xs: 2, md: -10},
-        px: { xs: 2, md: 8 },
+        // mt: {xs: 2, md: -10},
+        marginTop: { xs: 35, md: -12, xl: 15 },
+        px: isTablet ? 10 :{ xs: 0, md: 8 },
         pt: { xs: 6, md: 15 },
       }}
     >
@@ -33,7 +36,8 @@ const AsundsholmUppdrag: React.FC = () => {
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
-          maxWidth: "1200px",
+          // maxWidth: "1200px",
+            maxWidth: isTablet ? 900 : { xs: 350, md: 600, xl: 700 },
           gap: 4,
           px: { xs: 2, md: 4 },
         }}
@@ -50,31 +54,31 @@ const AsundsholmUppdrag: React.FC = () => {
           {/* <Texting component="h2" sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
         Åsundsholm
           </Texting> */}
-          <Typography variant="h4" fontWeight={300} gutterBottom>
+          <TextingATYP variant="h4" fontWeight={300} gutterBottom>
             Åsundsholm
-          </Typography>
-          <Typography variant="h6" fontWeight={400} gutterBottom>
+          </TextingATYP>
+          <Texting variant="h6" fontWeight={400} gutterBottom>
             Uppdrag
-          </Typography>
-          <Typography variant="body1" paragraph>
+          </Texting>
+          <TextingATYP variant="body1" paragraph>
             Åsundsholm är mer än bara en plats för golfentusiaster – det är en
             destination där upplevelser skapas och minnen formas. Vårt uppdrag
             var att skapa en modern och inspirerande hemsida som speglar hela
             Åsundsholms själ. Från den natursköna golfbanan vid Åsundens kant,
             till den hemtrevliga atmosfären i de nyrenoverade hotellrummen.
-          </Typography>
-          <Typography variant="body1" paragraph>
+          </TextingATYP>
+          <TextingATYP variant="body1" paragraph>
             Vi ville fånga känslan av att vakna upp till fågelkvitter, ta en
             morgonpromenad längs sjön och sedan njuta av en runda golf. Genom
             att använda stora, inbjudande bilder och ett språk som talar direkt
             till besökaren, skapade vi en hemsida som fungerar som en
             förlängning av den upplevelse du får på plats.
-          </Typography>
-          <Typography variant="body1" paragraph>
+          </TextingATYP>
+          <TextingATYP variant="body1" paragraph>
             Sammanfattningsvis, vårt mål var att leverera en hemsida som ger en
             försmak till allt det som gör Åsundsholm unikt – en plats där varje
             besök blir en personlig och minnesvärd upplevelse.
-          </Typography>
+          </TextingATYP>
           <Button
             variant="outlined"
             sx={{
