@@ -1,14 +1,15 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { isMobile } from "./GreyComponent";
 
 const mockImages = [
-  "https://i.imgur.com/1B3ye3I.png",
+  "https://i.imgur.com/XHtcCQV.png",
   "https://i.imgur.com/pDMM8Je.png",
   "https://i.imgur.com/DRE44iq.jpeg",
   "https://i.imgur.com/ADTyziN.jpeg",
   "https://i.imgur.com/3bgZXRG.jpeg",
   "https://i.imgur.com/XHtcCQV.png",
-  "https://i.imgur.com/1B3ye3I.png",
+  "https://i.imgur.com/XHtcCQV.png",
   "https://i.imgur.com/pDMM8Je.png",
   "https://i.imgur.com/DRE44iq.jpeg",
 ];
@@ -31,7 +32,8 @@ const InstagramGrid: React.FC = () => {
         sx={{
           width: "100%",
           maxWidth: 900,
-          px: { xs: 2, sm: 3, md: 0 },
+          px: { xs: 1, sm: 3, md: 0 },
+          mt: isMobile ? -10 : {xs: 3}
         }}
       >
         <Typography
@@ -45,7 +47,7 @@ const InstagramGrid: React.FC = () => {
           sx={{
             display: "grid",
             gridTemplateColumns: {
-              xs: "repeat(2, 1fr)",
+              xs: "repeat(3, 1fr)",
               sm: "repeat(3, 1fr)",
             },
             gap: 1,

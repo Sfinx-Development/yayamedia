@@ -38,12 +38,12 @@ const AsundsholmUppdrag: React.FC = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
+          flexDirection: isTablet ? "column" : { xs: "column", md: "row" },
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
           // maxWidth: "1200px",
-             maxWidth: isTablet ? 400 : { xs: 300, md: 1200, xl: 700 },
+             maxWidth: isTablet ? 1200 : { xs: 300, md: 1200, xl: 700 },
              paddingTop: isMobile ? 0 : { xs: 1, md: 0 },
              paddingLeft: isMobile ? 2 : { xs: 1, md: 0 },
           gap: 4,
@@ -56,7 +56,8 @@ const AsundsholmUppdrag: React.FC = () => {
             flex: 1,
             maxWidth: { xs: "100%", md: 450 }, // smalare än tidigare
             pr: { md: 4 },
-            mt: { md: -13 },
+            mt: { md: 10 },
+            ml: {md: 10}
           }}
         >
           {/* <Texting component="h2" sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
@@ -116,7 +117,7 @@ const AsundsholmUppdrag: React.FC = () => {
             // justifyContent: "center",
             justifyContent: "flex-end", // högerjustera bilden
             maxWidth: 750,
-            mt: { xs: 4, md: 0 }, // 👈 justeras så den kommer i samma höjd
+            mt: { xs: 4, md: 20 }, // 👈 justeras så den kommer i samma höjd
             ml: { md: 2 },
             mr: { md: -20, xl: -12 },
             // 👈 förskjut mer åt höger på desktop

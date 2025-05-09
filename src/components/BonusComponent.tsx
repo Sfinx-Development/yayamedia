@@ -1,4 +1,5 @@
 import { Box, Typography, styled, TypographyProps } from "@mui/material";
+import { isMobile } from "./GreyComponent";
 
 export const BonusComponent: React.FC = () => {
   const Texting = styled(Typography)<TypographyProps>`
@@ -41,7 +42,8 @@ export const BonusComponent: React.FC = () => {
             variant="h6"
             fontWeight={500}
             gutterBottom
-            sx={{ textAlign: "center" }} // 👈 rubriken centrerad
+            sx={{ textAlign: "center", 
+              mt: isMobile ? -5 : {sx: 10}  }} // 👈 rubriken centrerad
           >
             En liten bonus!
           </Texting>

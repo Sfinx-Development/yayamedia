@@ -1,7 +1,17 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, styled, TypographyProps } from "@mui/material";
 import React from "react";
+import { isMobile, isTablet } from "./GreyComponent";
 
 const SleipnerUppdrag: React.FC = () => {
+   const Texting = styled(Typography)<TypographyProps>`
+    font-family: "H3", sans-serif;
+    font-variation-settings: "wght" 300;
+  `;
+
+  const TextingATYP = styled(Typography)<TypographyProps>`
+    font-family: "atyp-bl-variable", sans-serif;
+    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  `;
   return (
     <>
       <Box
@@ -10,10 +20,17 @@ const SleipnerUppdrag: React.FC = () => {
           backgroundColor: "#f8f8f8",
           display: "flex",
           justifyContent: "center", // vänsterjusterat
-
-          px: { xs: 2, md: 8 },
+          flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
+          marginTop: { xs: 10, md: 12, xl: 15 },
+            paddingX: isTablet ? 2 : { xs: 2, md: 0 },
+          // px: { xs: 2, md: 8 },
           pt: { xs: 10, md: 10 },
           pb: { xs: 6, md: 12 },
+          //  paddingTop: isMobile ? 0 : { xs: 1, md: -15 },
+          // paddingLeft: isMobile ? 2 : { xs: 1, md: 0 },
+          // height: { xs: "auto", lg: "420px" },
+          overflow: "visible",
+          marginY: { xl: 15 },
           zIndex: 10,
         }}
       >
@@ -22,16 +39,19 @@ const SleipnerUppdrag: React.FC = () => {
             maxWidth: 560,
             textAlign: "left",
             ml: { xs: 3, md: -50 },
+            mr: { xs: 3, },
+            mt: isMobile ? -12 : { md: -23 },
+           
           }}
         >
-          <Typography variant="h5" fontWeight={300} gutterBottom>
-            Sleipnertandvården
-          </Typography>
-          <Typography variant="h6" fontWeight={600} gutterBottom>
+          <TextingATYP variant="h4" fontWeight={300} gutterBottom>
+          Sleipnertandvården
+          </TextingATYP>
+          <Texting variant="h6" fontWeight={400} gutterBottom>
             Uppdrag
-          </Typography>
+          </Texting>
 
-          <Typography variant="body1" paragraph>
+          <TextingATYP variant="body1" paragraph>
             Sleipnertandvården är precis vad du föreställer dig – en plats där
             munhälsa får stå i centrum. Här vill man hjälpa patienter till en
             friskare, vackrare och framför allt fräschare känsla, varje dag. Men
@@ -41,23 +61,23 @@ const SleipnerUppdrag: React.FC = () => {
             förändra. Med en önskan om att nå en yngre målgrupp, och samtidigt
             behålla sin befintliga kundbas, satte Sleipnertandvården upp ett
             tydligt mål: att bli top of mind när det är dags att välja tandvård.
-          </Typography>
+          </TextingATYP>
 
-          <Typography variant="body1" paragraph>
+          <TextingATYP variant="body1" paragraph>
             Vår rekommendation? Att börja från grunden, med en ny grafisk
             profil. En visuell identitet som speglar både professionalitet och
             värme, och som skulle hålla i längden.
-          </Typography>
-          <Typography variant="h6" fontWeight={600} gutterBottom>
+          </TextingATYP>
+          <Texting variant="h6" fontWeight={600} gutterBottom>
             Resultat
-          </Typography>
+          </Texting>
 
-          <Typography variant="body1" paragraph>
+          <TextingATYP variant="body1" paragraph>
             En modern grafisk profil med lekfulla inslag och ett tydligt
             uttryck. En identitet som skapar igenkänning i sociala medier,
             samtidigt som den väcker nyfikenhet hos just den målgrupp
             Sleipnertandvården vill nå.
-          </Typography>
+          </TextingATYP>
         </Box>
       </Box>
       {/* BILDBOX */}
@@ -173,7 +193,7 @@ const SleipnerUppdrag: React.FC = () => {
             }}
           />
         </Box>
-        
+
         {/* <Box
           sx={{
             flex: 1,
@@ -198,8 +218,6 @@ const SleipnerUppdrag: React.FC = () => {
           />
         </Box> */}
       </Box>
-
-   
 
       {/* FÄRGPALETT
       <Box
@@ -250,8 +268,6 @@ const SleipnerUppdrag: React.FC = () => {
   
   ))}
 </Box> */}
-
-
 
       <Box
         sx={{
