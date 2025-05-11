@@ -1,5 +1,5 @@
-import { Box, Typography, styled, TypographyProps } from "@mui/material";
-
+import { Box, styled, Typography, TypographyProps } from "@mui/material";
+import { isTablet } from "./GreyComponent";
 
 export const BonusComponent: React.FC = () => {
   const Texting = styled(Typography)<TypographyProps>`
@@ -39,11 +39,10 @@ export const BonusComponent: React.FC = () => {
           }}
         >
           <Texting
-            variant="h6"
+            variant="h3"
             fontWeight={500}
             gutterBottom
-            sx={{ textAlign: "center", 
-               }} 
+            sx={{ textAlign: "center" }}
           >
             En liten bonus!
           </Texting>
@@ -52,8 +51,9 @@ export const BonusComponent: React.FC = () => {
             variant="body1"
             sx={{
               mt: 2,
+              fontSize: isTablet ? 18 : { xl: 24 },
               mx: "auto", // centrera horisontellt
-              maxWidth: 540, // begränsa bredden
+              maxWidth: {xs:540, xl:"40%"}, // begränsa bredden
               textAlign: "center", // centrera texten visuellt
               lineHeight: 1.8, // extra radavstånd för luftighet
             }}

@@ -1,20 +1,14 @@
 import { Box } from "@mui/material";
-// import ParallaxYaya from "../components/ParallaxYaya";
-
-// import YellowComponent from "../components/YellowComponent";
-// import AsundsholmInfo from "../components/AsundsholmInfo";
-import Case from "../components/Case";
-import { BonusComponent } from "../components/BonusComponent";
-
 import AsundsholmUppdrag from "../components/AsundsholmUppdrag";
-
-// import ParallaxImg from "../components/ParallaxImg";
+import { BonusComponent } from "../components/BonusComponent";
+import Case from "../components/Case";
+import Footer from "../components/Footer";
 import { isMobile } from "../components/GreyComponent";
 import MobileFooter from "../components/MobileFooter";
-import Footer from "../components/Footer";
 import ParallaxImg from "../components/ParallaxImg";
 import Wave from "../components/Wave";
 
+//RESPOINSIVT STOR SKÄRM
 export default function AsundsholmProject() {
   return (
     <Box
@@ -45,7 +39,7 @@ export default function AsundsholmProject() {
           <Box
             sx={{
               backgroundColor: "#f8f8f8",
-              marginTop: -2,
+              marginTop: {xs:-2,xl:-25},
               position: "absolute",
               width: "100%",
               zIndex: 3,
