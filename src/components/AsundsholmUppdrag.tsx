@@ -52,16 +52,16 @@ const AsundsholmUppdrag: React.FC = () => {
           // maxWidth: "1200px",
           maxWidth: isTablet ? 1200 : { xs: 300, md: 1200, xl: "100%" },
           paddingTop: isMobile ? 0 : { xs: 1, md: 0 },
-          paddingLeft: isMobile ? 2 : { xs: 1, md: 0, xl: 20 },
+          paddingLeft: isMobile ? 0 : { xs: 1, md: 0, xl: 20 },
           gap: 4,
-          px: { xs: 2, md: 4 },
+          px: { xs: 0, md: 4 },
         }}
       >
         {/* TEXT */}
         <Box
           sx={{
             flex: 1,
-            maxWidth: { xs: "100%", md: 450, xl: "50%" }, // smalare än tidigare
+            maxWidth: { xs: "100%", md: "45%", xl: "50%" }, // smalare än tidigare
             pr: { md: 4 },
             mt: { md: 10 },
             ml: { md: 10 },
@@ -70,15 +70,27 @@ const AsundsholmUppdrag: React.FC = () => {
           {/* <Texting component="h2" sx={{ fontSize: { xs: 18, md: 20, xl: 30 } }}>
         Åsundsholm
           </Texting> */}
-          <TextingATYP variant="h2" fontWeight={300}>
+          <TextingATYP
+            variant="h2"
+            sx={{ fontSize: { xs: 36, md: 52, xl: 72 } }}
+            fontWeight={300}
+          >
             Åsundsholm
           </TextingATYP>
-          <Texting variant="h3" fontWeight={400} gutterBottom>
+          <Texting
+            variant="h3"
+            sx={{ fontSize: { xs: 28, md: 36, xl: 48 } }}
+            fontWeight={400}
+            gutterBottom
+          >
             Uppdrag
           </Texting>
           <TextingATYP
             variant="body1"
-            sx={{ fontSize: isTablet ? 18 : { xl: 24 } }}
+            sx={{
+              fontSize: isTablet ? 18 : { xl: 24 },
+              marginTop: { xs: 2, md: 4 },
+            }}
             paragraph
           >
             Åsundsholm är mer än bara en plats för golfentusiaster – det är en
@@ -139,10 +151,10 @@ const AsundsholmUppdrag: React.FC = () => {
             display: "flex",
             // justifyContent: "center",
             justifyContent: "flex-end", // högerjustera bilden
-            maxWidth: { xs: 750, xl: 950 },
-            mt: { xs: 4, md: 20, xl: 30 }, // 👈 justeras så den kommer i samma höjd
+            maxWidth: { xs:"auto",md: 750, xl: 950 },
+            mt: { xs: 4, md: 25, xl: 30 }, // 👈 justeras så den kommer i samma höjd
             ml: { md: 2 },
-            mr: { md: -20, xl: -35 },
+            mr: { md: -25, xl: -35 },
             overflow: "hidden",
             // 👈 förskjut mer åt höger på desktop
             // maxWidth: 500,
@@ -154,7 +166,7 @@ const AsundsholmUppdrag: React.FC = () => {
             src="https://i.imgur.com/1B3ye3I.png"
             alt="Laptop"
             sx={{
-              width: "150%",
+              width: {xs:"100%",md:"150%"},
               borderRadius: 2,
             }}
           />

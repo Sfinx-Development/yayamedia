@@ -1,5 +1,5 @@
+import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import React from "react";
-import { Box, Typography } from "@mui/material";
 import { isMobile } from "./GreyComponent";
 
 const mockImages = [
@@ -14,8 +14,11 @@ const mockImages = [
   "https://i.imgur.com/DRE44iq.jpeg",
 ];
 
-
 const InstagramGrid: React.FC = () => {
+  const Texting = styled(Typography)<TypographyProps>`
+    font-family: "H3", sans-serif;
+    font-variation-settings: "wght" 300;
+  `;
   return (
     <Box
       sx={{
@@ -33,15 +36,21 @@ const InstagramGrid: React.FC = () => {
           width: "100%",
           maxWidth: 900,
           px: { xs: 1, sm: 3, md: 0 },
-          mt: isMobile ? -10 : {xs: 3}
+          mt: isMobile ? -10 : { xs: 3 },
         }}
       >
-        <Typography
-          variant="h6"
-          sx={{ textAlign: "center", fontWeight: 600, mb: 4 }}
+        <Texting
+          variant="h3"
+          fontWeight={500}
+          sx={{
+            textAlign: "center",
+            fontWeight: 600,
+            mb: 4,
+            fontSize: { xs: 28, md: 36, xl: 48 },
+          }}
         >
           Sociala medier
-        </Typography>
+        </Texting>
 
         <Box
           sx={{
@@ -63,7 +72,7 @@ const InstagramGrid: React.FC = () => {
                 width: "100%", // fyller sin gridcell
                 height: "auto",
                 objectFit: "cover",
-                aspectRatio: "1 / 1", // gör varje ruta kvadratisk
+                aspectRatio: "3 / 4", // Bredare på höjden
               }}
             />
           ))}

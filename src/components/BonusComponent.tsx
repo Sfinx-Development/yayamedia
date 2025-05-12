@@ -42,7 +42,7 @@ export const BonusComponent: React.FC = () => {
             variant="h3"
             fontWeight={500}
             gutterBottom
-            sx={{ textAlign: "center" }}
+            sx={{ textAlign: "center", fontSize: { xs: 28, md: 36, xl: 48 } }}
           >
             En liten bonus!
           </Texting>
@@ -53,7 +53,7 @@ export const BonusComponent: React.FC = () => {
               mt: 2,
               fontSize: isTablet ? 18 : { xl: 24 },
               mx: "auto", // centrera horisontellt
-              maxWidth: {xs:540, xl:"40%"}, // begränsa bredden
+              maxWidth: { xs: 540, xl: "40%" }, // begränsa bredden
               textAlign: "center", // centrera texten visuellt
               lineHeight: 1.8, // extra radavstånd för luftighet
             }}

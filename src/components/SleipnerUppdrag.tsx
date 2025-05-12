@@ -1,9 +1,9 @@
-import { Box, Typography, styled, TypographyProps } from "@mui/material";
+import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import React from "react";
 import { isMobile, isTablet } from "./GreyComponent";
 
 const SleipnerUppdrag: React.FC = () => {
-   const Texting = styled(Typography)<TypographyProps>`
+  const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
   `;
@@ -22,9 +22,9 @@ const SleipnerUppdrag: React.FC = () => {
           justifyContent: "center", // vänsterjusterat
           flexDirection: isTablet ? "row" : { xs: "column", md: "row" },
           marginTop: { xs: 10, md: 12, xl: 15 },
-            paddingX: isTablet ? 2 : { xs: 2, md: 0 },
+          paddingX: isTablet ? 2 : { xs: 2, md: 0 },
           // px: { xs: 2, md: 8 },
-          pt: { xs: 10, md: 10 },
+          pt: { xs: 10, md: 10, xl: 20 },
           pb: { xs: 6, md: 12 },
           //  paddingTop: isMobile ? 0 : { xs: 1, md: -15 },
           // paddingLeft: isMobile ? 2 : { xs: 1, md: 0 },
@@ -36,22 +36,28 @@ const SleipnerUppdrag: React.FC = () => {
       >
         <Box
           sx={{
-            maxWidth: 560,
+            maxWidth: { xs: "100%", md: "50%", xl: "50%" },
             textAlign: "left",
             ml: { xs: 3, md: -50 },
-            mr: { xs: 3, },
+            mr: { xs: 3 },
             mt: isMobile ? -12 : { md: -23 },
-           
           }}
         >
-          <TextingATYP variant="h4" fontWeight={300} gutterBottom>
-          Sleipnertandvården
+          <TextingATYP variant="h2" sx={{ fontSize:{xs:36, md:52, xl:72} }} fontWeight={300}>
+            Sleipnertandvården
           </TextingATYP>
-          <Texting variant="h6" fontWeight={400} gutterBottom>
+          <Texting variant="h3" sx={{ fontSize:{xs:28, md:36, xl:48} }}  fontWeight={400} gutterBottom>
             Uppdrag
           </Texting>
 
-          <TextingATYP variant="body1" paragraph>
+          <TextingATYP
+            variant="body1"
+            sx={{
+              marginTop: { xs: 2, md: 4 },
+              fontSize: isTablet ? 18 : { xl: 24 },
+            }}
+            paragraph
+          >
             Sleipnertandvården är precis vad du föreställer dig – en plats där
             munhälsa får stå i centrum. Här vill man hjälpa patienter till en
             friskare, vackrare och framför allt fräschare känsla, varje dag. Men
@@ -63,7 +69,11 @@ const SleipnerUppdrag: React.FC = () => {
             tydligt mål: att bli top of mind när det är dags att välja tandvård.
           </TextingATYP>
 
-          <TextingATYP variant="body1" paragraph>
+          <TextingATYP
+            variant="body1"
+            sx={{ fontSize: isTablet ? 18 : { xl: 24 } }}
+            paragraph
+          >
             Vår rekommendation? Att börja från grunden, med en ny grafisk
             profil. En visuell identitet som speglar både professionalitet och
             värme, och som skulle hålla i längden.
@@ -72,7 +82,11 @@ const SleipnerUppdrag: React.FC = () => {
             Resultat
           </Texting>
 
-          <TextingATYP variant="body1" paragraph>
+          <TextingATYP
+            variant="body1"
+            sx={{ fontSize: isTablet ? 18 : { xl: 24 } }}
+            paragraph
+          >
             En modern grafisk profil med lekfulla inslag och ett tydligt
             uttryck. En identitet som skapar igenkänning i sociala medier,
             samtidigt som den väcker nyfikenhet hos just den målgrupp
