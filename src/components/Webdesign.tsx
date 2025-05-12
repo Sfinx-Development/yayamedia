@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Box, Typography, TypographyProps } from "@mui/material";
-import { isTablet } from "./GreyComponent";
+import { Box, Button, Typography, TypographyProps } from "@mui/material";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function Webdesign() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -26,42 +26,42 @@ export default function Webdesign() {
         flexDirection: "column",
       }}
     >
-        <Box
-              sx={{
-                backgroundColor: "#F7F7F7",
-                display: "flex",
-                flexDirection: "column",
-                margin: { xs: 2, md: 0 },
-                height: "100%",
-                width: "100%",
-              }}
-            >
-              <Texting
-                sx={{
-                  fontSize: isTablet ? 40 : { xs: 30, md: 40, xl: 45 },
-                  color: "#363434",
-                  zIndex: 999,
-                  marginBottom: { xs: -1, md: 0 },
-                  marginTop: titleMarginTop, // Justerar rubrikens top-margin
-                }}
-                component="h1"
-              >
-                Webbsesign
-              </Texting>
-              <TextingATYP
-                component="h3"
-                sx={{
-                  fontSize: { xs: 20, md: 20, xl: 25 },
-                  color: "#363434",
-                  margin: 0,
-                  padding: 0,
-                  // marginBottom: { xs: -9, md: 0 },
-                  zIndex: 999,
-                }}
-              >
-                Paketlösningar
-              </TextingATYP>
-            </Box>
+      <Box
+        sx={{
+          backgroundColor: "#F7F7F7",
+          display: "flex",
+          flexDirection: "column",
+          margin: { xs: 2, md: 0 },
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <Texting
+          sx={{
+            fontSize: isTablet ? 40 : { xs: 30, md: 40, xl: 45 },
+            color: "#363434",
+            zIndex: 999,
+            marginBottom: { xs: -1, md: 0 },
+            marginTop: titleMarginTop, // Justerar rubrikens top-margin
+          }}
+          component="h1"
+        >
+          Webbsesign
+        </Texting>
+        <TextingATYP
+          component="h3"
+          sx={{
+            fontSize: { xs: 20, md: 20, xl: 25 },
+            color: "#363434",
+            margin: 0,
+            padding: 0,
+            // marginBottom: { xs: -9, md: 0 },
+            zIndex: 999,
+          }}
+        >
+          Paketlösningar
+        </TextingATYP>
+      </Box>
       <Box
         sx={{
           backgroundColor: "#F7F7F7",
@@ -78,219 +78,320 @@ export default function Webdesign() {
         {/* första klick */}
         <Box
           sx={{
-            borderRadius: 2,
-            backgroundColor: "#B9DCD2",
-            width: 310,
-            color: "#363434",
-            padding: 4,
-            marginTop: 16,
-            height: boxHeight,
-            // borderRadius: 2,
-            // backgroundColor: "#B9DCD2",
-            // width: { xs: 310, md: 310, xl: 330 },
-            // color: "#363434",
-            // padding: 4,
-            // marginTop: 10,
-            // height: boxHeight, // Justerar höjden på boxarna
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            alignItems: "flex-start",
           }}
         >
-          <Texting
+          <Box
             sx={{
-              color: "#2D6555",
-              fontSize: { xs: 25, xl: 30 },
-              paddingTop: 2,
+              borderRadius: 2,
+              backgroundColor: "#B9DCD2",
+              width: 310,
+              color: "#363434",
+              padding: 4,
+              marginTop: 16,
+              height: boxHeight,
+              // borderRadius: 2,
+              // backgroundColor: "#B9DCD2",
+              // width: { xs: 310, md: 310, xl: 330 },
+              // color: "#363434",
+              // padding: 4,
+              // marginTop: 10,
+              // height: boxHeight, // Justerar höjden på boxarna
             }}
           >
-            Klick
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
-            Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
-            sätt.
-          </TextingATYP>
-          <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
-            20 000:-
-          </Texting>
-          <TextingATYP sx={{ color: "#2D6555", fontSize: { xs: 13, xl: 15 } }}>
-            Ex. moms
-          </TextingATYP>
+            <Texting
+              sx={{
+                color: "#2D6555",
+                fontSize: { xs: 25, xl: 30 },
+                paddingTop: 2,
+              }}
+            >
+              Klick
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
+              Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
+              sätt.
+            </TextingATYP>
+            <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+              20 000:-
+            </Texting>
+            <TextingATYP
+              sx={{ color: "#2D6555", fontSize: { xs: 13, xl: 15 } }}
+            >
+              Ex. moms
+            </TextingATYP>
 
-          <Texting
-            sx={{
-              color: "#2D6555",
-              fontSize: { xs: 14, xl: 17 },
-              paddingTop: 1,
-            }}
-          >
-            Vad får du?
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
-            -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Startsida
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Upp till fem undersidor
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Cookie policy
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Enklare sökordsanalys
-          </TextingATYP>
+            <Texting
+              sx={{
+                color: "#2D6555",
+                fontSize: { xs: 14, xl: 17 },
+                paddingTop: 1,
+              }}
+            >
+              Vad får du?
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
+              -Uppstartsmöte
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Startsida
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Upp till fem undersidor
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Cookie policy
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Enklare sökordsanalys
+            </TextingATYP>
 
-          <TextingATYP
+            <TextingATYP
+              sx={{
+                fontSize: { xs: 12, xl: 13 },
+                textAlign: "start",
+                paddingTop: 2,
+              }}
+            >
+              Hemsidan är responsiv och anpassas till desktop, platta eller
+              mobil beroende på besökarens referenser.
+            </TextingATYP>
+          </Box>
+          <Button
+            aria-label="Navigera till podden Snack och surr"
             sx={{
-              fontSize: { xs: 12, xl: 13 },
-              textAlign: "start",
-              paddingTop: 2,
+              backgroundColor: "#2D6555",
+              marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+              color: "#F7F7F7",
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+
+              "&:hover": {
+                backgroundColor: "#244f45",
+              },
             }}
           >
-            Hemsidan är responsiv och anpassas till desktop, platta eller mobil
-            beroende på besökarens referenser.
-          </TextingATYP>
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
+              Klick
+            </Texting>
+          </Button>
         </Box>
         {/* andra klack */}
         <Box
           sx={{
-            borderRadius: 2,
-            backgroundColor: "#F3D9DF",
-            width: 310,
-            padding: 4,
-            marginTop: 0,
-            color: "#363434",
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            alignItems: "flex-start",
           }}
         >
-          <Texting
+          <Box
             sx={{
-              fontSize: { xs: 30, xl: 35 },
-              paddingTop: 2,
-              color: "#EF3434",
+              borderRadius: 2,
+              backgroundColor: "#F3D9DF",
+              width: 310,
+              padding: 4,
+              marginTop: 0,
+              color: "#363434",
             }}
           >
-            Klack
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
-            sätt, men det kräver lite fler undersidor än vad klick-paketet
-            erbjuder..
-          </TextingATYP>
-          <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
-            35 000:-
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            Ex. moms
-          </TextingATYP>
-          <Texting
+            <Texting
+              sx={{
+                fontSize: { xs: 30, xl: 35 },
+                paddingTop: 2,
+                color: "#EF3434",
+              }}
+            >
+              Klack
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
+              sätt, men det kräver lite fler undersidor än vad klick-paketet
+              erbjuder..
+            </TextingATYP>
+            <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
+              35 000:-
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              Ex. moms
+            </TextingATYP>
+            <Texting
+              sx={{
+                fontSize: { xs: 14, xl: 17 },
+                paddingTop: 2,
+                color: "#EF3434",
+              }}
+            >
+              Vad får du?
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+              -Uppstartsmöte
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Startsida
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Upp till åtta undersidor
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Cookie policy
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Enklare sökordsanalys
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -SEO-anpassad copy
+            </TextingATYP>
+            <TextingATYP
+              sx={{
+                fontSize: { xs: 12, xl: 13 },
+                textAlign: "start",
+                paddingTop: 2,
+              }}
+            >
+              Hemsidan är responsiv och anpassas till desktop, platta eller
+              mobil beroende på besökarens referenser.
+            </TextingATYP>
+          </Box>
+          <Button
+            aria-label="Navigera till podden Snack och surr"
             sx={{
-              fontSize: { xs: 14, xl: 17 },
-              paddingTop: 2,
-              color: "#EF3434",
+              backgroundColor: "#EF3434",
+              marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+              color: "#F7F7F7",
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+
+              "&:hover": {
+                backgroundColor: "#c32d2d",
+              },
             }}
           >
-            Vad får du?
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
-            -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Startsida
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Upp till åtta undersidor
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Cookie policy
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Enklare sökordsanalys
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -SEO-anpassad copy
-          </TextingATYP>
-          <TextingATYP
-            sx={{
-              fontSize: { xs: 12, xl: 13 },
-              textAlign: "start",
-              paddingTop: 2,
-            }}
-          >
-            Hemsidan är responsiv och anpassas till desktop, platta eller mobil
-            beroende på besökarens referenser.
-          </TextingATYP>
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
+              Klack
+            </Texting>
+          </Button>
         </Box>
 
         <Box
           sx={{
-            borderRadius: 2,
-            backgroundColor: "#363434",
-            width: 310,
-            color: "#F7F7F7",
-            padding: 4,
-            marginTop: -6,
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            alignItems: "flex-start",
           }}
         >
-          <Texting
+          <Box
             sx={{
-              color: "#B8DCD2",
-              fontSize: { xs: 35, xl: 40 },
-              paddingTop: 2,
+              borderRadius: 2,
+              backgroundColor: "#363434",
+              width: 310,
+              color: "#F7F7F7",
+              padding: 4,
+              marginTop: -6,
             }}
           >
-            Boom!
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            För dig är det viktigt med en unik design. Här specialdesignar vi på
-            detaljnivå för att ditt varumärke ska sticka ut, precis så som det
-            förtjänar att göra.
-          </TextingATYP>
-          <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
-            Från 60 000:-
-          </Texting>
-          <TextingATYP sx={{ color: "#F7F7F7", fontSize: { xs: 13, xl: 15 } }}>
-            Ex. moms
-          </TextingATYP>
-          <Texting
-            sx={{
-              color: "#B8DCD2",
-              fontSize: { xs: 14, xl: 17 },
-              paddingTop: 5,
-            }}
-          >
-            Vad får du?
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
-            -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Analys av befintlig hemsida
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Startsida
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Upp till 20 specialdesignade undersidor
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Cookie policy
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Enklare sökordsanalys
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Bildmanér för stillbild och video till hemsidan
-          </TextingATYP>
+            <Texting
+              sx={{
+                color: "#B8DCD2",
+                fontSize: { xs: 35, xl: 40 },
+                paddingTop: 2,
+              }}
+            >
+              Boom!
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              För dig är det viktigt med en unik design. Här specialdesignar vi
+              på detaljnivå för att ditt varumärke ska sticka ut, precis så som
+              det förtjänar att göra.
+            </TextingATYP>
+            <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
+              Från 60 000:-
+            </Texting>
+            <TextingATYP
+              sx={{ color: "#F7F7F7", fontSize: { xs: 13, xl: 15 } }}
+            >
+              Ex. moms
+            </TextingATYP>
+            <Texting
+              sx={{
+                color: "#B8DCD2",
+                fontSize: { xs: 14, xl: 17 },
+                paddingTop: 5,
+              }}
+            >
+              Vad får du?
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+              -Uppstartsmöte
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Analys av befintlig hemsida
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Startsida
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Upp till 20 specialdesignade undersidor
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Cookie policy
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Enklare sökordsanalys
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Bildmanér för stillbild och video till hemsidan
+            </TextingATYP>
 
-          <TextingATYP
+            <TextingATYP
+              sx={{
+                fontSize: { xs: 12, xl: 13 },
+                textAlign: "start",
+                paddingTop: 2,
+              }}
+            >
+              Hela hemsidan är responsiv och anpassas till desktop, platta eller
+              mobil beroende på besökarens referenser.
+            </TextingATYP>
+          </Box>
+          <Button
+            aria-label="Navigera till podden Snack och surr"
             sx={{
-              fontSize: { xs: 12, xl: 13 },
-              textAlign: "start",
-              paddingTop: 2,
+              backgroundColor: "#B9DCD2",
+              color: "#363434",
+              marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+
+              "&:hover": {
+                backgroundColor: "#a2cfc1",
+              },
             }}
           >
-            Hela hemsidan är responsiv och anpassas till desktop, platta eller
-            mobil beroende på besökarens referenser.
-          </TextingATYP>
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
+              Boom!
+            </Texting>
+          </Button>
         </Box>
       </Box>
     </Box>

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Box, Typography, TypographyProps } from "@mui/material";
-import { isTablet } from "./GreyComponent";
+import { Box, Button, Typography, TypographyProps } from "@mui/material";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function SocialMedia() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -77,205 +77,308 @@ export default function SocialMedia() {
         {/* första klick */}
         <Box
           sx={{
-            borderRadius: 2,
-            backgroundColor: "#B9DCD2",
-            width: { xs: 310, md: 310, xl: 330 },
-            color: "#363434",
-            padding: 4,
-            marginTop: 10,
-            height: boxHeight, // Justerar höjden på boxarna
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            alignItems: "flex-start",
           }}
         >
-          <Texting
+          <Box
             sx={{
-              color: "#2D6555",
-              fontSize: { xs: 25, xl: 30 },
-              paddingTop: 2,
+              borderRadius: 2,
+              backgroundColor: "#B9DCD2",
+              width: { xs: 310, md: 310, xl: 330 },
+              color: "#363434",
+              padding: 4,
+              marginTop: 10,
+              height: boxHeight, // Justerar höjden på boxarna
             }}
           >
-            Klick
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
-            Du vet vad du vill, men har svårt att få fram rätt känsla. Då
-            behöver du en klick!
-          </TextingATYP>
-          <Texting
-            sx={{
-              color: "#2D6555",
-              fontSize: { xs: 25, xl: 30 },
-              paddingTop: 2,
-            }}
-          >
-            4500:-/mån
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            Priset gäller löpande avtal, lägsta avtalstid 6 mån.
-          </TextingATYP>
-          <Texting
-            sx={{
-              color: "#2D6555",
-              fontSize: { xs: 14, xl: 17 },
-              paddingTop: 2,
-            }}
-          >
-            Vad får du?
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
-            -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Tre inlägg per månad
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Passande copy
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Enklare redigering på befintligt bildmaterial
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Publicering i en kanal
-          </TextingATYP>
+            <Texting
+              sx={{
+                color: "#2D6555",
+                fontSize: { xs: 25, xl: 30 },
+                paddingTop: 2,
+              }}
+            >
+              Klick
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
+              Du vet vad du vill, men har svårt att få fram rätt känsla. Då
+              behöver du en klick!
+            </TextingATYP>
+            <Texting
+              sx={{
+                color: "#2D6555",
+                fontSize: { xs: 25, xl: 30 },
+                paddingTop: 2,
+              }}
+            >
+              4500:-/mån
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+            </TextingATYP>
+            <Texting
+              sx={{
+                color: "#2D6555",
+                fontSize: { xs: 14, xl: 17 },
+                paddingTop: 2,
+              }}
+            >
+              Vad får du?
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
+              -Uppstartsmöte
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Tre inlägg per månad
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Passande copy
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Enklare redigering på befintligt bildmaterial
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Publicering i en kanal
+            </TextingATYP>
 
-          <TextingATYP
+            <TextingATYP
+              sx={{
+                fontSize: { xs: 12, xl: 13 },
+                textAlign: "center",
+                paddingTop: 2,
+              }}
+            >
+              Klick erbjuds också som ett engångspaket. Då till en kostnad på
+              5500:-
+            </TextingATYP>
+          </Box>
+      
+          <Button
+            aria-label="Navigera till podden Snack och surr"
+           
             sx={{
-              fontSize: { xs: 12, xl: 13 },
-              textAlign: "center",
-              paddingTop: 2,
+              backgroundColor: "#2D6555",
+              marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+              color: "#F7F7F7",
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+            
+              "&:hover": {
+                backgroundColor: "#244f45",
+              },
             }}
           >
-            Klick erbjuds också som ett engångspaket. Då till en kostnad på
-            5500:-
-          </TextingATYP>
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
+            Klick
+            </Texting>
+          </Button>
         </Box>
         {/* andra klack */}
         <Box
           sx={{
-            borderRadius: 2,
-            backgroundColor: "#F3D9DF",
-            width: { xs: 310, md: 310, xl: 330 },
-            padding: 4,
-            marginTop: 5,
-            color: "#363434",
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            alignItems: "flex-start",
           }}
         >
-          <Texting
+          <Box
             sx={{
-              fontSize: { xs: 30, xl: 35 },
-              paddingTop: 2,
-              color: "#EF3434",
+              borderRadius: 2,
+              backgroundColor: "#F3D9DF",
+              width: { xs: 310, md: 310, xl: 330 },
+              padding: 4,
+              marginTop: 5,
+              color: "#363434",
             }}
           >
+            <Texting
+              sx={{
+                fontSize: { xs: 30, xl: 35 },
+                paddingTop: 2,
+                color: "#EF3434",
+              }}
+            >
+              Klack
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              Du vet vad du vill, men har svårt att få fram rätt känsla. Då
+              behöver du en klack!
+            </TextingATYP>
+            <Texting
+              sx={{
+                fontSize: 25,
+                paddingTop: { xs: 6, xl: 4 },
+                color: "#EF3434",
+              }}
+            >
+              8500:-/mån
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+            </TextingATYP>
+            <Texting
+              sx={{
+                fontSize: { xs: 14, xl: 17 },
+                paddingTop: { xs: 2, xl: 4 },
+                color: "#EF3434",
+              }}
+            >
+              Vad får du?
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+              -Uppstartsmöte
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Fyra inlägg per månad
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Publicering i två kanaler
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Passande copy
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Enklare fotografering inkl. redigering
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Contentplan för hela avtalstiden
+            </TextingATYP>
+          </Box>
+        
+          <Button
+            aria-label="Navigera till podden Snack och surr"
+           
+            sx={{
+              backgroundColor: "#EF3434",
+              marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+              color: "#F7F7F7",
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+            
+              "&:hover": {
+                backgroundColor: "#c32d2d",
+              },
+            }}
+          >
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
             Klack
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            Du vet vad du vill, men har svårt att få fram rätt känsla. Då
-            behöver du en klack!
-          </TextingATYP>
-          <Texting
-            sx={{
-              fontSize: 25,
-              paddingTop: { xs: 6, xl: 4 },
-              color: "#EF3434",
-            }}
-          >
-            8500:-/mån
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            Priset gäller löpande avtal, lägsta avtalstid 6 mån.
-          </TextingATYP>
-          <Texting
-            sx={{
-              fontSize: { xs: 14, xl: 17 },
-              paddingTop: { xs: 2, xl: 4 },
-              color: "#EF3434",
-            }}
-          >
-            Vad får du?
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
-            -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Fyra inlägg per månad
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Publicering i två kanaler
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Passande copy
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Enklare fotografering inkl. redigering
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Contentplan för hela avtalstiden
-          </TextingATYP>
+            </Texting>
+          </Button>
         </Box>
 
         <Box
           sx={{
-            borderRadius: 2,
-            backgroundColor: "#363434",
-            width: { xs: 310, md: 310, xl: 330 },
-            color: "#F7F7F7",
-            padding: 4,
-            marginTop: 0,
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            alignItems: "flex-start",
           }}
         >
-          <Texting
+          <Box
             sx={{
-              color: "#B8DCD2",
-              fontSize: { xs: 35, xl: 40 },
-              paddingTop: 2,
+              borderRadius: 2,
+              backgroundColor: "#363434",
+              width: { xs: 310, md: 310, xl: 330 },
+              color: "#F7F7F7",
+              padding: 4,
+              marginTop: 0,
             }}
           >
+            <Texting
+              sx={{
+                color: "#B8DCD2",
+                fontSize: { xs: 35, xl: 40 },
+                paddingTop: 2,
+              }}
+            >
+              Boom!
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              För dig som vill gå all in, och få en tiopoängare direkt!
+            </TextingATYP>
+            <Texting
+              sx={{
+                color: "#B8DCD2",
+                fontSize: 25,
+                paddingTop: { xs: 9, xl: 7 },
+              }}
+            >
+              15000:-/mån
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+            </TextingATYP>
+            <Texting
+              sx={{
+                color: "#B8DCD2",
+                fontSize: { xs: 14, xl: 17 },
+                paddingTop: { xs: 2, xl: 4 },
+              }}
+            >
+              Vad får du?
+            </Texting>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+              -Uppstartsmöte
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Åtta inlägg per månad
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Publicering i upp till tre kanaler
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Passande copy
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Fotografering inkl. redigering
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Contentplan för hela avtalstiden
+            </TextingATYP>
+            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+              -Annonsering och analys
+            </TextingATYP>
+          </Box>
+         
+          <Button
+            aria-label="Navigera till podden Snack och surr"
+           
+            sx={{
+              
+              backgroundColor: "#B9DCD2",
+              color: "#363434",    marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+             
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+            
+              "&:hover": {
+                backgroundColor: "#a2cfc1",
+              },
+            }}
+          >
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
             Boom!
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            För dig som vill gå all in, och få en tiopoängare direkt!
-          </TextingATYP>
-          <Texting
-            sx={{
-              color: "#B8DCD2",
-              fontSize: 25,
-              paddingTop: { xs: 9, xl: 7 },
-            }}
-          >
-            15000:-/mån
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            Priset gäller löpande avtal, lägsta avtalstid 6 mån.
-          </TextingATYP>
-          <Texting
-            sx={{
-              color: "#B8DCD2",
-              fontSize: { xs: 14, xl: 17 },
-              paddingTop: { xs: 2, xl: 4 },
-            }}
-          >
-            Vad får du?
-          </Texting>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
-            -Uppstartsmöte
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Åtta inlägg per månad
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Publicering i upp till tre kanaler
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Passande copy
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Fotografering inkl. redigering
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Contentplan för hela avtalstiden
-          </TextingATYP>
-          <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-            -Annonsering och analys
-          </TextingATYP>
+            </Texting>
+          </Button>
         </Box>
       </Box>
     </Box>
