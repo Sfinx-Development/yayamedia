@@ -80,6 +80,7 @@ import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
 import GraphicProfile from "./GraphicProfile";
 import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
+import Poddcast from "./Poddcast";
 import { isMobile, isTablet } from "./GreyComponent";
 
 export default function PaketScroll() {
@@ -90,6 +91,7 @@ export default function PaketScroll() {
     <SocialMedia key="s" />,
     <Webdesign key="w" />,
     <GraphicProfile key="g" />,
+    <Poddcast key="p" />,
   ];
 
   const repeated = Array.from({ length: 10 }, (_, i) =>
