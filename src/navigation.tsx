@@ -9,6 +9,8 @@ import AsundsholmProject from "./pages/Projects";
 // import SleipnerUppdrag from "./components/SleipnerUppdrag";
 
 import SleipnerProject from "./pages/SleipnerProject";
+import OffertForm from "./components/OffertForm";
+import Offert from "./pages/Offert";
 
 const Navigation = () => {
   return (
@@ -19,6 +21,7 @@ const Navigation = () => {
         <Route path="tjanster" element={<Services />}></Route>
         <Route path="asundsholm" element={<AsundsholmProject />}></Route>
         <Route path="sleipner" element={<SleipnerProject />} />
+        <Route path="/offert" element={<Offert />} />
 
       
         <Route path="*" element={<Error />}></Route>
