@@ -1,4 +1,5 @@
-import { Button, Typography } from "@mui/material";
+import { Button, styled, Typography, TypographyProps } from "@mui/material";
+// import { isTablet } from "./GreyComponent";
 
 interface CustomButtonProps {
   ariaLabel: string;
@@ -9,51 +10,73 @@ interface CustomButtonProps {
 }
 
 export default function CustomButton(props: CustomButtonProps) {
+  const Texting = styled(Typography)<TypographyProps>`
+    font-family: "H3", sans-serif;
+    font-variation-settings: "wght" 300;
+  `;
+
+  //   const TextingATYP = styled(Typography)<TypographyProps>`
+  //     font-family: "atyp-bl-variable", sans-serif;
+  //     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  //   `;
   return (
     <Button
       aria-label={props.ariaLabel}
       variant="outlined"
       disabled={props.disabled}
       sx={{
-        color: "#555556", // Mörkare text för högre kontrast
-        borderColor: "#f8d7e5",
-        marginY: 4,
-        paddingX: 3,
-        paddingY: 1,
-        background: "#f8d7e5", // Förbättrad gradient
-        ...(props.animation && {
-          animation: "moveUpDown 2s ease-in-out infinite", // Lägg till animation om props.animation är true
-        }),
+        backgroundColor: "#1D5880",
+        marginTop: 1,
+        minWidth: 200,
+        width: "fit-content",
+        
+        color: "#F7F7F7",
+        borderRadius: 2,
+        paddingY: 1.2,
+        textTransform: "none",
+        marginY: { xs: 2, md: 0 },
         "&:hover": {
-          borderColor: "#e48bb1",
-          backgroundColor: "#e48bb1",
-          transition: "background-color 0.3s ease, color 0.3s ease",
-        },
-        "@keyframes moveUpDown": {
-          "0%, 100%": {
-            transform: "translateY(0)",
+            backgroundColor: "#363434",
           },
-          "50%": {
-            transform: "translateY(-10px)",
-          },
-        },
       }}
       onClick={() => {
         props.handleOnClik();
       }}
     >
-      <Typography
+      <Texting
         sx={{
+            fontSize: {xs: 18, md: 18, xl: 25 },
           textAlign: "center",
-          color: "#555556", // Text med högre kontrast mot bakgrunden
+
+          color: "#F7F7F7",
           position: "relative",
-          fontWeight: 600, // Fet text för att säkerställa läsbarhet
-          textTransform: "uppercase",
+        //   fontWeight: 600, // Fet text för att säkerställa läsbarhet
+        //   textTransform: "uppercase",
           letterSpacing: "2px",
+        
         }}
       >
         {props.title}
-      </Typography>
+      </Texting>
     </Button>
+    //   <Button
+    //           aria-label="Navigera till om oss-sidan"
+    //           onClick={() => navigate("/yaya")}
+    //           sx={{
+    //             backgroundColor: "#1D5880",
+    //             marginTop: 1,
+    //             width: isTablet ? "50%" : "35%",
+    //             color: "#F7F7F7",
+    //             borderRadius: 2,
+    //             paddingY: 1.2,
+    //             textTransform: "none",
+    //             marginY: { xs: 2, md: 0 },
+    //             "&:hover": {
+    //               backgroundColor: "#363434",
+    //             },
+    //           }}
+    //         >
+    //           <Texting sx={{ fontSize: { md: 18, xl: 25 } }}>Om oss</Texting>
+    //         </Button>
   );
 }

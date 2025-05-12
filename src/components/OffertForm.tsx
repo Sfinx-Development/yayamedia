@@ -5,8 +5,10 @@ import {
   Checkbox,
   FormControlLabel,
   Snackbar,
+  styled,
   TextField,
   Typography,
+  TypographyProps,
 } from "@mui/material";
 import emailjs from "emailjs-com";
 import { useState } from "react";
@@ -14,7 +16,7 @@ import { useScreenSize } from "../ScreenSizeContext";
 import CustomButton from "./CustomButton";
 import { Radio } from "@mui/material";
 
-emailjs.init("C8CxNnxZg6mg-d2tq");
+// emailjs.init("C8CxNnxZg6mg-d2tq");
 
 export default function OffertForm() {
   const [name, setName] = useState("");
@@ -32,6 +34,16 @@ export default function OffertForm() {
   const [privacyPolicyChecked, setPrivacyPolicyChecked] = useState(false);
 
   const { isMobile } = useScreenSize();
+
+   const Texting = styled(Typography)<TypographyProps>`
+      font-family: "H3", sans-serif;
+      font-variation-settings: "wght" 300;
+    `;
+  
+    const TextingATYP = styled(Typography)<TypographyProps>`
+      font-family: "atyp-bl-variable", sans-serif;
+      font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+    `;
 
   const groupedServices = {
     "Sociala medier": ["Klick ", "Klack ", "Boom "],
@@ -140,7 +152,7 @@ export default function OffertForm() {
         backgroundImage: "url(pexels-shvetsa-5217915.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        padding: { xs: 2, md: 4 },
+        padding: { xs: 0, md: 0 },
       }}
     >
       <Box
@@ -148,14 +160,15 @@ export default function OffertForm() {
           zIndex: 1,
           width: "100%",
           maxWidth: { xs: "90%", md: "600px" },
-          padding: 10,
+          padding: { xs: 15, sm: 15, md: 15, xl: 15 },
+
           display: "flex",
           flexDirection: "column",
           gap: 3,
           backdropFilter: "blur(5px)", // Subtil suddning för att ge kontrast
         }}
       >
-        <Typography
+        <Texting
           variant={isMobile ? "h4" : "h3"}
           sx={{
             color: "#333",
@@ -168,10 +181,10 @@ export default function OffertForm() {
           }}
         >
           Offertförfrågan
-        </Typography>
+        </Texting>
 
         {error && (
-          <Typography
+          <TextingATYP
             color="error"
             sx={{
               textAlign: "center",
@@ -182,7 +195,7 @@ export default function OffertForm() {
             }}
           >
             Vänligen fyll i alla obligatoriska fält
-          </Typography>
+          </TextingATYP>
         )}
 
         <Snackbar open={openSnackbar} autoHideDuration={6000}>
@@ -287,12 +300,12 @@ export default function OffertForm() {
         >
           {Object.entries(groupedServices).map(([category, options]) => (
             <Box key={category} sx={{ marginBottom: 2 }}>
-              <Typography
+              <Texting
                 variant="h6"
                 sx={{ marginBottom: 1, fontWeight: "bold", color: "#363434" }}
               >
                 {category}
-              </Typography>
+              </Texting>
               <Box>
                 {options.map((option) => (
                   <FormControlLabel
@@ -402,14 +415,14 @@ export default function OffertForm() {
             />
           }
           label={
-            <Typography sx={{ fontSize: 13, color: "rgba(0,0,0,0.8)" }}>
+            <TextingATYP sx={{ fontSize: 13, color: "rgba(0,0,0,0.8)" }}>
               Jag samtycker till att yaya Media behandlar mina personuppgifter i
               enlighet med vår{" "}
               <a href="/privacy-policy" style={{ color: "rgba(0,0,0,0.8)" }}>
                 integritetspolicy
               </a>
               .
-            </Typography>
+            </TextingATYP>
           }
         />
         <CustomButton

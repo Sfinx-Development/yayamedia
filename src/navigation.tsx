@@ -9,7 +9,7 @@ import AsundsholmProject from "./pages/Projects";
 // import SleipnerUppdrag from "./components/SleipnerUppdrag";
 
 import SleipnerProject from "./pages/SleipnerProject";
-import OffertForm from "./components/OffertForm";
+// import OffertForm from "./components/OffertForm";
 import Offert from "./pages/Offert";
 
 const Navigation = () => {
