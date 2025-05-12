@@ -13,7 +13,7 @@ export default function GraphicProfile() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 430, sm: 300, md: 485, xl: 540 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 435, sm: 300, md: 430, xl: 540 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   return (

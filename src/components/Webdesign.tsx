@@ -13,7 +13,7 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 350, md: 400, xl: 450 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 340, md: 345, xl: 450 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   return (
@@ -67,7 +67,7 @@ export default function Webdesign() {
           backgroundColor: "#F7F7F7",
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
-          paddingBottom: { xs: 8, md: 10 },
+          paddingBottom: { xs: 8, md: 0 },
           margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
@@ -83,7 +83,7 @@ export default function Webdesign() {
             width: 310,
             color: "#363434",
             padding: 4,
-            marginTop: 14,
+            marginTop: 16,
             height: boxHeight,
             // borderRadius: 2,
             // backgroundColor: "#B9DCD2",
@@ -118,7 +118,7 @@ export default function Webdesign() {
             sx={{
               color: "#2D6555",
               fontSize: { xs: 14, xl: 17 },
-              paddingTop: 2,
+              paddingTop: 1,
             }}
           >
             Vad får du?
