@@ -15,10 +15,24 @@ import { useState } from "react";
 import { useScreenSize } from "../ScreenSizeContext";
 import CustomButton from "./CustomButton";
 import { Radio } from "@mui/material";
+// import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+
+type LocationState = {
+    preselect?: string;
+  };
+
+  type OffertFormProps = {
+    locationState?: LocationState;
+  };
+  
+  
+
 
 // emailjs.init("C8CxNnxZg6mg-d2tq");
 
-export default function OffertForm() {
+export default function OffertForm({ locationState }: OffertFormProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -35,6 +49,7 @@ export default function OffertForm() {
 
   const { isMobile } = useScreenSize();
 
+
    const Texting = styled(Typography)<TypographyProps>`
       font-family: "H3", sans-serif;
       font-variation-settings: "wght" 300;
@@ -45,11 +60,24 @@ export default function OffertForm() {
       font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
     `;
 
-  const groupedServices = {
-    "Sociala medier": ["Klick ", "Klack ", "Boom "],
-    Webdesign: ["Klick ", "Klack ", "Boom "],
-    "Grafisk profil": ["Klick ", "Klack ", "Boom "],
-  };
+    const groupedServices = {
+        "Sociala medier": ["Klick", "Klack", "Boom"],
+        Webdesign: ["Klick", "Klack", "Boom"],
+        "Grafisk profil": ["Klick", "Klack", "Boom"],
+        Podcast: ["Klick", "Klack", "Boom"], // <- Här också utan mellanslag
+      };
+
+ useEffect(() => {
+  if (locationState?.preselect) {
+    const [categoryRaw, optionRaw] = locationState.preselect.split(":");
+    const category = categoryRaw?.trim();
+    const option = optionRaw?.trim();
+    if (category && option) {
+      setServices({ [category]: option });
+    }
+  }
+}, [locationState]);
+
 
   //   const serviceChoices: string[] = [
   //     "Byggstäd",

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
 import { isMobile, isTablet } from "./GreyComponent";
+import { useNavigate } from "react-router-dom";
 
 export default function GraphicProfile() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -15,6 +16,26 @@ export default function GraphicProfile() {
 
   const boxHeight = { xs: 435, sm: 300, md: 430, xl: 540 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
+  const navigate = useNavigate();
+
+  const goToOffertWithPreselect = (preselect: string) => {
+    navigate("/offert", { state: { preselect } });
+  };
+
+  const buttonStyle = (bg: string, hover: string, textColor = "#F7F7F7") => ({
+    backgroundColor: bg,
+    color: textColor,
+    marginTop: 1,
+    width: isTablet ? "50%" : "35%",
+    marginBottom: 5,
+    borderRadius: 2,
+    paddingY: isMobile ? 1 : 1.2,
+    textTransform: "none",
+    marginY: { xs: 2, md: 2 },
+    "&:hover": {
+      backgroundColor: hover,
+    },
+  });
 
   return (
     <Box
@@ -141,27 +162,15 @@ export default function GraphicProfile() {
             </TextingATYP>
           </Box>
           <Button
-            aria-label="Navigera till podden Snack och surr"
+            fullWidth
+            aria-label="Välj Klick"
+            onClick={() => goToOffertWithPreselect("Grafisk profil: Klick")}
             sx={{
-              backgroundColor: "#2D6555",
-              marginTop: 1,
-              width: isTablet ? "50%" : "35%",
-              color: "#F7F7F7",
-              marginBottom: 5,
-              // marginTop: 5,
-              borderRadius: 2,
-              paddingY: isMobile ? 1 : 1.2,
-              textTransform: "none",
-              marginY: { xs: 2, md: 2 },
-
-              "&:hover": {
-                backgroundColor: "#244f45",
-              },
+              ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
+              justifyContent: "center",
             }}
           >
-            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
-              Klick
-            </Texting>
+            <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
           </Button>
         </Box>
         {/* andra klack */}
@@ -229,27 +238,15 @@ export default function GraphicProfile() {
             </TextingATYP>
           </Box>
           <Button
-            aria-label="Navigera till podden Snack och surr"
+            fullWidth
+            aria-label="Välj Klack"
+            onClick={() => goToOffertWithPreselect("Grafisk profil: Klack")}
             sx={{
-              backgroundColor: "#EF3434",
-              marginTop: 1,
-              width: isTablet ? "50%" : "35%",
-              color: "#F7F7F7",
-              marginBottom: 5,
-              // marginTop: 5,
-              borderRadius: 2,
-              paddingY: isMobile ? 1 : 1.2,
-              textTransform: "none",
-              marginY: { xs: 2, md: 2 },
-
-              "&:hover": {
-                backgroundColor: "#c32d2d",
-              },
+              ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
+              justifyContent: "center",
             }}
           >
-            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
-              Klack
-            </Texting>
+            <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
           </Button>
         </Box>
         <Box
@@ -330,28 +327,15 @@ export default function GraphicProfile() {
             </TextingATYP>
           </Box>
           <Button
-            aria-label="Navigera till podden Snack och surr"
+            fullWidth // gör hela knappen klickbar horisontellt
+            aria-label="Välj Boom"
+            onClick={() => goToOffertWithPreselect("Grafisk profil: Boom")}
             sx={{
-              backgroundColor: "#B9DCD2",
-              color: "#363434",
-              marginTop: 1,
-              width: isTablet ? "50%" : "35%",
-
-              marginBottom: 5,
-              // marginTop: 5,
-              borderRadius: 2,
-              paddingY: isMobile ? 1 : 1.2,
-              textTransform: "none",
-              marginY: { xs: 2, md: 2 },
-
-              "&:hover": {
-                backgroundColor: "#a2cfc1",
-              },
+              ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
+              justifyContent: "center", // centrerar texten
             }}
           >
-            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
-              Boom!
-            </Texting>
+            <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
           </Button>
         </Box>
       </Box>

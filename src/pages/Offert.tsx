@@ -1,8 +1,11 @@
 import { Box } from "@mui/material";
 import OffertForm from "../components/OffertForm";
+import { useLocation } from "react-router-dom";
+
 // import HelmetWrapper from "../components/HelmetWrapper";
 
 export default function Offert() {
+    const location = useLocation();
   return (
     <>
       {/* <HelmetWrapper
@@ -29,7 +32,8 @@ export default function Offert() {
         <Box
                 sx={{ width: "100%", position: "relative", backgroundColor: "#F7F7F7" }}
               >
-                <OffertForm />
+                <OffertForm key={JSON.stringify(location.state)} locationState={location.state} />
+
               </Box>
       </Box>
     </>

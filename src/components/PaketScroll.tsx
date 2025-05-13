@@ -82,10 +82,12 @@ import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
 import Poddcast from "./Poddcast";
 import { isMobile, isTablet } from "./GreyComponent";
+import { useLocation } from "react-router-dom";
 
 export default function PaketScroll() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [dragging, setDragging] = useState(false);
+  const location = useLocation();
 
   const baseComponents = [
     <SocialMedia key="s" />,
@@ -101,6 +103,17 @@ export default function PaketScroll() {
       </Box>
     ))
   ).flat();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     if (scrollRef.current) {
