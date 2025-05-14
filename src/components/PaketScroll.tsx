@@ -124,7 +124,7 @@ export default function PaketScroll() {
 
   const handleDragStart = () => setDragging(true);
 
-  const handleDragStop = (e: DraggableEvent, data: DraggableData) => {
+  const handleDragStop = (_e: DraggableEvent, data: DraggableData) => {
     setDragging(false);
     if (scrollRef.current) {
       scrollRef.current.scrollLeft -= data.deltaX;
