@@ -3,15 +3,15 @@ import React from "react";
 import { isMobile } from "./GreyComponent";
 
 const mockImages = [
-  "https://i.imgur.com/XHtcCQV.png",
-  "https://i.imgur.com/pDMM8Je.png",
-  "https://i.imgur.com/DRE44iq.jpeg",
-  "https://i.imgur.com/ADTyziN.jpeg",
-  "https://i.imgur.com/3bgZXRG.jpeg",
-  "https://i.imgur.com/XHtcCQV.png",
-  "https://i.imgur.com/XHtcCQV.png",
-  "https://i.imgur.com/pDMM8Je.png",
-  "https://i.imgur.com/DRE44iq.jpeg",
+  "https://i.imgur.com/mB9ABMS.png",
+  "https://i.imgur.com/750qs63.jpeg",
+  "https://i.imgur.com/naScTZI.png",
+  "https://i.imgur.com/XZagv20.png",
+  "https://i.imgur.com/AWAvHlA.png",
+  "https://i.imgur.com/RD2AlkJ.png",
+  "https://i.imgur.com/utWSTkK.png",
+  "https://i.imgur.com/ABtSm4U.jpeg",
+  "https://i.imgur.com/1DKlq8X.png",
 ];
 
 const InstagramGrid: React.FC = () => {
