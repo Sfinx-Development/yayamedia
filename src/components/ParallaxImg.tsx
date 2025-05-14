@@ -53,12 +53,12 @@
 // };
 
 // export default ParallaxImg;
-import { Box } from "@mui/material";
+import { Box} from "@mui/material";
 
 
 interface ParallaxImgProps {
   image: string;
-  bgPosition?: string; // ny prop
+  bgPosition?: string | { [key: string]: string }; 
   bgSize?: string;     // ny prop
 }
 
@@ -82,7 +82,7 @@ const ParallaxImg: React.FC<ParallaxImgProps> = ({ image, bgSize, bgPosition}) =
       <Box
         sx={{
           position: "fixed",
-          top: 0,
+          top: 0,         backgroundRepeat: "no-repeat",
           left: 0,
           width: "100%",
           minHeight: "100vh",

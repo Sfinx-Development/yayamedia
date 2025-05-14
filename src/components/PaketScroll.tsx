@@ -144,11 +144,11 @@ export default function PaketScroll() {
       }
     }
   };
-  const handleDrag = (_: DraggableEvent, data: DraggableData) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= data.deltaX;
-    }
-  };
+  // const handleDrag = (_: DraggableEvent, data: DraggableData) => {
+  //   if (scrollRef.current) {
+  //     scrollRef.current.scrollLeft -= data.deltaX;
+  //   }
+  // };
 
   return (
     <Box
@@ -161,13 +161,13 @@ export default function PaketScroll() {
     >
       <Draggable
         axis="x"
-        onStart={handleDragStart}
-        // onStop={() => setDragging(false)}
-        onDrag={handleDrag}
-        disabled={isMobile || isTablet}
         // onStart={handleDragStart}
-        onStop={handleDragStop}
-        // disabled={isMobile || isTablet} // 👈 inaktivera på mobil
+        // onStop={() => setDragging(false)}
+        // onDrag={handleDrag}
+        // disabled={isMobile || isTablet}
+         onStart={handleDragStart}
+         onStop={handleDragStop}
+        disabled={isMobile || isTablet} // 👈 inaktivera på mobil
       >
         <Box
           sx={{

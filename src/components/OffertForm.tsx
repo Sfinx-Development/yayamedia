@@ -18,7 +18,7 @@ import { Radio } from "@mui/material";
 // import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-
+import {  isBigScreen, isTablet } from "./GreyComponent";
 type LocationState = {
     preselect?: string;
   };
@@ -46,14 +46,13 @@ export default function OffertForm({ locationState }: OffertFormProps) {
   const [snackbarSeverity, setSnackbarSeverity] =
     useState<AlertColor>("success");
   const [privacyPolicyChecked, setPrivacyPolicyChecked] = useState(false);
-
   const { isMobile } = useScreenSize();
 
 
-   const Texting = styled(Typography)<TypographyProps>`
-      font-family: "H3", sans-serif;
-      font-variation-settings: "wght" 300;
-    `;
+  const Texting = styled(Typography)<TypographyProps>`
+    font-family: "H3", sans-serif;
+    font-variation-settings: "wght" 300;
+  `;
   
     const TextingATYP = styled(Typography)<TypographyProps>`
       font-family: "atyp-bl-variable", sans-serif;
@@ -123,19 +122,16 @@ export default function OffertForm({ locationState }: OffertFormProps) {
         .join("\n");
 
       const templateParams = {
-        to_name: "Yaya",
-        from_name: name,
+        name: name,
         reply_to: email,
-        message: `Telefon: ${phone}
-  Email: ${email}
-  Tjänster:
-  ${selectedServices}
-  
-  Meddelande: ${message}`,
+        phone:phone,
+        email:email,
+        selectedServices:selectedServices,
+        message:message
       };
 
       emailjs
-        .send("service_i4ggttl", "", templateParams)
+        .send("service_i4ggttl", "template_iv9mmwr", templateParams)
         .then(() => {
           setSnackbarSeverity("success");
           setSnackbarMessage("Förfrågan skickad!");
@@ -196,16 +192,27 @@ export default function OffertForm({ locationState }: OffertFormProps) {
           backdropFilter: "blur(5px)", // Subtil suddning för att ge kontrast
         }}
       >
+      <Snackbar open={openSnackbar} autoHideDuration={6000}>
+        <Alert
+          onClose={handleSnackbarClose}
+          severity={snackbarSeverity}
+          sx={{ width: "100%" }}
+        >
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
         <Texting
           variant={isMobile ? "h4" : "h3"}
           sx={{
-            color: "#333",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            letterSpacing: "2px",
-            marginBottom: 2,
-            marginTop: 4,
-            fontSize: { xs: 28, md: 42 },
+         fontSize: isTablet
+                    ? 60
+                    : isBigScreen
+                    ? 70
+                    : { xs: 25, md: 50, xl: 80 },
+                  margin: 0,
+                  paddingTop:{xs:5},
+                  color: "#363434",
+                  lineHeight: 1,
           }}
         >
           Offertförfrågan
