@@ -98,7 +98,7 @@ export default function PaketScroll() {
 
   const repeated = Array.from({ length: 10 }, (_, i) =>
     baseComponents.map((Component, j) => (
-      <Box key={`${i}-${j}`} sx={{ paddingRight: 15}}>
+      <Box key={`${i}-${j}`} sx={{ paddingRight: 15 }}>
         {Component}
       </Box>
     ))
@@ -136,9 +136,17 @@ export default function PaketScroll() {
 
       if (scrollArea.scrollLeft < threshold) {
         scrollArea.scrollLeft += scrollWidth / 2;
-      } else if (scrollArea.scrollLeft > scrollWidth - threshold - clientWidth) {
+      } else if (
+        scrollArea.scrollLeft >
+        scrollWidth - threshold - clientWidth
+      ) {
         scrollArea.scrollLeft -= scrollWidth / 2;
       }
+    }
+  };
+  const handleDrag = (_: DraggableEvent, data: DraggableData) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft -= data.deltaX;
     }
   };
 
@@ -154,8 +162,12 @@ export default function PaketScroll() {
       <Draggable
         axis="x"
         onStart={handleDragStart}
+        // onStop={() => setDragging(false)}
+        onDrag={handleDrag}
+        disabled={isMobile || isTablet}
+        // onStart={handleDragStart}
         onStop={handleDragStop}
-        disabled={isMobile || isTablet} // 👈 inaktivera på mobil
+        // disabled={isMobile || isTablet} // 👈 inaktivera på mobil
       >
         <Box
           sx={{
