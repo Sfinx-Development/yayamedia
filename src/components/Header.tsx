@@ -2,6 +2,8 @@ import { Box, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DrawerComponent from "./DrawerComponent";
+import { Menu, MenuItem,  } from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 export default function Header(): JSX.Element {
   const navigate = useNavigate();
@@ -28,6 +30,17 @@ export default function Header(): JSX.Element {
   useEffect(() => {
     console.log("ÖPPEN: ", drawerOpen);
   }, [drawerOpen]);
+
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box
@@ -94,15 +107,57 @@ export default function Header(): JSX.Element {
         >
           <Heading sx={{ fontSize: { xs: 20, md: 30 } }}>Yaya</Heading>
         </Link>
-        <Link
+        {/* <Link
           style={{
             textDecoration: "none",
             color: "#363434",
           }}
-          to="/#case"
+          to="/projects"
         >
           <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Case</Heading>
-        </Link>
+        </Link> */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
+          onClick={handleClick}
+        >
+          <Heading sx={{ fontSize: { xs: 20, md: 30 }, color: "#363434" }}>
+            Case
+          </Heading>
+          <ArrowDropDownIcon
+            sx={{ color: "#363434", ml: 1, fontSize: { xs: 28, md: 32 } }}
+          />
+        </Box>
+
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "case-button",
+          }}
+        >
+          <MenuItem
+            onClick={() => {
+              handleClose();
+              navigate("/asundsholm");
+            }}
+          >
+            Åsundsholm
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleClose();
+              navigate("/sleipner");
+            }}
+          >
+            Sleipner
+          </MenuItem>
+        </Menu>
+
         <Link
           style={{
             textDecoration: "none",

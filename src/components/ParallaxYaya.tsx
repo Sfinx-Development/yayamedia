@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Button, styled, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "./Footer";
@@ -301,8 +301,8 @@ export default function ParallaxYaya() {
                 backgroundColor: "#363434",
                 display: "flex",
                 flexDirection: "row",
-                height: isBiggerScreen ? 300 : { xs: 250, md: 230 },
-                padding: { xs: 2, md: 0, xl: 2 },
+                height: isBiggerScreen ? 300 : { xs: 270, md: 250 },
+                padding: { xs: 2.5, md: 0, xl: 2 },
                 justifyContent: { xs: "space-bewtween", md: "space-evenly" },
                 width: "100%",
                 position: "relative",
@@ -322,6 +322,7 @@ export default function ParallaxYaya() {
                     fontSize: { xs: 24, md: 30, lg: 20, sm: 20, xl: 45 },
                     color: "#B9DCD2",
                     marginBottom: 2,
+                    marginTop: 2,
                   }}
                 >
                   Så du vill veta mer?
@@ -346,6 +347,34 @@ export default function ParallaxYaya() {
                   berätta om dina drömmar och visioner. Vi är helt inne på att
                   förverkliga dom! */}
                 </TextingATYP>
+                <Button
+                  aria-label="Navigera till podden Snack och surr"
+                  onClick={() =>
+                    window.open(
+                      "https://open.spotify.com/show/1QdiSYtkp7lFSGE4UAiWX9?si=lTNJkNyrTo--NMmr_3VMkg",
+                      "_blank"
+                    )
+                  }
+                  sx={{
+                    backgroundColor: "#B9DCD2",
+                    marginTop: 1,
+                    width: isTablet ? "50%" : "35%",
+                    color: "#F7F7F7",
+                    marginBottom: 5,
+                    // marginTop: 5,
+                    borderRadius: 2,
+                    paddingY: isMobile ? 1 : 1.2,
+                    textTransform: "none",
+                    marginY: { xs: 2, md: 2 },
+                    "&:hover": {
+                      backgroundColor: "#B9DCD2",
+                    },
+                  }}
+                >
+                  <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
+                    Snackosurr
+                  </Texting>
+                </Button>
               </Box>
 
               {/* Two Girls Image */}

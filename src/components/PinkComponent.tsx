@@ -1,6 +1,6 @@
 import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import { useEffect } from "react";
-import { isBiggerScreen, isBigScreen, isTablet } from "./GreyComponent";
+import {  isBigScreen, isTablet } from "./GreyComponent";
 
 export default function PinkComponent() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -56,7 +56,7 @@ export default function PinkComponent() {
           <Texting
             component="h1"
             sx={{
-              paddingTop: isBiggerScreen ? 15 : 10,
+              paddingTop: {xs:10, xl:15},
               fontSize: isTablet
                 ? 80
                 : isBigScreen

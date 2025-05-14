@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
 import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
-
-export default function Webdesign() {
+// FORTSÄTT MED MARGINTOP , BOXHEIGT OCH PADDING TOP 
+export default function Poddcast() {
   const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -14,9 +14,8 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 310, md: 315, xl: 370 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 315, md: 320, xl: 390 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
-
   const navigate = useNavigate();
 
   const goToOffertWithPreselect = (preselect: string) => {
@@ -40,12 +39,13 @@ export default function Webdesign() {
 
   return (
     <Box
-      id="webbdesign"
+      id="poddcast"
       sx={{
         paddingLeft: 0,
         marginLeft: -8,
         display: "flex",
         flexDirection: "column",
+        paddingTop: 1
       }}
     >
       <Box
@@ -56,6 +56,8 @@ export default function Webdesign() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
+         
+         
         }}
       >
         <Texting
@@ -68,7 +70,7 @@ export default function Webdesign() {
           }}
           component="h1"
         >
-          Webbsesign
+          Podcast
         </Texting>
         <TextingATYP
           component="h3"
@@ -77,8 +79,7 @@ export default function Webdesign() {
             color: "#363434",
             margin: 0,
             padding: 0,
-            // marginBottom: { xs: -9, md: 0 },
-            marginBottom: { xs: -9, md: 0 },
+            marginBottom: { xs: -9, md: 2 },
             zIndex: 999,
           }}
         >
@@ -90,7 +91,7 @@ export default function Webdesign() {
           backgroundColor: "#F7F7F7",
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
-          paddingBottom: { xs: 8, md: 0 },
+          paddingBottom: { xs: 8, md: 10 },
           margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
@@ -114,8 +115,9 @@ export default function Webdesign() {
               width: 310,
               color: "#363434",
               padding: 4,
-              marginTop: 13,
+              marginTop: 10,
               height: boxHeight,
+            
               // borderRadius: 2,
               // backgroundColor: "#B9DCD2",
               // width: { xs: 310, md: 310, xl: 330 },
@@ -129,17 +131,18 @@ export default function Webdesign() {
               sx={{
                 color: "#2D6555",
                 fontSize: { xs: 25, xl: 30 },
-                paddingTop: 2,
+                paddingTop: 1,
               }}
             >
               Klick
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
-              Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
-              sätt.
+              Du är sugen på det där med podd och har kunskaper i ljudklippning.
+              Innan du går all in vill du gärna prova på - hyr vår
+              poddutrustning innan du bestämmer dig för a investera i en egen!
             </TextingATYP>
-            <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 1 }}>
-              20 000:-
+            <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+              Från 700:-/dag
             </Texting>
             <TextingATYP
               sx={{ color: "#2D6555", fontSize: { xs: 13, xl: 15 } }}
@@ -151,42 +154,28 @@ export default function Webdesign() {
               sx={{
                 color: "#2D6555",
                 fontSize: { xs: 14, xl: 17 },
-                paddingTop: 0.5,
+                paddingTop: 2,
               }}
             >
-              Vad får du?
+              Vad ingår?
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
-              -Uppstartsmöte
+              -Tre poddmickar inkl. Bordsstativ
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Startsida
+              -Tre hörlurar
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Upp till fem undersidor
+              -Portabel recorder (Zoom H6)
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Cookie policy
-            </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Enklare sökordsanalys
-            </TextingATYP>
-
-            <TextingATYP
-              sx={{
-                fontSize: { xs: 12, xl: 13 },
-                textAlign: "start",
-                paddingTop: 1,
-              }}
-            >
-              Hemsidan är responsiv och anpassas till desktop, platta eller
-              mobil beroende på besökarens referenser.
+              -Enklare genomgång av utrustning, vid behov
             </TextingATYP>
           </Box>
           <Button
             fullWidth
             aria-label="Välj Klick"
-            onClick={() => goToOffertWithPreselect("Webdesign: Klick")}
+            onClick={() => goToOffertWithPreselect("Podcast: Klick")}
             sx={{
               ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
               justifyContent: "center",
@@ -210,9 +199,8 @@ export default function Webdesign() {
               backgroundColor: "#F3D9DF",
               width: 310,
               padding: 4,
-              marginTop: 3,
+              marginTop: 0,
               color: "#363434",
-              paddingTop: 2
             }}
           >
             <Texting
@@ -225,12 +213,13 @@ export default function Webdesign() {
               Klack
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
-              sätt, men det kräver lite fler undersidor än vad klick-paketet
-              erbjuder..
+              Du är sugen på det där med podd men har varken rätt kunskap eller
+              utrustning. Med klack får du inte bara tillgång till ordentlig
+              utrustning - vi klipper och producerar även din podd. Vi
+              publicerar också, för den som önskar.
             </TextingATYP>
             <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
-              35 000:-
+              Från 6000:-
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               Ex. moms
@@ -242,41 +231,31 @@ export default function Webdesign() {
                 color: "#EF3434",
               }}
             >
-              Vad får du?
+              Vad ingår?
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
-              -Uppstartsmöte
+              -Tre poddmickar inkl bordsstativ
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Startsida
+              -Tre hörlurar
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Upp till åtta undersidor
+              -Portabel recorder (Zoom H6)
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Cookie policy
+              -Genomgång av utrustning
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Enklare sökordsanalys
+              -Producering/publicering
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -SEO-anpassad copy
-            </TextingATYP>
-            <TextingATYP
-              sx={{
-                fontSize: { xs: 12, xl: 13 },
-                textAlign: "start",
-                paddingTop: 2,
-              }}
-            >
-              Hemsidan är responsiv och anpassas till desktop, platta eller
-              mobil beroende på besökarens referenser.
+              -Upp till tre timmar
             </TextingATYP>
           </Box>
           <Button
             fullWidth
             aria-label="Välj Klack"
-            onClick={() => goToOffertWithPreselect("Webdesign: Klack")}
+            onClick={() => goToOffertWithPreselect("Podcast: Klack")}
             sx={{
               ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
               justifyContent: "center",
@@ -285,7 +264,6 @@ export default function Webdesign() {
             <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
           </Button>
         </Box>
-
         <Box
           sx={{
             display: "flex",
@@ -301,7 +279,7 @@ export default function Webdesign() {
               width: 310,
               color: "#F7F7F7",
               padding: 4,
-              marginTop: -8,
+              marginTop: -4,
             }}
           >
             <Texting
@@ -314,12 +292,12 @@ export default function Webdesign() {
               Boom!
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              För dig är det viktigt med en unik design. Här specialdesignar vi
-              på detaljnivå för att ditt varumärke ska sticka ut, precis så som
-              det förtjänar att göra.
+              Du nöjer dig inte med bara ljud, du går all in och hakar på
+              trenden med videopodd - smart val! Välkommen till vår poddstudio i
+              centrala Borås - du sköter snacket, vi hanterar resten
             </TextingATYP>
             <Texting sx={{ color: "#B8DCD2", fontSize: 25, paddingTop: 2 }}>
-              Från 60 000:-
+              Från 9000:-
             </Texting>
             <TextingATYP
               sx={{ color: "#F7F7F7", fontSize: { xs: 13, xl: 15 } }}
@@ -333,52 +311,70 @@ export default function Webdesign() {
                 paddingTop: 5,
               }}
             >
-              Vad får du?
+              Vad ingår?
             </Texting>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
-              -Uppstartsmöte
+              -Tre poddmickar inkl bordsstativ
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Analys av befintlig hemsida
+              -Tre hörlurar
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Startsida
+              -Portabel recorder (Zoom H6)
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Upp till 20 specialdesignade undersidor
+              -Producering/publicering
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Cookie policy
+              - Lån av poddstudio
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Enklare sökordsanalys
+              -Hela avsnittet filmat och klippt
             </TextingATYP>
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              -Bildmanér för stillbild och video till hemsidan
-            </TextingATYP>
-
-            <TextingATYP
-              sx={{
-                fontSize: { xs: 12, xl: 13 },
-                textAlign: "start",
-                paddingTop: 2,
-              }}
-            >
-              Hela hemsidan är responsiv och anpassas till desktop, platta eller
-              mobil beroende på besökarens referenser.
+              -Upp till tre timmar
             </TextingATYP>
           </Box>
           <Button
-            fullWidth // gör hela knappen klickbar horisontellt
+            fullWidth
             aria-label="Välj Boom"
-            onClick={() => goToOffertWithPreselect("Webdesign: Boom")}
+            onClick={() => goToOffertWithPreselect("Podcast: Boom")}
             sx={{
               ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
-              justifyContent: "center", // centrerar texten
+              justifyContent: "center",
             }}
           >
             <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
           </Button>
+
+          {/* <Button
+            aria-label="Navigera till podden Snack och surr"
+            onClick={() => {
+                console.log("Boom klickad");
+                navigate("/offert", { state: { preselect: "Podcast: Boom" } });
+              }}
+            sx={{
+              backgroundColor: "#B9DCD2",
+              color: "#363434",
+              marginTop: 1,
+              width: isTablet ? "50%" : "35%",
+
+              marginBottom: 5,
+              // marginTop: 5,
+              borderRadius: 2,
+              paddingY: isMobile ? 1 : 1.2,
+              textTransform: "none",
+              marginY: { xs: 2, md: 2 },
+
+              "&:hover": {
+                backgroundColor: "#a2cfc1",
+              },
+            }}
+          >
+            <Texting sx={{ fontSize: { sx: 10, md: 18, xl: 25 } }}>
+              Boom!
+            </Texting>
+          </Button> */}
         </Box>
       </Box>
     </Box>
