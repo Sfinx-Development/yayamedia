@@ -30,7 +30,7 @@ type LocationState = {
   
 
 
-// emailjs.init("C8CxNnxZg6mg-d2tq");
+emailjs.init("C8CxNnxZg6mg-d2tq");
 
 export default function OffertForm({ locationState }: OffertFormProps) {
   const [name, setName] = useState("");
@@ -123,7 +123,7 @@ export default function OffertForm({ locationState }: OffertFormProps) {
         .join("\n");
 
       const templateParams = {
-        to_name: "Städtjejerna",
+        to_name: "Yaya",
         from_name: name,
         reply_to: email,
         message: `Telefon: ${phone}
@@ -135,7 +135,7 @@ export default function OffertForm({ locationState }: OffertFormProps) {
       };
 
       emailjs
-        .send("service_52wg30w", "template_itru98a", templateParams)
+        .send("service_i4ggttl", "", templateParams)
         .then(() => {
           setSnackbarSeverity("success");
           setSnackbarMessage("Förfrågan skickad!");
