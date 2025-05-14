@@ -25,7 +25,7 @@ export default function SleipnerProject() {
     >
       <ParallaxImg
         image="https://i.imgur.com/ADTyziN.jpeg"
-        bgPosition="20% 67%" // ← flyttar bilden uppåt
+        bgPosition={{xs:"20% 150%",sm:"20% 75%",md:"20% 67%",xl:"20% 75%"}} // ← flyttar bilden uppåt
         bgSize="160%"
       />
       <Box sx={{ width: "100%", position: "relative" }}>

@@ -6,7 +6,7 @@ import {
   TypographyProps,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 // import Case from "./Case";
 import Footer from "./Footer";
 import GreenComponent from "./GreenComponent";
@@ -19,6 +19,8 @@ export default function ParallaxWave() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
+  const navigate = useNavigate();
+
   // const isBigScreen = window.innerHeight >= 1080;
   useEffect(() => {
     const handleScroll = () => {
@@ -162,7 +164,8 @@ export default function ParallaxWave() {
               paddingX: isTablet ? 2 : { xs: 0, md: 0 },
 
               width: "100%",
-      maxWidth: 1200,              mx: "auto",
+              maxWidth: 1200,
+              mx: "auto",
             }}
           >
             <Box
@@ -254,6 +257,7 @@ export default function ParallaxWave() {
               </Box>
               <Button
                 variant="contained"
+                onClick={() => navigate("/offert")} 
                 sx={{
                   backgroundColor: "#363434",
                   marginTop: 2,
@@ -365,6 +369,7 @@ export default function ParallaxWave() {
               </Box>
               <Button
                 variant="contained"
+                onClick={() => navigate("/tjanster", { state: { scrollTo: "poddcast" } })}
                 sx={{
                   backgroundColor: "#2F5C4A",
                   marginTop: 2,

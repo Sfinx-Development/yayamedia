@@ -80,25 +80,40 @@ import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
 import GraphicProfile from "./GraphicProfile";
 import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
+import Poddcast from "./Poddcast";
 import { isMobile, isTablet } from "./GreyComponent";
+import { useLocation } from "react-router-dom";
 
 export default function PaketScroll() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [dragging, setDragging] = useState(false);
+  const location = useLocation();
 
   const baseComponents = [
     <SocialMedia key="s" />,
     <Webdesign key="w" />,
     <GraphicProfile key="g" />,
+    <Poddcast key="p" />,
   ];
 
   const repeated = Array.from({ length: 10 }, (_, i) =>
     baseComponents.map((Component, j) => (
-      <Box key={`${i}-${j}`} sx={{ flexShrink: 0 }}>
+      <Box key={`${i}-${j}`} sx={{ paddingRight: 15 }}>
         {Component}
       </Box>
     ))
   ).flat();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const el = document.getElementById(location.state.scrollTo);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -121,11 +136,19 @@ export default function PaketScroll() {
 
       if (scrollArea.scrollLeft < threshold) {
         scrollArea.scrollLeft += scrollWidth / 2;
-      } else if (scrollArea.scrollLeft > scrollWidth - threshold - clientWidth) {
+      } else if (
+        scrollArea.scrollLeft >
+        scrollWidth - threshold - clientWidth
+      ) {
         scrollArea.scrollLeft -= scrollWidth / 2;
       }
     }
   };
+  // const handleDrag = (_: DraggableEvent, data: DraggableData) => {
+  //   if (scrollRef.current) {
+  //     scrollRef.current.scrollLeft -= data.deltaX;
+  //   }
+  // };
 
   return (
     <Box
@@ -138,8 +161,12 @@ export default function PaketScroll() {
     >
       <Draggable
         axis="x"
-        onStart={handleDragStart}
-        onStop={handleDragStop}
+        // onStart={handleDragStart}
+        // onStop={() => setDragging(false)}
+        // onDrag={handleDrag}
+        // disabled={isMobile || isTablet}
+         onStart={handleDragStart}
+         onStop={handleDragStop}
         disabled={isMobile || isTablet} // 👈 inaktivera på mobil
       >
         <Box
