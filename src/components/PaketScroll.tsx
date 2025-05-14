@@ -98,18 +98,18 @@ export default function PaketScroll() {
 
   const repeated = Array.from({ length: 10 }, (_, i) =>
     baseComponents.map((Component, j) => (
-      <Box key={`${i}-${j}`} sx={{ flexShrink: 0 }}>
+      <Box key={`${i}-${j}`} sx={{ paddingRight: 15}}>
         {Component}
       </Box>
     ))
   ).flat();
 
   useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
+    if (location.state?.scrollTo) {
+      const el = document.getElementById(location.state.scrollTo);
+      if (el) {
         setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" });
+          el.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
     }

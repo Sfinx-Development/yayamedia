@@ -14,8 +14,9 @@ export default function SocialMedia() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 385, md: 390, xl: 490 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 385, md: 335, xl: 395 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
+ 
 
   const navigate = useNavigate();
 
@@ -55,6 +56,7 @@ export default function SocialMedia() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
+     
         }}
       >
         <Texting
@@ -145,7 +147,7 @@ export default function SocialMedia() {
               sx={{
                 color: "#2D6555",
                 fontSize: { xs: 14, xl: 17 },
-                paddingTop: 2,
+                paddingTop: 1,
               }}
             >
               Vad får du?
@@ -170,7 +172,7 @@ export default function SocialMedia() {
               sx={{
                 fontSize: { xs: 12, xl: 13 },
                 textAlign: "center",
-                paddingTop: 2,
+                paddingTop: 1,
               }}
             >
               Klick erbjuds också som ett engångspaket. Då till en kostnad på
@@ -280,6 +282,7 @@ export default function SocialMedia() {
             flex: 1,
             flexDirection: "column",
             alignItems: "flex-start",
+            marginTop: -1
           }}
         >
           <Box

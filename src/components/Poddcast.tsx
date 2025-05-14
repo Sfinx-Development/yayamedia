@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
 import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
-
+// FORTSÄTT MED MARGINTOP , BOXHEIGT OCH PADDING TOP 
 export default function Poddcast() {
   const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
@@ -14,7 +14,7 @@ export default function Poddcast() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 355, md: 350, xl: 450 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 355, md: 320, xl: 390 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
   const navigate = useNavigate();
 
@@ -45,6 +45,7 @@ export default function Poddcast() {
         marginLeft: -8,
         display: "flex",
         flexDirection: "column",
+        paddingTop: 1
       }}
     >
       <Box
@@ -55,6 +56,8 @@ export default function Poddcast() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
+         
+         
         }}
       >
         <Texting
@@ -76,7 +79,7 @@ export default function Poddcast() {
             color: "#363434",
             margin: 0,
             padding: 0,
-            // marginBottom: { xs: -9, md: 0 },
+            marginBottom: { xs: -9, md: 2 },
             zIndex: 999,
           }}
         >
@@ -112,8 +115,9 @@ export default function Poddcast() {
               width: 310,
               color: "#363434",
               padding: 4,
-              marginTop: 14,
+              marginTop: 10,
               height: boxHeight,
+            
               // borderRadius: 2,
               // backgroundColor: "#B9DCD2",
               // width: { xs: 310, md: 310, xl: 330 },
@@ -127,7 +131,7 @@ export default function Poddcast() {
               sx={{
                 color: "#2D6555",
                 fontSize: { xs: 25, xl: 30 },
-                paddingTop: 2,
+                paddingTop: 1,
               }}
             >
               Klick
@@ -275,7 +279,7 @@ export default function Poddcast() {
               width: 310,
               color: "#F7F7F7",
               padding: 4,
-              marginTop: -6,
+              marginTop: -4,
             }}
           >
             <Texting

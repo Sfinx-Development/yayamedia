@@ -14,7 +14,7 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 340, md: 345, xl: 450 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 340, md: 315, xl: 370 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   const navigate = useNavigate();
@@ -113,7 +113,7 @@ export default function Webdesign() {
               width: 310,
               color: "#363434",
               padding: 4,
-              marginTop: 16,
+              marginTop: 13,
               height: boxHeight,
               // borderRadius: 2,
               // backgroundColor: "#B9DCD2",
@@ -137,7 +137,7 @@ export default function Webdesign() {
               Du behöver en hemsida som presenterar ditt varumärke på ett snyggt
               sätt.
             </TextingATYP>
-            <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 2 }}>
+            <Texting sx={{ color: "#2D6555", fontSize: 25, paddingTop: 1 }}>
               20 000:-
             </Texting>
             <TextingATYP
@@ -150,7 +150,7 @@ export default function Webdesign() {
               sx={{
                 color: "#2D6555",
                 fontSize: { xs: 14, xl: 17 },
-                paddingTop: 1,
+                paddingTop: 0.5,
               }}
             >
               Vad får du?
@@ -175,7 +175,7 @@ export default function Webdesign() {
               sx={{
                 fontSize: { xs: 12, xl: 13 },
                 textAlign: "start",
-                paddingTop: 2,
+                paddingTop: 1,
               }}
             >
               Hemsidan är responsiv och anpassas till desktop, platta eller
@@ -209,8 +209,9 @@ export default function Webdesign() {
               backgroundColor: "#F3D9DF",
               width: 310,
               padding: 4,
-              marginTop: 0,
+              marginTop: 3,
               color: "#363434",
+              paddingTop: 2
             }}
           >
             <Texting
@@ -299,7 +300,7 @@ export default function Webdesign() {
               width: 310,
               color: "#F7F7F7",
               padding: 4,
-              marginTop: -6,
+              marginTop: -8,
             }}
           >
             <Texting

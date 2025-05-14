@@ -369,7 +369,7 @@ export default function ParallaxWave() {
               </Box>
               <Button
                 variant="contained"
-               onClick={() => navigate("/tjanster#poddcast")}
+                onClick={() => navigate("/tjanster", { state: { scrollTo: "poddcast" } })}
                 sx={{
                   backgroundColor: "#2F5C4A",
                   marginTop: 2,

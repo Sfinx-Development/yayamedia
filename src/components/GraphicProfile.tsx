@@ -14,7 +14,7 @@ export default function GraphicProfile() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 435, sm: 300, md: 430, xl: 540 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 435, sm: 300, md: 320, xl: 380 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
   const navigate = useNavigate();
 
@@ -55,6 +55,7 @@ export default function GraphicProfile() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
+          paddingTop: 2
         }}
       >
         <Texting
@@ -76,6 +77,7 @@ export default function GraphicProfile() {
             color: "#363434",
             margin: 0,
             padding: 0,
+            marginBottom: { xs: -1, md: 7 },
             // marginBottom: { xs: -9, md: 0 },
             zIndex: 999,
           }}
@@ -264,7 +266,7 @@ export default function GraphicProfile() {
               width: { xs: 310, md: 310, xl: 330 },
               color: "#F7F7F7",
               padding: 4,
-              marginTop: -5,
+              marginTop: -7.5,
             }}
           >
             <Texting
