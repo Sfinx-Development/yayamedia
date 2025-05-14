@@ -14,7 +14,7 @@ export default function GraphicProfile() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 435, sm: 300, md: 320, xl: 380 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 305, sm: 300, md: 320, xl: 380 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
   const navigate = useNavigate();
 
@@ -114,7 +114,7 @@ export default function GraphicProfile() {
               width: 310,
               color: "#363434",
               padding: 4,
-              marginTop: 4,
+              marginTop: 3,
               height: boxHeight,
               // borderRadius: 2,
               // backgroundColor: "#B9DCD2",
@@ -190,7 +190,8 @@ export default function GraphicProfile() {
               backgroundColor: "#F3D9DF",
               width: { xs: 310, md: 310, xl: 330 },
               padding: 4,
-              marginTop: 0,
+               marginTop: {xs: -2.5, md: 0 },
+              
               color: "#363434",
             }}
           >
@@ -266,7 +267,9 @@ export default function GraphicProfile() {
               width: { xs: 310, md: 310, xl: 330 },
               color: "#F7F7F7",
               padding: 4,
-              marginTop: -7.5,
+              marginTop: {xs: -6, md: -7.5}, 
+
+             
             }}
           >
             <Texting

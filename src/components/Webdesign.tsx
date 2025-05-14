@@ -14,7 +14,7 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 340, md: 315, xl: 370 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 310, md: 315, xl: 370 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   const navigate = useNavigate();
@@ -78,6 +78,7 @@ export default function Webdesign() {
             margin: 0,
             padding: 0,
             // marginBottom: { xs: -9, md: 0 },
+            marginBottom: { xs: -9, md: 0 },
             zIndex: 999,
           }}
         >

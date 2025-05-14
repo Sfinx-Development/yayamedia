@@ -14,7 +14,7 @@ export default function SocialMedia() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 385, md: 335, xl: 395 }; // Samma höjd för alla boxar
+  const boxHeight = { xs: 330, md: 335, xl: 395 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
  
 
@@ -78,7 +78,7 @@ export default function SocialMedia() {
             color: "#363434",
             margin: 0,
             padding: 0,
-            // marginBottom: { xs: -9, md: 0 },
+            marginBottom: { xs: -9, md: 0 },
             zIndex: 999,
           }}
         >
