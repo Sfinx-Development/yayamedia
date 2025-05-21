@@ -109,10 +109,11 @@ export default function ParallaxWave() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-end",
+                alignItems: "center",
                 paddingBottom: { xs: 5, md: 20 },
-                margin: { xs: 2, md: 0 },
+                margin: { xs: 0, md: 0 },
                 //  paddingLeft: 1.5,
-                paddingLeft: isMobile ? 1.5 : { xs: 1, md: 0, sm: 0, xl: 0 },
+                paddingLeft: isMobile ? 0: { xs: 0, md: 0, sm: 0, xl: 0 },
               }}
             >
               <Texting
