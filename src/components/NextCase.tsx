@@ -2,16 +2,13 @@ import { Box, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 export default function NextCase() {
-  const cases = ["/asundsholm", "/sleipner", "/prhome&svanefors"];
+  const cases = ["/asundsholm", "/sleipner", "/prhome&svanefors", "/salusso"];
 
-  // Hämta nuvarande path
   const location = useLocation();
   const pathname = location.pathname;
 
-  // Hitta nuvarande index
   const currentIndex = cases.indexOf(pathname);
 
-  // Beräkna föregående och nästa case (loopar runt automatiskt)
   const prevCase = cases[(currentIndex - 1 + cases.length) % cases.length];
   const nextCase = cases[(currentIndex + 1) % cases.length];
 

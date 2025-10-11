@@ -48,9 +48,10 @@ const PRHomeUppdrag: React.FC = () => {
       >
         <Box
           sx={{
-            maxWidth: { xs: "100%", md: "50%", xl: "50%" },
+            width: { xs: "98%", md: "50%", xl: "100%" },
             textAlign: "left",
-            ml: { xs: 3, md: -50 },
+            // backgroundColor: "red",
+            ml: { xs: 2, md: -30, xl: 50 },
             mr: { xs: 3 },
             mt: isMobile ? -12 : { md: -23 },
           }}
@@ -199,7 +200,7 @@ const PRHomeUppdrag: React.FC = () => {
               // backgroundColor: "red",
               width: "100%",
               ml: { xs: 2, md: 20 },
-              mt: { xs: 2, md: 4 },
+              mt: { xs: 2, md: 6, xl: 8 },
             }}
           >
             <Texting
@@ -216,7 +217,7 @@ const PRHomeUppdrag: React.FC = () => {
               width: "100%",
               display: "flex",
               justifyContent: "center",
-              mt: { xs: 2, md: 6 },
+              mt: { xs: 2, md: 4 },
             }}
           >
             <Box

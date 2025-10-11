@@ -9,7 +9,7 @@
 //         height: "100vh",
 //         position: "relative",
 //         overflow: "hidden",
-        
+
 //       }}
 //     >
 //       {/* Bakgrundsbilden – FIXERAD */}
@@ -53,16 +53,19 @@
 // };
 
 // export default ParallaxImg;
-import { Box} from "@mui/material";
-
+import { Box } from "@mui/material";
 
 interface ParallaxImgProps {
   image: string;
-  bgPosition?: string | { [key: string]: string }; 
-  bgSize?: string;     // ny prop
+  bgPosition?: string | { [key: string]: string };
+  bgSize?: string | { [key: string]: string };
 }
 
-const ParallaxImg: React.FC<ParallaxImgProps> = ({ image, bgSize, bgPosition}) => {
+const ParallaxImg: React.FC<ParallaxImgProps> = ({
+  image,
+  bgSize,
+  bgPosition,
+}) => {
   return (
     <Box
       sx={{
@@ -75,14 +78,15 @@ const ParallaxImg: React.FC<ParallaxImgProps> = ({ image, bgSize, bgPosition}) =
         alignItems: { xs: "center", xl: "start" },
         position: "fixed",
         zIndex: 2,
-         height: "100vh",
+        height: "100vh",
       }}
     >
       {/* Bakgrundsbild – fixerad i viewporten */}
       <Box
         sx={{
           position: "fixed",
-          top: 0,         backgroundRepeat: "no-repeat",
+          top: 0,
+          backgroundRepeat: "no-repeat",
           left: 0,
           width: "100%",
           minHeight: "100vh",
@@ -94,11 +98,7 @@ const ParallaxImg: React.FC<ParallaxImgProps> = ({ image, bgSize, bgPosition}) =
           // zIndex: 1,
         }}
       />
-
- 
-        
-      </Box>
-
+    </Box>
   );
 };
 
