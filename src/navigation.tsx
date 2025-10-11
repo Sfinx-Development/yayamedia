@@ -10,6 +10,7 @@ import PRHome from "./pages/PRHomeProject";
 import AsundsholmProject from "./pages/Projects";
 import Salusso from "./pages/SalussoProject";
 import SleipnerProject from "./pages/SleipnerProject";
+import SwedteamProject from "./pages/SwedTeamProject";
 
 const Navigation = () => {
   return (
@@ -22,6 +23,7 @@ const Navigation = () => {
         <Route path="sleipner" element={<SleipnerProject />} />
         <Route path="prhome&svanefors" element={<PRHome />} />
         <Route path="salusso" element={<Salusso />} />
+        <Route path="swedteam" element={<SwedteamProject />} />
         <Route path="/offert" element={<Offert />} />
 
         <Route path="*" element={<Error />}></Route>
