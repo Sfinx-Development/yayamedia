@@ -1,6 +1,7 @@
 import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import React from "react";
 import { isMobile, isTablet } from "./GreyComponent";
+import Svanefors from "./SvaneFors";
 
 const PRHomeUppdrag: React.FC = () => {
   const Texting = styled(Typography)<TypographyProps>`
@@ -111,6 +112,7 @@ const PRHomeUppdrag: React.FC = () => {
             gap: 1.5,
             px: { xs: 3, md: 8, xl: 14 },
             mb: 6,
+            mt: 2,
           }}
         >
           <Box
@@ -287,6 +289,8 @@ const PRHomeUppdrag: React.FC = () => {
           </Box>
         </Box>
       </Box>
+
+      <Svanefors />
 
       <Box
         sx={{
