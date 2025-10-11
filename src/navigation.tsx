@@ -8,6 +8,7 @@ import Yaya from "./pages/Yaya";
 import Offert from "./pages/Offert";
 import PRHome from "./pages/PRHomeProject";
 import AsundsholmProject from "./pages/Projects";
+import Salusso from "./pages/SalussoProject";
 import SleipnerProject from "./pages/SleipnerProject";
 
 const Navigation = () => {
@@ -20,6 +21,7 @@ const Navigation = () => {
         <Route path="asundsholm" element={<AsundsholmProject />}></Route>
         <Route path="sleipner" element={<SleipnerProject />} />
         <Route path="prhome&svanefors" element={<PRHome />} />
+        <Route path="salusso" element={<Salusso />} />
         <Route path="/offert" element={<Offert />} />
 
         <Route path="*" element={<Error />}></Route>
