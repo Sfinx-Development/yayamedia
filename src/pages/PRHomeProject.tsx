@@ -1,15 +1,13 @@
 import { Box } from "@mui/material";
 import Footer from "../components/Footer";
 import { isMobile } from "../components/GreyComponent";
-import InstagramGrid from "../components/InstagramGrid";
 import MobileFooter from "../components/MobileFooter";
 import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
-import SleipnerUppdrag from "../components/SleipnerUppdrag";
+import PRHomeUppdrag from "../components/PRHomeUppdrag";
 import Wave from "../components/Wave";
 
-//RESPOINSIVT STOR SKÄRM
-export default function SleipnerProject() {
+export default function PRHome() {
   return (
     <Box
       sx={{
@@ -57,10 +55,8 @@ export default function SleipnerProject() {
               alignItems: "center",
             }}
           >
-            <SleipnerUppdrag />
-            <InstagramGrid />
+            <PRHomeUppdrag />
             <NextCase />
-
             {isMobile ? <MobileFooter /> : <Footer />}
           </Box>
         </Box>
