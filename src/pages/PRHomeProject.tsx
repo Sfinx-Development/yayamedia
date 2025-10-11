@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Footer from "../components/Footer";
 import { isMobile } from "../components/GreyComponent";
 import MobileFooter from "../components/MobileFooter";
+import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import PRHomeUppdrag from "../components/PRHomeUppdrag";
 import Wave from "../components/Wave";
@@ -55,6 +56,7 @@ export default function PRHome() {
             }}
           >
             <PRHomeUppdrag />
+            <NextCase />
             {isMobile ? <MobileFooter /> : <Footer />}
           </Box>
         </Box>

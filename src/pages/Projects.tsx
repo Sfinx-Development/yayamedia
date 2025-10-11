@@ -5,6 +5,7 @@ import Case from "../components/Case";
 import Footer from "../components/Footer";
 import { isMobile } from "../components/GreyComponent";
 import MobileFooter from "../components/MobileFooter";
+import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import Wave from "../components/Wave";
 
@@ -39,7 +40,7 @@ export default function AsundsholmProject() {
           <Box
             sx={{
               backgroundColor: "#f8f8f8",
-              marginTop: {xs:-2,xl:-25},
+              marginTop: { xs: -2, xl: -25 },
               position: "absolute",
               width: "100%",
               zIndex: 3,
@@ -52,6 +53,7 @@ export default function AsundsholmProject() {
             <AsundsholmUppdrag />
             <BonusComponent />
             <Case />
+            <NextCase />
             {isMobile ? <MobileFooter /> : <Footer />}
           </Box>
         </Box>

@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { isMobile } from "../components/GreyComponent";
 import InstagramGrid from "../components/InstagramGrid";
 import MobileFooter from "../components/MobileFooter";
+import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import SleipnerUppdrag from "../components/SleipnerUppdrag";
 import Wave from "../components/Wave";
@@ -25,7 +26,12 @@ export default function SleipnerProject() {
     >
       <ParallaxImg
         image="https://i.imgur.com/ADTyziN.jpeg"
-        bgPosition={{xs:"20% 150%",sm:"20% 75%",md:"20% 67%",xl:"20% 75%"}} // ← flyttar bilden uppåt
+        bgPosition={{
+          xs: "20% 150%",
+          sm: "20% 75%",
+          md: "20% 67%",
+          xl: "20% 75%",
+        }} // ← flyttar bilden uppåt
         bgSize="160%"
       />
       <Box sx={{ width: "100%", position: "relative" }}>
@@ -53,6 +59,7 @@ export default function SleipnerProject() {
           >
             <SleipnerUppdrag />
             <InstagramGrid />
+            <NextCase />
 
             {isMobile ? <MobileFooter /> : <Footer />}
           </Box>

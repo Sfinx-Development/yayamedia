@@ -117,7 +117,7 @@ const PRHomeUppdrag: React.FC = () => {
         >
           <Box
             sx={{
-              width: "98%",
+              width: "99%",
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "center",

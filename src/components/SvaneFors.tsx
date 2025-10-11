@@ -6,11 +6,6 @@ export default function Svanefors() {
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)<TypographyProps>`
-    font-family: "atyp-bl-variable", sans-serif;
-    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
-  `;
-
   const picturesRow2: string[] = [
     "https://i.imgur.com/2P8r1u6.jpeg",
     "https://i.imgur.com/L5ctafU.jpeg",
@@ -32,6 +27,7 @@ export default function Svanefors() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        mt: { xl: 4 },
       }}
     >
       <Texting
@@ -58,7 +54,7 @@ export default function Svanefors() {
       >
         <Box
           sx={{
-            width: "98%",
+            width: "99%",
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
@@ -138,7 +134,7 @@ export default function Svanefors() {
             // backgroundColor: "red",
             width: "100%",
             ml: { xs: 2, md: 20 },
-            mt: { xs: 2, md: 4 },
+            mt: { xs: 2, md: 6, xl: 8 },
           }}
         >
           <Texting
@@ -155,7 +151,7 @@ export default function Svanefors() {
             width: "100%",
             display: "flex",
             justifyContent: "center",
-            mt: { xs: 2, md: 6 },
+            mt: { xs: 2, md: 4 },
           }}
         >
           <Box
