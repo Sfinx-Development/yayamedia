@@ -23,21 +23,21 @@ export default function PRHome() {
       }}
     >
       <ParallaxImg
-        image="https://i.imgur.com/ADTyziN.jpeg"
+        image="https://i.imgur.com/dKFIC1b.jpeg"
         bgPosition={{
-          xs: "20% 150%",
-          sm: "20% 75%",
-          md: "20% 67%",
-          xl: "20% 75%",
-        }} // ← flyttar bilden uppåt
-        bgSize="160%"
+          xs: "65% 25%",
+          sm: "65% 25%",
+          md: "50% 25%",
+          xl: "50% 35%",
+        }}
+        bgSize={{ xs: "125%", md: "100%" }}
       />
       <Box sx={{ width: "100%", position: "relative" }}>
         <Box
           sx={{
             position: "absolute",
             width: "100%",
-            paddingY: { xs: 40, md: 10 },
+            paddingY: { xs: 40, md: 15, lg: 20, xl: 50 },
             zIndex: 3,
           }}
         >
