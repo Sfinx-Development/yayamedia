@@ -85,12 +85,13 @@ const SwedteamUppdrag: React.FC = () => {
             position: "relative",
             display: "flex",
             justifyContent: "center",
+            flexDirection: "column",
             alignItems: "center",
           }}
         >
           <Box
             sx={{
-              position: "absolute",
+              position: { xs: "static", md: "absolute" },
               top: { xs: 16, md: 80 },
               left: { xs: 16, md: 140 },
               zIndex: 2,
@@ -100,6 +101,7 @@ const SwedteamUppdrag: React.FC = () => {
             <Texting
               variant="h3"
               sx={{
+                ml: { xs: 2, md: 0 },
                 fontSize: { xs: 18, md: 24, xl: 32 },
                 mb: 1,
                 textAlign: "left",
@@ -112,6 +114,7 @@ const SwedteamUppdrag: React.FC = () => {
               variant="body1"
               sx={{
                 fontSize: isTablet ? 18 : { xl: 24 },
+                ml: { xs: 2, md: 0 },
               }}
               paragraph
             >
@@ -178,6 +181,114 @@ const SwedteamUppdrag: React.FC = () => {
             alt="Magazines"
             sx={{
               width: "100%",
+              objectFit: "cover",
+            }}
+          />
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          // backgroundColor: "red",
+          width: "100%",
+          ml: { xs: 2, md: 40 },
+          mt: { xs: 4, md: 8 },
+        }}
+      >
+        <Texting
+          variant="h3"
+          sx={{ fontSize: { xs: 18, md: 24, xl: 32 } }}
+          fontWeight={400}
+          textAlign={"left"}
+        >
+          Logotyp till ny teknologi
+        </Texting>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          mt: { xs: 2, md: 4 },
+          py: { xs: 2, md: 4 },
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+            // height: "50%",
+          }}
+        >
+          <Box
+            component="img"
+            src="https://i.imgur.com/JV8N1zp.png"
+            alt="Tag med logotyp"
+            sx={{
+              // width: "40%",
+              height: { xs: "300px", md: "720px", xl: "820px" },
+              objectFit: "cover",
+            }}
+          />
+          <Box
+            component="img"
+            src="https://i.imgur.com/P8gia9p.jpeg"
+            alt="Tag på jacka"
+            sx={{
+              // width: "40%",
+              height: { xs: "300px", md: "700px", xl: "800px" },
+              objectFit: "cover",
+            }}
+          />
+        </Box>
+      </Box>
+
+      <Box
+        sx={{
+          // backgroundColor: "red",
+          width: "100%",
+          ml: { xs: 2, md: 40 },
+          mt: { xs: 4, md: 8 },
+        }}
+      >
+        <Texting
+          variant="h3"
+          sx={{ fontSize: { xs: 18, md: 24, xl: 32 } }}
+          fontWeight={400}
+          textAlign={"left"}
+        >
+          Katalog och trycksaker
+        </Texting>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          mt: { xs: 2, md: 4 },
+          py: { xs: 2, md: 4 },
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            // height: "50%",
+          }}
+        >
+          <Box
+            component="img"
+            src="https://i.imgur.com/BtW75uJ.jpeg"
+            alt="Tag med logotyp"
+            sx={{
+              width: "100%",
+
               objectFit: "cover",
             }}
           />
