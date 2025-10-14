@@ -19,7 +19,7 @@ export default function NextCase() {
         backgroundColor: "#f8f8f8",
         display: "flex",
         justifyContent: "center",
-        py: { xs: 4, md: 10 },
+        py: { xs: 2, md: 8 },
         mt: { xs: 2, md: 4 },
       }}
     >

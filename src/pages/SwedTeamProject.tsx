@@ -4,10 +4,10 @@ import { isMobile } from "../components/GreyComponent";
 import MobileFooter from "../components/MobileFooter";
 import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
-import PRHomeUppdrag from "../components/PRHomeUppdrag";
+import SwedteamUppdrag from "../components/SwedteamUppdrag";
 import Wave from "../components/Wave";
 
-export default function PRHome() {
+export default function SwedteamProject() {
   return (
     <Box
       sx={{
@@ -23,21 +23,21 @@ export default function PRHome() {
       }}
     >
       <ParallaxImg
-        image="https://i.imgur.com/dKFIC1b.jpeg"
+        image="https://i.imgur.com/YXRP2MD.jpeg"
         bgPosition={{
-          xs: "65% 25%",
-          sm: "65% 25%",
-          md: "50% 25%",
-          xl: "50% 35%",
+          xs: "50% 25%",
+          sm: "50% 75%",
+          md: "50% 50%",
+          xl: "50% 75%",
         }}
-        bgSize={{ xs: "125%", md: "100%" }}
+        bgSize={{ xs: "180%", md: "100%" }}
       />
       <Box sx={{ width: "100%", position: "relative" }}>
         <Box
           sx={{
             position: "absolute",
             width: "100%",
-            paddingY: { xs: 40, md: 15, lg: 20, xl: 50 },
+            paddingY: { xs: 40, md: 15 },
             zIndex: 3,
           }}
         >
@@ -55,7 +55,7 @@ export default function PRHome() {
               alignItems: "center",
             }}
           >
-            <PRHomeUppdrag />
+            <SwedteamUppdrag />
             <NextCase />
             {isMobile ? <MobileFooter /> : <Footer />}
           </Box>
