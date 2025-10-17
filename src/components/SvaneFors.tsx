@@ -133,7 +133,7 @@ export default function Svanefors() {
           sx={{
             // backgroundColor: "red",
             width: "100%",
-            ml: { xs: 2, md: 20 },
+            ml: { xs: 4, md: 33 },
             mt: { xs: 2, md: 6, xl: 8 },
           }}
         >
@@ -227,7 +227,7 @@ export default function Svanefors() {
         sx={{
           // backgroundColor: "red",
           width: "100%",
-          ml: { xs: 2, md: 20 },
+          ml: { xs: 4, md: 33 },
           mt: { xs: 4, md: 8 },
         }}
       >
