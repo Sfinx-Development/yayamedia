@@ -43,13 +43,21 @@ const SleipnerUppdrag: React.FC = () => {
             mt: isMobile ? -12 : { md: -23 },
           }}
         >
-          <TextingATYP variant="h2" sx={{ fontSize:{xs:36, md:52, xl:72} }} fontWeight={300}>
+          <TextingATYP
+            variant="h2"
+            sx={{ fontSize: { xs: 36, md: 52, xl: 72 } }}
+            fontWeight={300}
+          >
             Sleipnertandvården
           </TextingATYP>
-          <Texting variant="h3" sx={{ fontSize:{xs:28, md:36, xl:48} }}  fontWeight={400} gutterBottom>
+          <Texting
+            variant="h3"
+            sx={{ fontSize: { xs: 28, md: 36, xl: 48 } }}
+            fontWeight={400}
+            gutterBottom
+          >
             Uppdrag
           </Texting>
-
           <TextingATYP
             variant="body1"
             sx={{
@@ -58,46 +66,32 @@ const SleipnerUppdrag: React.FC = () => {
             }}
             paragraph
           >
-            Sleipnertandvården är precis vad du föreställer dig – en plats där
-            munhälsa får stå i centrum. Här vill man hjälpa patienter till en
-            friskare, vackrare och framför allt fräschare känsla, varje dag. Men
-            trots starka värderingar och trogna patienter saknades en viktig
-            pusselbit: en digital närvaro. Från texten vi skrev in i bilden
-            fanns mottagningen inte alls på sociala medier – något vi ville
-            förändra. Med en önskan om att nå en yngre målgrupp, och samtidigt
-            behålla sin befintliga kundbas, satte Sleipnertandvården upp ett
-            tydligt mål: att bli top of mind när det är dags att välja tandvård.
-          </TextingATYP>
-
-          <TextingATYP
-            variant="body1"
-            sx={{ fontSize: isTablet ? 18 : { xl: 24 } }}
-            paragraph
-          >
-            Vår rekommendation? Att börja från grunden, med en ny grafisk
-            profil. En visuell identitet som speglar både professionalitet och
-            värme, och som skulle hålla i längden.
-          </TextingATYP>
-          <Texting variant="h6" fontWeight={600} gutterBottom>
-            Resultat
-          </Texting>
-
-          <TextingATYP
-            variant="body1"
-            sx={{ fontSize: isTablet ? 18 : { xl: 24 } }}
-            paragraph
-          >
-            En modern grafisk profil med lekfulla inslag och ett tydligt
-            uttryck. En identitet som skapar igenkänning i sociala medier,
-            samtidigt som den väcker nyfikenhet hos just den målgrupp
-            Sleipnertandvården vill nå.
+            Sociala medier & Grafisk identitet.
           </TextingATYP>
         </Box>
       </Box>
       {/* BILDBOX */}
       <Box
         sx={{
+          // backgroundColor: "red",
           width: "100%",
+          ml: { xs: 4, md: 33 },
+          mt: { xs: 2, md: 6, xl: 8 },
+        }}
+      >
+        <Texting
+          variant="h3"
+          sx={{ fontSize: { xs: 18, md: 24, xl: 32 } }}
+          fontWeight={400}
+          textAlign={"left"}
+        >
+          Webdesign och Logotyp
+        </Texting>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          mt: { xs: 2, md: 4 },
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
         }}
@@ -150,7 +144,23 @@ const SleipnerUppdrag: React.FC = () => {
           />
         </Box>
       </Box>
-
+      <Box
+        sx={{
+          // backgroundColor: "red",
+          width: "100%",
+          ml: { xs: 4, md: 33 },
+          mt: { xs: 2, md: 6, xl: 8 },
+        }}
+      >
+        <Texting
+          variant="h3"
+          sx={{ fontSize: { xs: 18, md: 24, xl: 32 } }}
+          fontWeight={400}
+          textAlign={"left"}
+        >
+          Grafisk identitet
+        </Texting>
+      </Box>
       <Box
         sx={{
           width: "100%",

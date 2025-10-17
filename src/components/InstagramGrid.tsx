@@ -34,24 +34,28 @@ const InstagramGrid: React.FC = () => {
       <Box
         sx={{
           width: "100%",
-          maxWidth: 900,
+          maxWidth: 1000,
           px: { xs: 1, sm: 3, md: 0 },
           mt: isMobile ? -10 : { xs: 3 },
         }}
       >
-        <Texting
-          variant="h3"
-          fontWeight={500}
+        <Box
           sx={{
-            textAlign: "center",
-            fontWeight: 600,
-            mb: 4,
-            fontSize: { xs: 28, md: 36, xl: 48 },
+            // backgroundColor: "red",
+            width: "100%",
+
+            ml: { xs: 2, md: 0 },
           }}
         >
-          Sociala medier
-        </Texting>
-
+          <Texting
+            variant="h3"
+            sx={{ fontSize: { xs: 18, md: 24, xl: 32 } }}
+            fontWeight={400}
+            textAlign={"left"}
+          >
+            Sociala medier
+          </Texting>
+        </Box>
         <Box
           sx={{
             display: "grid",
@@ -59,11 +63,18 @@ const InstagramGrid: React.FC = () => {
               xs: "repeat(3, 1fr)",
               sm: "repeat(3, 1fr)",
             },
+            mt: { xs: 2, md: 4 },
             gap: 1,
           }}
         >
           {mockImages.map((src, index) => (
             <Box
+              onClick={() =>
+                window.open(
+                  "https://instagram.com/sleipnertandvarden/",
+                  "_blank"
+                )
+              }
               key={index}
               component="img"
               src={src}
@@ -72,7 +83,8 @@ const InstagramGrid: React.FC = () => {
                 width: "100%", // fyller sin gridcell
                 height: "auto",
                 objectFit: "cover",
-                aspectRatio: "3 / 4", // Bredare på höjden
+                aspectRatio: "3 / 4",
+                cursor: "pointer",
               }}
             />
           ))}
