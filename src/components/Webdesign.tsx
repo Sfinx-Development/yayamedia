@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function Webdesign() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -64,11 +64,11 @@ export default function Webdesign() {
             color: "#363434",
             zIndex: 999,
             marginBottom: { xs: -1, md: 0 },
-            marginTop: titleMarginTop, // Justerar rubrikens top-margin
+            marginTop: titleMarginTop,
           }}
           component="h1"
         >
-          Webbsesign
+          Webbdesign
         </Texting>
         <TextingATYP
           component="h3"
@@ -212,7 +212,7 @@ export default function Webdesign() {
               padding: 4,
               marginTop: 3,
               color: "#363434",
-              paddingTop: 2
+              paddingTop: 2,
             }}
           >
             <Texting

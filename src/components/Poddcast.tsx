@@ -1,9 +1,16 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
-// FORTSÄTT MED MARGINTOP , BOXHEIGT OCH PADDING TOP 
-export default function Poddcast() {
+import { isMobile, isTablet } from "./GreyComponent";
+// FORTSÄTT MED MARGINTOP , BOXHEIGT OCH PADDING TOP
+
+export interface PoddcastProps {
+  marginLeft?: number;
+  topMargin?: number;
+  paddingBottom?: number;
+}
+
+export default function Poddcast(props: PoddcastProps) {
   const Texting = styled(Typography)<TypographyProps>`
     font-family: "H3", sans-serif;
     font-variation-settings: "wght" 300;
@@ -14,7 +21,7 @@ export default function Poddcast() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 315, md: 320, xl: 390 }; // Samma höjd för alla boxar
+  // const boxHeight = { xs: 315, md: 370, xl: 390 }; // Samma höjd för alla boxar
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
   const navigate = useNavigate();
 
@@ -42,10 +49,10 @@ export default function Poddcast() {
       id="poddcast"
       sx={{
         paddingLeft: 0,
-        marginLeft: -8,
+        marginLeft: props.marginLeft ? props.marginLeft : -8,
         display: "flex",
         flexDirection: "column",
-        paddingTop: 1
+        paddingTop: 1,
       }}
     >
       <Box
@@ -56,8 +63,6 @@ export default function Poddcast() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
-         
-         
         }}
       >
         <Texting
@@ -66,7 +71,7 @@ export default function Poddcast() {
             color: "#363434",
             zIndex: 999,
             marginBottom: { xs: -1, md: 0 },
-            marginTop: titleMarginTop, // Justerar rubrikens top-margin
+            marginTop: props.topMargin ? props.topMargin : titleMarginTop, // Justerar rubrikens top-margin
           }}
           component="h1"
         >
@@ -91,7 +96,9 @@ export default function Poddcast() {
           backgroundColor: "#F7F7F7",
           display: "flex",
           flexDirection: { xs: "row", md: "row" },
-          paddingBottom: { xs: 8, md: 10 },
+          paddingBottom: props.paddingBottom
+            ? props.paddingBottom
+            : { xs: 8, md: 10 },
           margin: { xs: 0, md: 0 },
           //   height: "100%",
           justifyContent: "start",
@@ -116,15 +123,10 @@ export default function Poddcast() {
               color: "#363434",
               padding: 4,
               marginTop: 10,
-              height: boxHeight,
-            
-              // borderRadius: 2,
-              // backgroundColor: "#B9DCD2",
-              // width: { xs: 310, md: 310, xl: 330 },
-              // color: "#363434",
-              // padding: 4,
-              // marginTop: 10,
-              // height: boxHeight, // Justerar höjden på boxarna
+              // height: boxHeight,
+              display: "flex", // 👈 viktigt
+              flexDirection: "column", // 👈 viktigt
+              justifyContent: "space-between", // 👈 trycker ner knappen till botten
             }}
           >
             <Texting
@@ -171,18 +173,18 @@ export default function Poddcast() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Enklare genomgång av utrustning, vid behov
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klick"
+              onClick={() => goToOffertWithPreselect("Podcast: Klick")}
+              sx={{
+                ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klick"
-            onClick={() => goToOffertWithPreselect("Podcast: Klick")}
-            sx={{
-              ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
-          </Button>
         </Box>
         {/* andra klack */}
         <Box
@@ -251,18 +253,18 @@ export default function Poddcast() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Upp till tre timmar
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klack"
+              onClick={() => goToOffertWithPreselect("Podcast: Klack")}
+              sx={{
+                ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klack"
-            onClick={() => goToOffertWithPreselect("Podcast: Klack")}
-            sx={{
-              ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
-          </Button>
         </Box>
         <Box
           sx={{
@@ -334,18 +336,18 @@ export default function Poddcast() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Upp till tre timmar
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Boom"
+              onClick={() => goToOffertWithPreselect("Podcast: Boom")}
+              sx={{
+                ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Boom"
-            onClick={() => goToOffertWithPreselect("Podcast: Boom")}
-            sx={{
-              ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
-          </Button>
 
           {/* <Button
             aria-label="Navigera till podden Snack och surr"

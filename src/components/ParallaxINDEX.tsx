@@ -1,10 +1,18 @@
-import { Box, styled, Typography, TypographyProps } from "@mui/material";
+import {
+  Box,
+  Button,
+  styled,
+  Typography,
+  TypographyProps,
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // import Case from "./Case";
 import Footer from "./Footer";
+import { isTablet } from "./GreyComponent";
 import MobileFooter from "./MobileFooter";
 import Partners from "./Partners";
+import Poddcast from "./Poddcast";
 import Wave from "./Wave";
 
 export default function ParallaxWave() {
@@ -25,6 +33,22 @@ export default function ParallaxWave() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const goToOffertWithPreselect = (preselect: string) => {
+    navigate("/offert", { state: { preselect } });
+  };
+
+  const buttonStyle = (bg: string, hover: string, textColor = "#F7F7F7") => ({
+    backgroundColor: bg,
+    color: textColor,
+    width: isTablet ? "20%" : "15%",
+    borderRadius: 2,
+    paddingY: isMobile ? 1 : 1.2,
+    textTransform: "none",
+    "&:hover": {
+      backgroundColor: hover,
+    },
+  });
 
   const location = useLocation();
   useEffect(() => {
@@ -162,6 +186,33 @@ export default function ParallaxWave() {
             Yaya, at your service
           </Texting>
         </Box>
+        <Box
+          sx={{
+            width: "100%",
+            alignItems: "center",
+            backgroundColor: "#F7F7F7",
+          }}
+        >
+          <Poddcast marginLeft={8} topMargin={10} paddingBottom={4} />
+          <Box sx={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              fullWidth
+              aria-label="Fler tjänster"
+              onClick={() => navigate("/tjanster#socialamedier")}
+              sx={{
+                ...buttonStyle(
+                  "rgba(199, 213, 221)",
+                  "rgba(199, 213, 221)",
+                  "#363434"
+                ),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Fler Tjänster</Texting>
+            </Button>
+          </Box>
+        </Box>
+
         {/* <GreenComponent /> */}
         {/* <Case /> */}
         <Partners />
