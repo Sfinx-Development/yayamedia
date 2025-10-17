@@ -151,7 +151,7 @@ const AsundsholmUppdrag: React.FC = () => {
             display: "flex",
             // justifyContent: "center",
             justifyContent: "flex-end", // högerjustera bilden
-            maxWidth: { xs:"auto",md: 750, xl: 950 },
+            maxWidth: { xs: "auto", md: 750, xl: 950 },
             mt: { xs: 4, md: 25, xl: 30 }, // 👈 justeras så den kommer i samma höjd
             ml: { md: 2 },
             mr: { md: -25, xl: -35 },
@@ -162,12 +162,14 @@ const AsundsholmUppdrag: React.FC = () => {
           }}
         >
           <Box
+            onClick={() => window.open("https://www.asundsholm.se", "_blank")}
             component="img"
             src="https://i.imgur.com/1B3ye3I.png"
             alt="Laptop"
             sx={{
-              width: {xs:"100%",md:"150%"},
+              width: { xs: "100%", md: "150%" },
               borderRadius: 2,
+              cursor: "pointer",
             }}
           />
         </Box>

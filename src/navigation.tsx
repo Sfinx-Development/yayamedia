@@ -5,6 +5,7 @@ import RootLayout from "./pages/Rootlayout";
 import Services from "./pages/Services";
 import Yaya from "./pages/Yaya";
 
+import CasePage from "./pages/Case";
 import Offert from "./pages/Offert";
 import PRHome from "./pages/PRHomeProject";
 import AsundsholmProject from "./pages/Projects";
@@ -18,6 +19,7 @@ const Navigation = () => {
       <Route element={<RootLayout />}>
         <Route index element={<Index />}></Route>
         <Route path="yaya" element={<Yaya />}></Route>
+        <Route path="case" element={<CasePage />}></Route>
         <Route path="tjanster" element={<Services />}></Route>
         <Route path="asundsholm" element={<AsundsholmProject />}></Route>
         <Route path="sleipner" element={<SleipnerProject />} />

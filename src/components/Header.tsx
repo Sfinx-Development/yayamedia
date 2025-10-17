@@ -1,9 +1,7 @@
-import { Box, styled, Typography } from "@mui/material";
+import { Box, Menu, MenuItem, styled, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DrawerComponent from "./DrawerComponent";
-import { Menu, MenuItem,  } from "@mui/material";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 export default function Header(): JSX.Element {
   const navigate = useNavigate();
@@ -33,10 +31,6 @@ export default function Header(): JSX.Element {
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-
-  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -116,21 +110,20 @@ export default function Header(): JSX.Element {
         >
           <Heading sx={{ fontSize: { xs: 19, md: 30 } }}>Case</Heading>
         </Link> */}
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            cursor: "pointer",
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "#363434",
           }}
-          onClick={handleClick}
+          to="/case"
         >
           <Heading sx={{ fontSize: { xs: 20, md: 30 }, color: "#363434" }}>
             Case
           </Heading>
-          <ArrowDropDownIcon
+          {/* <ArrowDropDownIcon
             sx={{ color: "#363434", ml: 1, fontSize: { xs: 28, md: 32 } }}
-          />
-        </Box>
+          /> */}
+        </Link>
 
         <Menu
           anchorEl={anchorEl}
