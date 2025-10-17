@@ -1,6 +1,6 @@
 import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 // import Case from "./Case";
 import Footer from "./Footer";
 import { isTablet } from "./GreyComponent";
@@ -11,7 +11,6 @@ export default function ParallaxCase() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
   const isMobile = window.innerWidth <= 820;
-  const navigate = useNavigate();
 
   // const isBigScreen = window.innerHeight >= 1080;
   useEffect(() => {
@@ -48,12 +47,15 @@ export default function ParallaxCase() {
   `;
 
   const caseImages = [
-    "https://i.imgur.com/mB9ABMS.png",
-    "https://i.imgur.com/750qs63.jpeg",
-    "https://i.imgur.com/naScTZI.png",
-    "https://i.imgur.com/XZagv20.png",
-    "https://i.imgur.com/AWAvHlA.png",
-    "https://i.imgur.com/RD2AlkJ.png",
+    { src: "https://i.imgur.com/YXRP2MD.jpeg", label: "Swedteam" },
+    { src: "https://i.imgur.com/dKFIC1b.jpeg", label: "Pr Home/Svanefors" },
+    { src: "https://i.imgur.com/ZlM4ulM.jpeg", label: "Salusso" },
+    { src: "https://i.imgur.com/ADTyziN.jpeg", label: "Sleipnertandvården" },
+    { src: "https://i.imgur.com/pDMM8Je.png", label: "Åsundsholm" },
+    {
+      src: "#363333",
+      label: "Och det här får bli din plats",
+    },
   ];
 
   return (
@@ -109,7 +111,7 @@ export default function ParallaxCase() {
                 marginTop: { xs: 10, md: 12, xl: 15 },
                 paddingX: isTablet ? 2 : { xs: 2, md: 0 },
                 pt: { xs: 10, md: 10, xl: 20 },
-                pb: { xs: 6, md: 12 },
+                // pb: { xs: 6, md: 12 },
                 overflow: "visible",
                 marginY: { xl: 15 },
                 zIndex: 10,
@@ -131,7 +133,7 @@ export default function ParallaxCase() {
                   fontWeight={400}
                   gutterBottom
                 >
-                  Uppdrag
+                  Case
                 </Texting>
 
                 <TextingATYP
@@ -167,32 +169,87 @@ export default function ParallaxCase() {
               },
               gap: 2, // avstånd mellan bilderna
               px: { xs: 2, md: 4 }, // padding åt sidorna så det inte går kant i kant
-              //   mt: { xs: 2, md: 4 },
+              mt: { xs: 2, md: 0 },
               mb: { xs: 4, md: 16 },
             }}
           >
-            {caseImages.map((src, index) => (
-              <Box
-                key={index}
-                component="img"
-                onClick={() =>
-                  window.open(
-                    "https://instagram.com/sleipnertandvarden/",
-                    "_blank"
-                  )
-                }
-                src={src}
-                alt={`Instagram bild ${index + 1}`}
-                sx={{
-                  width: "100%",
-                  aspectRatio: "1 / 1", // gör dem fyrkantiga
-                  objectFit: "cover",
-                  cursor: "pointer",
-                  borderRadius: 0,
-                  display: "block",
-                }}
-              />
-            ))}
+            {caseImages.map((src, index) => {
+              const isLast = index === caseImages.length - 1;
+              const isSleipner = src.label == "Sleipnertandvården";
+
+              return (
+                <Box
+                  key={index}
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    aspectRatio: "1 / 1",
+                    cursor: isLast ? "default" : "pointer",
+                    overflow: "hidden",
+                    backgroundColor: isLast ? "#363333" : "transparent",
+                    display: "flex",
+                    alignItems: isLast ? "center" : "unset",
+                    justifyContent: isLast ? "center" : "unset",
+                    textAlign: isLast ? "center" : "left",
+                  }}
+                  onClick={() => {
+                    if (!isLast) {
+                      window.open(
+                        "https://instagram.com/sleipnertandvarden/",
+                        "_blank"
+                      );
+                    }
+                  }}
+                >
+                  {!isLast && (
+                    <>
+                      <Box
+                        component="img"
+                        src={src.src}
+                        alt={`Instagram bild ${index + 1}`}
+                        sx={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          display: "block",
+                        }}
+                      />
+
+                      <Texting
+                        variant="h3"
+                        sx={{
+                          fontSize: { xs: 18, md: 34, xl: 48 },
+                          position: "absolute",
+                          bottom: 12,
+                          left: { xs: 10, md: 50 },
+                          color: isSleipner ? "#363333" : "white",
+                        }}
+                        fontWeight={400}
+                        gutterBottom
+                      >
+                        {src.label}
+                      </Texting>
+                    </>
+                  )}
+
+                  {isLast && (
+                    <Texting
+                      variant="h3"
+                      sx={{
+                        fontSize: { xs: 18, md: 38, xl: 48 },
+                        color: isLast ? "rgba(185, 219, 209)" : "white",
+                        px: 2,
+                        lineHeight: 1.3,
+                        width: isLast ? "50%" : "100%",
+                      }}
+                      fontWeight={400}
+                    >
+                      {src.label}
+                    </Texting>
+                  )}
+                </Box>
+              );
+            })}
           </Box>
 
           {isMobile ? <MobileFooter /> : <Footer />}

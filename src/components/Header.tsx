@@ -51,7 +51,6 @@ export default function Header(): JSX.Element {
       }}
       component={"header"}
     >
-      {/* Logotyp */}
       <div
         style={{
           cursor: "pointer",
@@ -162,17 +161,15 @@ export default function Header(): JSX.Element {
         </Link>
       </Box>
 
-      {/* Menyikoner */}
       <div
         onClick={() => {
-          console.log("Meny ikoner klickad"); // För felsökning
           setDrawerOpen(true);
         }}
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          paddingRight: "16px", // Sätt standardpadding
+          paddingRight: "16px",
           cursor: "pointer",
           //  marginRight: 90,
           marginRight: isMobile ? 10 : isBigScreen ? 120 : 80,
