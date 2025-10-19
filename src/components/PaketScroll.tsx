@@ -76,7 +76,6 @@
 // }
 import { Box } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import { DraggableData, DraggableEvent } from "react-draggable";
 import { useLocation } from "react-router-dom";
 import GraphicProfile from "./GraphicProfile";
 import Poddcast from "./Poddcast";
@@ -121,28 +120,28 @@ export default function PaketScroll() {
     }
   }, []);
 
-  const handleDragStart = () => setDragging(true);
+  // const handleDragStart = () => setDragging(true);
 
-  const handleDragStop = (_e: DraggableEvent, data: DraggableData) => {
-    setDragging(false);
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= data.deltaX;
+  // const handleDragStop = (_e: DraggableEvent, data: DraggableData) => {
+  //   setDragging(false);
+  //   if (scrollRef.current) {
+  //     scrollRef.current.scrollLeft -= data.deltaX;
 
-      const scrollArea = scrollRef.current;
-      const scrollWidth = scrollArea.scrollWidth;
-      const clientWidth = scrollArea.clientWidth;
-      const threshold = scrollWidth / 4;
+  //     const scrollArea = scrollRef.current;
+  //     const scrollWidth = scrollArea.scrollWidth;
+  //     const clientWidth = scrollArea.clientWidth;
+  //     const threshold = scrollWidth / 4;
 
-      if (scrollArea.scrollLeft < threshold) {
-        scrollArea.scrollLeft += scrollWidth / 2;
-      } else if (
-        scrollArea.scrollLeft >
-        scrollWidth - threshold - clientWidth
-      ) {
-        scrollArea.scrollLeft -= scrollWidth / 2;
-      }
-    }
-  };
+  //     if (scrollArea.scrollLeft < threshold) {
+  //       scrollArea.scrollLeft += scrollWidth / 2;
+  //     } else if (
+  //       scrollArea.scrollLeft >
+  //       scrollWidth - threshold - clientWidth
+  //     ) {
+  //       scrollArea.scrollLeft -= scrollWidth / 2;
+  //     }
+  //   }
+  // };
   // const handleDrag = (_: DraggableEvent, data: DraggableData) => {
   //   if (scrollRef.current) {
   //     scrollRef.current.scrollLeft -= data.deltaX;
@@ -157,8 +156,10 @@ export default function PaketScroll() {
         overflowX: "auto", // 👈 alltid auto
         cursor: dragging ? "grabbing" : "grab",
         userSelect: "none",
-        scrollbarWidth: "thin",
-        "&::-webkit-scrollbar": { height: 6 },
+        scrollbarWidth: "none", // 👈 döljer i Firefox
+        "&::-webkit-scrollbar": {
+          display: "none", // 👈 döljer i Chrome, Edge, Safari
+        },
       }}
       onMouseDown={(e) => {
         setDragging(true);

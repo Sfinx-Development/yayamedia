@@ -1,10 +1,7 @@
 import { Box, styled, Typography, TypographyProps } from "@mui/material";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function CaseScroller() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
   const caseImages = [
     {
       src: "https://i.imgur.com/YXRP2MD.jpeg",
@@ -65,8 +62,8 @@ export default function CaseScroller() {
               onClick={() => navigate(src.url)}
               sx={{
                 position: "relative",
-                minWidth: { xs: 280, md: 450 },
-                minHeight: { xs: 280, md: 450 },
+                minWidth: { xs: 280, md: 450, xl: 800 },
+                minHeight: { xs: 280, md: 450, xl: 800 },
                 aspectRatio: "1 / 1",
                 overflow: "hidden",
                 cursor: "pointer",
@@ -82,9 +79,6 @@ export default function CaseScroller() {
                   objectFit: "cover",
                   display: "block",
                   transition: "transform 0.5s ease, filter 0.5s ease",
-                  transform: activeIndex === index ? "scale(1.08)" : "scale(1)",
-                  filter:
-                    activeIndex === index ? "brightness(1.2)" : "brightness(1)",
                   "&:hover": {
                     transform: "scale(1.08)",
                     filter: "brightness(1.15)",

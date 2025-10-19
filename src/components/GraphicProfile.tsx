@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function GraphicProfile() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -14,7 +14,7 @@ export default function GraphicProfile() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 305, sm: 300, md: 320, xl: 380 }; // Samma höjd för alla boxar
+  // const boxHeight = { xs: 305, sm: 300, md: 320, xl: 380 };
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
   const navigate = useNavigate();
 
@@ -55,7 +55,7 @@ export default function GraphicProfile() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
-          paddingTop: 2
+          paddingTop: 2,
         }}
       >
         <Texting
@@ -96,6 +96,7 @@ export default function GraphicProfile() {
           justifyContent: "start",
           width: "90%",
           gap: 2,
+          alignItems: "flex-end",
         }}
       >
         {/* första klick */}
@@ -114,15 +115,11 @@ export default function GraphicProfile() {
               width: 310,
               color: "#363434",
               padding: 4,
-              marginTop: 3,
-              height: boxHeight,
-              // borderRadius: 2,
-              // backgroundColor: "#B9DCD2",
-              // width: { xs: 310, md: 310, xl: 330 },
-              // color: "#363434",
-              // padding: { xs: 2, md: 4, xl: 4 },
-              // marginTop: 15,
-              // height: boxHeight, // Justerar höjden på boxarna
+              marginTop: 10,
+              // height: boxHeight,
+              display: "flex", // 👈 viktigt
+              flexDirection: "column", // 👈 viktigt
+              justifyContent: "space-between", // 👈 trycker ner knappen till botten
             }}
           >
             <Texting
@@ -162,18 +159,18 @@ export default function GraphicProfile() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Logotyp i leverans av png, jpg och eps
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klick"
+              onClick={() => goToOffertWithPreselect("Grafisk profil: Klick")}
+              sx={{
+                ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klick"
-            onClick={() => goToOffertWithPreselect("Grafisk profil: Klick")}
-            sx={{
-              ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
-          </Button>
         </Box>
         {/* andra klack */}
         <Box
@@ -190,8 +187,8 @@ export default function GraphicProfile() {
               backgroundColor: "#F3D9DF",
               width: { xs: 310, md: 310, xl: 330 },
               padding: 4,
-               marginTop: {xs: -2.5, md: 0 },
-              
+              marginTop: { xs: -2.5, md: 0 },
+
               color: "#363434",
             }}
           >
@@ -239,18 +236,18 @@ export default function GraphicProfile() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Färger i RGB och Hex-kod
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klack"
+              onClick={() => goToOffertWithPreselect("Grafisk profil: Klack")}
+              sx={{
+                ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klack"
-            onClick={() => goToOffertWithPreselect("Grafisk profil: Klack")}
-            sx={{
-              ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
-          </Button>
         </Box>
         <Box
           sx={{
@@ -267,9 +264,7 @@ export default function GraphicProfile() {
               width: { xs: 310, md: 310, xl: 330 },
               color: "#F7F7F7",
               padding: 4,
-              marginTop: {xs: -6, md: -7.5}, 
-
-             
+              marginTop: { xs: -6, md: -7.5 },
             }}
           >
             <Texting
@@ -330,18 +325,18 @@ export default function GraphicProfile() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Allt levererat i en brandbook
             </TextingATYP>
+            <Button
+              fullWidth // gör hela knappen klickbar horisontellt
+              aria-label="Välj Boom"
+              onClick={() => goToOffertWithPreselect("Grafisk profil: Boom")}
+              sx={{
+                ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
+                justifyContent: "center", // centrerar texten
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth // gör hela knappen klickbar horisontellt
-            aria-label="Välj Boom"
-            onClick={() => goToOffertWithPreselect("Grafisk profil: Boom")}
-            sx={{
-              ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
-              justifyContent: "center", // centrerar texten
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
-          </Button>
         </Box>
       </Box>
     </Box>

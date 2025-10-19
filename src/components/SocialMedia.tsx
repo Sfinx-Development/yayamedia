@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function SocialMedia() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -14,9 +14,8 @@ export default function SocialMedia() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 330, md: 335, xl: 395 }; // Samma höjd för alla boxar
+  // const boxHeight = { xs: 330, md: 335, xl: 395 };
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
- 
 
   const navigate = useNavigate();
 
@@ -56,7 +55,6 @@ export default function SocialMedia() {
           margin: { xs: 2, md: 0 },
           height: "100%",
           width: "100%",
-     
         }}
       >
         <Texting
@@ -92,10 +90,10 @@ export default function SocialMedia() {
           flexDirection: { xs: "row", md: "row" },
           paddingBottom: { xs: 8, md: 10 },
           margin: { xs: 0, md: 0 },
-          //   height: "100%",
           justifyContent: "start",
           width: "90%",
           gap: 2,
+          alignItems: "flex-end",
         }}
       >
         {/* första klick */}
@@ -111,18 +109,21 @@ export default function SocialMedia() {
             sx={{
               borderRadius: 2,
               backgroundColor: "#B9DCD2",
-              width: { xs: 310, md: 310, xl: 330 },
+              width: 310,
               color: "#363434",
               padding: 4,
               marginTop: 10,
-              height: boxHeight, // Justerar höjden på boxarna
+              // height: boxHeight,
+              display: "flex", // 👈 viktigt
+              flexDirection: "column", // 👈 viktigt
+              justifyContent: "space-between", // 👈 trycker ner knappen till botten
             }}
           >
             <Texting
               sx={{
                 color: "#2D6555",
                 fontSize: { xs: 25, xl: 30 },
-                paddingTop: 2,
+                // paddingTop: 2,
               }}
             >
               Klick
@@ -178,18 +179,18 @@ export default function SocialMedia() {
               Klick erbjuds också som ett engångspaket. Då till en kostnad på
               5500:-
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klick"
+              onClick={() => goToOffertWithPreselect("Sociala medier: Klick")}
+              sx={{
+                ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klick"
-            onClick={() => goToOffertWithPreselect("Sociala medier: Klick")}
-            sx={{
-              ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
-          </Button>
         </Box>
         {/* andra klack */}
         <Box
@@ -223,18 +224,26 @@ export default function SocialMedia() {
               Du vet vad du vill, men har svårt att få fram rätt känsla. Då
               behöver du en klack!
             </TextingATYP>
-            <Texting
+            <Box
               sx={{
-                fontSize: 25,
-                paddingTop: { xs: 6, xl: 4 },
-                color: "#EF3434",
+                display: "flex",
+                flexDirection: "column",
+                paddingY: { xs: 3, xl: 2 },
               }}
             >
-              8500:-/mån
-            </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              Priset gäller löpande avtal, lägsta avtalstid 6 mån.
-            </TextingATYP>
+              <Texting
+                sx={{
+                  fontSize: 25,
+
+                  color: "#EF3434",
+                }}
+              >
+                8500:-/mån
+              </Texting>
+              <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+                Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+              </TextingATYP>
+            </Box>
             <Texting
               sx={{
                 fontSize: { xs: 14, xl: 17 },
@@ -262,18 +271,18 @@ export default function SocialMedia() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Contentplan för hela avtalstiden
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klack"
+              onClick={() => goToOffertWithPreselect("Sociala medier: Klack")}
+              sx={{
+                ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klack"
-            onClick={() => goToOffertWithPreselect("Sociala medier: Klack")}
-            sx={{
-              ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
-          </Button>
         </Box>
 
         <Box
@@ -282,7 +291,7 @@ export default function SocialMedia() {
             flex: 1,
             flexDirection: "column",
             alignItems: "flex-start",
-            marginTop: -1
+            marginTop: -1,
           }}
         >
           <Box
@@ -307,18 +316,25 @@ export default function SocialMedia() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               För dig som vill gå all in, och få en tiopoängare direkt!
             </TextingATYP>
-            <Texting
+            <Box
               sx={{
-                color: "#B8DCD2",
-                fontSize: 25,
-                paddingTop: { xs: 9, xl: 7 },
+                display: "flex",
+                flexDirection: "column",
+                paddingY: { xs: 4.5, xl: 3.5 },
               }}
             >
-              15000:-/mån
-            </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
-              Priset gäller löpande avtal, lägsta avtalstid 6 mån.
-            </TextingATYP>
+              <Texting
+                sx={{
+                  color: "#B8DCD2",
+                  fontSize: 25,
+                }}
+              >
+                15000:-/mån
+              </Texting>
+              <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+                Priset gäller löpande avtal, lägsta avtalstid 6 mån.
+              </TextingATYP>
+            </Box>
             <Texting
               sx={{
                 color: "#B8DCD2",
@@ -349,19 +365,18 @@ export default function SocialMedia() {
             <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
               -Annonsering och analys
             </TextingATYP>
+            <Button
+              fullWidth // gör hela knappen klickbar horisontellt
+              aria-label="Välj Boom"
+              onClick={() => goToOffertWithPreselect("Sociala medier: Boom")}
+              sx={{
+                ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
+                justifyContent: "center", // centrerar texten
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
+            </Button>
           </Box>
-
-          <Button
-            fullWidth // gör hela knappen klickbar horisontellt
-            aria-label="Välj Boom"
-            onClick={() => goToOffertWithPreselect("Sociala medier: Boom")}
-            sx={{
-              ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
-              justifyContent: "center", // centrerar texten
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
-          </Button>
         </Box>
       </Box>
     </Box>

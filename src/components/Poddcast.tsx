@@ -8,6 +8,13 @@ export interface PoddcastProps {
   marginLeft?: number;
   topMargin?: number;
   paddingBottom?: number;
+  height?: number;
+  width?:
+    | number
+    | { xs?: number; sm?: number; md?: number; lg?: number; xl?: number };
+  fontSize?:
+    | number
+    | { xs?: number; sm?: number; md?: number; lg?: number; xl?: number };
 }
 
 export default function Poddcast(props: PoddcastProps) {
@@ -53,6 +60,7 @@ export default function Poddcast(props: PoddcastProps) {
         display: "flex",
         flexDirection: "column",
         paddingTop: 1,
+        backgroundColor: "#F7F7F7",
       }}
     >
       <Box
@@ -104,6 +112,7 @@ export default function Poddcast(props: PoddcastProps) {
           justifyContent: "start",
           width: "90%",
           gap: 2,
+          alignItems: "flex-end",
         }}
       >
         {/* första klick */}
@@ -119,7 +128,7 @@ export default function Poddcast(props: PoddcastProps) {
             sx={{
               borderRadius: 2,
               backgroundColor: "#B9DCD2",
-              width: 310,
+              width: props.width ? props.width : 310,
               color: "#363434",
               padding: 4,
               marginTop: 10,
@@ -138,7 +147,9 @@ export default function Poddcast(props: PoddcastProps) {
             >
               Klick
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 16 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 16 } }}
+            >
               Du är sugen på det där med podd och har kunskaper i ljudklippning.
               Innan du går all in vill du gärna prova på - hyr vår
               poddutrustning innan du bestämmer dig för a investera i en egen!
@@ -147,7 +158,10 @@ export default function Poddcast(props: PoddcastProps) {
               Från 700:-/dag
             </Texting>
             <TextingATYP
-              sx={{ color: "#2D6555", fontSize: { xs: 13, xl: 15 } }}
+              sx={{
+                color: "#2D6555",
+                fontSize: props.fontSize ?? { xs: 13, xl: 15 },
+              }}
             >
               Ex. moms
             </TextingATYP>
@@ -155,22 +169,33 @@ export default function Poddcast(props: PoddcastProps) {
             <Texting
               sx={{
                 color: "#2D6555",
-                fontSize: { xs: 14, xl: 17 },
+                fontSize: props.fontSize ?? { xs: 14, xl: 17 },
                 paddingTop: 2,
               }}
             >
               Vad ingår?
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 1 }}>
+            <TextingATYP
+              sx={{
+                fontSize: props.fontSize ?? { xs: 13, xl: 15 },
+                paddingTop: 1,
+              }}
+            >
               -Tre poddmickar inkl. Bordsstativ
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Tre hörlurar
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Portabel recorder (Zoom H6)
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Enklare genomgång av utrustning, vid behov
             </TextingATYP>
             <Button
@@ -199,7 +224,7 @@ export default function Poddcast(props: PoddcastProps) {
             sx={{
               borderRadius: 2,
               backgroundColor: "#F3D9DF",
-              width: 310,
+              width: props.width ? props.width : 310,
               padding: 4,
               marginTop: 0,
               color: "#363434",
@@ -214,7 +239,9 @@ export default function Poddcast(props: PoddcastProps) {
             >
               Klack
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               Du är sugen på det där med podd men har varken rätt kunskap eller
               utrustning. Med klack får du inte bara tillgång till ordentlig
               utrustning - vi klipper och producerar även din podd. Vi
@@ -223,34 +250,51 @@ export default function Poddcast(props: PoddcastProps) {
             <Texting sx={{ color: "#EF3434", fontSize: 25, paddingTop: 2 }}>
               Från 6000:-
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               Ex. moms
             </TextingATYP>
             <Texting
               sx={{
-                fontSize: { xs: 14, xl: 17 },
+                fontSize: props.fontSize ?? { xs: 14, xl: 17 },
                 paddingTop: 2,
                 color: "#EF3434",
               }}
             >
               Vad ingår?
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+            <TextingATYP
+              sx={{
+                fontSize: props.fontSize ?? { xs: 13, xl: 15 },
+                paddingTop: 2,
+              }}
+            >
               -Tre poddmickar inkl bordsstativ
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Tre hörlurar
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Portabel recorder (Zoom H6)
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Genomgång av utrustning
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Producering/publicering
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Upp till tre timmar
             </TextingATYP>
             <Button
@@ -278,7 +322,7 @@ export default function Poddcast(props: PoddcastProps) {
             sx={{
               borderRadius: 2,
               backgroundColor: "#363434",
-              width: 310,
+              width: props.width ? props.width : 310,
               color: "#F7F7F7",
               padding: 4,
               marginTop: -4,
@@ -293,7 +337,9 @@ export default function Poddcast(props: PoddcastProps) {
             >
               Boom!
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               Du nöjer dig inte med bara ljud, du går all in och hakar på
               trenden med videopodd - smart val! Välkommen till vår poddstudio i
               centrala Borås - du sköter snacket, vi hanterar resten
@@ -302,38 +348,58 @@ export default function Poddcast(props: PoddcastProps) {
               Från 9000:-
             </Texting>
             <TextingATYP
-              sx={{ color: "#F7F7F7", fontSize: { xs: 13, xl: 15 } }}
+              sx={{
+                color: "#F7F7F7",
+                fontSize: props.fontSize ?? { xs: 13, xl: 15 },
+              }}
             >
               Ex. moms
             </TextingATYP>
             <Texting
               sx={{
                 color: "#B8DCD2",
-                fontSize: { xs: 14, xl: 17 },
+                fontSize: props.fontSize ?? { xs: 14, xl: 17 },
                 paddingTop: 5,
               }}
             >
               Vad ingår?
             </Texting>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 }, paddingTop: 2 }}>
+            <TextingATYP
+              sx={{
+                fontSize: props.fontSize ?? { xs: 13, xl: 15 },
+                paddingTop: 2,
+              }}
+            >
               -Tre poddmickar inkl bordsstativ
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Tre hörlurar
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Portabel recorder (Zoom H6)
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Producering/publicering
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               - Lån av poddstudio
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Hela avsnittet filmat och klippt
             </TextingATYP>
-            <TextingATYP sx={{ fontSize: { xs: 13, xl: 15 } }}>
+            <TextingATYP
+              sx={{ fontSize: props.fontSize ?? { xs: 13, xl: 15 } }}
+            >
               -Upp till tre timmar
             </TextingATYP>
             <Button

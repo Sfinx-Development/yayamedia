@@ -35,18 +35,6 @@ export default function ParallaxWave() {
     };
   }, []);
 
-  const caseImages = [
-    { src: "https://i.imgur.com/YXRP2MD.jpeg", label: "Swedteam" },
-    { src: "https://i.imgur.com/dKFIC1b.jpeg", label: "Pr Home/Svanefors" },
-    { src: "https://i.imgur.com/ZlM4ulM.jpeg", label: "Salusso" },
-    { src: "https://i.imgur.com/ADTyziN.jpeg", label: "Sleipnertandvården" },
-    { src: "https://i.imgur.com/pDMM8Je.png", label: "Åsundsholm" },
-    {
-      src: "#363333",
-      label: "Och det här får bli din plats",
-    },
-  ];
-
   const buttonStyle = (bg: string, hover: string, textColor = "#F7F7F7") => ({
     backgroundColor: bg,
     color: textColor,
@@ -75,15 +63,15 @@ export default function ParallaxWave() {
     font-variation-settings: "wght" 300;
   `;
 
-  const TextingATYP = styled(Typography)<TypographyProps>`
-    font-family: "atyp-bl-variable", sans-serif;
-    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
-  `;
-  // const navigate = useNavigate();
-  const Heading = styled(Typography)`
-    font-family: "atyp-bl-variable", sans-serif;
-    font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
-  `;
+  // const TextingATYP = styled(Typography)<TypographyProps>`
+  //   font-family: "atyp-bl-variable", sans-serif;
+  //   font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  // `;
+  // // const navigate = useNavigate();
+  // const Heading = styled(Typography)`
+  //   font-family: "atyp-bl-variable", sans-serif;
+  //   font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  // `;
   return (
     <Box
       sx={{
@@ -129,7 +117,7 @@ export default function ParallaxWave() {
               justifyContent: "space-between",
               gap: 4,
               alignItems: "center",
-              maxWidth: { xs: "90%", md: "80%" },
+              maxWidth: { xs: "90%", md: "80%", xl: "70%" },
             }}
           >
             <Box sx={{ flex: 1, backgroundColor: "#F8F8F8" }}>
@@ -145,10 +133,11 @@ export default function ParallaxWave() {
               </Texting>
               <Typography
                 sx={{
-                  fontSize: { xs: 16, md: 18 },
+                  fontSize: { xs: 16, md: 18, xl: 22 },
                   lineHeight: 1.6,
                   color: "#363434",
                   textAlign: { xs: "center", md: "left" },
+                  maxWidth: { xl: 900 },
                 }}
               >
                 Det brusar högt där ute. Att hitta sin unika rytm bland
@@ -173,17 +162,17 @@ export default function ParallaxWave() {
               sx={{
                 flex: 1,
                 width: "100%",
-                maxWidth: 500,
+                maxWidth: { xs: 500, xl: 700 },
                 objectFit: "contain",
                 mx: "auto",
                 display: "block",
-                transform: "translateX(-10%) translateY(80px)", // 👈 flyttar in till vänster & lite ner
+                transform: "translateX(-10%) translateY(80px)",
                 zIndex: 2,
               }}
             />
           </Box>
         </Box>
-        <Box sx={{ flex: 1, backgroundColor: "#F8F8F8", width: "100%" }}>
+        <Box sx={{ flex: 1, backgroundColor: "#F7F7F7", width: "100%" }}>
           <Texting
             sx={{
               fontSize: { xs: 30, md: 40, xl: 55 },
@@ -200,9 +189,16 @@ export default function ParallaxWave() {
             width: "100%",
             alignItems: "center",
             backgroundColor: "#F7F7F7",
+            justifyContent: "center",
           }}
         >
-          <Poddcast marginLeft={8} topMargin={10} paddingBottom={4} />
+          <Poddcast
+            marginLeft={8}
+            topMargin={10}
+            paddingBottom={4}
+            width={{ xl: 520 }}
+            fontSize={{ xl: 18 }}
+          />
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
               fullWidth
@@ -221,7 +217,7 @@ export default function ParallaxWave() {
             </Button>
           </Box>
         </Box>
-        <Box sx={{ flex: 1, backgroundColor: "#F8F8F8", width: "100%" }}>
+        <Box sx={{ flex: 1, backgroundColor: "#F7F7F7", width: "100%" }}>
           <Texting
             sx={{
               fontSize: { xs: 30, md: 40, xl: 55 },
@@ -229,6 +225,7 @@ export default function ParallaxWave() {
               // mb: 3,
               textAlign: "center",
               pt: { xs: 4, md: 10 },
+              backgroundColor: "#F7F7F7",
             }}
           >
             Case
