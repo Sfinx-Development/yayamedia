@@ -75,14 +75,13 @@
 //   );
 // }
 import { Box } from "@mui/material";
-import { useRef, useEffect, useState } from "react";
-import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
+import { useEffect, useRef, useState } from "react";
+import { DraggableData, DraggableEvent } from "react-draggable";
+import { useLocation } from "react-router-dom";
 import GraphicProfile from "./GraphicProfile";
+import Poddcast from "./Poddcast";
 import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
-import Poddcast from "./Poddcast";
-import { isMobile, isTablet } from "./GreyComponent";
-import { useLocation } from "react-router-dom";
 
 export default function PaketScroll() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -155,30 +154,43 @@ export default function PaketScroll() {
       ref={scrollRef}
       sx={{
         width: "100%",
-        overflowX: isMobile || isTablet ? "scroll" : "hidden", // 👈 tillåt scroll på mobil
+        overflowX: "auto", // 👈 alltid auto
         cursor: dragging ? "grabbing" : "grab",
+        userSelect: "none",
+        scrollbarWidth: "thin",
+        "&::-webkit-scrollbar": { height: 6 },
+      }}
+      onMouseDown={(e) => {
+        setDragging(true);
+        const startX = e.pageX - (scrollRef.current?.offsetLeft ?? 0);
+        const scrollLeft = scrollRef.current?.scrollLeft ?? 0;
+
+        const onMouseMove = (moveEvent: MouseEvent) => {
+          if (scrollRef.current) {
+            const x = moveEvent.pageX - (scrollRef.current.offsetLeft ?? 0);
+            scrollRef.current.scrollLeft = scrollLeft - (x - startX);
+          }
+        };
+
+        const onMouseUp = () => {
+          setDragging(false);
+          window.removeEventListener("mousemove", onMouseMove);
+          window.removeEventListener("mouseup", onMouseUp);
+        };
+
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("mouseup", onMouseUp);
       }}
     >
-      <Draggable
-        axis="x"
-        // onStart={handleDragStart}
-        // onStop={() => setDragging(false)}
-        // onDrag={handleDrag}
-        // disabled={isMobile || isTablet}
-         onStart={handleDragStart}
-         onStop={handleDragStop}
-        disabled={isMobile || isTablet} // 👈 inaktivera på mobil
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          width: "max-content",
+        }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            width: "max-content",
-          }}
-        >
-          {repeated}
-        </Box>
-      </Draggable>
+        {repeated}
+      </Box>
     </Box>
   );
 }

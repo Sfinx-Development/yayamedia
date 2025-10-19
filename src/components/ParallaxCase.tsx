@@ -1,6 +1,6 @@
 import { Box, styled, Typography, TypographyProps } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 // import Case from "./Case";
 import Footer from "./Footer";
 import { isTablet } from "./GreyComponent";
@@ -26,6 +26,7 @@ export default function ParallaxCase() {
   }, []);
 
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
@@ -47,14 +48,35 @@ export default function ParallaxCase() {
   `;
 
   const caseImages = [
-    { src: "https://i.imgur.com/YXRP2MD.jpeg", label: "Swedteam" },
-    { src: "https://i.imgur.com/dKFIC1b.jpeg", label: "Pr Home/Svanefors" },
-    { src: "https://i.imgur.com/ZlM4ulM.jpeg", label: "Salusso" },
-    { src: "https://i.imgur.com/ADTyziN.jpeg", label: "Sleipnertandvården" },
-    { src: "https://i.imgur.com/pDMM8Je.png", label: "Åsundsholm" },
+    {
+      src: "https://i.imgur.com/YXRP2MD.jpeg",
+      label: "Swedteam",
+      url: "/case/swedteam",
+    },
+    {
+      src: "https://i.imgur.com/dKFIC1b.jpeg",
+      label: "Pr Home/Svanefors",
+      url: "/case/prhome&svanefors",
+    },
+    {
+      src: "https://i.imgur.com/ZlM4ulM.jpeg",
+      label: "Salusso",
+      url: "/case/salusso",
+    },
+    {
+      src: "https://i.imgur.com/ADTyziN.jpeg",
+      label: "Sleipnertandvården",
+      url: "/case/sleipner",
+    },
+    {
+      src: "https://i.imgur.com/pDMM8Je.png",
+      label: "Åsundsholm",
+      url: "/case/asundsholm",
+    },
     {
       src: "#363333",
       label: "Och det här får bli din plats",
+      url: "",
     },
   ];
 
@@ -194,10 +216,7 @@ export default function ParallaxCase() {
                   }}
                   onClick={() => {
                     if (!isLast) {
-                      window.open(
-                        "https://instagram.com/sleipnertandvarden/",
-                        "_blank"
-                      );
+                      navigate(src.url);
                     }
                   }}
                 >

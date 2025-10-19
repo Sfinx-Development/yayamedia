@@ -13,7 +13,8 @@ export default function Partners() {
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
-        height: "100%",
+        // height: "100%",
+        padding: 0,
         paddingBottom: 10,
       }}
     >

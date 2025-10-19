@@ -8,6 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // import Case from "./Case";
+import CaseScroller from "./CaseScroller";
 import Footer from "./Footer";
 import { isTablet } from "./GreyComponent";
 import MobileFooter from "./MobileFooter";
@@ -34,9 +35,17 @@ export default function ParallaxWave() {
     };
   }, []);
 
-  const goToOffertWithPreselect = (preselect: string) => {
-    navigate("/offert", { state: { preselect } });
-  };
+  const caseImages = [
+    { src: "https://i.imgur.com/YXRP2MD.jpeg", label: "Swedteam" },
+    { src: "https://i.imgur.com/dKFIC1b.jpeg", label: "Pr Home/Svanefors" },
+    { src: "https://i.imgur.com/ZlM4ulM.jpeg", label: "Salusso" },
+    { src: "https://i.imgur.com/ADTyziN.jpeg", label: "Sleipnertandvården" },
+    { src: "https://i.imgur.com/pDMM8Je.png", label: "Åsundsholm" },
+    {
+      src: "#363333",
+      label: "Och det här får bli din plats",
+    },
+  ];
 
   const buttonStyle = (bg: string, hover: string, textColor = "#F7F7F7") => ({
     backgroundColor: bg,
@@ -212,9 +221,23 @@ export default function ParallaxWave() {
             </Button>
           </Box>
         </Box>
+        <Box sx={{ flex: 1, backgroundColor: "#F8F8F8", width: "100%" }}>
+          <Texting
+            sx={{
+              fontSize: { xs: 30, md: 40, xl: 55 },
+              color: "#363434",
+              // mb: 3,
+              textAlign: "center",
+              pt: { xs: 4, md: 10 },
+            }}
+          >
+            Case
+          </Texting>
+        </Box>
 
         {/* <GreenComponent /> */}
         {/* <Case /> */}
+        <CaseScroller />
         <Partners />
         {isMobile ? <MobileFooter /> : <Footer />}
       </Box>
