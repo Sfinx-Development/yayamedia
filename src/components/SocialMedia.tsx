@@ -83,6 +83,7 @@ export default function SocialMedia() {
           Paketlösningar
         </TextingATYP>
       </Box>
+      {/* sociala medier paketen är högre upp  */}
       <Box
         sx={{
           backgroundColor: "#F7F7F7",

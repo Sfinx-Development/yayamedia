@@ -5,7 +5,9 @@ import { isMobile, isTablet } from "./GreyComponent";
 // FORTSÄTT MED MARGINTOP , BOXHEIGT OCH PADDING TOP
 
 export interface PoddcastProps {
-  marginLeft?: number;
+  marginLeft?:
+    | number
+    | { xs?: number; sm?: number; md?: number; lg?: number; xl?: number };
   topMargin?: number;
   paddingBottom?: number;
   height?: number;

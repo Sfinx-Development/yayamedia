@@ -237,7 +237,7 @@ export default function ParallaxCase() {
                       <Texting
                         variant="h3"
                         sx={{
-                          fontSize: { xs: 18, md: 34, xl: 48 },
+                          fontSize: { xs: 18, md: 34, xl: 55 },
                           position: "absolute",
                           bottom: 12,
                           left: { xs: 10, md: 50 },
@@ -255,7 +255,7 @@ export default function ParallaxCase() {
                     <Texting
                       variant="h3"
                       sx={{
-                        fontSize: { xs: 18, md: 38, xl: 48 },
+                        fontSize: { xs: 18, md: 38, xl: 55 },
                         color: isLast ? "rgba(185, 219, 209)" : "white",
                         px: 2,
                         lineHeight: 1.3,

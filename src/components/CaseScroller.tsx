@@ -62,8 +62,8 @@ export default function CaseScroller() {
               onClick={() => navigate(src.url)}
               sx={{
                 position: "relative",
-                minWidth: { xs: 280, md: 450, xl: 800 },
-                minHeight: { xs: 280, md: 450, xl: 800 },
+                minWidth: { xs: 300, md: 450, xl: 800 },
+                minHeight: { xs: 300, md: 450, xl: 800 },
                 aspectRatio: "1 / 1",
                 overflow: "hidden",
                 cursor: "pointer",
@@ -88,10 +88,10 @@ export default function CaseScroller() {
               <Texting
                 variant="h3"
                 sx={{
-                  fontSize: { xs: 16, md: 28, xl: 40 },
+                  fontSize: { xs: 18, md: 28, xl: 40 },
                   position: "absolute",
                   bottom: 12,
-                  left: { xs: 4, md: 30 },
+                  left: { xs: 8, md: 30 },
                   color: isSleipner ? "#363333" : "white",
                   zIndex: 2,
                 }}
