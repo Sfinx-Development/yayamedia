@@ -75,14 +75,12 @@
 //   );
 // }
 import { Box } from "@mui/material";
-import { useRef, useEffect, useState } from "react";
-import Draggable, { DraggableData, DraggableEvent } from "react-draggable";
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import GraphicProfile from "./GraphicProfile";
+import Poddcast from "./Poddcast";
 import SocialMedia from "./SocialMedia";
 import Webdesign from "./Webdesign";
-import Poddcast from "./Poddcast";
-import { isMobile, isTablet } from "./GreyComponent";
-import { useLocation } from "react-router-dom";
 
 export default function PaketScroll() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -122,28 +120,28 @@ export default function PaketScroll() {
     }
   }, []);
 
-  const handleDragStart = () => setDragging(true);
+  // const handleDragStart = () => setDragging(true);
 
-  const handleDragStop = (_e: DraggableEvent, data: DraggableData) => {
-    setDragging(false);
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= data.deltaX;
+  // const handleDragStop = (_e: DraggableEvent, data: DraggableData) => {
+  //   setDragging(false);
+  //   if (scrollRef.current) {
+  //     scrollRef.current.scrollLeft -= data.deltaX;
 
-      const scrollArea = scrollRef.current;
-      const scrollWidth = scrollArea.scrollWidth;
-      const clientWidth = scrollArea.clientWidth;
-      const threshold = scrollWidth / 4;
+  //     const scrollArea = scrollRef.current;
+  //     const scrollWidth = scrollArea.scrollWidth;
+  //     const clientWidth = scrollArea.clientWidth;
+  //     const threshold = scrollWidth / 4;
 
-      if (scrollArea.scrollLeft < threshold) {
-        scrollArea.scrollLeft += scrollWidth / 2;
-      } else if (
-        scrollArea.scrollLeft >
-        scrollWidth - threshold - clientWidth
-      ) {
-        scrollArea.scrollLeft -= scrollWidth / 2;
-      }
-    }
-  };
+  //     if (scrollArea.scrollLeft < threshold) {
+  //       scrollArea.scrollLeft += scrollWidth / 2;
+  //     } else if (
+  //       scrollArea.scrollLeft >
+  //       scrollWidth - threshold - clientWidth
+  //     ) {
+  //       scrollArea.scrollLeft -= scrollWidth / 2;
+  //     }
+  //   }
+  // };
   // const handleDrag = (_: DraggableEvent, data: DraggableData) => {
   //   if (scrollRef.current) {
   //     scrollRef.current.scrollLeft -= data.deltaX;
@@ -155,30 +153,45 @@ export default function PaketScroll() {
       ref={scrollRef}
       sx={{
         width: "100%",
-        overflowX: isMobile || isTablet ? "scroll" : "hidden", // 👈 tillåt scroll på mobil
+        overflowX: "auto", // 👈 alltid auto
         cursor: dragging ? "grabbing" : "grab",
+        userSelect: "none",
+        scrollbarWidth: "none", // 👈 döljer i Firefox
+        "&::-webkit-scrollbar": {
+          display: "none", // 👈 döljer i Chrome, Edge, Safari
+        },
+      }}
+      onMouseDown={(e) => {
+        setDragging(true);
+        const startX = e.pageX - (scrollRef.current?.offsetLeft ?? 0);
+        const scrollLeft = scrollRef.current?.scrollLeft ?? 0;
+
+        const onMouseMove = (moveEvent: MouseEvent) => {
+          if (scrollRef.current) {
+            const x = moveEvent.pageX - (scrollRef.current.offsetLeft ?? 0);
+            scrollRef.current.scrollLeft = scrollLeft - (x - startX);
+          }
+        };
+
+        const onMouseUp = () => {
+          setDragging(false);
+          window.removeEventListener("mousemove", onMouseMove);
+          window.removeEventListener("mouseup", onMouseUp);
+        };
+
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("mouseup", onMouseUp);
       }}
     >
-      <Draggable
-        axis="x"
-        // onStart={handleDragStart}
-        // onStop={() => setDragging(false)}
-        // onDrag={handleDrag}
-        // disabled={isMobile || isTablet}
-         onStart={handleDragStart}
-         onStop={handleDragStop}
-        disabled={isMobile || isTablet} // 👈 inaktivera på mobil
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          width: "max-content",
+        }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            width: "max-content",
-          }}
-        >
-          {repeated}
-        </Box>
-      </Draggable>
+        {repeated}
+      </Box>
     </Box>
   );
 }

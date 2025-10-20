@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Button, Typography, TypographyProps } from "@mui/material";
-import { isMobile, isTablet } from "./GreyComponent";
 import { useNavigate } from "react-router-dom";
+import { isMobile, isTablet } from "./GreyComponent";
 
 export default function Webdesign() {
   const Texting = styled(Typography)<TypographyProps>`
@@ -14,7 +14,7 @@ export default function Webdesign() {
     font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
   `;
 
-  const boxHeight = { xs: 310, md: 315, xl: 370 }; // Samma höjd för alla boxar
+  // const boxHeight = { xs: 310, md: 315, xl: 370 };
   const titleMarginTop = { xs: 0, md: 20, xl: 20 };
 
   const navigate = useNavigate();
@@ -64,11 +64,11 @@ export default function Webdesign() {
             color: "#363434",
             zIndex: 999,
             marginBottom: { xs: -1, md: 0 },
-            marginTop: titleMarginTop, // Justerar rubrikens top-margin
+            marginTop: titleMarginTop,
           }}
           component="h1"
         >
-          Webbsesign
+          Webbdesign
         </Texting>
         <TextingATYP
           component="h3"
@@ -96,6 +96,7 @@ export default function Webdesign() {
           justifyContent: "start",
           width: "90%",
           gap: 2,
+          alignItems: "flex-end",
         }}
       >
         {/* första klick */}
@@ -114,15 +115,10 @@ export default function Webdesign() {
               width: 310,
               color: "#363434",
               padding: 4,
-              marginTop: 13,
-              height: boxHeight,
-              // borderRadius: 2,
-              // backgroundColor: "#B9DCD2",
-              // width: { xs: 310, md: 310, xl: 330 },
-              // color: "#363434",
-              // padding: 4,
-              // marginTop: 10,
-              // height: boxHeight, // Justerar höjden på boxarna
+              marginTop: 10,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
             }}
           >
             <Texting
@@ -182,18 +178,18 @@ export default function Webdesign() {
               Hemsidan är responsiv och anpassas till desktop, platta eller
               mobil beroende på besökarens referenser.
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klick"
+              onClick={() => goToOffertWithPreselect("Webdesign: Klick")}
+              sx={{
+                ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klick"
-            onClick={() => goToOffertWithPreselect("Webdesign: Klick")}
-            sx={{
-              ...buttonStyle("#2D6555", "#244f45", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klick</Texting>
-          </Button>
         </Box>
         {/* andra klack */}
         <Box
@@ -212,7 +208,7 @@ export default function Webdesign() {
               padding: 4,
               marginTop: 3,
               color: "#363434",
-              paddingTop: 2
+              paddingTop: 2,
             }}
           >
             <Texting
@@ -272,18 +268,18 @@ export default function Webdesign() {
               Hemsidan är responsiv och anpassas till desktop, platta eller
               mobil beroende på besökarens referenser.
             </TextingATYP>
+            <Button
+              fullWidth
+              aria-label="Välj Klack"
+              onClick={() => goToOffertWithPreselect("Webdesign: Klack")}
+              sx={{
+                ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
+                justifyContent: "center",
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth
-            aria-label="Välj Klack"
-            onClick={() => goToOffertWithPreselect("Webdesign: Klack")}
-            sx={{
-              ...buttonStyle("#EF3434", "#c32d2d", "#F7F7F7"),
-              justifyContent: "center",
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Klack</Texting>
-          </Button>
         </Box>
 
         <Box
@@ -367,18 +363,18 @@ export default function Webdesign() {
               Hela hemsidan är responsiv och anpassas till desktop, platta eller
               mobil beroende på besökarens referenser.
             </TextingATYP>
+            <Button
+              fullWidth // gör hela knappen klickbar horisontellt
+              aria-label="Välj Boom"
+              onClick={() => goToOffertWithPreselect("Webdesign: Boom")}
+              sx={{
+                ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
+                justifyContent: "center", // centrerar texten
+              }}
+            >
+              <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
+            </Button>
           </Box>
-          <Button
-            fullWidth // gör hela knappen klickbar horisontellt
-            aria-label="Välj Boom"
-            onClick={() => goToOffertWithPreselect("Webdesign: Boom")}
-            sx={{
-              ...buttonStyle("#B9DCD2", "#a2cfc1", "#363434"),
-              justifyContent: "center", // centrerar texten
-            }}
-          >
-            <Texting sx={{ pointerEvents: "none" }}>Boom!</Texting>
-          </Button>
         </Box>
       </Box>
     </Box>

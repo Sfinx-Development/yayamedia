@@ -2,7 +2,12 @@ import { Box, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 export default function NextCase() {
-  const cases = ["/asundsholm", "/sleipner", "/prhome&svanefors", "/salusso"];
+  const cases = [
+    "/case/asundsholm",
+    "/case/sleipner",
+    "/case/prhome&svanefors",
+    "/case/salusso",
+  ];
 
   const location = useLocation();
   const pathname = location.pathname;
