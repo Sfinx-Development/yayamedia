@@ -16,6 +16,7 @@ import Poddcast from "./Poddcast";
 import Wave from "./Wave";
 
 export default function ParallaxWave() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollPosition, setScrollPosition] = useState(0);
   const [dragging, setDragging] = useState(false);
   const isMobile = window.innerWidth <= 820;
