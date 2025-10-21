@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Box,
   Button,
@@ -16,19 +17,18 @@ import Poddcast from "./Poddcast";
 import Wave from "./Wave";
 
 export default function ParallaxWave() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
   const [dragging, setDragging] = useState(false);
   const isMobile = window.innerWidth <= 820;
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPosition(window.scrollY);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
   const podcastScrollRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
   useEffect(() => {
