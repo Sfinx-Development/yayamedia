@@ -62,6 +62,7 @@ const SwedteamUppdrag: React.FC = () => {
             sx={{
               marginTop: { xs: 2, md: 4 },
               fontSize: isTablet ? 18 : { xl: 24 },
+              maxWidth: { xl: "50%" },
             }}
             paragraph
           >
@@ -101,7 +102,7 @@ const SwedteamUppdrag: React.FC = () => {
             <Texting
               variant="h3"
               sx={{
-                ml: { xs: 2, md: 0 },
+                ml: { xs: 2, md: 0, xl: 8 },
                 fontSize: { xs: 18, md: 24, xl: 32 },
                 mb: 1,
                 textAlign: "left",
@@ -114,7 +115,7 @@ const SwedteamUppdrag: React.FC = () => {
               variant="body1"
               sx={{
                 fontSize: isTablet ? 18 : { xl: 24 },
-                ml: { xs: 2, md: 0 },
+                ml: { xs: 2, md: 0, xl: 8 },
               }}
               paragraph
             >
@@ -157,7 +158,7 @@ const SwedteamUppdrag: React.FC = () => {
             sx={{
               position: "absolute",
               top: { xs: 16, md: 80 },
-              left: { xs: 16, md: 140 },
+              left: { xs: 16, md: 140, xl: 200 },
               zIndex: 2,
               color: "black",
             }}
@@ -191,7 +192,7 @@ const SwedteamUppdrag: React.FC = () => {
         sx={{
           // backgroundColor: "red",
           width: "100%",
-          ml: { xs: 2, md: 40 },
+          ml: { xs: 2, md: 40, xl: 50 },
           mt: { xs: 4, md: 8 },
         }}
       >
@@ -250,7 +251,7 @@ const SwedteamUppdrag: React.FC = () => {
         sx={{
           // backgroundColor: "red",
           width: "100%",
-          ml: { xs: 2, md: 40 },
+          ml: { xs: 2, md: 40, xl: 50 },
           mt: { xs: 4, md: 8 },
         }}
       >

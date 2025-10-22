@@ -62,8 +62,8 @@ export default function CaseScroller() {
               onClick={() => navigate(src.url)}
               sx={{
                 position: "relative",
-                minWidth: { xs: 300, md: 450, xl: 800 },
-                minHeight: { xs: 300, md: 450, xl: 800 },
+                minWidth: { xs: 300, md: 550, xl: 800 },
+                minHeight: { xs: 300, md: 550, xl: 800 },
                 aspectRatio: "1 / 1",
                 overflow: "hidden",
                 cursor: "pointer",

@@ -100,7 +100,7 @@ export default function ParallaxWave() {
                 gap: { xs: 0, md: 4 },
                 alignItems: "center",
                 maxWidth: { xs: "90%", md: "75%", xl: "65%" },
-                px: { xs: 2, md: 0 },
+                px: { xs: 0, md: 0 },
               }}
             >
               <Box sx={{ flex: 1, backgroundColor: "#F7F7F7" }}>
@@ -258,10 +258,12 @@ export default function ParallaxWave() {
                   "#363434"
                 ),
                 justifyContent: "center",
-                width: { xs: "50%", md: "20%", xl: "15%" },
+                width: { xs: "50%", md: "18%", xl: "15%" },
               }}
             >
-              <Texting sx={{ pointerEvents: "none" }}>Fler Tjänster</Texting>
+              <Texting sx={{ pointerEvents: "none", fontSize: 25 }}>
+                Fler Tjänster
+              </Texting>
             </Button>
           </Box>
 

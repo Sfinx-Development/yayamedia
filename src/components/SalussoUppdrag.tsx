@@ -93,7 +93,7 @@ const SalussoUppdrag: React.FC = () => {
           <Box
             sx={{
               width: "100%",
-              ml: { xs: 4, md: 38, xl: 40 },
+              ml: { xs: 4, md: 38, xl: 48 },
               mt: { xs: 2, md: 2 },
             }}
           >
@@ -167,7 +167,7 @@ const SalussoUppdrag: React.FC = () => {
         <Box
           sx={{
             width: "100%",
-            ml: { xs: 4, md: 38, xl: 40 },
+            ml: { xs: 4, md: 38, xl: 48 },
             mt: { xs: 4, md: 4 },
           }}
         >
@@ -187,7 +187,7 @@ const SalussoUppdrag: React.FC = () => {
             justifyContent: "space-between",
             alignItems: "stretch",
             width: "100%",
-            mt: 2,
+            mt: { xs: 2, xl: 8 },
             gap: 4,
           }}
         >

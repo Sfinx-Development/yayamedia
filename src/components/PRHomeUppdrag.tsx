@@ -77,6 +77,7 @@ const PRHomeUppdrag: React.FC = () => {
             sx={{
               marginTop: { xs: 2, md: 4 },
               fontSize: isTablet ? 18 : { xl: 24 },
+              maxWidth: { xl: "50%" },
             }}
             paragraph
           >
@@ -199,7 +200,7 @@ const PRHomeUppdrag: React.FC = () => {
             sx={{
               // backgroundColor: "red",
               width: "100%",
-              ml: { xs: 4, md: 33 },
+              ml: { xs: 4, md: 18, xl: 25 },
               mt: { xs: 2, md: 6, xl: 8 },
             }}
           >
@@ -237,7 +238,7 @@ const PRHomeUppdrag: React.FC = () => {
                 src="https://i.imgur.com/7QFNvVu.png"
                 alt="Rosa lampa"
                 sx={{
-                  width: { xs: "45%", sm: "30%", md: "14%" },
+                  width: { xs: "45%", sm: "30%", md: "15%" },
                   objectFit: "contain",
                 }}
               />
@@ -246,7 +247,7 @@ const PRHomeUppdrag: React.FC = () => {
                 src="https://i.imgur.com/AFkY9aZ.png"
                 alt="Grön oljelampa"
                 sx={{
-                  width: { xs: "45%", sm: "30%", md: "14%" },
+                  width: { xs: "45%", sm: "30%", md: "15%" },
                   objectFit: "contain",
                 }}
               />
@@ -255,7 +256,7 @@ const PRHomeUppdrag: React.FC = () => {
                 src="https://i.imgur.com/1GmgyO3.png"
                 alt="Taklampa"
                 sx={{
-                  width: { xs: "45%", sm: "30%", md: "14%" },
+                  width: { xs: "45%", sm: "30%", md: "15%" },
                   objectFit: "contain",
                 }}
               />
@@ -264,7 +265,7 @@ const PRHomeUppdrag: React.FC = () => {
                 src="https://i.imgur.com/4jELoSB.png"
                 alt="Svart bordslampa"
                 sx={{
-                  width: { xs: "45%", sm: "30%", md: "14%" },
+                  width: { xs: "45%", sm: "30%", md: "15%" },
                   objectFit: "contain",
                 }}
               />
@@ -273,7 +274,7 @@ const PRHomeUppdrag: React.FC = () => {
                 src="https://i.imgur.com/GXuFbDR.png"
                 alt="Taklampa"
                 sx={{
-                  width: { xs: "45%", sm: "30%", md: "14%" },
+                  width: { xs: "45%", sm: "30%", md: "15%" },
                   objectFit: "contain",
                 }}
               />
@@ -282,7 +283,7 @@ const PRHomeUppdrag: React.FC = () => {
                 src="https://i.imgur.com/nkAhTU2.png"
                 alt="Grön vägglampa"
                 sx={{
-                  width: { xs: "45%", sm: "30%", md: "14%" },
+                  width: { xs: "45%", sm: "30%", md: "15%" },
                   objectFit: "contain",
                 }}
               />

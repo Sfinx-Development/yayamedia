@@ -34,8 +34,6 @@ const CrossLine = styled(Box)`
 
 export default function DrawerComponent(props: DrawerComponentProps) {
   const [isOpen, setIsopen] = useState(false);
-  const [isCaseOpen, setIsCaseOpen] = useState(false);
-
 
   return (
     <Drawer
@@ -106,72 +104,16 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               Case
             </Texting>
           </Link> */}
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            paddingLeft: { xs: 0.5, md: 2 },
-            paddingBottom: 0.5,
-          }}
-        >
+        <Link to="/case" style={{ textDecoration: "none", color: "#F7F7F7" }}>
           <Texting
-            onClick={() => setIsCaseOpen(!isCaseOpen)}
             sx={{
               fontSize: { xs: 18, sm: 20, xl: 30 },
-              color: "#F7F7F7",
-              cursor: "pointer",
+              paddingLeft: { xs: 0.5, md: 2 },
             }}
           >
             Case
           </Texting>
-          <IconButton
-            aria-label="Toggla case-meny"
-            onClick={() => setIsCaseOpen(!isCaseOpen)}
-            size="small"
-          >
-            <KeyboardArrowDown sx={{ color: "white" }} />
-          </IconButton>
-        </Box>
-
-        {isCaseOpen && (
-          <>
-            <Link
-              to="/asundsholm"
-              style={{
-                textDecoration: "none",
-                color: "#F7F7F7",
-                paddingTop: 0.5,
-              }}
-            >
-              <Atyp
-                sx={{
-                  fontSize: { xs: 14, sm: 16, xl: 20 },
-                  paddingLeft: { xs: 0.5, md: 2 },
-                }}
-              >
-                Åsundsholm
-              </Atyp>
-            </Link>
-            <Link
-              to="/sleipner"
-              style={{
-                textDecoration: "none",
-                color: "#F7F7F7",
-                paddingTop: 0.5,
-              }}
-            >
-              <Atyp
-                sx={{
-                  fontSize: { xs: 14, sm: 16, xl: 20 },
-                  paddingLeft: { xs: 0.5, md: 2 },
-                }}
-              >
-                Sleipner
-              </Atyp>
-            </Link>
-          </>
-        )}
-
+        </Link>
         <Box
           sx={{
             display: "flex",

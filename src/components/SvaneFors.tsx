@@ -133,7 +133,7 @@ export default function Svanefors() {
           sx={{
             // backgroundColor: "red",
             width: "100%",
-            ml: { xs: 4, md: 33 },
+            ml: { xs: 4, md: 18, xl: 25 },
             mt: { xs: 2, md: 6, xl: 8 },
           }}
         >
@@ -171,7 +171,7 @@ export default function Svanefors() {
               src="https://i.imgur.com/7Wzwovd.png"
               alt="Randig dyna"
               sx={{
-                width: { xs: "45%", sm: "30%", md: "14%" },
+                width: { xs: "45%", sm: "30%", md: "15%" },
                 objectFit: "contain",
               }}
             />
@@ -180,7 +180,7 @@ export default function Svanefors() {
               src="https://i.imgur.com/sJIprVk.png"
               alt="Mönstrad kudde"
               sx={{
-                width: { xs: "45%", sm: "30%", md: "14%" },
+                width: { xs: "45%", sm: "30%", md: "15%" },
                 objectFit: "contain",
               }}
             />
@@ -189,7 +189,7 @@ export default function Svanefors() {
               src="https://i.imgur.com/IV6KnVm.png"
               alt="Rund dyna"
               sx={{
-                width: { xs: "45%", sm: "30%", md: "14%" },
+                width: { xs: "45%", sm: "30%", md: "15%" },
                 objectFit: "contain",
               }}
             />
@@ -198,7 +198,7 @@ export default function Svanefors() {
               src="https://i.imgur.com/vNs4Eu3.png"
               alt="Brun pläd"
               sx={{
-                width: { xs: "45%", sm: "30%", md: "14%" },
+                width: { xs: "45%", sm: "30%", md: "15%" },
                 objectFit: "contain",
               }}
             />
@@ -207,7 +207,7 @@ export default function Svanefors() {
               src="https://i.imgur.com/4XiRHyL.png"
               alt="Inredning"
               sx={{
-                width: { xs: "45%", sm: "30%", md: "14%" },
+                width: { xs: "45%", sm: "30%", md: "15%" },
                 objectFit: "contain",
               }}
             />
@@ -216,7 +216,7 @@ export default function Svanefors() {
               src="https://i.imgur.com/DucNLSf.png"
               alt="Liggande kudde"
               sx={{
-                width: { xs: "45%", sm: "30%", md: "14%" },
+                width: { xs: "45%", sm: "30%", md: "15%" },
                 objectFit: "contain",
               }}
             />
@@ -227,7 +227,7 @@ export default function Svanefors() {
         sx={{
           // backgroundColor: "red",
           width: "100%",
-          ml: { xs: 4, md: 33 },
+          ml: { xs: 4, md: 18, xl: 25 },
           mt: { xs: 4, md: 8 },
         }}
       >

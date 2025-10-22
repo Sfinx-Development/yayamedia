@@ -28,7 +28,7 @@ export default function SwedteamProject() {
           xs: "50% 25%",
           sm: "50% 75%",
           md: "50% 50%",
-          xl: "50% 75%",
+          xl: "50% 100%",
         }}
         bgSize={{ xs: "180%", md: "100%" }}
       />
