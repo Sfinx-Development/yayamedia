@@ -85,7 +85,7 @@ const SleipnerUppdrag: React.FC = () => {
           fontWeight={400}
           textAlign={"left"}
         >
-          Webdesign och Logotyp
+          Grafisk identitet
         </Texting>
       </Box>
       <Box
@@ -144,23 +144,7 @@ const SleipnerUppdrag: React.FC = () => {
           />
         </Box>
       </Box>
-      <Box
-        sx={{
-          // backgroundColor: "red",
-          width: "100%",
-          ml: { xs: 4, md: 33 },
-          mt: { xs: 2, md: 6, xl: 8 },
-        }}
-      >
-        <Texting
-          variant="h3"
-          sx={{ fontSize: { xs: 18, md: 24, xl: 32 } }}
-          fontWeight={400}
-          textAlign={"left"}
-        >
-          Grafisk identitet
-        </Texting>
-      </Box>
+
       <Box
         sx={{
           width: "100%",
