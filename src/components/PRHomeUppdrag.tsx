@@ -1,5 +1,5 @@
 import { Box, styled, Typography, TypographyProps } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { isMobile, isTablet } from "./GreyComponent";
 import Svanefors from "./SvaneFors";
 
@@ -28,8 +28,47 @@ const PRHomeUppdrag: React.FC = () => {
     "https://i.imgur.com/uSzCxmw.jpeg",
   ];
 
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  const largeTile = {
+    flex: "1 1 calc(50% - 16px)",
+    maxWidth: "calc(50% - 16px)",
+    // borderRadius: 2,
+    overflow: "hidden" as const,
+    position: "relative" as const,
+    transition: "transform 0.3s ease, box-shadow 0.3s ease, z-index 0s",
+    cursor: "pointer",
+    "&:hover": {
+      transform: "scale(1.05)",
+      zIndex: 2,
+      boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+    },
+  };
+
+  const smallTile = {
+    flex: "1 1 calc(25% - 16px)",
+    maxWidth: "calc(25% - 16px)",
+    // borderRadius: 2,
+    overflow: "hidden" as const,
+    position: "relative" as const,
+    transition: "transform 0.3s ease, box-shadow 0.3s ease, z-index 0s",
+    cursor: "pointer",
+    "&:hover": {
+      transform: "scale(1.08)",
+      zIndex: 2,
+      boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+    },
+  };
+
+  const handleImageClick = (src: string) => {
+    // vill du bara ha detta på mobil kan du göra:
+    // if (!isMobile) return;
+    setActiveImage(src);
+  };
+
   return (
     <>
+      {/* TOPPSEKTION */}
       <Box
         sx={{
           width: "100%",
@@ -50,7 +89,6 @@ const PRHomeUppdrag: React.FC = () => {
           sx={{
             width: { xs: "98%", md: "50%", xl: "100%" },
             textAlign: "left",
-            // backgroundColor: "red",
             ml: { xs: 2, md: -30, xl: 50 },
             mr: { xs: 3 },
             mt: isMobile ? -12 : { md: -23 },
@@ -87,6 +125,7 @@ const PRHomeUppdrag: React.FC = () => {
         </Box>
       </Box>
 
+      {/* PR HOME – MILJÖBILDER */}
       <Box
         sx={{
           width: "100%",
@@ -117,6 +156,7 @@ const PRHomeUppdrag: React.FC = () => {
             mt: 2,
           }}
         >
+          {/* RAD 1 – 2 stora miljöbilder */}
           <Box
             sx={{
               width: "99%",
@@ -127,27 +167,34 @@ const PRHomeUppdrag: React.FC = () => {
             }}
           >
             <Box
-              component="img"
-              src="https://i.imgur.com/K3mLqb9.jpeg"
-              alt="Bild 1"
-              sx={{
-                flex: "1 1 calc(50% - 16px)",
-                maxWidth: "calc(50% - 16px)",
-                objectFit: "cover",
-              }}
-            />
+              sx={largeTile}
+              onClick={() =>
+                handleImageClick("https://i.imgur.com/K3mLqb9.jpeg")
+              }
+            >
+              <Box
+                component="img"
+                src="https://i.imgur.com/K3mLqb9.jpeg"
+                alt="Bild 1"
+                sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
             <Box
-              component="img"
-              src="https://i.imgur.com/dQTPVrR.jpeg"
-              alt="Bild 2"
-              sx={{
-                flex: "1 1 calc(50% - 16px)",
-                maxWidth: "calc(50% - 16px)",
-                objectFit: "cover",
-              }}
-            />
+              sx={largeTile}
+              onClick={() =>
+                handleImageClick("https://i.imgur.com/dQTPVrR.jpeg")
+              }
+            >
+              <Box
+                component="img"
+                src="https://i.imgur.com/dQTPVrR.jpeg"
+                alt="Bild 2"
+                sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </Box>
           </Box>
 
+          {/* RAD 2 */}
           <Box
             sx={{
               width: "100%",
@@ -157,22 +204,23 @@ const PRHomeUppdrag: React.FC = () => {
               gap: 1.5,
             }}
           >
-            {picturesRow2.map((i) => (
+            {picturesRow2.map((src) => (
               <Box
-                key={i}
-                component="img"
-                src={i}
-                alt={`Bild ${i}`}
-                sx={{
-                  flex: "1 1 calc(25% - 16px)",
-                  maxWidth: "calc(25% - 16px)",
-                  objectFit: "cover",
-                }}
-              />
+                key={src}
+                sx={smallTile}
+                onClick={() => handleImageClick(src)}
+              >
+                <Box
+                  component="img"
+                  src={src}
+                  alt="Miljöbild rad 2"
+                  sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </Box>
             ))}
           </Box>
 
-          {/* Rad 3 - 4 bilder */}
+          {/* RAD 3 */}
           <Box
             sx={{
               width: "100%",
@@ -182,23 +230,25 @@ const PRHomeUppdrag: React.FC = () => {
               gap: 1.5,
             }}
           >
-            {picturesRow3.map((i) => (
+            {picturesRow3.map((src) => (
               <Box
-                key={i}
-                component="img"
-                src={i}
-                alt={`Bild ${i}`}
-                sx={{
-                  flex: "1 1 calc(25% - 16px)",
-                  maxWidth: "calc(25% - 16px)",
-                  objectFit: "cover",
-                }}
-              />
+                key={src}
+                sx={smallTile}
+                onClick={() => handleImageClick(src)}
+              >
+                <Box
+                  component="img"
+                  src={src}
+                  alt="Miljöbild rad 3"
+                  sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </Box>
             ))}
           </Box>
+
+          {/* PRODUKTFOTO */}
           <Box
             sx={{
-              // backgroundColor: "red",
               width: "100%",
               ml: { xs: 4, md: 18, xl: 25 },
               mt: { xs: 2, md: 6, xl: 8 },
@@ -213,80 +263,56 @@ const PRHomeUppdrag: React.FC = () => {
               Produktfoto
             </Texting>
           </Box>
+
+          {/* Produktbilder med scroll (lampor) */}
           <Box
             sx={{
               width: "100%",
-              display: "flex",
-              justifyContent: "center",
               mt: { xs: 2, md: 4 },
+              overflowX: "auto",
+              px: { xs: 2, md: 4 },
+              pb: 2,
+              scrollbarWidth: "none",
+              "&::-webkit-scrollbar": { display: "none" },
             }}
           >
             <Box
               sx={{
-                width: "100%",
-                // maxWidth: "1600px",
                 display: "flex",
-                justifyContent: "center",
+                gap: 2,
+                width: "max-content",
                 alignItems: "flex-start",
-                // px: { xs: 3, md: 8, xl: 14 },
-                flexWrap: "wrap",
-                gap: 1,
               }}
             >
-              <Box
-                component="img"
-                src="https://i.imgur.com/7QFNvVu.png"
-                alt="Rosa lampa"
-                sx={{
-                  width: { xs: "45%", sm: "30%", md: "15%" },
-                  objectFit: "contain",
-                }}
-              />
-              <Box
-                component="img"
-                src="https://i.imgur.com/AFkY9aZ.png"
-                alt="Grön oljelampa"
-                sx={{
-                  width: { xs: "45%", sm: "30%", md: "15%" },
-                  objectFit: "contain",
-                }}
-              />
-              <Box
-                component="img"
-                src="https://i.imgur.com/1GmgyO3.png"
-                alt="Taklampa"
-                sx={{
-                  width: { xs: "45%", sm: "30%", md: "15%" },
-                  objectFit: "contain",
-                }}
-              />
-              <Box
-                component="img"
-                src="https://i.imgur.com/4jELoSB.png"
-                alt="Svart bordslampa"
-                sx={{
-                  width: { xs: "45%", sm: "30%", md: "15%" },
-                  objectFit: "contain",
-                }}
-              />
-              <Box
-                component="img"
-                src="https://i.imgur.com/GXuFbDR.png"
-                alt="Taklampa"
-                sx={{
-                  width: { xs: "45%", sm: "30%", md: "15%" },
-                  objectFit: "contain",
-                }}
-              />
-              <Box
-                component="img"
-                src="https://i.imgur.com/nkAhTU2.png"
-                alt="Grön vägglampa"
-                sx={{
-                  width: { xs: "45%", sm: "30%", md: "15%" },
-                  objectFit: "contain",
-                }}
-              />
+              {[
+                { src: "https://i.imgur.com/7QFNvVu.png", alt: "Rosa lampa" },
+                {
+                  src: "https://i.imgur.com/AFkY9aZ.png",
+                  alt: "Grön oljelampa",
+                },
+                { src: "https://i.imgur.com/1GmgyO3.png", alt: "Taklampa" },
+                {
+                  src: "https://i.imgur.com/4jELoSB.png",
+                  alt: "Svart bordslampa",
+                },
+                { src: "https://i.imgur.com/GXuFbDR.png", alt: "Taklampa 2" },
+                {
+                  src: "https://i.imgur.com/nkAhTU2.png",
+                  alt: "Grön vägglampa",
+                },
+              ].map((img) => (
+                <Box
+                  key={img.src}
+                  component="img"
+                  src={img.src}
+                  alt={img.alt}
+                  sx={{
+                    width: { xs: 160, sm: 200, md: 220, xl: 400 },
+                    objectFit: "contain",
+                    flexShrink: 0,
+                  }}
+                />
+              ))}
             </Box>
           </Box>
         </Box>
@@ -302,6 +328,34 @@ const PRHomeUppdrag: React.FC = () => {
           zIndex: 3,
         }}
       />
+
+      {activeImage && (
+        <Box
+          onClick={() => setActiveImage(null)}
+          sx={{
+            position: "fixed",
+            inset: 0,
+            bgcolor: "rgba(0,0,0,0.75)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 2000,
+            cursor: "zoom-out",
+          }}
+        >
+          <Box
+            component="img"
+            src={activeImage}
+            alt="Förstorad bild"
+            sx={{
+              maxWidth: "98%",
+              maxHeight: "98%",
+              // borderRadius: 2,
+              boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+            }}
+          />
+        </Box>
+      )}
     </>
   );
 };

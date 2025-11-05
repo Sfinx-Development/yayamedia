@@ -249,7 +249,7 @@ export default function ParallaxWave() {
           >
             <Button
               fullWidth
-              aria-label="Fler tjänster"
+              aria-label="Välj Klick"
               onClick={() => navigate("/tjanster#socialamedier")}
               sx={{
                 ...buttonStyle(
@@ -258,12 +258,9 @@ export default function ParallaxWave() {
                   "#363434"
                 ),
                 justifyContent: "center",
-                width: { xs: "50%", md: "18%", xl: "15%" },
               }}
             >
-              <Texting sx={{ pointerEvents: "none", fontSize: 25 }}>
-                Fler Tjänster
-              </Texting>
+              <Texting sx={{ pointerEvents: "none" }}>Fler tjänster</Texting>
             </Button>
           </Box>
 
