@@ -30,7 +30,7 @@ export default function SwedteamProject() {
           md: "50% 50%",
           xl: "50% 100%",
         }}
-        bgSize={{ xs: "180%", md: "100%" }}
+        bgSize={{ xs: "200%", md: "100%" }}
       />
       <Box sx={{ width: "100%", position: "relative" }}>
         <Box
