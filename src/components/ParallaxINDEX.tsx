@@ -49,7 +49,7 @@ export default function ParallaxWave() {
   const buttonStyle = (bg: string, hover: string, textColor = "#F7F7F7") => ({
     backgroundColor: bg,
     color: textColor,
-    width: isTablet ? "20%" : "15%",
+    width: isTablet ? "20%" : isMobile ? "35%" : "15%",
     borderRadius: 2,
     paddingY: isMobile ? 1 : 1.2,
     textTransform: "none",
@@ -80,114 +80,13 @@ export default function ParallaxWave() {
         <Wave />
         <Box sx={{ backgroundColor: "#F7F7F7", width: "100%" }}>
           <Box
-            sx={{
-              display: "flex",
-              width: "100%",
-              justifyContent: "center",
-              backgroundColor: "#F7F7F7",
-            }}
-          >
-            <Box
-              sx={{
-                backgroundColor: "#F7F7F7",
-                marginTop: { xs: 2, md: -2 },
-                width: "100%",
-                zIndex: 3,
-                textAlign: "center",
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                justifyContent: "space-between",
-                gap: { xs: 0, md: 4 },
-                alignItems: "center",
-                maxWidth: { xs: "90%", md: "75%", xl: "65%" },
-                px: { xs: 0, md: 0 },
-              }}
-            >
-              <Box sx={{ flex: 1, backgroundColor: "#F7F7F7" }}>
-                <Texting
-                  sx={{
-                    fontSize: { xs: 30, md: 40, xl: 55 },
-                    color: "#363434",
-                    mb: 3,
-                    textAlign: { xs: "left", md: "left" },
-                  }}
-                >
-                  Slut på moves?
-                </Texting>
-                <Typography
-                  sx={{
-                    fontSize: { xs: 16, md: 18, xl: 22 },
-                    lineHeight: 1.6,
-                    color: "#363434",
-                    textAlign: { xs: "left", md: "left" },
-                    maxWidth: { xl: 850 },
-                  }}
-                >
-                  Det brusar högt där ute. Att hitta sin unika rytm bland
-                  tusentals andra kan vara svårt - vi vet. Men vi vet också hur
-                  man skapar autentiskt innehåll. Du vet, sånt vi alla faktiskt
-                  frivilligt konsumerar. Ibland är allt som behövs ett enkelt
-                  klick. Andra gånger en skarp klack. Och för vissa, ett
-                  kraftfullt boom för att verkligen bryta igenom bruset.
-                  <br />
-                  <br />
-                  Oavsett hur du gör just nu kan du räkna med oss! En
-                  fullständig koreografi eller ett par väl valda moves? Upp till
-                  dig! Vi erbjuder paketlösningar för det mesta, och anpassar
-                  oss alltid efter dina behov.
-                </Typography>
-              </Box>
-              <Box
-                component="img"
-                src="https://i.imgur.com/a78yBCA.png"
-                alt="Moves illustration"
-                sx={{
-                  flex: 1,
-                  width: "100%",
-                  maxWidth: { xs: "80%", md: 500, xl: 700 },
-                  objectFit: "contain",
-                  mx: "auto",
-                  display: "block",
-                  transform: {
-                    xs: "none",
-                    md: "translateX(-15%) translateY(100px)",
-                    xl: "translateX(-10%) translateY(110px)",
-                  },
-                  mt: { xs: 4, md: 0 },
-                  zIndex: 2,
-                }}
-              />
-            </Box>
-          </Box>
-
-          <Box
-            sx={{
-              flex: 1,
-              backgroundColor: "#F7F7F7",
-              width: "100%",
-              textAlign: "center",
-              mt: { xs: 4, md: 15, xl: 20 },
-              px: { xs: 0, md: 2 },
-            }}
-          >
-            <Texting
-              sx={{
-                fontSize: { xs: 30, md: 40, xl: 55 },
-                color: "#363434",
-              }}
-            >
-              Yaya, at your service
-            </Texting>
-          </Box>
-
-          <Box
             ref={podcastScrollRef}
             sx={{
               overflowX: "auto",
               backgroundColor: "#F7F7F7",
               cursor: dragging ? "grabbing" : "grab",
               userSelect: "none",
-              mt: { xs: 0, md: 2 },
+              mt: { xs: -2, md: -2 },
               scrollbarWidth: "none",
               "&::-webkit-scrollbar": { display: "none" },
               display: "flex",
@@ -223,7 +122,7 @@ export default function ParallaxWave() {
               sx={{
                 display: "flex",
                 flexDirection: "row",
-                gap: 4,
+                // gap: 4,
                 // px: 4,
                 width: "max-content",
                 alignItems: "flex-start",
@@ -231,7 +130,7 @@ export default function ParallaxWave() {
             >
               <Poddcast
                 marginLeft={{ xs: 3, md: 4 }}
-                topMargin={10}
+                topMargin={-2}
                 paddingBottom={4}
                 width={{ xs: 300, md: 320, xl: 540 }}
                 fontSize={{ xl: 18 }}
