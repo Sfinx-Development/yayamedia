@@ -231,6 +231,11 @@ export default function ParallaxCase() {
                           height: "100%",
                           objectFit: "cover",
                           display: "block",
+                          transition: "transform 0.5s ease, filter 0.5s ease",
+                          "&:hover": {
+                            transform: "scale(1.08)",
+                            filter: "brightness(1.15)",
+                          },
                         }}
                       />
 

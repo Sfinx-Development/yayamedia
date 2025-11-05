@@ -50,9 +50,14 @@ export default function NextCase() {
         >
           <Box
             component="img"
-            src="https://i.imgur.com/7jb2kF8.png"
+            src="https://i.imgur.com/V4ItPoJ.png"
             alt="Föregående"
-            sx={{ width: { xs: 40, md: 100 }, height: "auto", mb: 1 }}
+            sx={{
+              width: { xs: 40, md: 100 },
+              height: "auto",
+              mb: 1,
+              transform: "rotate(180deg)",
+            }}
           />
           <Typography
             variant="body1"
@@ -78,9 +83,14 @@ export default function NextCase() {
         >
           <Box
             component="img"
-            src="https://i.imgur.com/V4ItPoJ.png"
+            src="https://i.imgur.com/7jb2kF8.png"
             alt="Nästa"
-            sx={{ width: { xs: 40, md: 100 }, height: "auto", mb: 1 }}
+            sx={{
+              width: { xs: 40, md: 100 },
+              height: "auto",
+              mb: 1,
+              transform: "rotate(180deg)",
+            }}
           />
           <Typography
             variant="body1"
