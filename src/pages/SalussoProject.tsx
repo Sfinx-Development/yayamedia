@@ -6,10 +6,26 @@ import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import SalussoUppdrag from "../components/SalussoUppdrag";
 import Wave from "../components/Wave";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 export default function Salusso() {
   return (
+     <>
+      <HelmetWrapper
+        title="Salusso – Case | YayaMedia"
+        description="Modern e-handelslösning och varumärkesprofil för Salusso. Läs om hur YayaMedia skapade en digital upplevelse med känsla och precision."
+        url="https://www.yayamedia.se/case/salusso"
+        image="https://www.yayamedia.se/og/case-salusso-1200x630.jpg"
+        ogType="article"
+        breadcrumbs={[
+          { name: "Hem", url: "https://www.yayamedia.se/" },
+          { name: "Case", url: "https://www.yayamedia.se/case" },
+          { name: "Salusso", url: "https://www.yayamedia.se/case/salusso" },
+        ]}
+      />
     <Box
+     component="main"
+        aria-label="Huvudinnehåll: Case Salusso"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -62,5 +78,6 @@ export default function Salusso() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }

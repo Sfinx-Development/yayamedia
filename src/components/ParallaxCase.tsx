@@ -225,7 +225,8 @@ export default function ParallaxCase() {
                       <Box
                         component="img"
                         src={src.src}
-                        alt={`Instagram bild ${index + 1}`}
+                        // alt={`Instagram bild ${index + 1}`}
+                          alt={`Case: ${src.label} – webbprojekt av YayaMedia`}
                         sx={{
                           width: "100%",
                           height: "100%",

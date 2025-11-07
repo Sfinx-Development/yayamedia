@@ -7,11 +7,27 @@ import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import SleipnerUppdrag from "../components/SleipnerUppdrag";
 import Wave from "../components/Wave";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 //RESPOINSIVT STOR SKÄRM
 export default function SleipnerProject() {
   return (
+     <>
+      <HelmetWrapper
+        title="Sleipner – Case | YayaMedia"
+        description="Branding, webb och design för Sleipner. YayaMedia skapade en stark visuell identitet och digital närvaro som speglar varumärkets kraft och elegans."
+        url="https://www.yayamedia.se/case/sleipner"
+        image="https://www.yayamedia.se/og/case-sleipner-1200x630.jpg"
+        ogType="article"
+        breadcrumbs={[
+          { name: "Hem", url: "https://www.yayamedia.se/" },
+          { name: "Case", url: "https://www.yayamedia.se/case" },
+          { name: "Sleipner", url: "https://www.yayamedia.se/case/sleipner" },
+        ]}
+      />
     <Box
+       component="main"
+        aria-label="Huvudinnehåll: Case Sleipner"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -66,5 +82,6 @@ export default function SleipnerProject() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }

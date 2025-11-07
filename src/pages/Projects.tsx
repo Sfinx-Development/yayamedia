@@ -8,11 +8,27 @@ import MobileFooter from "../components/MobileFooter";
 import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import Wave from "../components/Wave";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 //RESPOINSIVT STOR SKÄRM
 export default function AsundsholmProject() {
   return (
+       <>
+      <HelmetWrapper
+        title="Åsundsholm – Case | YayaMedia"
+        description="Helhetslyft för Åsundsholm: webb, varumärke och innehåll med fokus på SEO och upplevelse. Se vårt arbete och resultat."
+        url="https://www.yayamedia.se/case/asundsholm"
+        image="https://www.yayamedia.se/og/case-asundsholm-1200x630.jpg"
+        ogType="article"
+        breadcrumbs={[
+          { name: "Hem", url: "https://www.yayamedia.se/" },
+          { name: "Case", url: "https://www.yayamedia.se/case" },
+          { name: "Åsundsholm", url: "https://www.yayamedia.se/case/asundsholm" },
+        ]}
+      />
     <Box
+     component="main"
+        aria-label="Huvudinnehåll: Case Åsundsholm"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -59,5 +75,6 @@ export default function AsundsholmProject() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }

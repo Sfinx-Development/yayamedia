@@ -19,6 +19,8 @@ export default function PinkComponent() {
   }, []);
   return (
     <Box
+         component="header"
+      aria-label="Hero-sektion med huvudbudskap"
       sx={{
         width: "100%",
         background: "linear-gradient(to top, #EDC1D0, #F3D9DF)",
