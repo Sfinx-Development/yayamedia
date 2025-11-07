@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import ScrollToTop from "../components/ScrollToTop";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 export default function RootLayout() {
   return (
@@ -14,6 +15,12 @@ export default function RootLayout() {
         width: "100%",
       }}
     >
+       <HelmetWrapper
+        title="YayaMedia – Kreativ byrå inom design, webb & kommunikation"
+        description="YayaMedia är en kreativ byrå som hjälper varumärken växa genom strategi, design och digital närvaro."
+        url="https://www.yayamedia.se"
+        image="https://www.yayamedia.se/og/default-1200x630.jpg"
+      />
       <ScrollToTop />
       <Header />
 

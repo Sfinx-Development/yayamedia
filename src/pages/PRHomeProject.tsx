@@ -6,10 +6,26 @@ import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import PRHomeUppdrag from "../components/PRHomeUppdrag";
 import Wave from "../components/Wave";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 export default function PRHome() {
   return (
+       <>
+      <HelmetWrapper
+        title="PR Home & Svanefors – Case | YayaMedia"
+        description="Varumärkeslyft och webbnärvaro för PR Home & Svanefors. Se hur vi jobbade med design, innehåll och SEO för ökad synlighet."
+        url="https://www.yayamedia.se/case/prhome&svanefors"
+        image="https://www.yayamedia.se/og/case-prhome-svanefors-1200x630.jpg"
+        ogType="article"
+        breadcrumbs={[
+          { name: "Hem", url: "https://www.yayamedia.se/" },
+          { name: "Case", url: "https://www.yayamedia.se/case" },
+          { name: "PR Home & Svanefors", url: "https://www.yayamedia.se/case/prhome&svanefors" },
+        ]}
+      />
     <Box
+     component="main"
+        aria-label="Huvudinnehåll: Case PR Home & Svanefors"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -62,5 +78,6 @@ export default function PRHome() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }

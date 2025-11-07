@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import OffertForm from "../components/OffertForm";
 import { useLocation } from "react-router-dom";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 // import HelmetWrapper from "../components/HelmetWrapper";
 
@@ -8,14 +9,21 @@ export default function Offert() {
     const location = useLocation();
   return (
     <>
-      {/* <HelmetWrapper
-        title="Städtjänster i Borås | Pris & Offert – Städtjejerna"
-        description="Få ett kostnadsfritt prisförslag för hemstäd, flyttstäd eller företagsstäd i Borås. Vi skräddarsyr en lösning utifrån dina behov."
-        url="https://www.stadtjejerna.se/offert"
-        image="https://i.imgur.com/bo2l48Z.jpeg"
-      /> */}
+      <HelmetWrapper
+        title="Offert – YayaMedia | Kostnadsfri offert på webb & SEO"
+        description="Få en kostnadsfri offert från YayaMedia. Vi hjälper dig med webbutveckling, SEO, design och strategi som ger resultat."
+        url="https://www.yayamedia.se/offert"
+        image="https://www.yayamedia.se/og/offert-1200x630.jpg"
+        ogType="website"
+        breadcrumbs={[
+          { name: "Hem", url: "https://www.yayamedia.se/" },
+          { name: "Offert", url: "https://www.yayamedia.se/offert" },
+        ]}
+      />
 
       <Box
+       component="main"
+        aria-label="Huvudinnehåll: Offertformulär"
         style={{
             display: "flex",
             flexDirection: "column",

@@ -166,6 +166,8 @@ export default function OffertForm({ locationState }: OffertFormProps) {
 
   return (
     <Box
+    component="section"
+      aria-label="Offertformulär"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -180,6 +182,7 @@ export default function OffertForm({ locationState }: OffertFormProps) {
       }}
     >
       <Box
+       component="form"
         sx={{
           zIndex: 1,
           width: "100%",
@@ -220,6 +223,7 @@ export default function OffertForm({ locationState }: OffertFormProps) {
 
         {error && (
           <TextingATYP
+          role="alert"
             color="error"
             sx={{
               textAlign: "center",
@@ -450,7 +454,7 @@ export default function OffertForm({ locationState }: OffertFormProps) {
             />
           }
           label={
-            <TextingATYP sx={{ fontSize: 13, color: "rgba(0,0,0,0.8)" }}>
+            <TextingATYP id="policy-help" sx={{ fontSize: 13, color: "rgba(0,0,0,0.8)" }}>
               Jag samtycker till att yaya Media behandlar mina personuppgifter i
               enlighet med vår{" "}
               <a href="/privacy-policy" style={{ color: "rgba(0,0,0,0.8)" }}>

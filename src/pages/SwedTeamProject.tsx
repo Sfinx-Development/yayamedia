@@ -6,10 +6,26 @@ import NextCase from "../components/NextCase";
 import ParallaxImg from "../components/ParallaxImg";
 import SwedteamUppdrag from "../components/SwedteamUppdrag";
 import Wave from "../components/Wave";
+import HelmetWrapper from "../components/HelmetWrapper";
 
 export default function SwedteamProject() {
   return (
+       <>
+      <HelmetWrapper
+        title="Swedteam – Case | YayaMedia"
+        description="Webb, design och digital strategi för Swedteam. YayaMedia skapade en modern digital plattform som förmedlar varumärkets kvalitet och arv."
+        url="https://www.yayamedia.se/case/swedteam"
+        image="https://www.yayamedia.se/og/case-swedteam-1200x630.jpg"
+        ogType="article"
+        breadcrumbs={[
+          { name: "Hem", url: "https://www.yayamedia.se/" },
+          { name: "Case", url: "https://www.yayamedia.se/case" },
+          { name: "Swedteam", url: "https://www.yayamedia.se/case/swedteam" },
+        ]}
+      />
     <Box
+     component="main"
+        aria-label="Huvudinnehåll: Case Swedteam"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -62,5 +78,6 @@ export default function SwedteamProject() {
         </Box>
       </Box>
     </Box>
+    </>
   );
 }
