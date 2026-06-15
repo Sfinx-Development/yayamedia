@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export interface DrawerComponentProps {
   drawerOpen: boolean;
   toggleDrawer: (
-    open: boolean
+    open: boolean,
   ) => (event: React.KeyboardEvent | React.MouseEvent) => void;
 }
 
@@ -17,7 +17,10 @@ const Texting = styled(Typography)`
 
 const Atyp = styled(Typography)`
   font-family: "atyp-bl-variable", sans-serif;
-  font-variation-settings: "ital" 0, "opsz" 6, "wght" 280;
+  font-variation-settings:
+    "ital" 0,
+    "opsz" 6,
+    "wght" 280;
 `;
 
 const CrossLine = styled(Box)`
@@ -141,7 +144,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
         {isOpen && (
           <>
             <Link
-              to="/tjanster#socialamedier"
+              to="/tjanster/sociala-medier"
               style={{
                 textDecoration: "none",
                 color: "#F7F7F7",
@@ -158,7 +161,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               </Atyp>
             </Link>
             <Link
-              to="/tjanster#webbdesign"
+              to="/tjanster/webbdesign"
               style={{
                 textDecoration: "none",
                 color: "#F7F7F7",
@@ -175,7 +178,7 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               </Atyp>
             </Link>
             <Link
-              to="/tjanster#konceptutveckling"
+              to="/tjanster/konceptutveckling"
               style={{
                 textDecoration: "none",
                 color: "#F7F7F7",
@@ -191,8 +194,8 @@ export default function DrawerComponent(props: DrawerComponentProps) {
                 Konceptutveckling
               </Atyp>
             </Link>
-            <Link
-              to="/tjanster#copywriting"
+            {/* <Link
+              to="/tjanster/copywriting"
               style={{
                 textDecoration: "none",
                 color: "#F7F7F7",
@@ -207,9 +210,9 @@ export default function DrawerComponent(props: DrawerComponentProps) {
               >
                 Copywriting
               </Atyp>
-            </Link>
+            </Link> */}
             <Link
-              to="/tjanster#grafisk-profil"
+              to="/tjanster/grafisk-profil"
               style={{
                 textDecoration: "none",
                 color: "#F7F7F7",
