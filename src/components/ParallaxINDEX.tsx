@@ -149,7 +149,7 @@ export default function ParallaxWave() {
             <Button
               fullWidth
               aria-label="Välj Klick"
-              onClick={() => navigate("/tjanster#socialamedier")}
+              onClick={() => navigate("/tjanster/sociala-medier")}
               sx={{
                 ...buttonStyle(
                   "rgba(199, 213, 221)",

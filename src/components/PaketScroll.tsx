@@ -1,79 +1,4 @@
-// import { Box } from "@mui/material";
-// import { useRef, useState } from "react";
-// import Draggable, { DraggableData, DraggableEvent } from "react-draggable"; // Import DraggableEvent
-// import GraphicProfile from "./GraphicProfile";
-// import { isMobile, isTablet } from "./GreyComponent";
-// import SocialMedia from "./SocialMedia";
-// import Webdesign from "./Webdesign";
 
-// export default function PaketScroll() {
-//   const scrollRef = useRef<HTMLDivElement | null>(null); // Skapa en ref för scroll-behållaren
-//   const [dragging, setDragging] = useState(false);
-
-//   const handleDragStart = () => {
-//     setDragging(true); // Sätt dragging till true vid start
-//   };
-
-//   const handleDragStop = (e: DraggableEvent, data: DraggableData) => {
-//     // Change MouseEvent to DraggableEvent
-//     setDragging(false); // Återställ dragging
-//     console.log(e);
-//     if (scrollRef.current) {
-//       // Justera scroll-positionen efter dragning
-//       const newScrollLeft = scrollRef.current.scrollLeft - data.deltaX;
-
-//       // Kontrollera att vi inte går över gränserna
-//       const maxScrollLeft =
-//         scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
-
-//       // Sätt scrollLeft till en värde inom tillåten gräns
-//       scrollRef.current.scrollLeft = Math.max(
-//         0,
-//         Math.min(newScrollLeft, maxScrollLeft)
-//       );
-//     }
-//   };
-
-//   return (
-//     <Box
-//       ref={scrollRef}
-//       sx={{
-//         display: "flex",
-//         flexDirection: "row",
-//         overflowX: "scroll",
-//         cursor: dragging ? "grabbing" : "grab",
-//         width: "100%",
-//       }}
-//       onMouseDown={(e) => e.preventDefault()}
-//     >
-//       {isMobile || isTablet ? (
-//         <Box
-//           sx={{
-//             display: "flex",
-//             flexDirection: "row",
-//           }}
-//         >
-//           <SocialMedia />
-//           <Webdesign />
-//           <GraphicProfile />
-//         </Box>
-//       ) : (
-//         <Draggable axis="x" onStart={handleDragStart} onStop={handleDragStop}>
-//           <Box
-//             sx={{
-//               display: "flex",
-//               flexDirection: "row",
-//             }}
-//           >
-//             <SocialMedia />
-//             <Webdesign />
-//             <GraphicProfile />
-//           </Box>
-//         </Draggable>
-//       )}
-//     </Box>
-//   );
-// }
 import { Box } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -120,33 +45,7 @@ export default function PaketScroll() {
     }
   }, []);
 
-  // const handleDragStart = () => setDragging(true);
 
-  // const handleDragStop = (_e: DraggableEvent, data: DraggableData) => {
-  //   setDragging(false);
-  //   if (scrollRef.current) {
-  //     scrollRef.current.scrollLeft -= data.deltaX;
-
-  //     const scrollArea = scrollRef.current;
-  //     const scrollWidth = scrollArea.scrollWidth;
-  //     const clientWidth = scrollArea.clientWidth;
-  //     const threshold = scrollWidth / 4;
-
-  //     if (scrollArea.scrollLeft < threshold) {
-  //       scrollArea.scrollLeft += scrollWidth / 2;
-  //     } else if (
-  //       scrollArea.scrollLeft >
-  //       scrollWidth - threshold - clientWidth
-  //     ) {
-  //       scrollArea.scrollLeft -= scrollWidth / 2;
-  //     }
-  //   }
-  // };
-  // const handleDrag = (_: DraggableEvent, data: DraggableData) => {
-  //   if (scrollRef.current) {
-  //     scrollRef.current.scrollLeft -= data.deltaX;
-  //   }
-  // };
 
   return (
     <Box

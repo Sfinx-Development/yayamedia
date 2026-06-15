@@ -21,6 +21,7 @@ const Navigation = () => {
         <Route path="yaya" element={<Yaya />}></Route>
         <Route path="case" element={<CasePage />}></Route>
         <Route path="tjanster" element={<Services />}></Route>
+        <Route path="/tjanster/:serviceSlug" element={<Services />} />
         <Route path="/case/asundsholm" element={<AsundsholmProject />}></Route>
         <Route path="/case/sleipner" element={<SleipnerProject />} />
         <Route path="/case/prhome&svanefors" element={<PRHome />} />
